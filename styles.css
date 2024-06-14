@@ -15,7 +15,7 @@ body {
 }
 
 .header-title {
-    flex: 1;
+    flex: 0 0 auto;
 }
 
 .header-title h3 {
@@ -27,12 +27,20 @@ nav {
     flex: 2;
 }
 
+.nav-container {
+    flex: 1 1 auto;
+    display: flex;
+    justify-content: center;
+    overflow-x: auto;
+}
+
 .nav-list {
     list-style: none;
     padding: 0;
     display: flex;
     justify-content: center;
     margin: 0;
+    gap: 1em;
 }
 
 .nav-list li {
@@ -56,13 +64,16 @@ nav {
     opacity: 0;
     transition: opacity 0.3s ease, visibility 0.3s ease;
     border: none;
+    padding: 0;
 }
 
 .dropdown-content a {
     color: #333;
-    padding: 12px 16px;
+    padding: 10px 15px;
     text-decoration: none;
     display: block;
+    border: none;
+    margin: 0;
 }
 
 .dropdown-content a:hover {
@@ -76,6 +87,7 @@ nav {
 
 main {
     padding: 1em;
+    padding-bottom: 60px;
     text-align: center;
 }
 
@@ -84,7 +96,6 @@ footer {
     color: #333;
     text-align: center;
     padding: 1em 0;
-    position: fixed;
     width: 100%;
     bottom: 0;
 }
@@ -133,4 +144,16 @@ a:hover, a:active {
 .course-image-container a:hover {
     color: #0056b3; /* Adjust hover color */
     text-decoration: underline;
+}
+
+.sql_A {
+    text-align: left;
+}
+
+.sql_B {
+    text-align: left;
+}
+
+.sql_materials {
+    text-align: left;
 }
