@@ -148,6 +148,7 @@ a:hover, a:active {
     text-decoration: none;
     display: block;
     margin-top: 5px;
+    background-color: #f4f4f4;
 }
 
 .course-image-container a:hover {
