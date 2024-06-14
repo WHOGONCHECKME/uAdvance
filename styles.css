@@ -55,6 +55,7 @@ nav {
     z-index: 1;
     opacity: 0;
     transition: opacity 0.3s ease, visibility 0.3s ease;
+    border: none;
 }
 
 .dropdown-content a {
@@ -103,5 +104,33 @@ a:link, a:visited {
 
 a:hover, a:active {
     color: #0056b3;
+    text-decoration: underline;
+}
+
+/* Add styles for floating images with captions */
+.course-image-container {
+    float: left;
+    width: 20%; /* Adjust as needed to fit your layout */
+    margin: 10px;
+    text-align: center;
+}
+
+.course-image-container img {
+    width: 100%; /* Restricts the image width to the container width */
+    height: auto;
+    max-width: 200px; /* Sets a maximum width for the images */
+    border-radius: 8px;
+    background-color: #f4f4f4;
+}
+
+.course-image-container a {
+    color: #007BFF; /* Adjust link color */
+    text-decoration: none;
+    display: block;
+    margin-top: 5px;
+}
+
+.course-image-container a:hover {
+    color: #0056b3; /* Adjust hover color */
     text-decoration: underline;
 }
