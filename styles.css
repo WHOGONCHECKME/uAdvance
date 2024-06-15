@@ -39,6 +39,11 @@ nav {
     display: flex;
     justify-content: center;
     overflow-x: auto;
+    scrollbar-width: none; /* For Firefox */
+}
+
+.nav-container::-webkit-scrollbar {
+    display: none; /* For Chrome, Safari and Edge */
 }
 
 .nav-list {
