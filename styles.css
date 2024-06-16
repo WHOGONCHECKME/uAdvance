@@ -132,19 +132,40 @@ a:hover, a:active {
     text-decoration: underline;
 }
 
+.course-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.course-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 100px;
+    column-gap: 20px;
+    padding: 20px;
+    justify-content: center;
+    justify-items: center;
+}
+
 /* Add styles for floating images with captions */
 .course-image-container {
-    float: left;
-    width: 20%; /* Adjust as needed to fit your layout */
-    margin: 10px;
+    width: 100%; /* Ensure containers take full width of the grid column */
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* Align items to the bottom */
+    margin: 0;
+    padding: 0;
 }
 
 .course-image-container img {
-    width: 100%; /* Restricts the image width to the container width */
+    width: 100%; /* Image will take the full width of the container */
     height: auto;
-    max-width: 200px; /* Sets a maximum width for the images */
+    max-width: 100%; /* Ensure image respects the container width */
+    max-height: 200px;
     border-radius: 8px;
+    object-fit: contain;
     background-color: #f4f4f4;
 }
 
@@ -153,6 +174,7 @@ a:hover, a:active {
     text-decoration: none;
     display: block;
     margin-top: 5px;
+    margin: 0;
     background-color: #f4f4f4;
 }
 
