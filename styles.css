@@ -30,10 +30,6 @@ html, body {
     color: #333;
 }
 
-nav {
-    flex: 2;
-}
-
 .nav-container {
     flex: 1 1 auto;
     display: flex;
@@ -95,6 +91,7 @@ nav {
 .dropdown:hover .dropdown-content {
     display: block;
     opacity: 1;
+    visibility: visible;
 }
 
 main {

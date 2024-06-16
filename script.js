@@ -1,4 +1,5 @@
 // Add this script in a <script> tag before the closing </body> tag
+
 document.addEventListener('DOMContentLoaded', (event) => {
     const dropdown = document.querySelector('.dropdown');
     dropdown.addEventListener('mouseenter', () => {
