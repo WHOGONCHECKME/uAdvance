@@ -1,19 +1,36 @@
-// Add this script in a <script> tag before the closing </body> tag
-
+/*
 document.addEventListener('DOMContentLoaded', (event) => {
     const dropdown = document.querySelector('.dropdown');
-    dropdown.addEventListener('mouseenter', () => {
-        const dropdownContent = dropdown.querySelector('.dropdown-content');
-        dropdownContent.style.display = 'block';
-        setTimeout(() => {
-            dropdownContent.style.opacity = '1';
-        }, 0);
-    });
-    dropdown.addEventListener('mouseleave', () => {
-        const dropdownContent = dropdown.querySelector('.dropdown-content');
-        dropdownContent.style.opacity = '0';
-        setTimeout(() => {
-            dropdownContent.style.display = 'none';
-        }, 300); // Match this duration with the CSS transition duration
-    });
+    if (dropdown) {
+        console.log("Dropdown element found");
+        dropdown.addEventListener('mouseenter', () => {
+            console.log("Mouse entered dropdown");
+            const dropdownContent = dropdown.querySelector('.dropdown-content');
+            if (dropdownContent) {
+                dropdownContent.style.display = 'block';
+                setTimeout(() => {
+                    dropdownContent.style.opacity = '1';
+                    dropdownContent.style.visibility = 'visible';
+                }, 0);
+            } else {
+                console.log("Dropdown content not found");
+            }
+        });
+        dropdown.addEventListener('mouseleave', () => {
+            console.log("Mouse left dropdown");
+            const dropdownContent = dropdown.querySelector('.dropdown-content');
+            if (dropdownContent) {
+                dropdownContent.style.opacity = '0';
+                dropdownContent.style.visibility = 'hidden';
+                setTimeout(() => {
+                    dropdownContent.style.display = 'none';
+                }, 300);
+            } else {
+                console.log("Dropdown content not found");
+            }
+        });
+    } else {
+        console.log("Dropdown element not found");
+    }
 });
+*/

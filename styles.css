@@ -34,7 +34,7 @@ html, body {
     flex: 1 1 auto;
     display: flex;
     justify-content: center;
-    overflow-x: auto;
+    overflow-x: visible;
     scrollbar-width: none; /* For Firefox */
 }
 
@@ -49,6 +49,7 @@ html, body {
     justify-content: center;
     margin: 0;
     gap: 1em;
+    position: relative;
 }
 
 .nav-list li {
@@ -61,38 +62,50 @@ html, body {
     text-decoration: none;
 }
 
-/* Dropdown styles */
-.dropdown-content {
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content.no-marker {
     display: none;
     position: absolute;
     background-color: white;
-    min-width: 200px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    min-width: 160px;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
     z-index: 1;
-    opacity: 0;
+    padding: 0px;
+/*    opacity: 0;
+    visibility: hidden;
     transition: opacity 0.3s ease, visibility 0.3s ease;
     border: none;
     padding: 0;
+*/
 }
 
-.dropdown-content a {
+/* Not neccesary*/
+.dropdown-content.no-marker a {
     color: #333;
-    padding: 10px 15px;
+    padding: 12px 20px;
     text-decoration: none;
     display: block;
-    border: none;
-    margin: 0;
+    background-color: white;
+    border-bottom: 1px solid #eaeaea;
+    transition: background-color 0.3s ease;
 }
 
 .dropdown-content a:hover {
     background-color: #f1f1f1;
 }
 
-.dropdown:hover .dropdown-content {
+
+.dropdown:hover .dropdown-content.no-marker {
     display: block;
-    opacity: 1;
-    visibility: visible;
 }
+
+
+
+
 
 main {
     flex: 1;
