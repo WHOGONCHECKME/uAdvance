@@ -1,134 +1,186 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ELB94FEHDE"></script>
-    <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-ELB94FEHDE');
-    </script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Cache-Control" content="no-store, no cache, must-revalidate">
-    <meta http-equiv="Pragma" content="no-cache">
-    <meta http-equiv="Expires" content="0">
-    <title>Home - uAdvance</title>
-    <link rel="stylesheet" href="styles.css?v=1.0">
-    <link rel="icon" href="favicon/favicon.ico" type="image/x-icon">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Corporate training in data analytics, Excel, Power BI and machine learning for banks, insurers, wealth and super funds.">
+<meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<title>Home · uAdvance</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="icon" href="favicon/favicon.ico" type="image/x-icon">
+<link rel="stylesheet" href="assets/css/style.css">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ELB94FEHDE"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-ELB94FEHDE');
+</script>
 </head>
 <body>
-    <div class="wrapper">
-        <header>
-            <div class = "header-container">
-                <div class = "header-title">
-                    <h3>uAdvance</h3>
-                </div>
-                <nav class="nav-container">
-                    <ul class = "nav-list">
-                        <li><a href="index.html">Home</a></li>
-                        <li class="dropdown">
-                            <a href="courses.html">Courses</a>
-                            <ul class="dropdown-content no-marker">
-                                <li><a href="excel.html">Excel</a></li>
-                                <li><a href="sql.html">SQL Coding</a></li>
-                                <li><a href="r.html">R Coding</a></li>
-                                <li><a href="python.html">Python Coding</a></li>
-                                <li><a href="da.html">Data Analytics</a></li>
-                                <li><a href="ml.html">Machine Learning</a></li>
-                                <li><a href="pbi.html">Power BI</a></li>
-                                <li><a href="qlik.html">Qlik Sense</a></li>
-                                <li><a href="tableau.html">Tableau</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </header>
-        <main>
-            <section id="intro">
-                <h3>Welcome to uAdvance Learning & Development</h3>
-                <p>Give your staff the tools to give you the best output. uAdvance upskills staff into the advancing world of Coding, Data Analytics and Machine Learning within the Financial Services industry.</p>
-            </section>
-            <section>
-                <h3>Who is this for:</h3>
-                <p>
-                    Professionals who want to become more efficient in a data driven world. Whether you have never touched computer programming or data science before or you want to brush up your skills, uAdvance is the place to learn it.
-                </p>
-            </section>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="index.html">uAdvance</a>
+    <nav class="nav" aria-label="Primary">
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation">☰</button>
+      <ul id="nav-menu" class="nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li class="has-submenu">
+          <a href="courses.html">Courses</a>
+          <ul class="submenu" aria-label="Courses">
+            <li><a href="excel.html">Excel</a></li>
+            <li><a href="da.html">Data Analytics</a></li>
+            <li><a href="pbi.html">Power BI</a></li>
+            <li><a href="ml.html">Machine Learning</a></li>
+          </ul>
+        </li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main class="site-main">
 
-            <section id="courses" class="course-container">
-                <div class="course-grid">
-                    <div class="course-image-container">
-                        <a href="excel.html">
-                            <img src="images/excel.jpg" alt="Excel">Excel
-                        </a>
-                    </div>
-                    <div class="course-image-container">
-                        <a href="sql.html">
-                            <img src="images/sql.jpg" alt="SQL Coding">SQL Coding
-                        </a>                        
-                    </div>
-                    <div class="course-image-container">
-                        <a href="r.html">
-                            <img src="images/r.jpg" alt="R Coding">R Coding
-                        </a>                        
-                    </div>
-                    <div class="course-image-container">
-                        <a href="python.html">
-                            <img src="images/python.jpg" alt="Python Coding">Python Coding
-                        </a>                        
-                    </div>
-                    <div class="course-image-container">
-                        <a href="da.html">
-                            <img src="images/da.jpg" alt="Data Analytics">Data Analytics
-                        </a>
-                    </div>
-                    <div class="course-image-container">
-                        <a href="ml.html">
-                            <img src="images/ml.jpg" alt="Machine Learning">Machine Learning
-                        </a>                        
-                    </div>
-                    <div class="course-image-container">
-                        <a href="pbi.html">
-                            <img src="images/pbi.jpg" alt="Power BI">Power BI
-                        </a>                        
-                    </div>
-                    <div class="course-image-container">
-                        <a href="qlik.html">
-                            <img src="images/qlik.jpg" alt="Qlik Sense">Qlik Sense
-                        </a>                        
-                    </div>
-                    <div class="course-image-container">
-                        <a href="tableau.html">
-                            <img src="images/tableau.jpg" alt="Tableau">Tableau
-                        </a>                        
-                    </div>
-                </div>
-            </section>
-        </main>
-        <footer>
-            <p>&copy; 2025 uAdvance all rights reserved</p>
-        </footer>
+<section class="hero">
+  <div class="container hero-grid">
+    <div class="hero-text">
+      <h1>Modern data & analytics training for financial services</h1>
+      <p>Short, hands‑on programs tailored for large corporate teams — banks, insurers, and super funds. We teach your staff to deliver value with Excel, Power BI, Python/R, and machine learning — with real financial datasets and practical workflows.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-primary" href="courses.html">Browse courses</a>
+        <a class="btn btn-secondary" href="contact.html">Request a proposal</a>
+      </div>
+      <ul class="badge-list">
+        <li>1–2 day workshops or modular programs</li>
+        <li>On‑site or virtual delivery</li>
+        <li>Designed for finance, risk, actuarial & operations</li>
+      </ul>
     </div>
-    <script src="script.js?v=1.0"></script>
+    <div class="hero-card">
+      <div class="kpi">
+        <div class="kpi-number">98%</div>
+        <div class="kpi-label">would recommend</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-number">+3×</div>
+        <div class="kpi-label">productivity lift*</div>
+      </div>
+      <div class="kpi-note">*Based on post‑course surveys & case studies.</div>
+    </div>
+  </div>
+</section>
+
+<section class="trust">
+  <div class="container">
+    <h2>Built for regulated enterprises</h2>
+    <p>Content emphasises auditability, controls, and reproducible workflows suitable for APRA/ASIC‑regulated environments.</p>
+    <div class="pill-row">
+      <span class="pill">Data governance</span>
+      <span class="pill">Model risk management</span>
+      <span class="pill">Version control</span>
+      <span class="pill">Documentation standards</span>
+      <span class="pill">Privacy & security</span>
+    </div>
+  </div>
+</section>
+
+<section class="cards container">
+  <h2>Popular courses</h2>
+  <div class="card-grid">
+    <a class="card" href="excel.html">
+      <h3>Excel for Analytics</h3>
+      <p>From clean data to robust, auditable analysis. Shortcuts, dynamic arrays, data models and more.</p>
+      <span class="card-link">View course →</span>
+    </a>
+    <a class="card" href="pbi.html">
+      <h3>Power BI for Reporting</h3>
+      <p>Model data, write DAX you can trust, and publish secure, reliable dashboards.</p>
+      <span class="card-link">View course →</span>
+    </a>
+    <a class="card" href="da.html">
+      <h3>Data Analytics Fundamentals</h3>
+      <p>Sampling, inference, segmentation and forecasting — taught with real FS data.</p>
+      <span class="card-link">View course →</span>
+    </a>
+    <a class="card" href="ml.html">
+      <h3>Machine Learning Essentials</h3>
+      <p>From regression to trees and model evaluation, with a focus on explainability.</p>
+      <span class="card-link">View course →</span>
+    </a>
+  </div>
+</section>
+
+<section class="container split">
+  <div>
+    <h2>Delivery that fits your team</h2>
+    <ul class="checklist">
+      <li>Pre‑course skills survey to calibrate difficulty</li>
+      <li>Industry‑specific case studies (banking, insurance, super)</li>
+      <li>BYO datasets option under NDA</li>
+      <li>Action plans and templates for immediate adoption</li>
+    </ul>
+  </div>
+  <div class="panel">
+    <h3>Capabilities</h3>
+    <ul class="bullets tight">
+      <li>Spreadsheet modelling & controls</li>
+      <li>Data cleaning, joins & transformations</li>
+      <li>Descriptive & inferential statistics</li>
+      <li>Forecasting & scenario analysis</li>
+      <li>Dashboards & storytelling</li>
+      <li>Intro to Python/R and SQL (optional)</li>
+    </ul>
+  </div>
+</section>
+
+<section class="cta container">
+  <div class="cta-inner">
+    <h2>Ready to upskill your team?</h2>
+    <p>Tell us your objectives and constraints. We’ll tailor a program for your business unit.</p>
+    <a class="btn btn-primary" href="contact.html">Contact us</a>
+  </div>
+</section>
+
+</main>
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <div class="brand">uAdvance</div>
+      <p>Corporate training for financial services: banks, insurers, super funds and wealth managers.</p>
+    </div>
+    <div>
+      <h4>Courses</h4>
+      <ul>
+        <li><a href="excel.html">Excel</a></li>
+        <li><a href="da.html">Data Analytics</a></li>
+        <li><a href="pbi.html">Power BI</a></li>
+        <li><a href="ml.html">Machine Learning</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Company</h4>
+      <ul>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="courses.html">All Courses</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Get in touch</h4>
+      <ul>
+        <li><a href="mailto:hello@uadvance.com.au">hello@uadvance.com.au</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <small>&copy; {datetime.datetime.now().year} uAdvance. All rights reserved.</small>
+  </div>
+</footer>
+<script src="assets/js/main.js"></script>
 </body>
 </html>
-
-
-<!--
-
-# Add all changed files to the staging area
-git add .
-
-# Commit the changes with a descriptive message
-git commit -m "Describe your changes here"
-
-# Push the committed changes to the remote repository on GitHub
-git push origin main
-
--->

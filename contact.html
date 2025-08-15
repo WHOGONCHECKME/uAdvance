@@ -1,68 +1,124 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ELB94FEHDE"></script>
-    <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-ELB94FEHDE');
-    </script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Cache-Control" content="no-store, no cache, must-revalidate">
-    <meta http-equiv="Pragma" content="no-cache">
-    <meta http-equiv="Expires" content="0">
-    <title>Contact - uAdvnace</title>
-    <link rel="stylesheet" href="styles.css?v=1.0">
-    <link rel="icon" href="favicon/favicon.ico" type="image/x-icon">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Corporate training in data analytics, Excel, Power BI and machine learning for banks, insurers, wealth and super funds.">
+<meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<title>Contact · uAdvance</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="icon" href="favicon/favicon.ico" type="image/x-icon">
+<link rel="stylesheet" href="assets/css/style.css">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ELB94FEHDE"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-ELB94FEHDE');
+</script>
 </head>
 <body>
-    <div class="wrapper">
-        <header class="header-container">
-            <div class="header-title">
-                <h3>uAdvance</h3>
-            </div>
-            <nav class="nav-container">
-                <nav>
-                    <ul class="nav-list">
-                        <li><a href="index.html">Home</a></li>
-                        <li class="dropdown">
-                            <a href="courses.html">Courses</a>
-                            <ul class="dropdown-content no-marker">
-                                <li><a href="excel.html">Excel</a></li>
-                                <li><a href="sql.html">SQL Coding</a></li>
-                                <li><a href="r.html">R Coding</a></li>
-                                <li><a href="python.html">Python Coding</a></li>
-                                <li><a href="da.html">Data Analytics</a></li>
-                                <li><a href="ml.html"> Machine Learning</a></li>
-                                <li><a href="pbi.html">Power BI</a></li>
-                                <li><a href="qlik.html">Qlik</a></li>
-                                <li><a href="tableau.html"> Tableau</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </nav>
-            </nav>    
-        </header>
-        <main>
-            <section>
-                <h2>Contact Details</h2>
-            <h4>
-                Email: admin@uadvance.com.au
-            </br>
-                Phone: 0407 364 814
-            </h4>
-            </section>
-        </main>
-        <footer>
-            <p>&copy; 2025 uAdvance all rights reserved</p>
-        </footer>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="index.html">uAdvance</a>
+    <nav class="nav" aria-label="Primary">
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation">☰</button>
+      <ul id="nav-menu" class="nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li class="has-submenu">
+          <a href="courses.html">Courses</a>
+          <ul class="submenu" aria-label="Courses">
+            <li><a href="excel.html">Excel</a></li>
+            <li><a href="da.html">Data Analytics</a></li>
+            <li><a href="pbi.html">Power BI</a></li>
+            <li><a href="ml.html">Machine Learning</a></li>
+          </ul>
+        </li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main class="site-main">
+
+<section class="page-hero">
+  <div class="container narrow">
+    <h1>Contact</h1>
+    <p>Tell us your objectives, audience and constraints. We’ll send a tailored outline.</p>
+  </div>
+</section>
+
+<section class="container narrow">
+  <form class="contact-form" action="mailto:hello@uadvance.com.au" method="post" enctype="text/plain">
+    <div class="grid-2">
+      <div>
+        <label for="name">Name</label>
+        <input id="name" name="name" type="text" required>
+      </div>
+      <div>
+        <label for="email">Work email</label>
+        <input id="email" name="email" type="email" required>
+      </div>
     </div>
-    <script src="script.js?v=1.0"></script>
+    <div class="grid-2">
+      <div>
+        <label for="org">Organisation</label>
+        <input id="org" name="organisation" type="text">
+      </div>
+      <div>
+        <label for="team">Team / function</label>
+        <input id="team" name="team" type="text">
+      </div>
+    </div>
+    <div>
+      <label for="message">Objectives / context</label>
+      <textarea id="message" name="message" rows="6" placeholder="e.g., Upskill 30 analysts in Power BI; focus on DAX, governance, and report publishing..."></textarea>
+    </div>
+    <button class="btn btn-primary" type="submit">Send</button>
+    <p class="form-note">Prefer email? Write to <a href="mailto:hello@uadvance.com.au">hello@uadvance.com.au</a>.</p>
+  </form>
+</section>
+
+</main>
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <div class="brand">uAdvance</div>
+      <p>Corporate training for financial services: banks, insurers, super funds and wealth managers.</p>
+    </div>
+    <div>
+      <h4>Courses</h4>
+      <ul>
+        <li><a href="excel.html">Excel</a></li>
+        <li><a href="da.html">Data Analytics</a></li>
+        <li><a href="pbi.html">Power BI</a></li>
+        <li><a href="ml.html">Machine Learning</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Company</h4>
+      <ul>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="courses.html">All Courses</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Get in touch</h4>
+      <ul>
+        <li><a href="mailto:hello@uadvance.com.au">hello@uadvance.com.au</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <small>&copy; {datetime.datetime.now().year} uAdvance. All rights reserved.</small>
+  </div>
+</footer>
+<script src="assets/js/main.js"></script>
 </body>
 </html>
