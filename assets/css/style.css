@@ -31,7 +31,7 @@ body{
 .nav-list a{color:var(--text);text-decoration:none;opacity:.9}
 .nav-list a:hover{opacity:1}
 .has-submenu{position:relative}
-.submenu{display:none;position:absolute;top:calc(100% + 10px);left:0;background:var(--panel);border:1px solid var(--border);border-radius:12px;min-width:220px;padding:8px 0;box-shadow:var(--shadow)}
+.submenu{display:none;position:absolute;top:100%;left:0;background:var(--panel);border:1px solid var(--border);border-radius:12px;min-width:220px;padding:8px 0;box-shadow:var(--shadow)}
 .has-submenu:hover .submenu{display:block}
 .submenu li{list-style:none}
 .submenu a{display:block;padding:10px 14px}
