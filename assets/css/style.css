@@ -123,8 +123,10 @@ input:focus,textarea:focus{outline:2px solid var(--brand);border-color:var(--bra
   .split{grid-template-columns:1fr}
   .footer-grid{grid-template-columns:1fr 1fr}
   .grid-2{grid-template-columns:1fr}
-  .submenu{position:static;display:block;background:transparent;border:none;padding:0}
-  .has-submenu:hover .submenu{display:block}
+  .submenu{position:static;display:none;background:transparent;border:none;padding:0;margin-top:6px}
+  .has-submenu.open .submenu{display:block}
+  .has-submenu > a{display:flex;align-items:center;justify-content:space-between}
+  .has-submenu > a::after{content:"▾";opacity:.8;font-size:12px;margin-left:8px}
 }
 @media (max-width: 560px){
   .card-grid{grid-template-columns:1fr}
