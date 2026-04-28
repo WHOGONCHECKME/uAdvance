@@ -1,12 +1,961 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>News</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>uAdvance — News</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  /* ── Reset & Variables ── */
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg:        #0f0f0e;
+    --bg2:       #161614;
+    --bg3:       #1e1e1b;
+    --bg4:       #252521;
+    --line:      #2e2e2a;
+    --line2:     #3a3a35;
+    --text:      #e8e6df;
+    --muted:     #888780;
+    --faint:     #555450;
+    --accent:    #c8a96e;
+    --accent2:   #e8c98a;
+    --pill-web:  #1a3a2e;
+    --pill-webt: #5dcaa5;
+    --pill-news: #1a2a3e;
+    --pill-newst:#85b7eb;
+    --pill-other:#2e2018;
+    --pill-othert:#ef9f27;
+    --serif: 'Instrument Serif', Georgia, serif;
+    --sans:  'DM Sans', sans-serif;
+    --sidebar: 360px;
+    --chat-h: 320px;
+  }
+
+  body {
+    font-family: var(--sans);
+    background: var(--bg);
+    color: var(--text);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    font-size: 14px;
+  }
+
+  /* ── Top bar ── */
+  header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 0 24px;
+    height: 52px;
+    border-bottom: 1px solid var(--line);
+    flex-shrink: 0;
+    background: var(--bg);
+  }
+  .logo {
+    font-family: var(--serif);
+    font-size: 20px;
+    color: var(--accent);
+    letter-spacing: -0.3px;
+    white-space: nowrap;
+  }
+  .logo span { color: var(--muted); font-style: italic; }
+  .header-meta {
+    font-size: 12px;
+    color: var(--faint);
+    margin-left: auto;
+  }
+  #article-count { color: var(--accent); font-weight: 500; }
+
+  /* ── Layout ── */
+  .layout {
+    display: flex;
+    flex: 1;
+    min-height: 0;
+  }
+
+  /* ── Sidebar ── */
+  .sidebar {
+    width: var(--sidebar);
+    flex-shrink: 0;
+    border-right: 1px solid var(--line);
+    display: flex;
+    flex-direction: column;
+    background: var(--bg2);
+  }
+
+  .filters {
+    padding: 14px 16px 12px;
+    border-bottom: 1px solid var(--line);
+    flex-shrink: 0;
+  }
+  .filter-row {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    margin-bottom: 8px;
+  }
+  .filter-row:last-child { margin-bottom: 0; }
+
+  .filter-label {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--faint);
+    width: 44px;
+    flex-shrink: 0;
+  }
+  .filter-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+  .chip {
+    font-size: 11px;
+    padding: 3px 9px;
+    border-radius: 20px;
+    border: 1px solid var(--line2);
+    background: transparent;
+    color: var(--muted);
+    cursor: pointer;
+    transition: all 0.15s;
+    font-family: var(--sans);
+    white-space: nowrap;
+  }
+  .chip:hover { border-color: var(--faint); color: var(--text); }
+  .chip.active { border-color: var(--accent); color: var(--accent); background: rgba(200,169,110,0.08); }
+
+  .search-wrap {
+    position: relative;
+    margin-bottom: 0;
+  }
+  .search-wrap input {
+    width: 100%;
+    background: var(--bg3);
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    padding: 7px 10px 7px 32px;
+    color: var(--text);
+    font-size: 13px;
+    font-family: var(--sans);
+    outline: none;
+    transition: border-color 0.15s;
+  }
+  .search-wrap input:focus { border-color: var(--accent); }
+  .search-wrap input::placeholder { color: var(--faint); }
+  .search-icon {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--faint);
+    font-size: 13px;
+    pointer-events: none;
+  }
+
+  /* ── Article list ── */
+  .article-list {
+    flex: 1;
+    overflow-y: auto;
+    padding: 6px 0;
+  }
+  .article-list::-webkit-scrollbar { width: 4px; }
+  .article-list::-webkit-scrollbar-track { background: transparent; }
+  .article-list::-webkit-scrollbar-thumb { background: var(--line2); border-radius: 2px; }
+
+  .article-card {
+    padding: 13px 16px;
+    border-bottom: 1px solid var(--line);
+    cursor: pointer;
+    transition: background 0.12s;
+    position: relative;
+  }
+  .article-card:hover { background: var(--bg3); }
+  .article-card.active { background: var(--bg3); }
+  .article-card.active::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 0; bottom: 0;
+    width: 3px;
+    background: var(--accent);
+    border-radius: 0 2px 2px 0;
+  }
+
+  .card-meta {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 5px;
+  }
+  .cat-pill {
+    font-size: 10px;
+    padding: 2px 7px;
+    border-radius: 10px;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+  .cat-web  { background: var(--pill-web);  color: var(--pill-webt); }
+  .cat-news { background: var(--pill-news); color: var(--pill-newst); }
+  .cat-other{ background: var(--pill-other); color: var(--pill-othert); }
+
+  .card-date {
+    font-size: 11px;
+    color: var(--faint);
+    margin-left: auto;
+  }
+  .card-title {
+    font-family: var(--serif);
+    font-size: 14.5px;
+    line-height: 1.35;
+    color: var(--text);
+    margin-bottom: 5px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  .card-summary {
+    font-size: 12px;
+    line-height: 1.5;
+    color: var(--muted);
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  .card-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    margin-top: 6px;
+  }
+  .tag {
+    font-size: 10px;
+    padding: 2px 6px;
+    border-radius: 4px;
+    background: var(--bg4);
+    color: var(--faint);
+    border: 1px solid var(--line);
+  }
+
+  .empty-state {
+    padding: 40px 20px;
+    text-align: center;
+    color: var(--faint);
+    font-size: 13px;
+  }
+
+  /* ── Main panel ── */
+  .main {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .article-view {
+    flex: 1;
+    overflow-y: auto;
+    padding: 36px 48px 24px;
+  }
+  .article-view::-webkit-scrollbar { width: 4px; }
+  .article-view::-webkit-scrollbar-track { background: transparent; }
+  .article-view::-webkit-scrollbar-thumb { background: var(--line2); border-radius: 2px; }
+
+  /* Placeholder state */
+  .placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    gap: 12px;
+    color: var(--faint);
+  }
+  .placeholder-icon { font-size: 32px; opacity: 0.4; }
+  .placeholder p { font-size: 14px; }
+
+  /* Article content */
+  .article-header { margin-bottom: 28px; }
+  .article-pub-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+    flex-wrap: wrap;
+  }
+  .article-publication {
+    font-size: 12px;
+    color: var(--accent);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+  .article-date { font-size: 12px; color: var(--faint); }
+  .article-title {
+    font-family: var(--serif);
+    font-size: 28px;
+    line-height: 1.25;
+    color: var(--text);
+    margin-bottom: 14px;
+    font-weight: 400;
+  }
+  .article-relevance {
+    font-size: 13px;
+    color: var(--muted);
+    line-height: 1.55;
+    padding: 12px 16px;
+    border-left: 3px solid var(--accent);
+    background: rgba(200,169,110,0.05);
+    border-radius: 0 6px 6px 0;
+    margin-bottom: 16px;
+    font-style: italic;
+  }
+  .article-key-points {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 20px;
+  }
+  .kp {
+    font-size: 13px;
+    color: var(--muted);
+    padding-left: 16px;
+    position: relative;
+    line-height: 1.5;
+  }
+  .kp::before {
+    content: '—';
+    position: absolute;
+    left: 0;
+    color: var(--faint);
+  }
+  .article-divider {
+    border: none;
+    border-top: 1px solid var(--line);
+    margin: 24px 0;
+  }
+  .article-body {
+    font-size: 15px;
+    line-height: 1.75;
+    color: #c8c6bf;
+    white-space: pre-wrap;
+    word-break: break-word;
+  }
+  .article-source-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 20px;
+    font-size: 12px;
+    color: var(--accent);
+    text-decoration: none;
+    border: 1px solid rgba(200,169,110,0.3);
+    padding: 6px 12px;
+    border-radius: 6px;
+    transition: background 0.15s;
+  }
+  .article-source-link:hover { background: rgba(200,169,110,0.08); }
+
+  /* ── Chat panel ── */
+  .chat-panel {
+    border-top: 1px solid var(--line);
+    background: var(--bg2);
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    transition: height 0.2s ease;
+  }
+  .chat-panel.collapsed { height: 42px; overflow: hidden; }
+  .chat-panel:not(.collapsed) { height: var(--chat-h); }
+
+  .chat-toggle {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 0 16px;
+    height: 42px;
+    cursor: pointer;
+    flex-shrink: 0;
+    border-bottom: 1px solid var(--line);
+    user-select: none;
+    transition: background 0.12s;
+  }
+  .chat-toggle:hover { background: var(--bg3); }
+  .chat-toggle-label {
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+  .chat-model-badge {
+    font-size: 10px;
+    padding: 2px 7px;
+    border-radius: 10px;
+    background: var(--bg4);
+    color: var(--faint);
+    border: 1px solid var(--line);
+    margin-left: auto;
+  }
+  .chat-chevron {
+    font-size: 10px;
+    color: var(--faint);
+    transition: transform 0.2s;
+  }
+  .chat-panel:not(.collapsed) .chat-chevron { transform: rotate(180deg); }
+
+  .chat-messages {
+    flex: 1;
+    overflow-y: auto;
+    padding: 10px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    min-height: 0;
+  }
+  .chat-messages::-webkit-scrollbar { width: 3px; }
+  .chat-messages::-webkit-scrollbar-thumb { background: var(--line2); border-radius: 2px; }
+
+  .msg {
+    max-width: 85%;
+    padding: 8px 12px;
+    border-radius: 10px;
+    font-size: 13px;
+    line-height: 1.5;
+  }
+  .msg-user {
+    background: rgba(200,169,110,0.12);
+    color: var(--text);
+    align-self: flex-end;
+    border: 1px solid rgba(200,169,110,0.2);
+  }
+  .msg-ai {
+    background: var(--bg3);
+    color: var(--muted);
+    align-self: flex-start;
+    border: 1px solid var(--line);
+  }
+  .msg-thinking {
+    color: var(--faint);
+    font-style: italic;
+    font-size: 12px;
+    align-self: flex-start;
+  }
+
+  .chat-input-row {
+    display: flex;
+    gap: 8px;
+    padding: 10px 16px;
+    border-top: 1px solid var(--line);
+    flex-shrink: 0;
+    align-items: flex-end;
+  }
+  .chat-context-note {
+    font-size: 10px;
+    color: var(--faint);
+    margin-bottom: 4px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+  }
+  .chat-input-wrap { flex: 1; display: flex; flex-direction: column; }
+  .chat-input {
+    background: var(--bg3);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 8px 12px;
+    color: var(--text);
+    font-size: 13px;
+    font-family: var(--sans);
+    outline: none;
+    resize: none;
+    min-height: 38px;
+    max-height: 100px;
+    transition: border-color 0.15s;
+    line-height: 1.4;
+  }
+  .chat-input:focus { border-color: var(--accent); }
+  .chat-input::placeholder { color: var(--faint); }
+
+  .chat-send {
+    background: var(--accent);
+    color: var(--bg);
+    border: none;
+    border-radius: 8px;
+    padding: 8px 14px;
+    font-size: 13px;
+    font-family: var(--sans);
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.15s, opacity 0.15s;
+    white-space: nowrap;
+    height: 38px;
+  }
+  .chat-send:hover { background: var(--accent2); }
+  .chat-send:disabled { opacity: 0.4; cursor: not-allowed; }
+
+  /* ── API key modal ── */
+  .modal-bg {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    backdrop-filter: blur(4px);
+  }
+  .modal-bg.hidden { display: none; }
+  .modal {
+    background: var(--bg2);
+    border: 1px solid var(--line2);
+    border-radius: 12px;
+    padding: 28px;
+    width: 400px;
+    max-width: 90vw;
+  }
+  .modal h2 {
+    font-family: var(--serif);
+    font-size: 20px;
+    color: var(--text);
+    margin-bottom: 8px;
+    font-weight: 400;
+  }
+  .modal p { font-size: 13px; color: var(--muted); margin-bottom: 16px; line-height: 1.5; }
+  .modal input {
+    width: 100%;
+    background: var(--bg3);
+    border: 1px solid var(--line2);
+    border-radius: 8px;
+    padding: 10px 14px;
+    color: var(--text);
+    font-size: 13px;
+    font-family: var(--sans);
+    outline: none;
+    margin-bottom: 12px;
+    transition: border-color 0.15s;
+  }
+  .modal input:focus { border-color: var(--accent); }
+  .modal-note { font-size: 11px; color: var(--faint); margin-bottom: 16px; line-height: 1.5; }
+  .modal-btn {
+    background: var(--accent);
+    color: var(--bg);
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 13px;
+    font-family: var(--sans);
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.15s;
+  }
+  .modal-btn:hover { background: var(--accent2); }
+
+  /* ── Loading spinner ── */
+  .spinner {
+    display: inline-block;
+    width: 14px; height: 14px;
+    border: 2px solid var(--line2);
+    border-top-color: var(--accent);
+    border-radius: 50%;
+    animation: spin 0.6s linear infinite;
+    vertical-align: middle;
+    margin-right: 6px;
+  }
+  @keyframes spin { to { transform: rotate(360deg); } }
+
+  /* ── Scrollbar global ── */
+  * { scrollbar-width: thin; scrollbar-color: var(--line2) transparent; }
+</style>
 </head>
 <body>
-  <h1>Daily News</h1>
-  <p>This page is working.</p>
+
+<!-- API Key Modal -->
+<div class="modal-bg" id="key-modal">
+  <div class="modal">
+    <h2>OpenAI API Key</h2>
+    <p>Enter your OpenAI API key to enable the chat assistant. Your key is stored only in this browser session and never sent anywhere except directly to OpenAI.</p>
+    <input type="password" id="key-input" placeholder="sk-..." autocomplete="off">
+    <p class="modal-note">You can change this at any time by clicking the model badge in the chat panel.</p>
+    <button class="modal-btn" onclick="saveKey()">Save &amp; Continue</button>
+    <button class="modal-btn" style="background:transparent;color:var(--muted);margin-left:8px" onclick="dismissModal()">Skip for now</button>
+  </div>
+</div>
+
+<header>
+  <div class="logo">uAdvance <span>/ news</span></div>
+  <div class="header-meta"><span id="article-count">0</span> articles loaded</div>
+</header>
+
+<div class="layout">
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="filters">
+      <div class="filter-row">
+        <div class="filter-label">Search</div>
+        <div class="search-wrap" style="flex:1">
+          <span class="search-icon">⌕</span>
+          <input type="text" id="search-input" placeholder="Search titles, summaries…">
+        </div>
+      </div>
+      <div class="filter-row">
+        <div class="filter-label">Category</div>
+        <div class="filter-chips" id="cat-chips"></div>
+      </div>
+      <div class="filter-row">
+        <div class="filter-label">Sort</div>
+        <div class="filter-chips">
+          <button class="chip active" data-sort="date-desc" onclick="setSort(this)">Newest</button>
+          <button class="chip" data-sort="date-asc" onclick="setSort(this)">Oldest</button>
+          <button class="chip" data-sort="alpha" onclick="setSort(this)">A–Z</button>
+        </div>
+      </div>
+    </div>
+    <div class="article-list" id="article-list"></div>
+  </aside>
+
+  <!-- Main -->
+  <div class="main">
+    <div class="article-view" id="article-view">
+      <div class="placeholder" id="placeholder">
+        <div class="placeholder-icon">◈</div>
+        <p>Select an article to read</p>
+      </div>
+      <div id="article-content" style="display:none"></div>
+    </div>
+
+    <!-- Chat -->
+    <div class="chat-panel collapsed" id="chat-panel">
+      <div class="chat-toggle" onclick="toggleChat()">
+        <span style="font-size:13px">◇</span>
+        <span class="chat-toggle-label">Ask ChatGPT</span>
+        <span class="chat-model-badge" id="model-badge" onclick="event.stopPropagation();openKeyModal()">gpt-4o · set key</span>
+        <span class="chat-chevron">▲</span>
+      </div>
+      <div class="chat-messages" id="chat-messages">
+        <div class="msg msg-ai">Hi! Ask me anything about the articles you're reading. I'll use the current article as context when you have one open.</div>
+      </div>
+      <div class="chat-input-row">
+        <div class="chat-input-wrap">
+          <div class="chat-context-note" id="chat-context-note">No article selected — ask general questions</div>
+          <textarea class="chat-input" id="chat-input" placeholder="Ask a question…" rows="1" onkeydown="handleChatKey(event)"></textarea>
+        </div>
+        <button class="chat-send" id="chat-send" onclick="sendChat()">Send</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+// ── State ──────────────────────────────────────────────────────────────────
+let allArticles = [];
+let filteredArticles = [];
+let activeCategory = 'All';
+let activeSort = 'date-desc';
+let selectedArticle = null;
+let openaiKey = sessionStorage.getItem('oai_key') || '';
+
+// ── Boot ───────────────────────────────────────────────────────────────────
+async function init() {
+  // Show key modal if no key set
+  if (!openaiKey) {
+    document.getElementById('key-modal').classList.remove('hidden');
+  } else {
+    document.getElementById('key-modal').classList.add('hidden');
+    updateModelBadge();
+  }
+
+  try {
+    const res = await fetch('articles_index.json');
+    if (!res.ok) throw new Error('not found');
+    allArticles = await res.json();
+  } catch {
+    // Dev fallback: use sample data so the page is usable without the file
+    allArticles = getSampleArticles();
+  }
+
+  document.getElementById('article-count').textContent = allArticles.length;
+  buildCategoryChips();
+  applyFilters();
+}
+
+// ── Filters ────────────────────────────────────────────────────────────────
+function buildCategoryChips() {
+  const cats = ['All', ...new Set(allArticles.map(a => a.category || 'Other').filter(Boolean))];
+  const wrap = document.getElementById('cat-chips');
+  wrap.innerHTML = cats.map(c =>
+    `<button class="chip${c === 'All' ? ' active' : ''}" onclick="setCategory(this,'${c}')">${c}</button>`
+  ).join('');
+}
+
+function setCategory(el, cat) {
+  document.querySelectorAll('#cat-chips .chip').forEach(c => c.classList.remove('active'));
+  el.classList.add('active');
+  activeCategory = cat;
+  applyFilters();
+}
+
+function setSort(el) {
+  document.querySelectorAll('[data-sort]').forEach(c => c.classList.remove('active'));
+  el.classList.add('active');
+  activeSort = el.dataset.sort;
+  applyFilters();
+}
+
+document.getElementById('search-input').addEventListener('input', applyFilters);
+
+function applyFilters() {
+  const q = document.getElementById('search-input').value.toLowerCase().trim();
+  let list = [...allArticles];
+
+  if (activeCategory !== 'All') list = list.filter(a => (a.category || 'Other') === activeCategory);
+  if (q) list = list.filter(a =>
+    (a.title || '').toLowerCase().includes(q) ||
+    (a.summary || '').toLowerCase().includes(q) ||
+    (a.publication || '').toLowerCase().includes(q) ||
+    (a.tags || []).some(t => t.toLowerCase().includes(q))
+  );
+
+  if (activeSort === 'date-desc') list.sort((a,b) => (b.published_date||b.scraped_at||'').localeCompare(a.published_date||a.scraped_at||''));
+  else if (activeSort === 'date-asc') list.sort((a,b) => (a.published_date||a.scraped_at||'').localeCompare(b.published_date||b.scraped_at||''));
+  else if (activeSort === 'alpha') list.sort((a,b) => (a.title||'').localeCompare(b.title||''));
+
+  filteredArticles = list;
+  renderList();
+}
+
+// ── Render list ────────────────────────────────────────────────────────────
+function renderList() {
+  const el = document.getElementById('article-list');
+  if (!filteredArticles.length) {
+    el.innerHTML = '<div class="empty-state">No articles match your filters.</div>';
+    return;
+  }
+  el.innerHTML = filteredArticles.map((a, i) => {
+    const cat = (a.category || 'Other').toLowerCase();
+    const catClass = cat === 'web' ? 'cat-web' : cat === 'news' ? 'cat-news' : 'cat-other';
+    const date = formatDate(a.published_date);
+    const tags = (a.tags || []).slice(0,3).map(t => `<span class="tag">${t}</span>`).join('');
+    const isActive = selectedArticle && selectedArticle.id === a.id ? ' active' : '';
+    return `<div class="article-card${isActive}" onclick="selectArticle(${i})">
+      <div class="card-meta">
+        <span class="cat-pill ${catClass}">${a.category || 'Other'}</span>
+        <span class="card-date">${date}</span>
+      </div>
+      <div class="card-title">${a.title || 'Untitled'}</div>
+      ${a.summary ? `<div class="card-summary">${a.summary}</div>` : ''}
+      ${tags ? `<div class="card-tags">${tags}</div>` : ''}
+    </div>`;
+  }).join('');
+}
+
+// ── Select article ─────────────────────────────────────────────────────────
+async function selectArticle(index) {
+  const article = filteredArticles[index];
+  selectedArticle = article;
+  renderList(); // refresh active state
+
+  // Load full text from individual JSON file
+  let fullText = article.full_text || '';
+  if (!fullText && article.filename) {
+    try {
+      const res = await fetch(`articles/${article.filename}`);
+      if (res.ok) {
+        const data = await res.json();
+        fullText = data.full_text || '';
+        selectedArticle = { ...article, full_text: fullText };
+      }
+    } catch {}
+  }
+
+  renderArticle(selectedArticle, fullText);
+  updateChatContext(selectedArticle);
+}
+
+function renderArticle(a, fullText) {
+  document.getElementById('placeholder').style.display = 'none';
+  const el = document.getElementById('article-content');
+  el.style.display = 'block';
+
+  const date = formatDate(a.published_date);
+  const kps = (a.key_points || []).map(p => `<div class="kp">${p}</div>`).join('');
+  const sourceLink = a.final_url
+    ? `<a class="article-source-link" href="${a.final_url}" target="_blank">↗ View original source</a>`
+    : a.factiva_url
+    ? `<a class="article-source-link" href="${a.factiva_url}" target="_blank">↗ View on Factiva</a>`
+    : '';
+
+  el.innerHTML = `
+    <div class="article-header">
+      <div class="article-pub-row">
+        ${a.publication ? `<span class="article-publication">${a.publication}</span>` : ''}
+        ${date ? `<span class="article-date">${date}</span>` : ''}
+        ${a.word_count ? `<span class="article-date">· ${a.word_count} words</span>` : ''}
+      </div>
+      <h1 class="article-title">${a.title || 'Untitled'}</h1>
+      ${a.relevance ? `<div class="article-relevance">${a.relevance}</div>` : ''}
+      ${kps ? `<div class="article-key-points">${kps}</div>` : ''}
+    </div>
+    <hr class="article-divider">
+    <div class="article-body">${fullText || '<em style="color:var(--faint)">Full text not available. View the original source below.</em>'}</div>
+    <div style="margin-top:24px">${sourceLink}</div>
+  `;
+
+  // Scroll article view to top
+  document.getElementById('article-view').scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+// ── Chat ───────────────────────────────────────────────────────────────────
+function toggleChat() {
+  document.getElementById('chat-panel').classList.toggle('collapsed');
+}
+
+function updateChatContext(article) {
+  const note = document.getElementById('chat-context-note');
+  note.textContent = article
+    ? `Context: "${article.title.slice(0,50)}${article.title.length > 50 ? '…' : ''}"`
+    : 'No article selected — ask general questions';
+}
+
+function handleChatKey(e) {
+  if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); sendChat(); }
+}
+
+async function sendChat() {
+  if (!openaiKey) { openKeyModal(); return; }
+  const input = document.getElementById('chat-input');
+  const msg = input.value.trim();
+  if (!msg) return;
+
+  input.value = '';
+  input.style.height = 'auto';
+  addMessage(msg, 'user');
+
+  const btn = document.getElementById('chat-send');
+  btn.disabled = true;
+  addMessage('<span class="spinner"></span>Thinking…', 'thinking');
+
+  // Build system message with article context
+  let system = `You are a helpful research assistant for uAdvance, an Australian professional development platform for actuaries and financial services professionals. Answer clearly and concisely.`;
+  if (selectedArticle) {
+    const ctx = [
+      selectedArticle.title && `Title: ${selectedArticle.title}`,
+      selectedArticle.publication && `Publication: ${selectedArticle.publication}`,
+      selectedArticle.published_date && `Date: ${selectedArticle.published_date}`,
+      selectedArticle.summary && `Summary: ${selectedArticle.summary}`,
+      selectedArticle.full_text && `Article text (first 3000 chars):\n${(selectedArticle.full_text || '').slice(0, 3000)}`,
+    ].filter(Boolean).join('\n');
+    system += `\n\nThe user is currently reading this article:\n${ctx}`;
+  }
+
+  try {
+    const res = await fetch('https://api.openai.com/v1/chat/completions', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${openaiKey}` },
+      body: JSON.stringify({
+        model: 'gpt-4o',
+        max_tokens: 600,
+        messages: [
+          { role: 'system', content: system },
+          { role: 'user', content: msg }
+        ]
+      })
+    });
+    const data = await res.json();
+    removeThinking();
+    if (data.error) throw new Error(data.error.message);
+    addMessage(data.choices[0].message.content, 'ai');
+  } catch(err) {
+    removeThinking();
+    addMessage(`Error: ${err.message}`, 'ai');
+  }
+  btn.disabled = false;
+}
+
+function addMessage(text, type) {
+  const wrap = document.getElementById('chat-messages');
+  const div = document.createElement('div');
+  div.className = `msg msg-${type}`;
+  div.innerHTML = text;
+  wrap.appendChild(div);
+  wrap.scrollTop = wrap.scrollHeight;
+}
+
+function removeThinking() {
+  const el = document.querySelector('.msg-thinking');
+  if (el) el.remove();
+}
+
+// ── API key modal ──────────────────────────────────────────────────────────
+function openKeyModal() {
+  document.getElementById('key-input').value = openaiKey;
+  document.getElementById('key-modal').classList.remove('hidden');
+}
+function dismissModal() {
+  document.getElementById('key-modal').classList.add('hidden');
+}
+function saveKey() {
+  const k = document.getElementById('key-input').value.trim();
+  if (k) {
+    openaiKey = k;
+    sessionStorage.setItem('oai_key', k);
+    updateModelBadge();
+  }
+  document.getElementById('key-modal').classList.add('hidden');
+}
+function updateModelBadge() {
+  document.getElementById('model-badge').textContent = openaiKey ? 'gpt-4o · ✓ key set' : 'gpt-4o · set key';
+}
+
+// ── Helpers ────────────────────────────────────────────────────────────────
+function formatDate(d) {
+  if (!d) return '';
+  try {
+    return new Date(d).toLocaleDateString('en-AU', { day: 'numeric', month: 'short', year: 'numeric' });
+  } catch { return d; }
+}
+
+// ── Sample data (used if articles_index.json not found) ───────────────────
+function getSampleArticles() {
+  return [
+    {
+      id: 'sample-1', title: '2 billion reasons to fix retirement income',
+      summary: 'Australia\'s retirement income system faces structural challenges with an estimated $2 billion gap in coverage.',
+      publication: 'Firstlinks', published_date: '2026-04-23', category: 'Web',
+      tags: ['superannuation', 'retirement income', 'policy'], word_count: '1414',
+      relevance: 'Directly relevant to actuaries advising on retirement income strategy.',
+      key_points: ['$2bn gap identified in retirement coverage', 'Policy reform proposed', 'Actuaries central to solution'],
+      final_url: '#', full_text: 'Full article text would appear here once articles_index.json is loaded from your articles/ folder.',
+      filename: null
+    },
+    {
+      id: 'sample-2', title: 'Microsoft to spend $25bn on Australian AI blitz',
+      summary: 'Microsoft announces a $25 billion investment in Australian AI infrastructure over the next two years.',
+      publication: 'The Australian', published_date: '2026-04-24', category: 'News',
+      tags: ['ai', 'microsoft', 'investment', 'australia'], word_count: '1395',
+      relevance: 'AI investment reshaping the technology landscape relevant to financial services modernisation.',
+      key_points: ['$25bn commitment over 2 years', 'Focus on cloud and AI infrastructure', 'Jobs creation expected'],
+      final_url: '#', full_text: 'Place your articles_index.json in the same folder as this file to load real articles.',
+      filename: null
+    },
+  ];
+}
+
+// ── Auto-resize textarea ───────────────────────────────────────────────────
+document.getElementById('chat-input').addEventListener('input', function() {
+  this.style.height = 'auto';
+  this.style.height = Math.min(this.scrollHeight, 100) + 'px';
+});
+
+init();
+</script>
 </body>
 </html>
