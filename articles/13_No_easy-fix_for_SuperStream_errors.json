@@ -1,10 +1,10 @@
 {
   "id": "WC47832020260430em4u0000c",
   "index": 13,
-  "scraped_at": "2026-05-01T10:56:08Z",
+  "scraped_at": "2026-05-02T06:12:39Z",
   "title": "No easy-fix for SuperStream errors",
   "full_text": "NEWS SUPERSTREAM No easy-fix for SuperStream errors April 30, 2026 Jason Spits A failed rollover from an SMSF via SuperStream cannot be fixed quickly or easily and may add extra time and cost to the process. Add us as a preferred source on Google Rollovers from an SMSF not executed properly via SuperStream cannot be corrected in that system and will require significant manual work to rectify, highlighting the need to ensure wind-ups are completed in a specific order, a technical expert has noted. Heffron SMSF specialist Sean Johnston illustrated the difficulty of trying to fix a failed rollover of this kind referring to a case where a self-managed super fund was being wound up and as a result was moving its benefits to an Australian Prudential Regulatory Authority (APRA) regulated fund. “The accountant for the fund initiated a super stream rollover for $100,000, so one tranche of payment, but due to some banking limits it was transferred across in multiple tranches. Is there a way to resolve this?” he asked during a recent online question and answer session. “The short answer, and the most common one I give to this question, is talk to the recipient fund. “There is a default process at law, [whereby] the recipient fund should not match it off, and should refund it to the [vehicle] that paid it. “That sounds like a lot of work, and I don’t mean that notionally, I mean the new fund is not going to know what bank account that money has come from, so they’re going to have to do a trace on the account, and then they’re going to have to send it back. “In practice, most of them will allow you to do something else, and that is to provide a paper rollover statement. “[Here] what they will ask you to do is rescind the transaction in SuperStream and re-upload separate transactions [they will] manually match off [against] the payment reference number.” Johnston added some APRA-regulated funds have staff dedicated to correcting SuperStream rollover issues and their help must be specifically requested but acknowledged this assistance will not negate the initial rollover errors. “It doesn’t really matter how you solve this problem, you are probably going to get a SuperStream breach, which is a payment standards breach, because you haven’t followed the SuperStream rules,” he indicated. “At the point that we’ve got to this stage, it’s a little bit hard to do anything else. The damage has been done. You have to wear that and work with your client and the recipient fund to the best you can. “When we’re doing wind ups these things need to be drilled home to clients that, if you mess this up, we might have to do another year’s worth of accounts and they might be charged for another year because you’re going to have to do another tax return.” X linkedin Jason Spits SENIOR JOURNALIST Jason is a senior journalist with Benchmark Media and writes for the selfmanagedsuper website and magazine and smstrusteenews website. He has covered financial services since 1999 and has written about life insurance, superannuation, investment management and financial advice, in both a freelance and in-house capacity, and also did a brief stint as a media manager for an industry association. He has been the editor of trade titles Money Management and Financial Standard, and was most recently senior journalist with life insurance title Riskinfo. Articles by Jason PREVIOUS ARTICLE NEXT ARTICLE",
-  "summary": "Errors in SuperStream rollovers from self-managed super funds (SMSFs) cannot be easily rectified and often require extensive manual intervention. A recent case highlighted the complications arising from multiple payment tranches, which can lead to breaches of SuperStream rules. Professionals must ensure proper procedures are followed during fund wind-ups to avoid additional costs and complications.",
+  "summary": "Errors in SuperStream rollovers from self-managed super funds (SMSFs) cannot be quickly rectified, requiring significant manual intervention. A recent case highlighted the complications arising from multiple tranche payments, necessitating communication with the recipient fund to resolve issues. Professionals must ensure proper procedures are followed during fund wind-ups to avoid additional costs and complications.",
   "publication": "Housing isn’t just a young people problem. We know how this story ends\ntheage.com.au30 April 2026 19:00 GMT1,415 wordsMillie Muroi\n\nWhen we debate intergenerational fairness, it often looks like younger Australians lamenting the selfishness of Boomers and those Boomers calling Zoomers “entitled” for wanting more.",
   "author": "",
   "published_date": "2026-05-01",
@@ -12,6 +12,7 @@
   "language": "English",
   "category": "Web",
   "category_code": "W",
+  "heading": "Superannuation and Investments",
   "newsletter": "Actuaries Institute Today",
   "factiva_url": "https://global.factiva.com/redir/default.aspx?EP=NL&AN=WC47832020260430em4u0000c&CAT=W&napc=MC&f=nv&P=er&erc=LVfLdDTapCBrFH93tOPKccHd3xazgTKFnVNXLS29ADZY2C%2b%2fttJUlgKpRGvvpyD7V8kHRRdxBDjpwzd9ZyiPhuAu3wqDNdKgm8cacQuZmE89nkBoLnSUg6CEeAzruSb900WlLSyXQAiU0ft7DEs5tEU21Z83ionPoL1GjRwta3Z7JZcPzDbe%2b8VgDkthIplLKNAQy8PwCeHS2Hjjixj4BxW4DFuKsIW%2b%7c2&nldtl=DkzATV7FuEELjedX88l%2bbTt6lBYNjNrSx2D3jDckwHXkhG%2f6ivvzpde5Huy7QPKBW0ycjaNGbQabes74SLZYbvuTIlexoUROvcWemMhZPJ2bKet7uPd4rj9%2f%2fHDftBQbMvypAQtnk5Glq8%2buJ4Nybw%3d%3d%7c2&mod=MCT_email&page_driver=MCT_email",
   "final_url": "https://smsmagazine.com.au/news/2026/04/30/no-easy-fix-for-superstream-errors/",
@@ -20,15 +21,15 @@
   "selector_used": "article",
   "key_points": [
     "Failed SuperStream rollovers require manual correction",
-    "Multiple payment tranches complicate the rollover process",
-    "Adherence to SuperStream rules is crucial to avoid breaches"
+    "Communication with recipient funds is essential for resolving issues",
+    "Improper rollovers can lead to additional accounting costs"
   ],
   "tags": [
     "superannuation",
+    "smsf",
     "financial services",
-    "SMSF",
-    "compliance"
+    "regulatory compliance"
   ],
-  "relevance": "Understanding the complexities of SuperStream rollovers is essential for actuaries and financial services professionals to ensure compliance and efficient fund management.",
+  "relevance": "Understanding the complexities of SuperStream processes is crucial for actuaries and financial services professionals to mitigate risks and ensure compliance during fund transitions.",
   "summarised": true
 }

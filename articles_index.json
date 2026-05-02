@@ -2,9 +2,9 @@
   {
     "id": "AGEEOL0020260430em4u0018h",
     "index": 1,
-    "scraped_at": "2026-05-01T10:51:57Z",
+    "scraped_at": "2026-05-02T07:25:01Z",
     "title": "Housing isn’t just a young people problem. We know how this story ends",
-    "summary": "A report from the Actuaries Institute highlights that while younger Australians have seen improvements in health and education, they face significant economic and housing challenges compared to older generations. The wealth gap is widening, driven by government spending favouring older Australians and persistent housing affordability issues. This situation may lead to increased intergenerational inequity, with younger people bearing the financial burden of supporting older generations.",
+    "summary": "A report from the Actuaries Institute highlights that while younger Australians have made gains in health and education, they face worsening economic and housing conditions compared to older generations. The gap in wealth accumulation between age groups is significant, with older Australians benefiting more from rising property and share market values. Government spending trends favour older generations, exacerbating intergenerational equity issues as younger Australians bear the financial burden of this spending.",
     "publication": "Housing isn’t just a young people problem. We know how this story ends\ntheage.com.au30 April 2026 19:00 GMT1,415 wordsMillie Muroi\n\nWhen we debate intergenerational fairness, it often looks like younger Australians lamenting the selfishness of Boomers and those Boomers calling Zoomers “entitled” for wanting more.",
     "author": "",
     "published_date": "2026-05-01",
@@ -19,26 +19,27 @@
     "page_title": "Dow Jones Newsletter",
     "selector_used": "body",
     "key_points": [
-      "Younger Australians have gained in health and education but face economic challenges.",
-      "Government spending is increasingly directed towards older generations, worsening intergenerational fairness.",
-      "Housing affordability remains a critical issue, impacting young people's ability to build wealth."
+      "Younger Australians are experiencing worsening economic and housing conditions compared to older generations.",
+      "Older age groups have seen significant gains in household wealth, outpacing younger Australians.",
+      "Government spending is increasingly directed towards older generations, impacting intergenerational equity."
     ],
     "tags": [
+      "housing",
       "intergenerational equity",
-      "housing affordability",
-      "government policy",
-      "wealth gap"
+      "wealth gap",
+      "government spending"
     ],
-    "relevance": "Understanding these trends is crucial for actuaries and financial services professionals as they assess risks and develop strategies for wealth management across generations.",
+    "relevance": "Understanding these trends is crucial for actuaries and financial services professionals as they assess risks and develop strategies for wealth management and retirement planning.",
     "summarised": true,
-    "filename": "01_Housing_isnt_just_a_young_people_problem_We_know_how_this_story_ends.json"
+    "filename": "01_Housing_isnt_just_a_young_people_problem_We_know_how_this_story_ends.json",
+    "heading": "Actuaries"
   },
   {
     "id": "WC63761020260430em4t00001",
     "index": 2,
-    "scraped_at": "2026-05-01T10:52:18Z",
+    "scraped_at": "2026-05-02T06:09:00Z",
     "title": "Insurers throw weight behind national plan to slash premiums for resilient homes",
-    "summary": "Australia's insurance industry is supporting a national plan to reduce home insurance premiums by incentivising homeowners to upgrade their properties for disaster resilience. The Housing Resilience Action Plan 2030 aims to link lower insurance costs to resilience improvements, addressing the rising affordability stress affecting 1.6 million households. Stakeholders, including IAG and the Insurance Council of Australia, emphasise the need for coordinated action across government, industry, and communities to tackle the underlying risks and improve long-term affordability.",
+    "summary": "Australia's insurance industry is supporting a national plan to reduce home insurance premiums for properties upgraded to withstand natural disasters. The Housing Resilience Action Plan 2030 aims to link resilience improvements with lower insurance costs, addressing the rising affordability stress affecting 1.6 million households. Stakeholders, including insurers and banks, emphasize the need for coordinated action to manage risks and improve long-term affordability.",
     "publication": "Housing isn’t just a young people problem. We know how this story ends\ntheage.com.au30 April 2026 19:00 GMT1,415 wordsMillie Muroi\n\nWhen we debate intergenerational fairness, it often looks like younger Australians lamenting the selfishness of Boomers and those Boomers calling Zoomers “entitled” for wanting more.",
     "author": "",
     "published_date": "2026-05-01",
@@ -53,26 +54,27 @@
     "page_title": "Insurers throw weight behind national plan to slash premiums for resilient homes | Insurance Business",
     "selector_used": "body",
     "key_points": [
-      "The plan proposes a National Risk and Resilience Rating System to connect resilience upgrades with lower insurance costs.",
-      "Insurance affordability stress has increased by 50% in two years, with 15% of households now affected.",
-      "The plan calls for a National Housing Resilience Accord to facilitate collaboration among stakeholders."
+      "Insurers are backing a plan to link cheaper premiums to disaster-proofing home upgrades.",
+      "The number of households facing insurance affordability stress has increased significantly.",
+      "The plan calls for a National Housing Resilience Accord to facilitate coordinated efforts."
     ],
     "tags": [
       "insurance",
       "affordability",
-      "resilience",
-      "housing"
+      "housing",
+      "resilience"
     ],
-    "relevance": "This initiative highlights the importance of risk management and pricing strategies in the insurance sector, which are critical areas of focus for actuaries and financial services professionals.",
+    "relevance": "This is relevant to actuaries as it highlights the intersection of risk management, insurance pricing, and the impact of climate change on financial services.",
     "summarised": true,
-    "filename": "02_Insurers_throw_weight_behind_national_plan_to_slash_premiums_for_resilient_homes.json"
+    "filename": "02_Insurers_throw_weight_behind_national_plan_to_slash_premiums_for_resilient_homes.json",
+    "heading": "Actuaries"
   },
   {
     "id": "ABCNEW0020260429em4t00131",
     "index": 3,
-    "scraped_at": "2026-05-01T10:52:36Z",
+    "scraped_at": "2026-05-02T06:09:18Z",
     "title": "Insurers among group proposing cheaper premiums in exchange for more resilient homes",
-    "summary": "A coalition of insurers, actuaries, banks, and community advocates has proposed a plan to reduce home insurance premiums by linking them to resilience upgrades for homes against natural disasters. The initiative aims to address the rising insurance affordability stress affecting 1.6 million Australian households, driven by increasing natural disasters and building costs. The proposed National Risk and Resilience Rating System (NRRRS) seeks to enhance home resilience while providing clearer information to consumers about their insurance options.",
+    "summary": "A coalition of industry stakeholders, including insurers and actuaries, has proposed a plan to reduce home insurance premiums by linking them to resilience upgrades against natural disasters. The initiative aims to address the rising insurance affordability stress affecting 1.6 million Australian homes. The plan includes a National Risk and Resilience Rating System to incentivise homeowners to enhance their properties' resilience, thereby mitigating future financial risks.",
     "publication": "Housing isn’t just a young people problem. We know how this story ends\ntheage.com.au30 April 2026 19:00 GMT1,415 wordsMillie Muroi\n\nWhen we debate intergenerational fairness, it often looks like younger Australians lamenting the selfishness of Boomers and those Boomers calling Zoomers “entitled” for wanting more.",
     "author": "",
     "published_date": "2026-05-01",
@@ -87,26 +89,27 @@
     "page_title": "Dow Jones Newsletter",
     "selector_used": "body",
     "key_points": [
-      "Insurance affordability stress has risen by 50% in two years, affecting 15% of Australian homes.",
-      "The Housing Resilience Action Plan 2030 proposes a national system to link resilience upgrades to lower insurance costs.",
-      "Community welfare is threatened as unaffordable insurance leads to increased anxiety and potential migration from affected regions."
+      "Insurance affordability stress has increased by 50% in two years, affecting 15% of households.",
+      "The proposed National Risk and Resilience Rating System aims to connect resilience upgrades to lower insurance premiums.",
+      "Community welfare is at risk as many homeowners are forced to forgo insurance due to rising costs."
     ],
     "tags": [
       "insurance",
       "resilience",
-      "natural disasters",
-      "affordability"
+      "homeownership",
+      "natural disasters"
     ],
-    "relevance": "This is relevant to actuaries and financial services professionals as it addresses the financial implications of climate change on insurance markets and consumer behaviour.",
+    "relevance": "This initiative highlights the importance of risk assessment and management in insurance, which is critical for actuaries and financial services professionals in developing sustainable solutions.",
     "summarised": true,
-    "filename": "03_Insurers_among_group_proposing_cheaper_premiums_in_exchange_for_more_resilient_h.json"
+    "filename": "03_Insurers_among_group_proposing_cheaper_premiums_in_exchange_for_more_resilient_h.json",
+    "heading": "Actuaries"
   },
   {
     "id": "AUSTLN0020260430em510003s",
     "index": 4,
-    "scraped_at": "2026-05-01T10:52:56Z",
+    "scraped_at": "2026-05-02T06:09:34Z",
     "title": "APRA warns banks on lack of AI guardrails",
-    "summary": "The Australian Prudential Regulation Authority (APRA) has expressed concerns that banks, insurers, and superannuation funds are inadequately managing risks associated with artificial intelligence (AI). APRA's letter highlighted a reliance on vendor presentations without sufficient scrutiny of AI risks, urging firms to enhance their governance and risk management practices. The regulator plans to monitor AI usage and may take further policy action if necessary.",
+    "summary": "The Australian Prudential Regulation Authority (APRA) has expressed concerns that banks, insurers, and superannuation funds are inadequately managing risks associated with artificial intelligence (AI), relying too heavily on vendor presentations. APRA expects firms to enhance their internal controls and understanding of AI risks, warning that enforcement actions could follow if improvements are not made. The regulator is finalising plans to supervise AI risks and assess potential prudential impacts.",
     "publication": "Housing isn’t just a young people problem. We know how this story ends\ntheage.com.au30 April 2026 19:00 GMT1,415 wordsMillie Muroi\n\nWhen we debate intergenerational fairness, it often looks like younger Australians lamenting the selfishness of Boomers and those Boomers calling Zoomers “entitled” for wanting more.",
     "author": "",
     "published_date": "2026-05-01",
@@ -121,26 +124,27 @@
     "page_title": "Dow Jones Newsletter",
     "selector_used": "body",
     "key_points": [
-      "APRA warns that financial institutions are overly reliant on AI vendor sales pitches instead of robust internal risk management.",
-      "The regulator identified gaps in governance, risk management, and operational resilience related to AI.",
-      "APRA is finalising plans for supervising AI risks and may implement additional policy measures."
+      "APRA warns financial institutions about inadequate management of AI risks.",
+      "Firms are relying on vendor pitches without sufficient risk examination.",
+      "APRA is finalising plans for AI risk supervision and may take enforcement actions."
     ],
     "tags": [
       "ai",
       "risk management",
-      "regulation",
-      "financial services"
+      "banking",
+      "insurance"
     ],
-    "relevance": "This is relevant to actuaries and financial services professionals as it underscores the importance of risk management in the adoption of emerging technologies like AI.",
+    "relevance": "This is relevant to actuaries and financial services professionals as it highlights the importance of robust risk management practices in the rapidly evolving landscape of AI technology.",
     "summarised": true,
-    "filename": "04_APRA_warns_banks_on_lack_of_AI_guardrails.json"
+    "filename": "04_APRA_warns_banks_on_lack_of_AI_guardrails.json",
+    "heading": "Data Science and AI"
   },
   {
     "id": "AUSTLN0020260430em510003y",
     "index": 5,
-    "scraped_at": "2026-05-01T10:53:10Z",
+    "scraped_at": "2026-05-02T06:09:53Z",
     "title": "AI push not protectionism: Charlton",
-    "summary": "The Albanese government is urging Australian businesses to increase their investment in local artificial intelligence (AI) to prevent job losses and data exodus overseas. AI Assistant Minister Andrew Charlton emphasises the importance of choosing Australian AI solutions over foreign products when options are comparable. The government has also revised procurement rules to prioritise local businesses in AI contracts.",
+    "summary": "The Albanese government is urging the private sector to increase investment in Australian artificial intelligence (AI) to prevent job losses and data exodus overseas. AI Assistant Minister Andrew Charlton emphasised the importance of choosing local AI solutions over foreign options when they are comparable. The government has also adjusted procurement rules to prioritise Australian businesses in AI-related contracts.",
     "publication": "Housing isn’t just a young people problem. We know how this story ends\ntheage.com.au30 April 2026 19:00 GMT1,415 wordsMillie Muroi\n\nWhen we debate intergenerational fairness, it often looks like younger Australians lamenting the selfishness of Boomers and those Boomers calling Zoomers “entitled” for wanting more.",
     "author": "",
     "published_date": "2026-05-01",
@@ -155,26 +159,27 @@
     "page_title": "Dow Jones Newsletter",
     "selector_used": "body",
     "key_points": [
-      "Government calls for increased private sector investment in Australian AI",
-      "Charlton warns of job losses and data loss to foreign vendors",
-      "New procurement rules prioritise Australian businesses for government contracts"
+      "The government is pushing for increased private sector investment in local AI to avoid dependency on foreign products.",
+      "Charlton highlighted the risk of job losses and data leaving Australia if local AI options are not chosen.",
+      "New procurement rules require government agencies to consider Australian businesses first for AI contracts below certain thresholds."
     ],
     "tags": [
       "artificial intelligence",
-      "government policy",
       "investment",
-      "procurement"
+      "procurement",
+      "data protection"
     ],
-    "relevance": "This is relevant to actuaries and financial services professionals as it highlights the government's strategy to bolster local industries and the implications for investment decisions in technology.",
+    "relevance": "This initiative impacts the financial services sector by influencing procurement decisions and investment strategies in technology.",
     "summarised": true,
-    "filename": "05_AI_push_not_protectionism_Charlton.json"
+    "filename": "05_AI_push_not_protectionism_Charlton.json",
+    "heading": "Data Science and AI"
   },
   {
     "id": "AUSTLN0020260430em510002u",
     "index": 6,
-    "scraped_at": "2026-05-01T10:53:24Z",
+    "scraped_at": "2026-05-02T06:10:08Z",
     "title": "Cyber defences to play catch-up",
-    "summary": "Cybercriminals are expected to increasingly utilise artificial intelligence in hacking over the next 12 to 18 months, posing heightened risks, especially to small and medium-sized enterprises. The Australian Cyber Security Centre warns that while vulnerabilities may rise, advancements in AI could lead to more secure software in the long term. The urgency for businesses to quickly apply security patches is critical to mitigate these emerging threats.",
+    "summary": "Cybercriminals are expected to increasingly leverage artificial intelligence to enhance hacking techniques over the next 12 to 18 months, posing significant risks, particularly to small and medium-sized enterprises. The Australian Cyber Security Centre has indicated that while vulnerabilities may rise, advancements in AI could lead to more secure software in the long term. Urgent action is needed to patch software flaws quickly to mitigate these emerging threats.",
     "publication": "Housing isn’t just a young people problem. We know how this story ends\ntheage.com.au30 April 2026 19:00 GMT1,415 wordsMillie Muroi\n\nWhen we debate intergenerational fairness, it often looks like younger Australians lamenting the selfishness of Boomers and those Boomers calling Zoomers “entitled” for wanting more.",
     "author": "",
     "published_date": "2026-05-01",
@@ -189,26 +194,27 @@
     "page_title": "Dow Jones Newsletter",
     "selector_used": "body",
     "key_points": [
-      "AI-driven cyber threats are anticipated to escalate in the coming year and a half.",
-      "Small and medium-sized entities are particularly vulnerable compared to larger operators.",
-      "The rapid identification of software flaws by AI could ultimately enhance software security."
+      "AI-driven cyber threats are anticipated to escalate in the next 12 to 18 months.",
+      "Small and medium-sized entities are particularly vulnerable to these threats.",
+      "Prompt application of software patches is critical to prevent exploitation by cybercriminals."
     ],
     "tags": [
       "cybersecurity",
       "artificial intelligence",
       "risk management",
-      "software security"
+      "software vulnerabilities"
     ],
-    "relevance": "Understanding the evolving landscape of cyber threats is crucial for actuaries and financial services professionals to manage risks effectively.",
+    "relevance": "Understanding the evolving landscape of cyber threats is crucial for actuaries and financial services professionals to manage risk effectively and protect sensitive data.",
     "summarised": true,
-    "filename": "06_Cyber_defences_to_play_catch-up.json"
+    "filename": "06_Cyber_defences_to_play_catch-up.json",
+    "heading": "Data Science and AI"
   },
   {
     "id": "WC63761020260430em4t000dx",
     "index": 7,
-    "scraped_at": "2026-05-01T10:53:49Z",
+    "scraped_at": "2026-05-02T06:10:33Z",
     "title": "Castle Insurance rolls out net commissions across broker platforms",
-    "summary": "Castle Insurance has launched a net commission option for home and contents policies, allowing brokers to choose between full-commission and net-commission structures. This change is in response to the Australian Securities and Investments Commission's informed consent requirements for insurance commissions, which took effect in July 2025. The new option aims to enhance transparency and flexibility for brokers in managing client remuneration.",
+    "summary": "Castle Insurance has introduced a net commission option for brokers on home and contents policies, allowing them to choose between full-commission and net-commission structures. This change aligns with the Australian Securities and Investments Commission's informed consent requirements for insurance commissions. The new option aims to enhance transparency and flexibility for brokers in managing client fees and commissions.",
     "publication": "Housing isn’t just a young people problem. We know how this story ends\ntheage.com.au30 April 2026 19:00 GMT1,415 wordsMillie Muroi\n\nWhen we debate intergenerational fairness, it often looks like younger Australians lamenting the selfishness of Boomers and those Boomers calling Zoomers “entitled” for wanting more.",
     "author": "",
     "published_date": "2026-05-01",
@@ -223,26 +229,27 @@
     "page_title": "Castle Insurance rolls out net commissions across broker platforms | Insurance Business",
     "selector_used": "body",
     "key_points": [
-      "Brokers can now choose between full-commission (17.5%) and net-commission (0%) for Castle-branded policies.",
-      "The change aligns with ASIC's informed consent rules, requiring clear disclosure of commission structures to clients.",
-      "The net commission option allows brokers to separate insurance premiums from advice and service fees."
+      "Brokers can now choose between full-commission (17.5%) and net-commission (0%) structures for Castle-branded policies.",
+      "The change is in response to ASIC's informed consent rules that took effect on July 10, 2025.",
+      "The net commission option allows brokers to separate insurance premiums from service fees, enhancing transparency."
     ],
     "tags": [
       "insurance",
+      "brokerage",
       "commissions",
-      "brokers",
-      "regulation"
+      "ASIC"
     ],
     "relevance": "This development is significant for actuaries and financial services professionals as it impacts commission structures and compliance with regulatory requirements in the insurance sector.",
     "summarised": true,
-    "filename": "07_Castle_Insurance_rolls_out_net_commissions_across_broker_platforms.json"
+    "filename": "07_Castle_Insurance_rolls_out_net_commissions_across_broker_platforms.json",
+    "heading": "General Insurance"
   },
   {
     "id": "WC63761020260429em4t000dx",
     "index": 8,
-    "scraped_at": "2026-05-01T10:54:18Z",
+    "scraped_at": "2026-05-02T06:10:53Z",
     "title": "IAG backs cultural land management in three‑year AbCF deal",
-    "summary": "Insurance Australia Group (IAG) has renewed its partnership with the Aboriginal Carbon Foundation for three years to support Aboriginal-led cultural land management and fire programs. This collaboration aims to enhance community safety and environmental sustainability through cultural burning practices, which can reduce bushfire risks. The partnership also seeks to integrate these practices into emergency management and insurance frameworks.",
+    "summary": "Insurance Australia Group (IAG) has extended its partnership with the Aboriginal Carbon Foundation for three years to support Aboriginal-led cultural land management and fire programs. This collaboration aims to enhance community resilience against bushfire risks through cultural burning practices, which are believed to reduce the likelihood of high-intensity fires. The partnership also seeks to integrate these practices into emergency management and insurance frameworks, addressing barriers to their mainstream adoption.",
     "publication": "Housing isn’t just a young people problem. We know how this story ends\ntheage.com.au30 April 2026 19:00 GMT1,415 wordsMillie Muroi\n\nWhen we debate intergenerational fairness, it often looks like younger Australians lamenting the selfishness of Boomers and those Boomers calling Zoomers “entitled” for wanting more.",
     "author": "",
     "published_date": "2026-05-01",
@@ -257,24 +264,25 @@
     "page_title": "IAG backs cultural land management in three‑year AbCF deal | Insurance Business",
     "selector_used": "body",
     "key_points": [
-      "IAG's partnership with the Aboriginal Carbon Foundation focuses on cultural land management and fire programs.",
-      "Cultural burning practices are designed to lower bushfire risks and promote biodiversity.",
-      "The collaboration aims to address barriers to integrating Aboriginal land management into mainstream emergency and insurance systems."
+      "IAG renews partnership with the Aboriginal Carbon Foundation to support cultural land management.",
+      "Cultural burning practices are aimed at reducing bushfire risks and improving community safety.",
+      "The partnership seeks to integrate cultural land management into existing emergency and insurance frameworks."
     ],
     "tags": [
-      "insurance",
-      "sustainability",
+      "bushfire",
       "risk management",
-      "indigenous practices"
+      "insurance",
+      "sustainability"
     ],
-    "relevance": "This partnership highlights the importance of integrating traditional land management practices into risk assessment and mitigation strategies, which is crucial for actuaries and financial services professionals in managing climate-related risks.",
+    "relevance": "This initiative highlights the importance of integrating traditional land management practices into risk assessment and insurance models, which is crucial for actuaries in understanding and pricing risk in bushfire-prone areas.",
     "summarised": true,
-    "filename": "08_IAG_backs_cultural_land_management_in_threeyear_AbCF_deal.json"
+    "filename": "08_IAG_backs_cultural_land_management_in_threeyear_AbCF_deal.json",
+    "heading": "General Insurance"
   },
   {
     "id": "AGEE000020260430em510000k",
     "index": 9,
-    "scraped_at": "2026-05-01T10:54:39Z",
+    "scraped_at": "2026-05-02T06:11:07Z",
     "title": "Doctors accuse Butler of playing 'blame game' over specialists' fees",
     "summary": "Australian doctors are challenging Health Minister Mark Butler's claims that specialist fees are excessively high and may require government regulation. The Australian Medical Association argues that the focus should be on comprehensive Medicare reform rather than blaming doctors for rising out-of-pocket costs. Butler is considering capping specialist fees due to significant variability in charges for common procedures.",
     "publication": "Housing isn’t just a young people problem. We know how this story ends\ntheage.com.au30 April 2026 19:00 GMT1,415 wordsMillie Muroi\n\nWhen we debate intergenerational fairness, it often looks like younger Australians lamenting the selfishness of Boomers and those Boomers calling Zoomers “entitled” for wanting more.",
@@ -291,26 +299,27 @@
     "page_title": "Dow Jones Newsletter",
     "selector_used": "body",
     "key_points": [
-      "Doctors accuse Health Minister Butler of blaming them for high specialist fees.",
-      "Butler is exploring potential regulation of medical fees due to cost variability.",
-      "The AMA calls for broader Medicare reforms rather than targeted blame."
+      "Doctors accuse Health Minister Butler of shifting blame for rising specialist fees.",
+      "The AMA calls for broader Medicare reforms and increased rebates rather than just incentives.",
+      "Butler is exploring potential regulations to cap specialist fees amid concerns about affordability."
     ],
     "tags": [
       "healthcare",
       "medicare",
       "specialist fees",
-      "regulation"
+      "insurance"
     ],
-    "relevance": "Understanding the dynamics of healthcare costs and potential regulatory changes is crucial for actuaries involved in health insurance and financial planning.",
+    "relevance": "This issue impacts healthcare costs and insurance premiums, which are crucial for actuaries and financial services professionals involved in health insurance and risk assessment.",
     "summarised": true,
-    "filename": "09_Doctors_accuse_Butler_of_playing_blame_game_over_specialists_fees.json"
+    "filename": "09_Doctors_accuse_Butler_of_playing_blame_game_over_specialists_fees.json",
+    "heading": "Health and Disability Insurance"
   },
   {
     "id": "WC47832020260430em4u00005",
     "index": 10,
-    "scraped_at": "2026-05-01T10:55:05Z",
+    "scraped_at": "2026-05-02T06:11:36Z",
     "title": "TPD and disability claims behind 88% of life insurance disputes",
-    "summary": "Recent data from APRA indicates that total and permanent disablement (TPD) and disability income insurance (DII) claims accounted for 88% of life insurance disputes in 2025. Disputed claims rose by 13.7% to 11,207, with a significant portion related to group insurance within superannuation. Mental health issues are a leading cause of TPD claims, particularly among younger Australians.",
+    "summary": "Data from APRA indicates that total and permanent disablement (TPD) and disability income insurance (DII) claims account for 88% of life insurance disputes in Australia. In 2025, there were 11,207 disputed claims, a 13.7% increase from the previous year, with the majority stemming from group insurance within superannuation. Mental health issues are a significant driver of these claims, particularly among younger demographics.",
     "publication": "Housing isn’t just a young people problem. We know how this story ends\ntheage.com.au30 April 2026 19:00 GMT1,415 wordsMillie Muroi\n\nWhen we debate intergenerational fairness, it often looks like younger Australians lamenting the selfishness of Boomers and those Boomers calling Zoomers “entitled” for wanting more.",
     "author": "",
     "published_date": "2026-05-01",
@@ -325,9 +334,9 @@
     "page_title": "TPD and disability claims behind 88% of life insurance disputes | Financial Standard",
     "selector_used": "body",
     "key_points": [
-      "88% of life insurance disputes are due to TPD and DII claims.",
-      "Disputed claims increased by 13.7% to 11,207 in 2025.",
-      "Mental health is a major driver of TPD claims, especially among those in their 30s."
+      "TPD and DII claims represent 88% of life insurance disputes.",
+      "Disputed claims rose to 11,207 in 2025, with 56% related to group superannuation.",
+      "Mental health is a leading cause of TPD claims, especially among younger individuals."
     ],
     "tags": [
       "life insurance",
@@ -337,14 +346,15 @@
     ],
     "relevance": "Understanding the trends in life insurance disputes is crucial for actuaries and financial services professionals to better manage risk and client expectations.",
     "summarised": true,
-    "filename": "10_TPD_and_disability_claims_behind_88_of_life_insurance_disputes.json"
+    "filename": "10_TPD_and_disability_claims_behind_88_of_life_insurance_disputes.json",
+    "heading": "Life Insurance"
   },
   {
     "id": "WC47832020260430em4u0000b",
     "index": 11,
-    "scraped_at": "2026-05-01T10:55:26Z",
+    "scraped_at": "2026-05-02T06:11:55Z",
     "title": "Set-up balance not critical for AFCA",
-    "summary": "The Australian Financial Complaints Authority (AFCA) has clarified that the minimum balance for establishing a Self-Managed Super Fund (SMSF) is not the sole factor in assessing complaints. AFCA senior ombudsman Alexandra Sidoti emphasised that individual circumstances, such as expected future contributions, play a crucial role in determining the appropriateness of an SMSF. Cost-effectiveness must also be evaluated in relation to the client's current superannuation vehicle and anticipated contributions.",
+    "summary": "The Australian Financial Complaints Authority (AFCA) has clarified that the minimum balance for establishing a self-managed super fund (SMSF) is not the sole factor in assessing complaints. AFCA's senior ombudsman, Alexandra Sidoti, emphasized that individual circumstances, such as expected future contributions, play a significant role in determining the appropriateness of an SMSF. Cost-effectiveness must also be evaluated in relation to the member's current superannuation vehicle.",
     "publication": "Housing isn’t just a young people problem. We know how this story ends\ntheage.com.au30 April 2026 19:00 GMT1,415 wordsMillie Muroi\n\nWhen we debate intergenerational fairness, it often looks like younger Australians lamenting the selfishness of Boomers and those Boomers calling Zoomers “entitled” for wanting more.",
     "author": "",
     "published_date": "2026-05-01",
@@ -360,8 +370,8 @@
     "selector_used": "article",
     "key_points": [
       "Minimum SMSF balance is not a sole determinant for AFCA complaints.",
-      "Individual client circumstances and future contributions are critical factors.",
-      "Cost-effectiveness of SMSFs should be compared with existing superannuation options."
+      "Individual circumstances and future contributions are critical in assessment.",
+      "Cost-effectiveness should be compared between current superannuation and SMSF."
     ],
     "tags": [
       "smsf",
@@ -369,16 +379,17 @@
       "superannuation",
       "cost effectiveness"
     ],
-    "relevance": "This information is relevant for actuaries and financial services professionals involved in superannuation advice and SMSF management.",
+    "relevance": "This information is crucial for actuaries and financial services professionals involved in SMSF advice and compliance.",
     "summarised": true,
-    "filename": "11_Set-up_balance_not_critical_for_AFCA.json"
+    "filename": "11_Set-up_balance_not_critical_for_AFCA.json",
+    "heading": "Superannuation and Investments"
   },
   {
     "id": "WC47832020260430em4u0000a",
     "index": 12,
-    "scraped_at": "2026-05-01T10:55:48Z",
+    "scraped_at": "2026-05-02T06:12:16Z",
     "title": "ATO targeting tardy funds, practitioners",
-    "summary": "The ATO will target self-managed superannuation funds (SMSFs) with a history of late annual return lodgements in the upcoming financial year, particularly focusing on the compliance of practitioners. Approximately 93,000 SMSFs have overdue lodgements, with 20,000 never having lodged a return. Tax and superannuation professionals are encouraged to ensure their clients meet reporting deadlines to avoid compliance issues.",
+    "summary": "The ATO will target self-managed superannuation funds (SMSFs) that frequently fail to lodge annual returns, focusing on both trustees and tax professionals. Approximately 93,000 SMSFs have overdue lodgements, with 20,000 never having lodged a return, raising compliance concerns. Practitioners are urged to ensure their clients meet reporting deadlines to avoid penalties and maintain compliance status.",
     "publication": "Housing isn’t just a young people problem. We know how this story ends\ntheage.com.au30 April 2026 19:00 GMT1,415 wordsMillie Muroi\n\nWhen we debate intergenerational fairness, it often looks like younger Australians lamenting the selfishness of Boomers and those Boomers calling Zoomers “entitled” for wanting more.",
     "author": "",
     "published_date": "2026-05-01",
@@ -393,9 +404,9 @@
     "page_title": "ATO targeting tardy funds, practitioners | SMS Magazine",
     "selector_used": "article",
     "key_points": [
-      "ATO to target SMSFs with late lodgements",
-      "93,000 SMSFs have overdue lodgements",
-      "Practitioners should assist clients in meeting compliance obligations"
+      "ATO to increase scrutiny on SMSFs with late lodgements and their trustees.",
+      "93,000 SMSFs are overdue, including 20,000 that have never lodged a return.",
+      "Tax professionals should assist clients in meeting lodgement obligations to avoid compliance issues."
     ],
     "tags": [
       "smsf",
@@ -403,16 +414,17 @@
       "ato",
       "superannuation"
     ],
-    "relevance": "This is relevant to actuaries and financial services professionals as it highlights the importance of compliance in SMSF management and the potential consequences of non-compliance.",
+    "relevance": "This is relevant as it highlights the importance of compliance in SMSFs, a key area for actuaries and financial services professionals managing superannuation funds.",
     "summarised": true,
-    "filename": "12_ATO_targeting_tardy_funds_practitioners.json"
+    "filename": "12_ATO_targeting_tardy_funds_practitioners.json",
+    "heading": "Superannuation and Investments"
   },
   {
     "id": "WC47832020260430em4u0000c",
     "index": 13,
-    "scraped_at": "2026-05-01T10:56:08Z",
+    "scraped_at": "2026-05-02T06:12:39Z",
     "title": "No easy-fix for SuperStream errors",
-    "summary": "Errors in SuperStream rollovers from self-managed super funds (SMSFs) cannot be easily rectified and often require extensive manual intervention. A recent case highlighted the complications arising from multiple payment tranches, which can lead to breaches of SuperStream rules. Professionals must ensure proper procedures are followed during fund wind-ups to avoid additional costs and complications.",
+    "summary": "Errors in SuperStream rollovers from self-managed super funds (SMSFs) cannot be quickly rectified, requiring significant manual intervention. A recent case highlighted the complications arising from multiple tranche payments, necessitating communication with the recipient fund to resolve issues. Professionals must ensure proper procedures are followed during fund wind-ups to avoid additional costs and complications.",
     "publication": "Housing isn’t just a young people problem. We know how this story ends\ntheage.com.au30 April 2026 19:00 GMT1,415 wordsMillie Muroi\n\nWhen we debate intergenerational fairness, it often looks like younger Australians lamenting the selfishness of Boomers and those Boomers calling Zoomers “entitled” for wanting more.",
     "author": "",
     "published_date": "2026-05-01",
@@ -428,25 +440,26 @@
     "selector_used": "article",
     "key_points": [
       "Failed SuperStream rollovers require manual correction",
-      "Multiple payment tranches complicate the rollover process",
-      "Adherence to SuperStream rules is crucial to avoid breaches"
+      "Communication with recipient funds is essential for resolving issues",
+      "Improper rollovers can lead to additional accounting costs"
     ],
     "tags": [
       "superannuation",
+      "smsf",
       "financial services",
-      "SMSF",
-      "compliance"
+      "regulatory compliance"
     ],
-    "relevance": "Understanding the complexities of SuperStream rollovers is essential for actuaries and financial services professionals to ensure compliance and efficient fund management.",
+    "relevance": "Understanding the complexities of SuperStream processes is crucial for actuaries and financial services professionals to mitigate risks and ensure compliance during fund transitions.",
     "summarised": true,
-    "filename": "13_No_easy-fix_for_SuperStream_errors.json"
+    "filename": "13_No_easy-fix_for_SuperStream_errors.json",
+    "heading": "Superannuation and Investments"
   },
   {
     "id": "WC63761020260430em4t000b5",
     "index": 14,
-    "scraped_at": "2026-05-01T10:56:33Z",
+    "scraped_at": "2026-05-02T06:13:02Z",
     "title": "APRA amends CPS 230 for non‑traditional service providers",
-    "summary": "APRA has amended Prudential Standard CPS 230 to introduce a limited exemption for certain non-traditional service providers, effective July 1, 2026. The exemption applies to specified contractual obligations when entities engage with exempt categories such as government agencies and financial market exchanges, provided standardised terms are used. However, all other CPS 230 requirements remain in effect, emphasising the need for ongoing operational risk management.",
+    "summary": "APRA has amended Prudential Standard CPS 230 to introduce a limited exemption for certain non-traditional service providers, effective July 1, 2026. The changes allow regulated entities to bypass specific contractual obligations if they engage with exempt providers under standardised terms. However, all other CPS 230 requirements remain in effect, emphasising the need for ongoing operational risk management.",
     "publication": "Housing isn’t just a young people problem. We know how this story ends\ntheage.com.au30 April 2026 19:00 GMT1,415 wordsMillie Muroi\n\nWhen we debate intergenerational fairness, it often looks like younger Australians lamenting the selfishness of Boomers and those Boomers calling Zoomers “entitled” for wanting more.",
     "author": "",
     "published_date": "2026-05-01",
@@ -461,9 +474,9 @@
     "page_title": "CPS 230 recalibrated: Regulator refines landmark resilience rule | Insurance Business",
     "selector_used": "body",
     "key_points": [
-      "APRA introduces exemptions for specific non-traditional service providers under CPS 230.",
-      "Exemptions apply only to certain contractual obligations when using standardised terms.",
-      "All other CPS 230 requirements for operational risk management remain unchanged."
+      "Exemptions apply to government agencies, regulators, and financial market exchanges among others.",
+      "Entities must still seek CPS 230-compliant contracts where possible and manage operational risks.",
+      "APRA retains discretion to adjust the list of exempt providers and has made minor changes based on industry feedback."
     ],
     "tags": [
       "apra",
@@ -471,16 +484,17 @@
       "insurance",
       "regulation"
     ],
-    "relevance": "These changes impact how actuaries and financial services professionals manage operational risks associated with non-traditional service providers.",
+    "relevance": "These amendments impact how actuaries and financial services professionals manage operational risks associated with non-traditional service providers.",
     "summarised": true,
-    "filename": "14_APRA_amends_CPS_230_for_nontraditional_service_providers.json"
+    "filename": "14_APRA_amends_CPS_230_for_nontraditional_service_providers.json",
+    "heading": "Regulation"
   },
   {
     "id": "AUSTLN0020260429em4u00025",
     "index": 15,
-    "scraped_at": "2026-05-01T10:56:53Z",
+    "scraped_at": "2026-05-02T06:13:20Z",
     "title": "Treasurer waves off economists’ warnings",
-    "summary": "Treasurer Jim Chalmers asserts that Australia is better positioned than other advanced economies to handle economic shocks from the ongoing Middle East conflict, citing strong growth and low unemployment. However, economists express concerns about Australia's high inflation and its implications for monetary policy, suggesting that the Reserve Bank may need to raise interest rates. The latest inflation data indicates a significant rise, increasing the likelihood of a rate hike in the near future.",
+    "summary": "Treasurer Jim Chalmers asserts that Australia's economy is better positioned than other advanced nations to handle global economic shocks, citing strong growth and low unemployment. However, concerns persist regarding rising inflation and the potential need for the Reserve Bank to increase interest rates in response to the recent inflation data. Economists warn that Australia may be ill-prepared for the inflationary pressures exacerbated by the ongoing conflict in the Middle East.",
     "publication": "Housing isn’t just a young people problem. We know how this story ends\ntheage.com.au30 April 2026 19:00 GMT1,415 wordsMillie Muroi\n\nWhen we debate intergenerational fairness, it often looks like younger Australians lamenting the selfishness of Boomers and those Boomers calling Zoomers “entitled” for wanting more.",
     "author": "",
     "published_date": "2026-05-01",
@@ -495,26 +509,27 @@
     "page_title": "Dow Jones Newsletter",
     "selector_used": "body",
     "key_points": [
-      "Australia's economy is reportedly better placed to withstand global shocks due to strong growth and low unemployment.",
-      "Concerns persist regarding high inflation, which is already above the Reserve Bank's target band.",
-      "Financial markets are anticipating a potential interest rate hike following the latest inflation readings."
+      "Australia's economy grew by 2.6% in the last quarter of 2025, outperforming many G20 nations.",
+      "Inflation surged to 4.6% in March, raising concerns about the Reserve Bank's monetary policy.",
+      "Economists suggest Australia is one of the least well-prepared developed economies to handle the impending inflation shock."
     ],
     "tags": [
-      "economic growth",
+      "economy",
       "inflation",
       "interest rates",
       "monetary policy"
     ],
     "relevance": "Understanding the economic landscape and inflation trends is crucial for actuaries and financial services professionals in assessing risks and making informed decisions.",
     "summarised": true,
-    "filename": "15_Treasurer_waves_off_economists_warnings.json"
+    "filename": "15_Treasurer_waves_off_economists_warnings.json",
+    "heading": "Banking and Economy"
   },
   {
     "id": "DAITEL0020260429em4u00028",
     "index": 16,
-    "scraped_at": "2026-05-01T10:57:07Z",
+    "scraped_at": "2026-05-02T06:13:37Z",
     "title": "Rate hike fears grow as inflation surges",
-    "summary": "Australia's inflation has surged to a three-year high of 4.6%, prompting Treasurer Jim Chalmers to indicate that the Reserve Bank of Australia may need to raise interest rates. Economists warn that the ongoing fuel crisis will further exacerbate inflationary pressures. Chalmers highlighted the impact of the Middle East conflict on domestic prices and announced plans for spending restraint in the upcoming budget.",
+    "summary": "Inflation in Australia has surged to a three-year high of 4.6%, prompting Treasurer Jim Chalmers to warn of further economic pain due to ongoing global crises. Economists anticipate the Reserve Bank of Australia will need to increase interest rates in response to these inflationary pressures. The trimmed mean inflation rate remains stable at 3.3%, indicating persistent underlying price pressures.",
     "publication": "Housing isn’t just a young people problem. We know how this story ends\ntheage.com.au30 April 2026 19:00 GMT1,415 wordsMillie Muroi\n\nWhen we debate intergenerational fairness, it often looks like younger Australians lamenting the selfishness of Boomers and those Boomers calling Zoomers “entitled” for wanting more.",
     "author": "",
     "published_date": "2026-05-01",
@@ -529,9 +544,9 @@
     "page_title": "Dow Jones Newsletter",
     "selector_used": "body",
     "key_points": [
-      "Inflation reaches 4.6%, the highest in three years",
-      "RBA likely to raise interest rates due to inflation pressures",
-      "Treasurer warns of ongoing economic pain from the fuel crisis"
+      "Inflation reached 4.6%, the highest in three years.",
+      "Treasurer warns of continued economic challenges linked to global events.",
+      "Economists expect interest rate hikes from the RBA soon."
     ],
     "tags": [
       "inflation",
@@ -539,16 +554,17 @@
       "economy",
       "financial policy"
     ],
-    "relevance": "Understanding inflation trends and interest rate movements is crucial for actuaries and financial services professionals in managing risk and advising clients.",
+    "relevance": "Understanding inflation trends and interest rate responses is crucial for actuaries and financial services professionals in managing risk and advising clients.",
     "summarised": true,
-    "filename": "16_Rate_hike_fears_grow_as_inflation_surges.json"
+    "filename": "16_Rate_hike_fears_grow_as_inflation_surges.json",
+    "heading": "Banking and Economy"
   },
   {
     "id": "AUSTLN0020260429em4u00018",
     "index": 17,
-    "scraped_at": "2026-05-01T10:57:27Z",
+    "scraped_at": "2026-05-02T06:13:53Z",
     "title": "Demand for bigger low-paid wage rise",
-    "summary": "The ACTU has increased its wage claim for low-paid workers to over 5% in response to rising inflation, particularly driven by a significant spike in fuel prices. This move is opposed by business groups advocating for a smaller increase of 3.5%. The situation highlights the tension between rising living costs and wage growth, which may impact economic stability.",
+    "summary": "The ACTU is pushing for a wage increase for 3 million low-paid workers, raising their claim to over 5% due to a spike in inflation driven by rising fuel prices. This move is opposed by business groups advocating for a smaller 3.5% increase. The situation highlights the ongoing tension between wage growth and inflationary pressures in the Australian economy.",
     "publication": "Housing isn’t just a young people problem. We know how this story ends\ntheage.com.au30 April 2026 19:00 GMT1,415 wordsMillie Muroi\n\nWhen we debate intergenerational fairness, it often looks like younger Australians lamenting the selfishness of Boomers and those Boomers calling Zoomers “entitled” for wanting more.",
     "author": "",
     "published_date": "2026-05-01",
@@ -563,19 +579,20 @@
     "page_title": "Dow Jones Newsletter",
     "selector_used": "body",
     "key_points": [
-      "ACTU's wage claim for low-paid workers exceeds 5% due to inflation pressures.",
-      "Business groups are advocating for a 3.5% wage increase instead.",
-      "Inflation, particularly from fuel prices, is affecting both workers and businesses."
+      "ACTU demands over 5% wage rise for low-paid workers due to inflation",
+      "Business groups advocate for a 3.5% increase instead",
+      "Rising fuel prices are significantly impacting cost of living and wage negotiations"
     ],
     "tags": [
-      "wages",
+      "minimum wage",
       "inflation",
-      "labour market",
+      "wage growth",
       "economic policy"
     ],
-    "relevance": "Understanding wage dynamics and inflation trends is crucial for actuaries and financial services professionals in assessing economic risks and advising clients.",
+    "relevance": "Understanding wage dynamics and inflation is crucial for actuaries and financial services professionals as it impacts economic forecasts and financial planning.",
     "summarised": true,
-    "filename": "17_Demand_for_bigger_low-paid_wage_rise.json"
+    "filename": "17_Demand_for_bigger_low-paid_wage_rise.json",
+    "heading": "Banking and Economy"
   },
   {
     "id": "WC63761020260428em4r000b5",
@@ -609,7 +626,8 @@
     ],
     "relevance": "Understanding cyber resilience is crucial for actuaries and financial services professionals as it impacts risk management and operational continuity in their sectors.",
     "summarised": true,
-    "filename": "01_Cyber_visibility_high_recovery_plans_missing_across_Australia.json"
+    "filename": "01_Cyber_visibility_high_recovery_plans_missing_across_Australia.json",
+    "heading": ""
   },
   {
     "id": "ABCNEW0020260428em4s0015y",
@@ -643,7 +661,8 @@
     ],
     "relevance": "This is relevant to actuaries and financial services professionals as it highlights emerging regulatory challenges and the need for compliance in the evolving landscape of workplace technology.",
     "summarised": true,
-    "filename": "02_Australia_lacks_national_strategy_to_regulate_AI_spread_in_workplace_report_stat.json"
+    "filename": "02_Australia_lacks_national_strategy_to_regulate_AI_spread_in_workplace_report_stat.json",
+    "heading": ""
   },
   {
     "id": "WC47832020260428em4s00008",
@@ -677,7 +696,8 @@
     ],
     "relevance": "This incident highlights the importance of cybersecurity measures and risk management in the financial services sector, which is critical for actuaries and professionals managing financial risks.",
     "summarised": true,
-    "filename": "03_Generation_Life_reports_cyber_attack.json"
+    "filename": "03_Generation_Life_reports_cyber_attack.json",
+    "heading": ""
   },
   {
     "id": "WC63761020260428em4s000jh",
@@ -711,7 +731,8 @@
     ],
     "relevance": "This ruling is pertinent for actuaries and financial services professionals as it emphasizes the critical nature of precise policy wording and the implications for risk assessment and liability coverage.",
     "summarised": true,
-    "filename": "04_Allianz_loses_Federal_Court_bid_to_rewrite_sexual_misconduct_policy_sublimit.json"
+    "filename": "04_Allianz_loses_Federal_Court_bid_to_rewrite_sexual_misconduct_policy_sublimit.json",
+    "heading": ""
   },
   {
     "id": "WC63761020260428em4r0008d",
@@ -745,7 +766,8 @@
     ],
     "relevance": "This is relevant to actuaries and financial services professionals as it addresses the financial implications of climate risks and the insurance industry's response to increasing natural disasters.",
     "summarised": true,
-    "filename": "05_Insurers_flag_funding_gap_for_council_flood_defences_nationwide.json"
+    "filename": "05_Insurers_flag_funding_gap_for_council_flood_defences_nationwide.json",
+    "heading": ""
   },
   {
     "id": "WC63761020260428em4r0005l",
@@ -779,7 +801,8 @@
     ],
     "relevance": "This situation highlights the intersection of healthcare regulation and competition, which is crucial for actuaries and financial professionals involved in health insurance and risk management.",
     "summarised": true,
-    "filename": "06_Bupa_hospital_deals_trigger_fresh_competition_concerns_-_report.json"
+    "filename": "06_Bupa_hospital_deals_trigger_fresh_competition_concerns_-_report.json",
+    "heading": ""
   },
   {
     "id": "AUSTLN0020260428em4t0001o",
@@ -813,7 +836,8 @@
     ],
     "relevance": "This issue is pertinent for actuaries and financial services professionals as it impacts health insurance pricing and the financial sustainability of aged care funding.",
     "summarised": true,
-    "filename": "07_Big_rebates_for_over-65s_good_for_taxpayers.json"
+    "filename": "07_Big_rebates_for_over-65s_good_for_taxpayers.json",
+    "heading": ""
   },
   {
     "id": "WC47832020260428em4s00007",
@@ -847,7 +871,8 @@
     ],
     "relevance": "This is relevant to actuaries and financial services professionals as it underscores the importance of insurance coverage and regulatory compliance in superannuation products.",
     "summarised": true,
-    "filename": "08_Cbus_calls_for_mandatory_insurance_warnings.json"
+    "filename": "08_Cbus_calls_for_mandatory_insurance_warnings.json",
+    "heading": ""
   },
   {
     "id": "WCSPREW020260428em4s00001",
@@ -881,7 +906,8 @@
     ],
     "relevance": "This information is relevant to actuaries and financial services professionals as it highlights trends in retirement benefits and the impact of demographic changes on superannuation funds.",
     "summarised": true,
-    "filename": "09_MLC_pension_bonus_payouts_hit_record_amid_retirements.json"
+    "filename": "09_MLC_pension_bonus_payouts_hit_record_amid_retirements.json",
+    "heading": ""
   },
   {
     "id": "AUSTOL0020260428em4s0028l",
@@ -915,7 +941,8 @@
     ],
     "relevance": "Understanding inflation trends and interest rate movements is crucial for actuaries and financial services professionals in managing risk and advising clients.",
     "summarised": true,
-    "filename": "10_Inflation_surge_to_rubber_stamp_fresh_wave_of_interest_rate_hikes.json"
+    "filename": "10_Inflation_surge_to_rubber_stamp_fresh_wave_of_interest_rate_hikes.json",
+    "heading": ""
   },
   {
     "id": "AUSTLN0020260428em4t0000y",
@@ -949,7 +976,8 @@
     ],
     "relevance": "This is relevant to actuaries and financial services professionals as it highlights the importance of risk management and financial stability in the banking sector.",
     "summarised": true,
-    "filename": "11_Banks_new_stress_test_as_inflation_rates_bite.json"
+    "filename": "11_Banks_new_stress_test_as_inflation_rates_bite.json",
+    "heading": ""
   },
   {
     "id": "DJDN000020260428em4s00034",
@@ -983,7 +1011,8 @@
     ],
     "relevance": "Understanding these economic trends is crucial for actuaries and financial services professionals in assessing risks and making informed decisions.",
     "summarised": true,
-    "filename": "12_Australias_Economy_Slowing_Sharply_With_Jobs_Set_to_Be_Lost_--_Market_Talk.json"
+    "filename": "12_Australias_Economy_Slowing_Sharply_With_Jobs_Set_to_Be_Lost_--_Market_Talk.json",
+    "heading": ""
   },
   {
     "id": "AGEE000020260428em4t0001i",
@@ -1017,7 +1046,8 @@
     ],
     "relevance": "Understanding the dynamics of property and investment strategies is crucial for actuaries and financial services professionals in advising clients on wealth management.",
     "summarised": true,
-    "filename": "13_Property_on_shaky_ground_as_rate_hikes_loom_in_2026.json"
+    "filename": "13_Property_on_shaky_ground_as_rate_hikes_loom_in_2026.json",
+    "heading": ""
   },
   {
     "id": "WC20350020260423em4l00003",
@@ -1051,7 +1081,8 @@
     ],
     "relevance": "This proposal is relevant as it addresses systemic issues in retirement income, impacting financial planning and actuarial assessments for retirement funding.",
     "summarised": true,
-    "filename": "01_2_billion_reasons_to_fix_retirement_income.json"
+    "filename": "01_2_billion_reasons_to_fix_retirement_income.json",
+    "heading": ""
   },
   {
     "id": "AUSTLN0020260423em4o0002h",
@@ -1085,7 +1116,8 @@
     ],
     "relevance": "This investment highlights the intersection of technology and economic growth, which is crucial for actuaries and financial professionals in understanding market trends and workforce impacts.",
     "summarised": true,
-    "filename": "02_Microsoft_to_spend_25bn_on_Australian_AI_blitz.json"
+    "filename": "02_Microsoft_to_spend_25bn_on_Australian_AI_blitz.json",
+    "heading": ""
   },
   {
     "id": "WC57100020260423em4n00009",
@@ -1119,7 +1151,8 @@
     ],
     "relevance": "This development is relevant to actuaries and financial services professionals as it highlights the increasing integration of AI tools in business operations, which may impact productivity and cost management strategies.",
     "summarised": true,
-    "filename": "03_Meta_AI_business_assistant_now_available_in_Australia.json"
+    "filename": "03_Meta_AI_business_assistant_now_available_in_Australia.json",
+    "heading": ""
   },
   {
     "id": "ADNWAU0020260423em4n0000b",
@@ -1153,7 +1186,8 @@
     ],
     "relevance": "This development highlights the increasing role of AI in marketing, which may impact advertising strategies and resource allocation for financial services professionals.",
     "summarised": true,
-    "filename": "04_Amazon_Ads_launches_AI_video_ad_generator_in_Australia.json"
+    "filename": "04_Amazon_Ads_launches_AI_video_ad_generator_in_Australia.json",
+    "heading": ""
   },
   {
     "id": "WC63761020260423em4m0005m",
@@ -1187,7 +1221,8 @@
     ],
     "relevance": "This development highlights the increasing role of AI in enhancing operational efficiency, which is crucial for actuaries and financial services professionals to understand as they adapt to technological advancements in their field.",
     "summarised": true,
-    "filename": "05_CBN_brings_AI_into_everyday_broker_workflows.json"
+    "filename": "05_CBN_brings_AI_into_everyday_broker_workflows.json",
+    "heading": ""
   },
   {
     "id": "WC63761020260423em4m00001",
@@ -1221,7 +1256,8 @@
     ],
     "relevance": "This acquisition underscores the growing convergence between insurance capital and infrastructure investments, which may influence asset pricing and risk management strategies in the financial services sector.",
     "summarised": true,
-    "filename": "06_US_insurance_giant_leads_15_billion_swoop_on_Moorabbin_Airport.json"
+    "filename": "06_US_insurance_giant_leads_15_billion_swoop_on_Moorabbin_Airport.json",
+    "heading": ""
   },
   {
     "id": "COUMAI0020260423em4o0004r",
@@ -1255,7 +1291,8 @@
     ],
     "relevance": "This trend highlights the increasing impact of technology on insurance costs and the need for actuaries to adapt to evolving risks in the industry.",
     "summarised": true,
-    "filename": "07_AI_fraud_pushes_up_insurance.json"
+    "filename": "07_AI_fraud_pushes_up_insurance.json",
+    "heading": ""
   },
   {
     "id": "GRDN000020260423em4n004h6",
@@ -1289,7 +1326,8 @@
     ],
     "relevance": "These changes may impact the financial planning and risk assessment processes for professionals working with individuals with disabilities.",
     "summarised": true,
-    "filename": "08_Labors_NDIS_cuts_leave_many_questions_unanswered_Heres_what_we_know_so_far.json"
+    "filename": "08_Labors_NDIS_cuts_leave_many_questions_unanswered_Heres_what_we_know_so_far.json",
+    "heading": ""
   },
   {
     "id": "AUSTLN0020260423em4o0001r",
@@ -1323,7 +1361,8 @@
     ],
     "relevance": "This decision impacts the financial landscape for retirees and may influence future actuarial assessments related to healthcare costs and insurance pricing.",
     "summarised": true,
-    "filename": "09_Clout_to_over-65s_a_blow_to_budget.json"
+    "filename": "09_Clout_to_over-65s_a_blow_to_budget.json",
+    "heading": ""
   },
   {
     "id": "WC64005020260423em4m00002",
@@ -1357,7 +1396,8 @@
     ],
     "relevance": "Understanding the governance of SMSFs is crucial for actuaries and financial services professionals involved in superannuation and investment advice.",
     "summarised": true,
-    "filename": "10_Recent_claims_from_certain_industry_quarters_that_SMSFs_are_not_properly_governe.json"
+    "filename": "10_Recent_claims_from_certain_industry_quarters_that_SMSFs_are_not_properly_governe.json",
+    "heading": ""
   },
   {
     "id": "AUSTOL0020260423em4m0002u",
@@ -1391,7 +1431,8 @@
     ],
     "relevance": "This is relevant to actuaries and financial services professionals as it highlights the need for updated estate planning strategies in light of new tax regulations affecting superannuation.",
     "summarised": true,
-    "filename": "11_Super_tax_change_threatens_to_ignite_family_feuds.json"
+    "filename": "11_Super_tax_change_threatens_to_ignite_family_feuds.json",
+    "heading": ""
   },
   {
     "id": "WCSPREW020260423em4n00002",
@@ -1425,7 +1466,8 @@
     ],
     "relevance": "This appointment and cost-cutting initiative may impact investment strategies and operational efficiencies relevant to actuaries and financial services professionals.",
     "summarised": true,
-    "filename": "12_Future_Fund_names_new_CIO.json"
+    "filename": "12_Future_Fund_names_new_CIO.json",
+    "heading": ""
   },
   {
     "id": "WCSPREW020260423em4m00005",
@@ -1459,7 +1501,8 @@
     ],
     "relevance": "This leadership change at ACSI is significant for actuaries and financial services professionals as it impacts governance practices and investment strategies within the superannuation sector.",
     "summarised": true,
-    "filename": "13_Super_investor_body_reshuffles_presidency_after_HESTA_exit.json"
+    "filename": "13_Super_investor_body_reshuffles_presidency_after_HESTA_exit.json",
+    "heading": ""
   },
   {
     "id": "AUSTLN0020260423em4o00021",
@@ -1493,7 +1536,8 @@
     ],
     "relevance": "This is relevant to actuaries and financial services professionals as it underscores the importance of compliance and the risks associated with unregulated financial advice in the digital age.",
     "summarised": true,
-    "filename": "14_Finfluencers_put_on_notice_in_crackdown.json"
+    "filename": "14_Finfluencers_put_on_notice_in_crackdown.json",
+    "heading": ""
   },
   {
     "id": "AGEE000020260423em4o0000t",
@@ -1527,7 +1571,8 @@
     ],
     "relevance": "This situation highlights the ongoing challenges in the financial services sector regarding job security and the impact of technology on employment, which are critical considerations for actuaries and financial professionals.",
     "summarised": true,
-    "filename": "15_Financial_services_Bank_union_slams_CBA_over_further_119_job_cuts.json"
+    "filename": "15_Financial_services_Bank_union_slams_CBA_over_further_119_job_cuts.json",
+    "heading": ""
   },
   {
     "id": "AUSTLN0020260423em4o0001e",
@@ -1561,7 +1606,8 @@
     ],
     "relevance": "Understanding interest rate movements is crucial for actuaries and financial services professionals as they impact lending, investment strategies, and economic forecasts.",
     "summarised": true,
-    "filename": "16_Westpac_lifts_rates_for_second_time_in_three_weeks.json"
+    "filename": "16_Westpac_lifts_rates_for_second_time_in_three_weeks.json",
+    "heading": ""
   },
   {
     "id": "AUSTLN0020260422em4n0004d",
@@ -1595,7 +1641,8 @@
     ],
     "relevance": "Understanding BOQ's transformation and financial performance provides insights into the banking sector's adaptation to digital trends and economic pressures, relevant for actuaries and finance professionals.",
     "summarised": true,
-    "filename": "17_BOQ_suffering_a_dose_of_heartburn_over_bank_transformation.json"
+    "filename": "17_BOQ_suffering_a_dose_of_heartburn_over_bank_transformation.json",
+    "heading": ""
   },
   {
     "id": "SMHHOL0020260423em4n000xe",
@@ -1629,6 +1676,7 @@
     ],
     "relevance": "This development is significant for actuaries and financial services professionals as it reflects the increasing integration of digital solutions in government services and the management of personal data.",
     "summarised": true,
-    "filename": "18_Digital_drivers_licences_coming_to_WA.json"
+    "filename": "18_Digital_drivers_licences_coming_to_WA.json",
+    "heading": ""
   }
 ]

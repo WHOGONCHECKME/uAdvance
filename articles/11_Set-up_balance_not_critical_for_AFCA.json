@@ -1,10 +1,10 @@
 {
   "id": "WC47832020260430em4u0000b",
   "index": 11,
-  "scraped_at": "2026-05-01T10:55:26Z",
+  "scraped_at": "2026-05-02T06:11:55Z",
   "title": "Set-up balance not critical for AFCA",
   "full_text": "NEWS AFCA, SMSF Set-up balance not critical for AFCA April 30, 2026 Darin Tyson-Chan The minimum balance used to establish an SMSF is not a single determining factor for AFCA when processing an individual’s complaint. Add us as a preferred source on Google The Australian Financial Complaints Authority (AFCA) has confirmed it does not consider the concept of a minimum member balance with regard to SMSF establishment as a sole determinant when assessing a consumer action. AFCA senior ombudsman investment and advice Alexandra Sidoti indicated the balance of benefits used to set up an SMSF cannot be used to judge the success or failure of a fund due to a series of other factors that might be present at the time but not obvious at face value. “It very much does depend on the client’s circumstances. You might have a circumstance, for example, where a client is walking in with a really low balance but there are expectations of early significant contributions to that,” Sidoti told AFCA member forum attendees yesterday. “It might be they’re about to sell an investment property and anticipate putting the proceeds into the SMSF, or maybe they’ve got an inheritance that they’re about to contribute to the SMSF,” she added. “So the starting balance alone isn’t the factor [that should be considered].” “Sometimes there are other factors, like if someone has a small business, [meaning] there might be other [aspects] associated with that vehicle which is really specifically appropriate to their circumstances,” she noted. According to Sidoti, a determination of whether an SMSF is an appropriate retirement savings vehicle for a particular individual when a rollover is involved needs to take into account its cost effectiveness in conjunction with the aforementioned elements. “When you look at the cost effectiveness you have to really look at the proportionality of the [fees involved]. A simple way of doing that is to [line] up all of the fees and costs of the superannuation vehicle they are currently in and compare that to what it would look like if they have an SMSF with its current balance,” she explained. “[In situation where] the starting balance isn’t looking great and the proportionate costs are looking a bit high, but you’re anticipating [triggering] the [non-concessional contribution] bring forward provisions and put another $300,000 or something, that’s going to really change what that cost effectiveness looks like quite early on,” she said. “So all of those are relevant considerations.” X linkedin Darin Tyson-Chan EDITOR Darin is the founder and publisher of Benchmark Media, an independent publishing house whose mastheads include financialobserver, selfmanagedsuper and smstrusteenews. He has been covering the financial services space for over a decade and in this time he has worked for a variety of trade publications. Darin has also written for the Money section published in The Sydney Morning Herald and The Age. Articles by Darin PREVIOUS ARTICLE",
-  "summary": "The Australian Financial Complaints Authority (AFCA) has clarified that the minimum balance for establishing a Self-Managed Super Fund (SMSF) is not the sole factor in assessing complaints. AFCA senior ombudsman Alexandra Sidoti emphasised that individual circumstances, such as expected future contributions, play a crucial role in determining the appropriateness of an SMSF. Cost-effectiveness must also be evaluated in relation to the client's current superannuation vehicle and anticipated contributions.",
+  "summary": "The Australian Financial Complaints Authority (AFCA) has clarified that the minimum balance for establishing a self-managed super fund (SMSF) is not the sole factor in assessing complaints. AFCA's senior ombudsman, Alexandra Sidoti, emphasized that individual circumstances, such as expected future contributions, play a significant role in determining the appropriateness of an SMSF. Cost-effectiveness must also be evaluated in relation to the member's current superannuation vehicle.",
   "publication": "Housing isn’t just a young people problem. We know how this story ends\ntheage.com.au30 April 2026 19:00 GMT1,415 wordsMillie Muroi\n\nWhen we debate intergenerational fairness, it often looks like younger Australians lamenting the selfishness of Boomers and those Boomers calling Zoomers “entitled” for wanting more.",
   "author": "",
   "published_date": "2026-05-01",
@@ -12,6 +12,7 @@
   "language": "English",
   "category": "Web",
   "category_code": "W",
+  "heading": "Superannuation and Investments",
   "newsletter": "Actuaries Institute Today",
   "factiva_url": "https://global.factiva.com/redir/default.aspx?EP=NL&AN=WC47832020260430em4u0000b&CAT=W&napc=MC&f=nv&P=er&erc=LVfLdDTapCBrFH93tOPKccHd3xazgTKFnVNXLS29ADZY2C%2b%2fttJUlgKpRGvvpyD7V8kHRRdxBDjpwzd9ZyiPhuAu3wqDNdKgm8cacQuZmE89nkBoLnSUg6CEeAzruSb900WlLSyXQAiU0ft7DEs5tEU21Z83ionPoL1GjRwta3Z7JZcPzDbe%2b8VgDkthIplLKNAQy8PwCeHS2Hjjixj4BxW4DFuKsIW%2b%7c2&nldtl=DkzATV7FuEELjedX88l%2bbTt6lBYNjNrSx2D3jDckwHXkhG%2f6ivvzpde5Huy7QPKBW0ycjaNGbQabes74SLZYbvuTIlexoUROvcWemMhZPJ2bKet7uPd4rj9%2f%2fHDftBQbMvypAQtnk5Glq8%2buJ4Nybw%3d%3d%7c2&mod=MCT_email&page_driver=MCT_email",
   "final_url": "https://smsmagazine.com.au/news/2026/04/30/set-up-balance-not-critical-for-afca/",
@@ -20,8 +21,8 @@
   "selector_used": "article",
   "key_points": [
     "Minimum SMSF balance is not a sole determinant for AFCA complaints.",
-    "Individual client circumstances and future contributions are critical factors.",
-    "Cost-effectiveness of SMSFs should be compared with existing superannuation options."
+    "Individual circumstances and future contributions are critical in assessment.",
+    "Cost-effectiveness should be compared between current superannuation and SMSF."
   ],
   "tags": [
     "smsf",
@@ -29,6 +30,6 @@
     "superannuation",
     "cost effectiveness"
   ],
-  "relevance": "This information is relevant for actuaries and financial services professionals involved in superannuation advice and SMSF management.",
+  "relevance": "This information is crucial for actuaries and financial services professionals involved in SMSF advice and compliance.",
   "summarised": true
 }

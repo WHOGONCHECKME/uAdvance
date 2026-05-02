@@ -607,8 +607,8 @@
         </div>
       </div>
       <div class="filter-row">
-        <div class="filter-label">Category</div>
-        <div class="filter-chips" id="cat-chips"></div>
+        <div class="filter-label">Heading</div>
+        <div class="filter-chips" id="heading-chips"></div>
       </div>
       <div class="filter-row">
         <div class="filter-label">Sort</div>
@@ -658,7 +658,7 @@
 // ── State ──────────────────────────────────────────────────────────────────
 let allArticles = [];
 let filteredArticles = [];
-let activeCategory = 'All';
+let activeHeading = 'All';
 let activeSort = 'date-desc';
 let selectedArticle = null;
 let openaiKey = sessionStorage.getItem('oai_key') || '';
@@ -683,23 +683,23 @@ async function init() {
   }
 
   document.getElementById('article-count').textContent = allArticles.length;
-  buildCategoryChips();
+  buildHeadingChips();
   applyFilters();
 }
 
 // ── Filters ────────────────────────────────────────────────────────────────
-function buildCategoryChips() {
-  const cats = ['All', ...new Set(allArticles.map(a => a.category || 'Other').filter(Boolean))];
-  const wrap = document.getElementById('cat-chips');
-  wrap.innerHTML = cats.map(c =>
-    `<button class="chip${c === 'All' ? ' active' : ''}" onclick="setCategory(this,'${c}')">${c}</button>`
+function buildHeadingChips() {
+  const headings = ['All', ...new Set(allArticles.map(a => (a.heading || '').trim()).filter(Boolean))];
+  const wrap = document.getElementById('heading-chips');
+  wrap.innerHTML = headings.map(h =>
+    `<button class="chip${h === 'All' ? ' active' : ''}" onclick="setHeading(this,'${escapeForOnclick(h)}')">${escapeHtml(h)}</button>`
   ).join('');
 }
 
-function setCategory(el, cat) {
-  document.querySelectorAll('#cat-chips .chip').forEach(c => c.classList.remove('active'));
+function setHeading(el, heading) {
+  document.querySelectorAll('#heading-chips .chip').forEach(c => c.classList.remove('active'));
   el.classList.add('active');
-  activeCategory = cat;
+  activeHeading = heading;
   applyFilters();
 }
 
@@ -716,13 +716,14 @@ function applyFilters() {
   const q = document.getElementById('search-input').value.toLowerCase().trim();
   let list = [...allArticles];
 
-  if (activeCategory !== 'All') list = list.filter(a => (a.category || 'Other') === activeCategory);
+  if (activeHeading !== 'All') list = list.filter(a => (a.heading || '').trim() === activeHeading);
   if (q) list = list.filter(a =>
     (a.title || '').toLowerCase().includes(q) ||
     (a.summary || '').toLowerCase().includes(q) ||
     (a.publication || '').toLowerCase().includes(q) ||
+    (a.heading || '').toLowerCase().includes(q) ||
     (a.tags || []).some(t => t.toLowerCase().includes(q))
-  );
+    );
 
   if (activeSort === 'date-desc') list.sort((a,b) => (b.published_date||b.scraped_at||'').localeCompare(a.published_date||a.scraped_at||''));
   else if (activeSort === 'date-asc') list.sort((a,b) => (a.published_date||a.scraped_at||'').localeCompare(b.published_date||b.scraped_at||''));
@@ -921,6 +922,22 @@ function formatDate(d) {
   try {
     return new Date(d).toLocaleDateString('en-AU', { day: 'numeric', month: 'short', year: 'numeric' });
   } catch { return d; }
+}
+
+function escapeHtml(str) {
+  return String(str)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#039;');
+}
+
+function escapeForOnclick(str) {
+  return String(str)
+    .replace(/\\/g, '\\\\')
+    .replace(/'/g, "\\'")
+    .replace(/"/g, '&quot;');
 }
 
 // ── Sample data (used if articles_index.json not found) ───────────────────
