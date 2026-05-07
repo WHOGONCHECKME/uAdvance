@@ -2,9 +2,9 @@
   {
     "id": "WCSPREW020260505em5500001",
     "index": 10,
-    "scraped_at": "2026-05-06T23:14:11Z",
+    "scraped_at": "2026-05-07T02:52:21Z",
     "title": "ASFA, JANA lift scrutiny on super manager risk oversight",
-    "summary": "Superannuation funds are being urged to enhance their oversight of investment managers due to increasing regulatory expectations. The Association of Superannuation Funds of Australia (ASFA) and JANA have released a guidance note aimed at improving operational due diligence practices across the industry. This framework emphasizes the importance of assessing operational risk as a core component of investment decision-making.",
+    "summary": "Superannuation funds are urged to enhance their oversight of investment managers following new guidance from ASFA and JANA. The Better Practice Guidance Note on Investment Manager Operational Due Diligence aims to establish a consistent framework for assessing operational risk, aligning with APRA's CPS 230 standards. This guidance emphasizes the importance of operational due diligence in investment decision-making and mandates regular reviews to ensure compliance and risk management.",
     "publication": "Budget war on Boomers won’t make young better off\nafr.com01 May 2026 07:33 GMT939 wordsThe AFR View\n\nLet’s consider Anthony Albanese’s spin on the likely paring back of the capital gains tax discount and limiting the negative gearing tax break for property investors in the May 12 federal budget.",
     "author": "",
     "published_date": "2026-05-07",
@@ -18,28 +18,28 @@
     "final_url": "https://www.superreview.com.au/asfa-jana-lift-scrutiny-on-super-manager-risk-oversight/",
     "redirected_to_source": true,
     "page_title": "ASFA, JANA lift scrutiny on super manager risk oversight - Super Review",
-    "selector_used": ".entry-content",
+    "selector_used": "trafilatura",
     "key_points": [
-      "ASFA and JANA's guidance note aims to standardize operational risk assessments for investment managers.",
-      "The framework requires a forward-looking, risk-based approach to operational due diligence.",
-      "Operational due diligence should be a core part of ongoing manager oversight, with reviews recommended every three years."
+      "ASFA and JANA released guidance to improve investment manager risk assessment.",
+      "The framework aligns with APRA's CPS 230, focusing on operational resilience and oversight.",
+      "Regular operational due diligence reviews are required to maintain compliance and manage risks."
     ],
     "tags": [
       "superannuation",
-      "investment management",
-      "operational risk",
+      "risk management",
+      "investment",
       "regulation"
     ],
-    "relevance": "This guidance is crucial for actuaries and financial services professionals as it impacts the governance and risk management practices within superannuation funds.",
+    "relevance": "This is relevant to actuaries and financial services professionals as it highlights the increasing regulatory expectations for operational risk management within superannuation funds.",
     "summarised": true,
     "filename": "10_ASFA_JANA_lift_scrutiny_on_super_manager_risk_oversight.json"
   },
   {
     "id": "1",
     "index": 1,
-    "scraped_at": "2026-05-06T23:10:32Z",
+    "scraped_at": "2026-05-07T02:48:47Z",
     "title": "Solving the $326 billion ‘stranded’ pension asset problem",
-    "summary": "A dialogue paper from the Actuaries Institute highlights that over 1.5 million Australians aged 65 and older have $326 billion in 'stranded' superannuation accumulation balances, incurring over $2 billion in annual tax costs. The authors propose a three-part solution to transition these funds into a pension phase, aiming to shift the focus from lump sums to regular income streams in retirement. This initiative seeks to address systemic inertia and improve retirement income outcomes for Australians.",
+    "summary": "A dialogue paper from the Actuaries Institute highlights that over 1.5 million Australians aged 65 and over have $326 billion in 'stranded' superannuation accumulation balances, incurring over $2 billion in annual tax costs. The paper proposes a three-part solution to transition these funds into pension phase, including mandatory transfers at age 75. The authors advocate for a shift in mindset towards retirement income streams rather than lump sums.",
     "publication": "Budget war on Boomers won’t make young better off\nafr.com01 May 2026 07:33 GMT939 wordsThe AFR View\n\nLet’s consider Anthony Albanese’s spin on the likely paring back of the capital gains tax discount and limiting the negative gearing tax break for property investors in the May 12 federal budget.",
     "author": "",
     "published_date": "2026-05-07",
@@ -53,11 +53,11 @@
     "final_url": "https://www.investmentmagazine.com.au/2026/04/solving-the-326-billion-stranded-pension-asset-problem/",
     "redirected_to_source": true,
     "page_title": "Solving the $326 billion ‘stranded’ pension asset problem - Investment Magazine",
-    "selector_used": "article",
+    "selector_used": "trafilatura",
     "key_points": [
-      "Over 1.5 million Australians have $326 billion in superannuation accumulation phase, incurring significant tax costs.",
-      "The proposed solution includes collecting bank details from age 60, offering pre-set pensions from age 65, and mandatory transfers to pension phase at age 75.",
-      "The initiative aims to shift the mindset towards regular retirement income streams rather than lump sums."
+      "1.5 million Australians have $326 billion in stranded superannuation assets.",
+      "Proposed changes include mandatory pension phase transfers at age 75.",
+      "The focus is on transitioning to regular income streams for retirement."
     ],
     "tags": [
       "superannuation",
@@ -65,16 +65,16 @@
       "financial services",
       "actuarial science"
     ],
-    "relevance": "This is relevant for actuaries and financial services professionals as it addresses critical changes in retirement income strategies and regulatory expectations.",
+    "relevance": "This is relevant to actuaries and financial services professionals as it addresses systemic issues in retirement income management and potential regulatory changes impacting superannuation funds.",
     "summarised": true,
     "filename": "01_Solving_the_326_billion_stranded_pension_asset_problem.json"
   },
   {
     "id": "2",
     "index": 2,
-    "scraped_at": "2026-05-06T23:10:57Z",
+    "scraped_at": "2026-05-07T02:49:15Z",
     "title": "Housing affordability widening intergenerational equity gap: Study",
-    "summary": "A recent study by the Actuaries Institute highlights a widening wealth gap between older and younger Australians, primarily driven by housing affordability issues. The report indicates that while older age groups have seen significant wealth increases, younger Australians have struggled, with only a small fraction of rental properties being affordable for minimum wage earners. This growing disparity raises concerns about intergenerational equity and the need for policy reforms in housing and taxation.",
+    "summary": "A recent report by the Actuaries Institute reveals a widening wealth gap between older and younger Australians, driven largely by housing affordability issues. While older age groups have seen significant increases in household wealth, younger Australians, particularly those aged 25-34, have experienced much smaller gains. The report highlights the need for policy changes to address intergenerational equity and improve housing security.",
     "publication": "Budget war on Boomers won’t make young better off\nafr.com01 May 2026 07:33 GMT939 wordsThe AFR View\n\nLet’s consider Anthony Albanese’s spin on the likely paring back of the capital gains tax discount and limiting the negative gearing tax break for property investors in the May 12 federal budget.",
     "author": "",
     "published_date": "2026-05-07",
@@ -88,11 +88,11 @@
     "final_url": "https://www.fssustainability.com.au/housing-affordability-widening-intergenerational-equity-gap-study",
     "redirected_to_source": true,
     "page_title": "Housing affordability widening intergenerational equity gap: Study | FS Sustainability",
-    "selector_used": "body",
+    "selector_used": "trafilatura",
     "key_points": [
-      "Older Australians aged 65-74 gained an average of $375,000 in household wealth, compared to just $98,000 for those aged 25-34.",
-      "Only 1.51% of rental listings in Greater Sydney are affordable for minimum wage earners, exacerbating housing insecurity.",
-      "The report calls for policy changes to address intergenerational equity and improve housing security for younger Australians."
+      "Older Australians (ages 65-74) gained an average of $375,000 in household wealth, compared to $98,000 for those aged 25-34.",
+      "Only 1.51% of rental listings are affordable for minimum wage earners in Greater Sydney and Illawarra.",
+      "The report calls for policy reforms to enhance housing security and address the growing intergenerational equity gap."
     ],
     "tags": [
       "housing affordability",
@@ -100,16 +100,16 @@
       "wealth gap",
       "policy reform"
     ],
-    "relevance": "Understanding the dynamics of intergenerational wealth and housing affordability is crucial for actuaries and financial services professionals in assessing risks and advising clients on financial planning.",
+    "relevance": "Understanding the dynamics of intergenerational equity and housing affordability is crucial for actuaries and financial services professionals in assessing risks and advising clients.",
     "summarised": true,
     "filename": "02_Housing_affordability_widening_intergenerational_equity_gap_Study.json"
   },
   {
     "id": "AFNROL0020260504em51000p2",
     "index": 3,
-    "scraped_at": "2026-05-06T23:11:19Z",
+    "scraped_at": "2026-05-07T02:49:32Z",
     "title": "Budget war on Boomers won’t make young better off",
-    "summary": "The upcoming federal budget is expected to propose cuts to capital gains tax discounts and negative gearing, aimed at addressing intergenerational inequality. However, experts argue that these changes may not significantly benefit younger Australians and could lead to unintended consequences in the housing market. A broader structural tax reform is suggested as a more effective solution to improve financial circumstances for younger generations.",
+    "summary": "The upcoming federal budget may include cuts to capital gains tax discounts and negative gearing, framed by Prime Minister Albanese as a move towards intergenerational equity. However, experts argue that these changes alone will not significantly benefit younger Australians and could even exacerbate housing supply issues. A broader structural tax reform is suggested as necessary for meaningful improvements in financial circumstances for younger generations.",
     "publication": "Budget war on Boomers won’t make young better off\nafr.com01 May 2026 07:33 GMT939 wordsThe AFR View\n\nLet’s consider Anthony Albanese’s spin on the likely paring back of the capital gains tax discount and limiting the negative gearing tax break for property investors in the May 12 federal budget.",
     "author": "",
     "published_date": "2026-05-07",
@@ -123,28 +123,28 @@
     "final_url": "https://viewer.factiva.com/Edition?an=AFNROL0020260504em51000p2&mod=MCT_email&page_driver=MCT_email&CAT=A&napc=MC&erc=LVfLdDTapCBrFH93tOPKccHd3xazgTKFnVNXLS29ADZY2C%2B%2FttJUlnmC38wmTOkhEa5JZ7HA5ghDQNZloPZGjhEcHm6Txlnk32KI5yE5XD1ezNo794fSFx5JF3Ze1FDl8HVHvgm264TnUM%2FqAJ%2FH3E8gw60GBC86vbvxHUqiNLBU4IFLxmbi6ItLVIkjkx4iA1Vp7BENDGTKS37p0%2BT4xptaueVWKjxh%7C2&editionId=13581508&templateId=34197&trackProfileName=Actuaries%20Institute&eid4=dli4bWDCZhAfMY_2FPkJWIrLVcC_2BwwpY2r7J0vYrDxTGvyUdveah_2F2_2Fb7Ie_2FjL9kCNmjT_2BO_2BY68pQz2xiEPNsHFLEiVRIdfTA2BWx545_2B6J6aGXxqNoCj23wQkPJbWJcleB7QdXyUgG_2B4r4qAbuh823dulAlWDXMXYv2vbVjw7xQGF8hSyEttmVw_3D_3D%7C2&nldtl=DkzATV7FuEELjedX88l%20bTt6lBYNjNrSx2D3jDckwHXkhG%2F6ivvzpde5Huy7QPKBTEEk%2FG1IoG%2FI5Lz4kQVYhAQoYoCnl%20x50GfYFPVjacVGTeycPQNzqG9z0dzyA5i7swzcZqFmD89IwrinV4FY7Q%3D%3D%7C2",
     "redirected_to_source": false,
     "page_title": "Dow Jones Newsletter",
-    "selector_used": "body",
+    "selector_used": "trafilatura",
     "key_points": [
-      "Proposed tax changes may not improve financial outcomes for younger Australians.",
-      "The government is under pressure to address intergenerational wealth disparities.",
-      "Broader tax reform is needed to effectively tackle the challenges faced by younger workers."
+      "Proposed tax changes may not significantly benefit younger Australians.",
+      "The need for broader structural tax reform is emphasized.",
+      "Current policies may not address the root causes of intergenerational wealth disparity."
     ],
     "tags": [
-      "capital gains tax",
-      "negative gearing",
+      "taxation",
       "intergenerational equity",
-      "housing market"
+      "housing",
+      "budget"
     ],
-    "relevance": "Understanding the implications of tax policy changes is crucial for actuaries and financial services professionals as they navigate the evolving economic landscape.",
+    "relevance": "Understanding the implications of tax policy changes is crucial for actuaries and financial professionals in assessing future economic conditions and advising clients.",
     "summarised": true,
     "filename": "03_Budget_war_on_Boomers_wont_make_young_better_off.json"
   },
   {
     "id": "4",
     "index": 4,
-    "scraped_at": "2026-05-06T23:11:49Z",
+    "scraped_at": "2026-05-07T02:50:03Z",
     "title": "Covid-era intergenerational equity gains now in retreat",
-    "summary": "A recent report from the Actuaries Institute indicates that intergenerational equity gains made during the COVID-19 pandemic are now declining, with older Australians accumulating wealth at a much faster rate than younger cohorts. The report highlights worsening housing affordability and government spending patterns that favour older generations, contributing to rising disparities. While some positive trends exist, such as lower unemployment rates among younger Australians, significant challenges remain.",
+    "summary": "A recent Actuaries Institute report indicates that intergenerational equity gains achieved during the COVID-19 pandemic are rapidly declining, with older Australians accumulating significantly more wealth than younger cohorts. Housing affordability and government spending patterns are identified as key factors contributing to this trend. While some improvements in employment and the gender pay gap are noted, the overall outlook for younger Australians remains concerning.",
     "publication": "Budget war on Boomers won’t make young better off\nafr.com01 May 2026 07:33 GMT939 wordsThe AFR View\n\nLet’s consider Anthony Albanese’s spin on the likely paring back of the capital gains tax discount and limiting the negative gearing tax break for property investors in the May 12 federal budget.",
     "author": "",
     "published_date": "2026-05-07",
@@ -158,28 +158,28 @@
     "final_url": "https://financialnewswire.com.au/financial-planning/covid-era-intergenerational-equity-gains-now-in-retreat/",
     "redirected_to_source": true,
     "page_title": "Covid-era intergenerational equity gains now in retreat - Financial Newswire",
-    "selector_used": "article",
+    "selector_used": "trafilatura",
     "key_points": [
-      "Older Australians gained more wealth than younger cohorts during the past two years, exacerbating intergenerational disparities.",
-      "Government spending patterns have shifted to favour older generations, increasing the fiscal burden on younger Australians.",
-      "Despite some improvements in employment and the gender pay gap, mental health issues and housing affordability continue to affect younger Australians negatively."
+      "Older Australians gained more wealth than younger cohorts during the past two years, with significant disparities in asset accumulation.",
+      "Government spending patterns have increasingly favoured older generations, exacerbating intergenerational inequality.",
+      "Despite some positive trends in employment and gender pay equity, mental health issues and housing affordability continue to challenge younger Australians."
     ],
     "tags": [
       "intergenerational equity",
-      "government spending",
-      "housing crisis",
-      "unemployment"
+      "housing affordability",
+      "government policy",
+      "wealth distribution"
     ],
-    "relevance": "Understanding these trends is crucial for actuaries and financial services professionals as they navigate the implications of intergenerational wealth disparities and policy impacts on financial planning.",
+    "relevance": "Understanding these trends is crucial for actuaries and financial services professionals as they navigate the implications of intergenerational wealth disparities on financial planning and policy development.",
     "summarised": true,
     "filename": "04_Covid-era_intergenerational_equity_gains_now_in_retreat.json"
   },
   {
     "id": "WC63761020260506em56000p1",
     "index": 5,
-    "scraped_at": "2026-05-06T23:12:13Z",
+    "scraped_at": "2026-05-07T02:50:23Z",
     "title": "Research finds AI-triggered layoffs not translating to ROI",
-    "summary": "A Gartner report reveals that layoffs triggered by AI adoption are not yielding expected returns on investment for many organisations. Approximately 80% of companies implementing autonomous technologies have reduced their workforce, yet those seeing higher ROI are investing in upskilling employees instead. The report suggests that autonomous business will ultimately create more jobs rather than reduce them.",
+    "summary": "A Gartner report indicates that layoffs due to AI adoption are not yielding expected returns on investment for many organisations. Approximately 80% of companies that implemented autonomous technologies have reduced their workforce, yet those achieving higher ROI are investing in employee upskilling instead. The report suggests that autonomous business will ultimately create more jobs rather than reduce them.",
     "publication": "Budget war on Boomers won’t make young better off\nafr.com01 May 2026 07:33 GMT939 wordsThe AFR View\n\nLet’s consider Anthony Albanese’s spin on the likely paring back of the capital gains tax discount and limiting the negative gearing tax break for property investors in the May 12 federal budget.",
     "author": "",
     "published_date": "2026-05-07",
@@ -193,28 +193,28 @@
     "final_url": "https://www.insurancebusinessmag.com/au/business-strategy/research-finds-aitriggered-layoffs-not-translating-to-roi-574257.aspx",
     "redirected_to_source": true,
     "page_title": "Research finds AI-triggered layoffs not translating to ROI | Insurance Business",
-    "selector_used": "body",
+    "selector_used": "trafilatura",
     "key_points": [
       "80% of organisations reducing workforce due to AI adoption",
-      "Layoffs do not guarantee ROI; upskilling employees is more effective",
-      "Autonomous business is expected to create more jobs by 2028-2029"
+      "Layoffs do not guarantee ROI; upskilling does",
+      "Autonomous business expected to create more jobs by 2028-2029"
     ],
     "tags": [
-      "artificial intelligence",
+      "ai",
       "workforce",
       "roi",
       "upskilling"
     ],
-    "relevance": "This information is crucial for actuaries and financial services professionals as it highlights the importance of strategic workforce management in the context of technological advancements.",
+    "relevance": "Understanding the impact of AI on workforce dynamics is crucial for actuaries and financial professionals as it affects employment trends and economic forecasts.",
     "summarised": true,
     "filename": "05_Research_finds_AI-triggered_layoffs_not_translating_to_ROI.json"
   },
   {
     "id": "WC63761020260506em56000rw",
     "index": 6,
-    "scraped_at": "2026-05-06T23:12:39Z",
+    "scraped_at": "2026-05-07T02:50:48Z",
     "title": "Allianz transfers global commercial cyber portfolio to Coalition",
-    "summary": "Allianz has entered a long-term partnership with Coalition, transferring its standalone commercial cyber insurance portfolio to Coalition, which will manage underwriting, product design, and claims handling. Allianz will continue to support larger corporate risks and provide capacity while gaining an increased equity stake in Coalition. The collaboration aims to enhance cyber risk management and expand their market presence globally.",
+    "summary": "Allianz Commercial is transferring its standalone commercial cyber insurance portfolio to Coalition under a long-term partnership, making Coalition its exclusive partner for this segment. The deal will enable Coalition to manage underwriting, product design, and claims handling, while Allianz will continue to support larger corporate risks and provide capacity. This collaboration aims to enhance cyber insurance offerings and streamline services across multiple jurisdictions.",
     "publication": "Budget war on Boomers won’t make young better off\nafr.com01 May 2026 07:33 GMT939 wordsThe AFR View\n\nLet’s consider Anthony Albanese’s spin on the likely paring back of the capital gains tax discount and limiting the negative gearing tax break for property investors in the May 12 federal budget.",
     "author": "",
     "published_date": "2026-05-07",
@@ -228,28 +228,28 @@
     "final_url": "https://www.insurancebusinessmag.com/au/news/cyber/allianz-transfers-global-commercial-cyber-portfolio-to-coalition-574275.aspx",
     "redirected_to_source": true,
     "page_title": "Allianz transfers global commercial cyber portfolio to Coalition | Insurance Business",
-    "selector_used": "body",
+    "selector_used": "trafilatura",
     "key_points": [
-      "Allianz transfers its commercial cyber insurance portfolio to Coalition",
-      "Coalition will manage underwriting and claims, while Allianz focuses on larger accounts",
-      "The partnership aims to improve cyber risk management and expand market reach"
+      "Allianz transfers its standalone commercial cyber insurance portfolio to Coalition for at least 10 years.",
+      "Coalition will handle underwriting, product development, and claims, while Allianz focuses on larger accounts.",
+      "The partnership aims to improve cyber risk management and expand offerings in key markets."
     ],
     "tags": [
       "cyber insurance",
-      "partnership",
+      "partnerships",
       "risk management",
-      "insurance"
+      "insurance industry"
     ],
-    "relevance": "This development highlights the evolving landscape of cyber insurance, which is increasingly relevant for actuaries and financial services professionals managing risk in a digital environment.",
+    "relevance": "This development highlights the evolving landscape of cyber insurance, which is crucial for actuaries and financial services professionals involved in risk assessment and product development.",
     "summarised": true,
     "filename": "06_Allianz_transfers_global_commercial_cyber_portfolio_to_Coalition.json"
   },
   {
     "id": "WC63761020260506em56000rv",
     "index": 7,
-    "scraped_at": "2026-05-06T23:13:07Z",
+    "scraped_at": "2026-05-07T02:51:16Z",
     "title": "Brokers as shock-absorbers: Inside the insurer turnaround times squeeze",
-    "summary": "Insurer turnaround times are increasingly impacting brokers' ability to deliver timely services to clients, as delays stem from internal changes within insurance companies. Brokers are adapting by implementing structured processes to manage claims and maintain client communication. The ability to absorb these delays and provide consistent service is becoming a key competitive advantage for brokerages.",
+    "summary": "Insurer turnaround times are increasingly affecting brokers' ability to deliver timely services to clients, as delays stem from internal insurer processes and restructuring. Brokers are adapting by implementing internal processes to manage claims and maintain client communication. The ability to navigate these challenges effectively is becoming a key differentiator for brokerages in a competitive market.",
     "publication": "Budget war on Boomers won’t make young better off\nafr.com01 May 2026 07:33 GMT939 wordsThe AFR View\n\nLet’s consider Anthony Albanese’s spin on the likely paring back of the capital gains tax discount and limiting the negative gearing tax break for property investors in the May 12 federal budget.",
     "author": "",
     "published_date": "2026-05-07",
@@ -263,28 +263,28 @@
     "final_url": "https://www.insurancebusinessmag.com/au/news/claims/brokers-as-shockabsorbers-inside-the-insurer-turnaround-times-squeeze-574205.aspx",
     "redirected_to_source": true,
     "page_title": "Brokers as shock-absorbers: Inside the insurer turnaround times squeeze | Insurance Business",
-    "selector_used": "body",
+    "selector_used": "trafilatura",
     "key_points": [
-      "Insurer delays are a chronic issue affecting broker-client interactions.",
-      "Brokers are implementing internal processes to manage claims despite insurer lag.",
-      "The ability to navigate these delays is crucial for client retention."
+      "Insurer turnaround times are a growing concern for brokers",
+      "Delays are often due to internal changes within insurers",
+      "Brokers are developing internal processes to manage claims more efficiently"
     ],
     "tags": [
       "insurance",
-      "brokers",
+      "brokerage",
       "claims",
       "turnaround times"
     ],
-    "relevance": "Understanding turnaround times is essential for actuaries and financial services professionals to enhance client service and operational efficiency in the insurance sector.",
+    "relevance": "Understanding the dynamics of insurer turnaround times is crucial for actuaries and financial services professionals as it impacts client satisfaction and operational efficiency.",
     "summarised": true,
     "filename": "07_Brokers_as_shock-absorbers_Inside_the_insurer_turnaround_times_squeeze.json"
   },
   {
     "id": "WC63761020260506em550008d",
     "index": 8,
-    "scraped_at": "2026-05-06T23:13:31Z",
+    "scraped_at": "2026-05-07T02:51:36Z",
     "title": "Personalisation or bust: Why 60% of insurance customers are ready to walk",
-    "summary": "Research indicates that 60% of insurance customers are willing to switch providers for more personalised service, highlighting a shift in customer loyalty dynamics. Despite the availability of technology for personalisation, many insurers struggle to implement it effectively due to strategic misalignment and data quality issues. The industry must prioritise personalisation as a core growth strategy to meet evolving customer expectations.",
+    "summary": "A significant 60% of insurance customers are willing to switch providers for more personalised service, highlighting a shift in the industry from price competition to customer experience. Despite the availability of technology for personalisation, only about 25% of insurers can deliver it at scale, primarily due to strategic misalignment and data quality issues. The push for personalisation is critical for retaining younger, digitally savvy customers and improving operational efficiency.",
     "publication": "Budget war on Boomers won’t make young better off\nafr.com01 May 2026 07:33 GMT939 wordsThe AFR View\n\nLet’s consider Anthony Albanese’s spin on the likely paring back of the capital gains tax discount and limiting the negative gearing tax break for property investors in the May 12 federal budget.",
     "author": "",
     "published_date": "2026-05-07",
@@ -298,28 +298,28 @@
     "final_url": "https://www.insurancebusinessmag.com/au/news/breaking-news/personalisation-or-bust-why-60-of-insurance-customers-are-ready-to-walk-574193.aspx",
     "redirected_to_source": true,
     "page_title": "Personalisation or bust: Why 60% of insurance customers are ready to walk | Insurance Business",
-    "selector_used": "body",
+    "selector_used": "trafilatura",
     "key_points": [
       "60% of customers would switch for personalised service",
       "Only 25% of insurers can deliver personalisation at scale",
-      "Data quality and governance are critical challenges for effective personalisation"
+      "Data quality and governance are major challenges for effective personalisation"
     ],
     "tags": [
       "insurance",
       "personalisation",
-      "data quality",
-      "customer loyalty"
+      "customer experience",
+      "data quality"
     ],
-    "relevance": "Understanding the importance of personalisation and data governance is crucial for actuaries and financial services professionals to enhance customer retention and satisfaction.",
+    "relevance": "Understanding the shift towards personalisation is crucial for actuaries and financial services professionals as it impacts customer retention strategies and operational efficiencies.",
     "summarised": true,
     "filename": "08_Personalisation_or_bust_Why_60_of_insurance_customers_are_ready_to_walk.json"
   },
   {
     "id": "WC47832020260506em560000a",
     "index": 9,
-    "scraped_at": "2026-05-06T23:13:50Z",
+    "scraped_at": "2026-05-07T02:52:00Z",
     "title": "Income support system cannot handle claims surge: CALI",
-    "summary": "Australia's income support system is under significant strain due to a surge in claims, particularly related to mental health issues. A report from the Council of Australian Life Insurers indicates that 8.5 million Australians accessed income support in the past year, with mental health being a major contributor to claims. The report calls for a more coordinated approach to manage the increasing demand and improve outcomes for affected individuals.",
+    "summary": "Australia's income support system is under significant strain due to a surge in claims, particularly related to mental health issues, with 8.5 million Australians accessing $78.9 billion in support last year. The fragmented nature of the system, comprising 11 different support streams, complicates access for those in need. Industry leaders are advocating for a more coordinated approach to improve outcomes and manage rising demand.",
     "publication": "Budget war on Boomers won’t make young better off\nafr.com01 May 2026 07:33 GMT939 wordsThe AFR View\n\nLet’s consider Anthony Albanese’s spin on the likely paring back of the capital gains tax discount and limiting the negative gearing tax break for property investors in the May 12 federal budget.",
     "author": "",
     "published_date": "2026-05-07",
@@ -333,28 +333,28 @@
     "final_url": "https://www.financialstandard.com.au/news/income-support-system-cannot-handle-claims-surge-cali-179812429",
     "redirected_to_source": true,
     "page_title": "Income support system cannot handle claims surge: CALI | Financial Standard",
-    "selector_used": "body",
+    "selector_used": "trafilatura",
     "key_points": [
-      "8.5 million Australians accessed income support, totaling $78.9 billion in payments over the past year.",
-      "Mental health conditions account for a significant portion of disability and income protection claims.",
-      "Industry groups advocate for a coordinated system to improve access to support and recovery outcomes."
+      "8.5 million Australians accessed income support in the past year, costing $78.9 billion.",
+      "Mental health conditions are a major driver of increased claims, accounting for a significant portion of disability and income protection claims.",
+      "There is a call for a coordinated approach to streamline the income support system and improve recovery outcomes."
     ],
     "tags": [
       "income support",
       "mental health",
-      "claims",
-      "insurance"
+      "insurance",
+      "policy reform"
     ],
-    "relevance": "This issue highlights the challenges in the income support system, which actuaries and financial services professionals must consider in their risk assessments and product designs.",
+    "relevance": "This is relevant to actuaries and financial services professionals as it highlights the challenges in the income support system and the implications for insurance and financial planning.",
     "summarised": true,
     "filename": "09_Income_support_system_cannot_handle_claims_surge_CALI.json"
   },
   {
     "id": "WCSPREW020260506em5600001",
     "index": 11,
-    "scraped_at": "2026-05-06T23:14:31Z",
+    "scraped_at": "2026-05-07T02:52:40Z",
     "title": "ASFA leadership overhaul begins with chair, director exits",
-    "summary": "The Association of Superannuation Funds of Australia (ASFA) is undergoing a leadership transition with the departure of independent chair Gary Dransfield and board member Bryony Hayes. Both were instrumental in recent strategic developments, including the SC3 Framework aimed at enhancing sector resilience against cyber threats. ASFA is now seeking to appoint a new independent chair and an additional board member as it continues to evolve its strategic direction.",
+    "summary": "The Association of Superannuation Funds of Australia (ASFA) is undergoing a leadership transition with the departure of independent chair Gary Dransfield and board member Bryony Hayes. The organisation is currently searching for a new chair and an additional board member as it continues to implement its 2024–2027 strategy. Both departing members contributed to the SC3 Framework aimed at enhancing sector resilience against cyber threats.",
     "publication": "Budget war on Boomers won’t make young better off\nafr.com01 May 2026 07:33 GMT939 wordsThe AFR View\n\nLet’s consider Anthony Albanese’s spin on the likely paring back of the capital gains tax discount and limiting the negative gearing tax break for property investors in the May 12 federal budget.",
     "author": "",
     "published_date": "2026-05-07",
@@ -368,11 +368,11 @@
     "final_url": "https://www.superreview.com.au/asfa-leadership-overhaul-begins-with-chair-director-exits/",
     "redirected_to_source": true,
     "page_title": "ASFA leadership overhaul begins with chair, director exits - Super Review",
-    "selector_used": ".entry-content",
+    "selector_used": "trafilatura",
     "key_points": [
       "Gary Dransfield steps down as independent chair after four years",
       "Bryony Hayes exits the board following TelstraSuper's merger with Aware Super",
-      "ASFA is seeking new leadership to support its strategic initiatives and governance"
+      "ASFA is implementing its 2024–2027 strategy and has initiated a search for new board leadership"
     ],
     "tags": [
       "superannuation",
@@ -380,16 +380,16 @@
       "governance",
       "cybersecurity"
     ],
-    "relevance": "These leadership changes at ASFA may impact regulatory and strategic directions within the superannuation sector, which is crucial for actuaries and financial services professionals.",
+    "relevance": "These leadership changes at ASFA may impact policy direction and governance in the superannuation sector, which is crucial for actuaries and financial services professionals.",
     "summarised": true,
     "filename": "11_ASFA_leadership_overhaul_begins_with_chair_director_exits.json"
   },
   {
     "id": "WC47832020260506em5600002",
     "index": 12,
-    "scraped_at": "2026-05-06T23:14:55Z",
+    "scraped_at": "2026-05-07T02:52:59Z",
     "title": "Payday Super guidance needs more work",
-    "summary": "A group of seven industry bodies has urged the ATO to improve its draft guidance on Payday Super, citing inconsistencies and difficulties in interpretation across the four law companion rulings. They expressed concerns about the practical operability of the guidance and the lack of visibility for employers regarding superannuation contributions. The bodies made 30 recommendations to enhance clarity and reduce confusion about payment methods under the new regime.",
+    "summary": "A coalition of seven industry bodies has urged the ATO to enhance the clarity and consistency of four draft law companion rulings related to Payday Super. They expressed concerns about the practical operability of the rulings and the lack of visibility for employers regarding superannuation contributions. The bodies made 30 recommendations, including clarifying that existing payment methods for superannuation contributions remain unchanged.",
     "publication": "Budget war on Boomers won’t make young better off\nafr.com01 May 2026 07:33 GMT939 wordsThe AFR View\n\nLet’s consider Anthony Albanese’s spin on the likely paring back of the capital gains tax discount and limiting the negative gearing tax break for property investors in the May 12 federal budget.",
     "author": "",
     "published_date": "2026-05-07",
@@ -403,28 +403,28 @@
     "final_url": "https://smsmagazine.com.au/news/2026/05/06/payday-super-guidance-needs-more-work/",
     "redirected_to_source": true,
     "page_title": "Payday Super guidance needs more work | SMS Magazine",
-    "selector_used": "article",
+    "selector_used": "trafilatura",
     "key_points": [
-      "Industry bodies found the draft guidance on Payday Super inconsistent and difficult to interpret.",
-      "Concerns were raised about employers' lack of visibility on superannuation fund contributions.",
-      "Thirty recommendations were made to improve clarity and ensure compliance for employers."
+      "Industry bodies find the draft LCRs inconsistent and difficult to interpret.",
+      "Employers lack visibility on superannuation fund receipt, risking compliance issues.",
+      "Recommendations include clarifying payment methods and timing obligations for employers."
     ],
     "tags": [
-      "superannuation",
+      "payday super",
       "ATO",
-      "Payday Super",
-      "employer compliance"
+      "superannuation",
+      "compliance"
     ],
-    "relevance": "This is relevant to actuaries and financial services professionals as it impacts employer obligations and compliance regarding superannuation contributions.",
+    "relevance": "This issue is relevant as it impacts employers' compliance with superannuation obligations, which is crucial for actuaries and financial services professionals managing retirement funds.",
     "summarised": true,
     "filename": "12_Payday_Super_guidance_needs_more_work.json"
   },
   {
     "id": "AUSTLN0020260506em570001w",
     "index": 13,
-    "scraped_at": "2026-05-06T23:15:13Z",
+    "scraped_at": "2026-05-07T02:53:18Z",
     "title": "Disconnect super cold callers: Longo",
-    "summary": "The Australian Securities & Investments Commission (ASIC) is advocating for a ban on unlicensed superannuation marketing, citing significant consumer harm linked to cold calling practices. This call follows the collapse of investment schemes that resulted in substantial losses for thousands of Australians. ASIC's chair, Joe Longo, emphasised the need for regulatory reforms to protect consumers from exploitation in the superannuation sector.",
+    "summary": "ASIC is advocating for a ban on unlicensed superannuation marketing to prevent consumer harm and protect retirement savings. This follows significant losses experienced by investors in the Shield and First Guardian funds, which were linked to aggressive lead generation tactics. The Albanese government is considering reforms to enhance consumer protections in the superannuation sector.",
     "publication": "Budget war on Boomers won’t make young better off\nafr.com01 May 2026 07:33 GMT939 wordsThe AFR View\n\nLet’s consider Anthony Albanese’s spin on the likely paring back of the capital gains tax discount and limiting the negative gearing tax break for property investors in the May 12 federal budget.",
     "author": "",
     "published_date": "2026-05-07",
@@ -438,28 +438,28 @@
     "final_url": "https://viewer.factiva.com/Edition?an=AUSTLN0020260506em570001w&mod=MCT_email&page_driver=MCT_email&CAT=A&napc=MC&erc=LVfLdDTapCBrFH93tOPKccHd3xazgTKFnVNXLS29ADZY2C%2B%2FttJUlnmC38wmTOkhEa5JZ7HA5ghDQNZloPZGjhEcHm6Txlnk32KI5yE5XD1ezNo794fSFx5JF3Ze1FDl8HVHvgm264TnUM%2FqAJ%2FH3E8gw60GBC86vbvxHUqiNLBU4IFLxmbi6ItLVIkjkx4iA1Vp7BENDGTKS37p0%2BT4xptaueVWKjxh%7C2&editionId=13581508&templateId=34197&trackProfileName=Actuaries%20Institute&eid4=dli4bWDCZhAfMY_2FPkJWIrLVcC_2BwwpY2r7J0vYrDxTGvyUdveah_2F2_2Fb7Ie_2FjL9kCNmjT_2BO_2BY68pQz2xiEPNsHFLEiVRIdfTA2BWx545_2B6J6aGXxqNoCj23wQkPJbWJcleB7QdXyUgG_2B4r4qAbuh823dulAlWDXMXYv2vbVjw7xQGF8hSyEttmVw_3D_3D%7C2&nldtl=DkzATV7FuEELjedX88l%20bTt6lBYNjNrSx2D3jDckwHXkhG%2F6ivvzpde5Huy7QPKBTEEk%2FG1IoG%2FI5Lz4kQVYhAQoYoCnl%20x50GfYFPVjacVGTeycPQNzqG9z0dzyA5i7swzcZqFmD89IwrinV4FY7Q%3D%3D%7C2",
     "redirected_to_source": false,
     "page_title": "Dow Jones Newsletter",
-    "selector_used": "body",
+    "selector_used": "trafilatura",
     "key_points": [
-      "ASIC is pushing for a ban on unlicensed communications regarding superannuation.",
-      "The call for reform follows the failures of Shield and First Guardian funds, which led to $1 billion in losses.",
-      "Proposed reforms include regulating lead generation and enhancing consumer protection measures."
+      "ASIC calls for a ban on unlicensed superannuation marketing to combat consumer harm.",
+      "The Shield and First Guardian fund collapses resulted in $1 billion in losses for nearly 12,000 investors.",
+      "Proposed reforms include regulating cold-calling as a financial service and requiring licenses for lead generators."
     ],
     "tags": [
       "superannuation",
-      "regulation",
       "consumer protection",
-      "financial advice"
+      "financial regulation",
+      "investment risks"
     ],
-    "relevance": "This is relevant to actuaries and financial services professionals as it highlights ongoing regulatory changes that may impact investment practices and consumer trust in financial products.",
+    "relevance": "These developments highlight the importance of regulatory compliance and consumer protection in the financial services industry, which are critical areas for actuaries and financial professionals.",
     "summarised": true,
     "filename": "13_Disconnect_super_cold_callers_Longo.json"
   },
   {
     "id": "BC11058020260506em5600003",
     "index": 14,
-    "scraped_at": "2026-05-06T23:15:31Z",
+    "scraped_at": "2026-05-07T02:53:37Z",
     "title": "Coinbase Targets $1T Retirement Market With Crypto Offering for Australian SMSFs",
-    "summary": "Coinbase has launched a new service tailored for Australia's self-managed super funds (SMSFs) to facilitate cryptocurrency investments in the AU$1 trillion retirement sector. The offering includes streamlined onboarding, compliant reporting tools, and institutional-grade custody to address compliance challenges faced by trustees. Trustees will still be responsible for assessing the suitability of crypto investments for their funds.",
+    "summary": "Coinbase has launched a service tailored for Australian self-managed super funds (SMSFs) to facilitate cryptocurrency investments, targeting the AU$1 trillion retirement market. The offering includes simplified onboarding, compliant reporting, and institutional-grade custody to address barriers to crypto adoption. Trustees will maintain responsibility for aligning crypto investments with their fund's strategy and risk profile.",
     "publication": "Budget war on Boomers won’t make young better off\nafr.com01 May 2026 07:33 GMT939 wordsThe AFR View\n\nLet’s consider Anthony Albanese’s spin on the likely paring back of the capital gains tax discount and limiting the negative gearing tax break for property investors in the May 12 federal budget.",
     "author": "",
     "published_date": "2026-05-07",
@@ -473,11 +473,11 @@
     "final_url": "https://cryptonews.com.au/news/coinbase-targets-1t-retirement-market-with-crypto-offering-for-australian-smsfs-133796/",
     "redirected_to_source": true,
     "page_title": "Coinbase Targets $1T Retirement Market With Crypto Offering for Australian SMSFs",
-    "selector_used": "article",
+    "selector_used": "trafilatura",
     "key_points": [
-      "Coinbase targets the AU$1 trillion SMSF market with a new crypto service",
-      "The service simplifies compliance and reporting for SMSF trustees",
-      "Trustees retain responsibility for investment decisions regarding cryptocurrency"
+      "Coinbase targets the AU$1 trillion SMSF market with a dedicated crypto service.",
+      "The service includes tailored onboarding and audit-ready documentation for compliance.",
+      "Trustees are responsible for assessing the suitability of crypto investments for their funds."
     ],
     "tags": [
       "cryptocurrency",
@@ -485,16 +485,16 @@
       "retirement",
       "compliance"
     ],
-    "relevance": "This development is significant for actuaries and financial services professionals as it highlights the growing intersection of traditional retirement funds and digital assets, necessitating an understanding of compliance and risk management in this evolving landscape.",
+    "relevance": "This development is significant for actuaries and financial services professionals as it opens new investment avenues within the SMSF sector and highlights evolving compliance requirements in the crypto space.",
     "summarised": true,
     "filename": "14_Coinbase_Targets_1T_Retirement_Market_With_Crypto_Offering_for_Australian_SMSFs.json"
   },
   {
     "id": "AGEE000020260506em5700006",
     "index": 15,
-    "scraped_at": "2026-05-06T23:15:46Z",
+    "scraped_at": "2026-05-07T02:53:52Z",
     "title": "Exclusive: Chalmers to lower deficits amid cabinet frustration",
-    "summary": "Treasurer Jim Chalmers is set to announce a modest reduction in budget deficits in the upcoming federal budget, aiming to counter criticism of Labor's spending and its impact on interest rates. This improvement is partly attributed to savings from tax windfalls due to rising commodity prices and significant budget cuts in various sectors. The Reserve Bank's governor has raised concerns about government handouts potentially driving inflation, prompting tensions within the cabinet.",
+    "summary": "Treasurer Jim Chalmers is set to announce a modest reduction in budget deficits in the upcoming federal budget, aiming to address concerns over Labor's spending and its impact on interest rates. The forecasted improvement comes amid cabinet frustration over Reserve Bank Governor Michele Bullock's comments linking government handouts to inflationary pressures. Key budget savings will include an overhaul of the NDIS and cuts across various sectors, while the government plans to save most of the tax windfall from rising commodity prices.",
     "publication": "Budget war on Boomers won’t make young better off\nafr.com01 May 2026 07:33 GMT939 wordsThe AFR View\n\nLet’s consider Anthony Albanese’s spin on the likely paring back of the capital gains tax discount and limiting the negative gearing tax break for property investors in the May 12 federal budget.",
     "author": "",
     "published_date": "2026-05-07",
@@ -508,11 +508,11 @@
     "final_url": "https://viewer.factiva.com/Edition?an=AGEE000020260506em5700006&mod=MCT_email&page_driver=MCT_email&CAT=A&napc=MC&erc=LVfLdDTapCBrFH93tOPKccHd3xazgTKFnVNXLS29ADZY2C%2B%2FttJUlnmC38wmTOkhEa5JZ7HA5ghDQNZloPZGjhEcHm6Txlnk32KI5yE5XD1ezNo794fSFx5JF3Ze1FDl8HVHvgm264TnUM%2FqAJ%2FH3E8gw60GBC86vbvxHUqiNLBU4IFLxmbi6ItLVIkjkx4iA1Vp7BENDGTKS37p0%2BT4xptaueVWKjxh%7C2&editionId=13581508&templateId=34197&trackProfileName=Actuaries%20Institute&eid4=dli4bWDCZhAfMY_2FPkJWIrLVcC_2BwwpY2r7J0vYrDxTGvyUdveah_2F2_2Fb7Ie_2FjL9kCNmjT_2BO_2BY68pQz2xiEPNsHFLEiVRIdfTA2BWx545_2B6J6aGXxqNoCj23wQkPJbWJcleB7QdXyUgG_2B4r4qAbuh823dulAlWDXMXYv2vbVjw7xQGF8hSyEttmVw_3D_3D%7C2&nldtl=DkzATV7FuEELjedX88l%20bTt6lBYNjNrSx2D3jDckwHXkhG%2F6ivvzpde5Huy7QPKBTEEk%2FG1IoG%2FI5Lz4kQVYhAQoYoCnl%20x50GfYFPVjacVGTeycPQNzqG9z0dzyA5i7swzcZqFmD89IwrinV4FY7Q%3D%3D%7C2",
     "redirected_to_source": false,
     "page_title": "Dow Jones Newsletter",
-    "selector_used": "body",
+    "selector_used": "trafilatura",
     "key_points": [
-      "Chalmers will forecast a modest improvement in budget deficits amid cabinet frustrations.",
-      "The budget will include significant cuts to various sectors and savings from tax windfalls.",
-      "The RBA governor's comments on government spending have sparked tensions within the government."
+      "Chalmers will forecast a modest reduction in deficits to counter accusations of excessive spending.",
+      "The budget will include significant savings initiatives, including a $35 billion overhaul of the NDIS.",
+      "Bullock's comments on government spending and inflation have sparked cabinet frustration and debate."
     ],
     "tags": [
       "budget",
@@ -520,16 +520,16 @@
       "interest rates",
       "government spending"
     ],
-    "relevance": "Understanding budget forecasts and government spending is crucial for actuaries and financial professionals as it impacts economic conditions and investment strategies.",
+    "relevance": "Understanding budgetary changes and their implications on interest rates is crucial for actuaries and financial services professionals in assessing economic conditions and risks.",
     "summarised": true,
     "filename": "15_Exclusive_Chalmers_to_lower_deficits_amid_cabinet_frustration.json"
   },
   {
     "id": "CANBTZ0020260506em570000s",
     "index": 16,
-    "scraped_at": "2026-05-06T23:16:05Z",
+    "scraped_at": "2026-05-07T02:54:08Z",
     "title": "Record refinancing surge looms as latest rate rise hits homeowners",
-    "summary": "A significant surge in mortgage refinancing is anticipated as Australian homeowners react to the latest interest rate rise, with over 640,000 refinancing in 2025. Mortgage stress is increasingly attributed to repayment pressures rather than property prices, with many homeowners struggling to meet their mortgage obligations. Experts suggest that homeowners should explore refinancing options to mitigate rising costs, despite concerns about the broader economic implications of increased rates.",
+    "summary": "A surge in mortgage refinancing is anticipated as Australian homeowners face another interest rate rise, with refinancing inquiries increasing by 60% in the past six months. The Reserve Bank of Australia's cash rate is expected to reach 4.35%, raising concerns about mortgage affordability amidst ongoing inflation. Experts suggest homeowners should explore refinancing options to mitigate rising costs.",
     "publication": "Budget war on Boomers won’t make young better off\nafr.com01 May 2026 07:33 GMT939 wordsThe AFR View\n\nLet’s consider Anthony Albanese’s spin on the likely paring back of the capital gains tax discount and limiting the negative gearing tax break for property investors in the May 12 federal budget.",
     "author": "",
     "published_date": "2026-05-07",
@@ -543,28 +543,28 @@
     "final_url": "https://viewer.factiva.com/Edition?an=CANBTZ0020260506em570000s&mod=MCT_email&page_driver=MCT_email&CAT=A&napc=MC&erc=LVfLdDTapCBrFH93tOPKccHd3xazgTKFnVNXLS29ADZY2C%2B%2FttJUlnmC38wmTOkhEa5JZ7HA5ghDQNZloPZGjhEcHm6Txlnk32KI5yE5XD1ezNo794fSFx5JF3Ze1FDl8HVHvgm264TnUM%2FqAJ%2FH3E8gw60GBC86vbvxHUqiNLBU4IFLxmbi6ItLVIkjkx4iA1Vp7BENDGTKS37p0%2BT4xptaueVWKjxh%7C2&editionId=13581508&templateId=34197&trackProfileName=Actuaries%20Institute&eid4=dli4bWDCZhAfMY_2FPkJWIrLVcC_2BwwpY2r7J0vYrDxTGvyUdveah_2F2_2Fb7Ie_2FjL9kCNmjT_2BO_2BY68pQz2xiEPNsHFLEiVRIdfTA2BWx545_2B6J6aGXxqNoCj23wQkPJbWJcleB7QdXyUgG_2B4r4qAbuh823dulAlWDXMXYv2vbVjw7xQGF8hSyEttmVw_3D_3D%7C2&nldtl=DkzATV7FuEELjedX88l%20bTt6lBYNjNrSx2D3jDckwHXkhG%2F6ivvzpde5Huy7QPKBTEEk%2FG1IoG%2FI5Lz4kQVYhAQoYoCnl%20x50GfYFPVjacVGTeycPQNzqG9z0dzyA5i7swzcZqFmD89IwrinV4FY7Q%3D%3D%7C2",
     "redirected_to_source": false,
     "page_title": "Dow Jones Newsletter",
-    "selector_used": "body",
+    "selector_used": "trafilatura",
     "key_points": [
-      "Refinancing inquiries have risen by 60% in the past six months due to increased interest rates.",
-      "39% of homeowners reported difficulty in paying their mortgage, reflecting growing financial strain.",
-      "Experts advise homeowners to consider refinancing options to reduce repayment burdens."
+      "Over 640,000 Australians refinanced their mortgages in 2025.",
+      "39% of homeowners reported struggling to pay their mortgage as of April 2026.",
+      "Higher interest rates may dampen buyer demand but are unlikely to significantly impact property prices due to ongoing housing shortages."
     ],
     "tags": [
       "refinancing",
       "interest rates",
       "mortgages",
-      "economic impact"
+      "inflation"
     ],
-    "relevance": "Understanding the implications of rising interest rates and refinancing trends is crucial for actuaries and financial services professionals in assessing market risks and advising clients.",
+    "relevance": "Understanding the implications of interest rate changes is crucial for actuaries and financial services professionals in assessing risk and advising clients.",
     "summarised": true,
     "filename": "16_Record_refinancing_surge_looms_as_latest_rate_rise_hits_homeowners.json"
   },
   {
     "id": "NLNEWW0020260506em56002mh",
     "index": 17,
-    "scraped_at": "2026-05-06T23:16:21Z",
+    "scraped_at": "2026-05-07T02:54:25Z",
     "title": "‘Outlier’ behind Aussie dollar’s 4-year high",
-    "summary": "The Australian dollar has reached a four-year high, trading at 72.48 US cents, driven by rising domestic interest rates following a recent 25 basis point increase by the Reserve Bank of Australia (RBA) to 4.35%. This increase is attributed to persistent inflation pressures, with trimmed mean inflation expected to rise to 3.8% by June. Experts note that while the Australian economy is not booming, the RBA's proactive stance on inflation has positioned Australia as an outlier in global monetary policy.",
+    "summary": "The Australian dollar has reached a four-year high, trading at 72.48 US cents, following a 25 basis point increase in the cash rate by the Reserve Bank of Australia (RBA) to 4.35%. This increase is part of the RBA's strategy to combat persistent inflation, which currently stands at 4.6%. While the rise in the dollar benefits importers and overseas travellers, it poses challenges for mortgage holders as the RBA continues to address inflationary pressures.",
     "publication": "Budget war on Boomers won’t make young better off\nafr.com01 May 2026 07:33 GMT939 wordsThe AFR View\n\nLet’s consider Anthony Albanese’s spin on the likely paring back of the capital gains tax discount and limiting the negative gearing tax break for property investors in the May 12 federal budget.",
     "author": "",
     "published_date": "2026-05-07",
@@ -578,11 +578,11 @@
     "final_url": "https://viewer.factiva.com/Edition?an=NLNEWW0020260506em56002mh&mod=MCT_email&page_driver=MCT_email&CAT=A&napc=MC&erc=LVfLdDTapCBrFH93tOPKccHd3xazgTKFnVNXLS29ADZY2C%2B%2FttJUlnmC38wmTOkhEa5JZ7HA5ghDQNZloPZGjhEcHm6Txlnk32KI5yE5XD1ezNo794fSFx5JF3Ze1FDl8HVHvgm264TnUM%2FqAJ%2FH3E8gw60GBC86vbvxHUqiNLBU4IFLxmbi6ItLVIkjkx4iA1Vp7BENDGTKS37p0%2BT4xptaueVWKjxh%7C2&editionId=13581508&templateId=34197&trackProfileName=Actuaries%20Institute&eid4=dli4bWDCZhAfMY_2FPkJWIrLVcC_2BwwpY2r7J0vYrDxTGvyUdveah_2F2_2Fb7Ie_2FjL9kCNmjT_2BO_2BY68pQz2xiEPNsHFLEiVRIdfTA2BWx545_2B6J6aGXxqNoCj23wQkPJbWJcleB7QdXyUgG_2B4r4qAbuh823dulAlWDXMXYv2vbVjw7xQGF8hSyEttmVw_3D_3D%7C2&nldtl=DkzATV7FuEELjedX88l%20bTt6lBYNjNrSx2D3jDckwHXkhG%2F6ivvzpde5Huy7QPKBTEEk%2FG1IoG%2FI5Lz4kQVYhAQoYoCnl%20x50GfYFPVjacVGTeycPQNzqG9z0dzyA5i7swzcZqFmD89IwrinV4FY7Q%3D%3D%7C2",
     "redirected_to_source": false,
     "page_title": "Dow Jones Newsletter",
-    "selector_used": "body",
+    "selector_used": "trafilatura",
     "key_points": [
-      "The Australian dollar has risen to its highest level since June 2022 due to increased interest rates.",
-      "The RBA raised the cash rate to combat inflation, which is currently above its target range.",
-      "Australia's unique monetary policy stance is attracting global capital as other developed economies face different inflation challenges."
+      "The Australian dollar has risen due to a series of interest rate hikes by the RBA.",
+      "Inflation in Australia remains a concern, with forecasts suggesting it will rise to 3.8% by June.",
+      "The RBA's monetary policy is focused on achieving price stability and full employment amid global economic challenges."
     ],
     "tags": [
       "australian dollar",
@@ -590,7 +590,7 @@
       "inflation",
       "monetary policy"
     ],
-    "relevance": "Understanding currency movements and interest rate decisions is crucial for actuaries and financial services professionals in managing risk and investment strategies.",
+    "relevance": "Understanding the dynamics of interest rates and currency fluctuations is crucial for actuaries and financial services professionals in managing risk and advising clients.",
     "summarised": true,
     "filename": "17_Outlier_behind_Aussie_dollars_4-year_high.json"
   },
