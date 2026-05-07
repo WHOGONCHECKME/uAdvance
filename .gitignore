@@ -5,3 +5,4 @@ dowjones-news-bot/.venv/
 dowjones-news-bot/archive/
 dowjones-news-bot/__pycache__/
 dowjones-news-bot/*.pyc
+archive/
