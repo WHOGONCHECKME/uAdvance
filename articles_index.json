@@ -2,9 +2,9 @@
   {
     "id": "AUSTLN0020260507em580000s",
     "index": 1,
-    "scraped_at": "2026-05-08T00:43:50Z",
+    "scraped_at": "2026-05-08T13:52:43Z",
     "title": "Major global data breach rocks local schools and unis",
-    "summary": "A significant data breach involving education resource provider Instructure has compromised sensitive information of over 200 million individuals globally, affecting schools, colleges, and universities in Australia. Queensland Education Minister John-Paul Langbroek confirmed that names, email addresses, and school locations of students and staff from Education Queensland schools since 2020 have been exposed. Education leaders are on high alert as institutions work to inform affected families and staff.",
+    "summary": "A significant cybersecurity breach at education resource provider Instructure has compromised the personal data of over 200 million individuals globally, impacting numerous Australian schools, colleges, and universities. Queensland Education Minister John-Paul Langbroek confirmed that names, email addresses, and school locations of students and staff since 2020 have been affected. Education leaders are currently notifying families and teachers about the breach's implications.",
     "publication": "Major global data breach rocks local schools and unis\nThe Australian08 May 2026279 words\n\nSchools, colleges and universities across Australia have been left scrambling after a major hacking scandal compromised sensitive data belonging to millions of students worldwide.",
     "author": "",
     "published_date": "2026-05-08",
@@ -20,26 +20,26 @@
     "page_title": "Dow Jones Newsletter",
     "selector_used": "trafilatura",
     "key_points": [
-      "Instructure's data breach affects over 200 million people worldwide.",
-      "Sensitive information compromised includes names, email addresses, and school locations.",
-      "Education institutions are notifying families and staff about the breach."
+      "Instructure's data breach affects over 200 million individuals globally",
+      "Sensitive data compromised includes names, email addresses, and school locations",
+      "Education institutions in Australia are on high alert and notifying affected parties"
     ],
     "tags": [
-      "data breach",
-      "education",
       "cybersecurity",
+      "education",
+      "data breach",
       "privacy"
     ],
-    "relevance": "This incident highlights the importance of data security and risk management, which are critical considerations for actuaries and financial services professionals.",
+    "relevance": "This incident highlights the importance of data security and risk management, critical areas for actuaries and financial services professionals.",
     "summarised": true,
     "filename": "01_Major_global_data_breach_rocks_local_schools_and_unis.json"
   },
   {
     "id": "AUSTLN0020260506em570000j",
     "index": 2,
-    "scraped_at": "2026-05-08T00:44:07Z",
+    "scraped_at": "2026-05-08T13:53:01Z",
     "title": "AI data centres a threat to grid: AGL",
-    "summary": "AGL Energy has raised concerns that the increasing electricity demand from AI-driven data centres may exceed official forecasts, putting additional strain on Australia's power grid. The company estimates that operational data centres currently consume about 5 terawatt hours of electricity, a figure that could rise significantly with new projects. This situation highlights the need for new investments in energy generation to support the growing demand from digital infrastructure.",
+    "summary": "AGL Energy has raised concerns that the increasing electricity demand from AI-driven data centres could exceed forecasts, putting pressure on Australia's power grid. The company estimates that operational data centres currently consume about 5 terawatt hours of electricity, with potential demand rising to 34 terawatt hours as new projects come online. This situation highlights the need for significant investment in energy infrastructure to ensure grid reliability amidst growing digital demands.",
     "publication": "Major global data breach rocks local schools and unis\nThe Australian08 May 2026279 words\n\nSchools, colleges and universities across Australia have been left scrambling after a major hacking scandal compromised sensitive data belonging to millions of students worldwide.",
     "author": "",
     "published_date": "2026-05-08",
@@ -55,26 +55,26 @@
     "page_title": "Dow Jones Newsletter",
     "selector_used": "trafilatura",
     "key_points": [
-      "AGL warns that data centres could drive electricity demand beyond current forecasts.",
-      "Operational data centres currently consume about 5 terawatt hours of electricity, potentially rising to 34 terawatt hours.",
-      "Developers are increasingly expected to secure their own renewable energy sources to support new data centre projects."
+      "AGL warns data centre demand may exceed electricity forecasts.",
+      "Current demand from data centres is about 5 terawatt hours, potentially rising to 34 terawatt hours.",
+      "Developers are expected to secure their own renewable power sources to support new data centres."
     ],
     "tags": [
-      "energy",
       "data centres",
+      "electricity demand",
       "renewable energy",
-      "electricity demand"
+      "infrastructure investment"
     ],
-    "relevance": "This is relevant to actuaries and financial services professionals as it underscores the financial implications of energy demand trends and the need for investment in infrastructure.",
+    "relevance": "This is relevant to actuaries and financial services professionals as it underscores the financial implications of energy demand trends and the need for investment in infrastructure to support economic growth.",
     "summarised": true,
     "filename": "02_AI_data_centres_a_threat_to_grid_AGL.json"
   },
   {
     "id": "WC63761020260507em56000jh",
     "index": 3,
-    "scraped_at": "2026-05-08T00:44:26Z",
+    "scraped_at": "2026-05-08T13:53:25Z",
     "title": "Specialty market gives back half of hard‑market gains – WTW",
-    "summary": "The specialty insurance market has experienced a significant decline in rates, with a 10-point drop in the insurance rate index as of January 1, 2026, returning pricing to 2020 levels. Approximately 75% of tracked classes saw rate decreases, particularly in property and energy sectors, while general liability and medical malpractice lines are facing counter-cyclical pressures. The market is now in a softening phase, raising concerns about long-term sustainability amid ongoing inflation and claims trends.",
+    "summary": "The specialty insurance market has experienced a significant decline in rates, with a 10-point drop in the insurance rate index as of January 1, 2026, returning pricing to 2020 levels. Approximately 75% of material classes tracked showed rate decreases, particularly in property and energy sectors, while general liability and medical malpractice lines are facing counter-cyclical pressures. The market is now in a softening phase, with concerns about long-term sustainability due to embedded loss-cost inflation.",
     "publication": "Major global data breach rocks local schools and unis\nThe Australian08 May 2026279 words\n\nSchools, colleges and universities across Australia have been left scrambling after a major hacking scandal compromised sensitive data belonging to millions of students worldwide.",
     "author": "",
     "published_date": "2026-05-08",
@@ -90,26 +90,26 @@
     "page_title": "Specialty market gives back half of hard‑market gains – WTW | Insurance Business",
     "selector_used": "trafilatura",
     "key_points": [
-      "Specialty insurance rates declined significantly in 2025 and early 2026, reversing gains from previous years.",
-      "75% of material classes tracked showed rate decreases, with property and energy experiencing the most pronounced drops.",
-      "Concerns around long-tail liabilities and social inflation are limiting rate reductions in general liability and medical malpractice."
+      "Specialty insurance rates declined by 5% gross of claims trend as of January 1, 2026.",
+      "75% of tracked classes showed rate decreases, with property and energy experiencing the most significant drops.",
+      "The market is in a softening phase, raising concerns about sustainability amid ongoing inflationary pressures."
     ],
     "tags": [
       "insurance",
       "market trends",
-      "liability",
+      "risk management",
       "pricing"
     ],
-    "relevance": "Understanding these market dynamics is crucial for actuaries and financial professionals involved in risk assessment and pricing strategies.",
+    "relevance": "Understanding these market dynamics is crucial for actuaries and financial services professionals involved in pricing, risk assessment, and strategic planning.",
     "summarised": true,
     "filename": "03_Specialty_market_gives_back_half_of_hardmarket_gains_WTW.json"
   },
   {
     "id": "WC63761020260507em57000gp",
     "index": 4,
-    "scraped_at": "2026-05-08T00:44:54Z",
+    "scraped_at": "2026-05-08T13:53:54Z",
     "title": "Australia’s first climate reports expose gap between board awareness and action",
-    "summary": "A review of climate disclosures by Australian companies reveals a significant gap between board awareness of climate-related risks and the actions taken to quantify and manage these risks. While two-thirds of early reporters acknowledge material climate risks, less than one-third have provided quantified estimates of their financial impact. This gap presents challenges for insurers and investors seeking consistent metrics for decision-making.",
+    "summary": "Australia's largest listed entities are beginning to acknowledge climate-related financial risks, with about two-thirds identifying at least one material risk. However, less than one-third have quantified these risks, creating challenges for insurers and investors. The gap between risk identification and capital allocation highlights a governance issue that needs addressing to ensure effective climate risk management.",
     "publication": "Major global data breach rocks local schools and unis\nThe Australian08 May 2026279 words\n\nSchools, colleges and universities across Australia have been left scrambling after a major hacking scandal compromised sensitive data belonging to millions of students worldwide.",
     "author": "",
     "published_date": "2026-05-08",
@@ -125,26 +125,26 @@
     "page_title": "Australia’s first climate reports expose gap between board awareness and action | Insurance Business",
     "selector_used": "trafilatura",
     "key_points": [
-      "Two-thirds of companies acknowledge climate risks, but less than one-third quantify their financial impact.",
-      "Many companies have not aligned capital allocation with identified climate risks.",
-      "Deferral of Scope 3 emissions reporting limits visibility into transition risks."
+      "Two-thirds of companies report at least one material climate risk",
+      "Less than one-third quantify the financial impact of these risks",
+      "Significant gap between identified risks and capital allocation for mitigation"
     ],
     "tags": [
       "climate risk",
-      "financial disclosure",
-      "investment",
-      "governance"
+      "financial reporting",
+      "governance",
+      "investment"
     ],
-    "relevance": "Understanding the current state of climate risk disclosures is crucial for actuaries and financial services professionals as it impacts risk assessment, investment strategies, and regulatory compliance.",
+    "relevance": "This is relevant to actuaries and financial services professionals as it underscores the importance of integrating climate risk into financial decision-making and reporting practices.",
     "summarised": true,
     "filename": "04_Australias_first_climate_reports_expose_gap_between_board_awareness_and_action.json"
   },
   {
     "id": "ABCNEW0020260506em56001mh",
     "index": 5,
-    "scraped_at": "2026-05-08T00:45:09Z",
+    "scraped_at": "2026-05-08T13:54:12Z",
     "title": "Cyclone Narelle pushes housing shortages deeper into crisis in Exmouth",
-    "summary": "Cyclone Narelle has exacerbated the housing crisis in Exmouth, Western Australia, displacing many residents and straining accommodation resources. Local officials are struggling to provide housing for displaced locals and essential workers, with a significant portion of properties deemed uninhabitable. The situation highlights the ongoing challenges in housing availability and the need for timely land releases to address future demands.",
+    "summary": "Cyclone Narelle has severely impacted housing availability in Exmouth, Western Australia, displacing many residents and exacerbating an existing housing crisis. Local authorities are struggling to find accommodation for displaced individuals and essential workers, while the housing market is under further strain due to a lack of available properties. The situation highlights the need for timely land releases and infrastructure planning to address future housing demands.",
     "publication": "Major global data breach rocks local schools and unis\nThe Australian08 May 2026279 words\n\nSchools, colleges and universities across Australia have been left scrambling after a major hacking scandal compromised sensitive data belonging to millions of students worldwide.",
     "author": "",
     "published_date": "2026-05-08",
@@ -160,26 +160,26 @@
     "page_title": "Dow Jones Newsletter",
     "selector_used": "trafilatura",
     "key_points": [
-      "Cyclone Narelle caused significant damage, displacing many residents in Exmouth.",
-      "The local housing crisis has worsened, with many properties uninhabitable and limited accommodation options.",
-      "Local government is working to address housing shortages and future land releases are critical."
+      "Cyclone Narelle caused significant damage to homes in Exmouth, displacing many residents.",
+      "The local housing crisis has worsened, with increased demand for accommodation and limited availability.",
+      "Local government is working to address housing shortages but faces challenges in rapid recovery and development."
     ],
     "tags": [
       "housing crisis",
       "natural disasters",
-      "exmouth",
-      "community support"
+      "community recovery",
+      "infrastructure planning"
     ],
-    "relevance": "This situation underscores the importance of risk assessment and financial planning in disaster recovery for actuaries and financial services professionals.",
+    "relevance": "This situation underscores the importance of risk assessment and planning in the context of natural disasters, which is crucial for actuaries and financial services professionals involved in insurance and community resilience.",
     "summarised": true,
     "filename": "05_Cyclone_Narelle_pushes_housing_shortages_deeper_into_crisis_in_Exmouth.json"
   },
   {
     "id": "AUSTLN0020260507em5800019",
     "index": 6,
-    "scraped_at": "2026-05-08T00:45:25Z",
+    "scraped_at": "2026-05-08T13:54:32Z",
     "title": "‘Final straw’ for small private hospitals",
-    "summary": "Dozens of small private hospitals in regional Australia face potential closure if the government abolishes the higher private health insurance rebate for over-65s, a move projected to save $3 billion. The change could lead to a significant drop in private health insurance coverage among older Australians, impacting hospital revenues and increasing pressure on public health services. The government is seeking support from either the Coalition or the Greens to pass this contentious measure through the Senate.",
+    "summary": "Dozens of small private hospitals in regional Australia face significant patient losses if the government abolishes the higher private health insurance rebate for over-65s. This policy change, aimed at saving $3 billion for aged care, could lead to closures as older patients may drop or downgrade their insurance. The situation is particularly critical for hospitals in marginal Labor electorates, with warnings of increased pressure on public hospital systems.",
     "publication": "Major global data breach rocks local schools and unis\nThe Australian08 May 2026279 words\n\nSchools, colleges and universities across Australia have been left scrambling after a major hacking scandal compromised sensitive data belonging to millions of students worldwide.",
     "author": "",
     "published_date": "2026-05-08",
@@ -195,30 +195,30 @@
     "page_title": "Dow Jones Newsletter",
     "selector_used": "trafilatura",
     "key_points": [
-      "Abolishing the higher rebate for over-65s could lead to a patient exodus from private hospitals.",
-      "Private hospitals with a high proportion of older patients are particularly at risk of closure.",
-      "The government needs bipartisan support to implement the rebate changes, which are set to take effect on April 1."
+      "The government plans to abolish the higher private health insurance rebate for over-65s, risking patient losses for small private hospitals.",
+      "Private Healthcare Australia warns that this change could lead to hospital closures, especially in regional areas.",
+      "Opposition parties are contesting the measure, citing potential negative impacts on older Australians and public healthcare."
     ],
     "tags": [
-      "private health insurance",
-      "healthcare policy",
-      "government budget",
-      "hospital funding"
+      "private health",
+      "insurance",
+      "aged care",
+      "health policy"
     ],
-    "relevance": "This situation highlights the financial implications of healthcare policy changes, which are crucial for actuaries involved in health insurance and risk assessment.",
+    "relevance": "This issue affects the financial viability of healthcare providers and the broader implications for public health funding, which are critical considerations for actuaries and financial services professionals.",
     "summarised": true,
     "filename": "06_Final_straw_for_small_private_hospitals.json"
   },
   {
     "id": "AUSTOL0020260507em570038s",
     "index": 7,
-    "scraped_at": "2026-05-08T00:45:44Z",
+    "scraped_at": "2026-05-08T13:54:55Z",
     "title": "‘No surprises’: Behind IAG’s pitch to take risk out of insurance",
-    "summary": "Nick Hawkins, CEO of Insurance Australia Group (IAG), outlines a new strategy, Ambition 2030, focusing on organic growth and technological advancements in insurance. IAG has improved its operational efficiency and aims to leverage AI for risk assessment and customer engagement. The company is positioned for growth in the Australian and New Zealand markets, despite regulatory challenges surrounding recent acquisitions.",
+    "summary": "Nick Hawkins, CEO of Insurance Australia Group (IAG), outlines a strategy for growth under the Ambition 2030 plan, focusing on organic growth and technological advancements. IAG aims to streamline operations and reduce operational risk by consolidating its platforms and leveraging AI for efficiency. Hawkins emphasizes the importance of maintaining a clear focus on core insurance offerings while avoiding diversification into other financial services.",
     "publication": "Major global data breach rocks local schools and unis\nThe Australian08 May 2026279 words\n\nSchools, colleges and universities across Australia have been left scrambling after a major hacking scandal compromised sensitive data belonging to millions of students worldwide.",
     "author": "",
     "published_date": "2026-05-08",
-    "word_count": "728",
+    "word_count": "731",
     "language": "English",
     "category": "News",
     "category_code": "A",
@@ -230,26 +230,26 @@
     "page_title": "Dow Jones Newsletter",
     "selector_used": "trafilatura",
     "key_points": [
-      "IAG's strategy includes a focus on organic growth and technology integration.",
-      "The company has achieved key financial targets, including a return on equity of 14.9%.",
-      "Hawkins aims to simplify insurance offerings while maintaining a strong focus on core business areas."
+      "IAG is focused on organic growth and technological advancements under Ambition 2030.",
+      "The company has consolidated its operations to reduce operational risk and improve efficiency.",
+      "Hawkins aims to keep IAG as a best-in-class insurer without diversifying into other financial services."
     ],
     "tags": [
       "insurance",
       "technology",
-      "growth",
-      "strategy"
+      "growth strategy",
+      "artificial intelligence"
     ],
-    "relevance": "This is relevant to actuaries and financial services professionals as it highlights the evolving landscape of insurance and the importance of technology in risk management and customer service.",
+    "relevance": "This is relevant to actuaries and financial services professionals as it highlights trends in insurance technology and operational strategies that may impact risk assessment and pricing models.",
     "summarised": true,
     "filename": "07_No_surprises_Behind_IAGs_pitch_to_take_risk_out_of_insurance.json"
   },
   {
     "id": "WC47832020260507em5700006",
     "index": 8,
-    "scraped_at": "2026-05-08T00:46:13Z",
+    "scraped_at": "2026-05-08T13:55:31Z",
     "title": "Insurance premiums to drop for HESTA members",
-    "summary": "HESTA members will see an average insurance premium reduction of 12% across all cover types starting July 1, 2026. This includes a 6% drop in death cover and up to 23.5% in income protection, following a new agreement with AIA Australia. Additional enhancements include waiving insurance fees for members on parental leave and improved access to cover adjustments.",
+    "summary": "HESTA members will see an average reduction of 12% in insurance premiums across all cover types starting July 1, 2026. The decrease includes a 6% drop in death cover and up to 23.5% in income protection, following a new agreement with AIA Australia. Additional enhancements include waiving insurance fees for members on parental leave and improved access to cover adjustments.",
     "publication": "Major global data breach rocks local schools and unis\nThe Australian08 May 2026279 words\n\nSchools, colleges and universities across Australia have been left scrambling after a major hacking scandal compromised sensitive data belonging to millions of students worldwide.",
     "author": "",
     "published_date": "2026-05-08",
@@ -265,26 +265,26 @@
     "page_title": "Insurance premiums to drop for HESTA members | Financial Standard",
     "selector_used": "trafilatura",
     "key_points": [
-      "Insurance premiums for HESTA members will decrease by an average of 12%",
-      "New features include waiving fees for parental leave and easier access to increased cover",
-      "This contrasts with other super funds that are raising premiums due to increased claims"
+      "Average insurance premium reduction of 12% for HESTA members",
+      "Waiving insurance fees for parental leave up to 12 months",
+      "Easier access to increased cover and non-lapsing binding death benefit nominations"
     ],
     "tags": [
       "superannuation",
       "insurance",
       "HESTA",
-      "premium reduction"
+      "financial services"
     ],
-    "relevance": "These changes are significant for actuaries and financial services professionals as they reflect trends in insurance pricing and member benefits within superannuation funds.",
+    "relevance": "This news is relevant as it highlights changes in insurance offerings that may impact member benefits and financial planning strategies for actuaries and financial services professionals.",
     "summarised": true,
     "filename": "08_Insurance_premiums_to_drop_for_HESTA_members.json"
   },
   {
     "id": "WC47832020260507em5700009",
     "index": 9,
-    "scraped_at": "2026-05-08T00:46:40Z",
+    "scraped_at": "2026-05-08T13:56:03Z",
     "title": "Digital asset adoption in SMSFs not a surprise: Burgess",
-    "summary": "A report indicates that nearly half of self-managed super funds (SMSFs) are adopting digital assets, with many trustees prioritising access to these investments. SMSF Association CEO Peter Burgess noted that this trend isn't surprising given the rapid growth of digital assets and their appeal for investment autonomy. The report suggests that as digital asset platforms evolve, they must remain compliant with regulatory requirements to support this trend.",
+    "summary": "Recent data indicates a significant rise in the adoption of digital assets within self-managed super funds (SMSFs), with nearly half of trustees citing access to these assets as a primary reason for establishing their funds. SMSF Association CEO Peter Burgess noted that while high concentrations in digital assets are common initially, diversification is expected over time. The trend highlights the need for tailored advice in the sector as platforms like Coinbase and OKX expand their offerings for SMSF trustees.",
     "publication": "Major global data breach rocks local schools and unis\nThe Australian08 May 2026279 words\n\nSchools, colleges and universities across Australia have been left scrambling after a major hacking scandal compromised sensitive data belonging to millions of students worldwide.",
     "author": "",
     "published_date": "2026-05-08",
@@ -300,26 +300,26 @@
     "page_title": "Digital asset adoption in SMSFs not a surprise: Burgess | Financial Standard",
     "selector_used": "trafilatura",
     "key_points": [
-      "46% of SMSF trustees hold digital assets primarily for access",
-      "Many SMSFs concentrate heavily on digital assets initially but may diversify over time",
-      "Compliance with AUSTRAC and ASIC is crucial for digital asset platforms"
+      "46% of SMSF trustees holding digital assets established their funds primarily for access to these assets.",
+      "Many investors initially concentrate their SMSF portfolios in digital assets but are likely to diversify over time.",
+      "The growth in digital asset adoption underscores the importance of compliance and bespoke advice in the SMSF sector."
     ],
     "tags": [
       "digital assets",
       "smsf",
-      "investment",
+      "superannuation",
       "compliance"
     ],
-    "relevance": "This trend highlights the evolving landscape of investment options available to SMSFs, which is crucial for actuaries and financial services professionals advising clients on retirement strategies.",
+    "relevance": "This trend is crucial for actuaries and financial services professionals as it reflects changing investment behaviours and the need for compliance in managing SMSFs.",
     "summarised": true,
     "filename": "09_Digital_asset_adoption_in_SMSFs_not_a_surprise_Burgess.json"
   },
   {
     "id": "WCSPREW020260507em5700008",
     "index": 10,
-    "scraped_at": "2026-05-08T00:47:01Z",
+    "scraped_at": "2026-05-08T13:56:31Z",
     "title": "Family home rethink sharpens focus on super gaps",
-    "summary": "Australians are urged to reconsider retirement funding as many enter retirement with mortgage debt and insufficient superannuation balances. Homesafe Wealth Release CEO Dianne Shepherd highlights the need to include housing wealth in retirement planning, as many retirees are asset-rich but cash-constrained. A more integrated approach to assessing household wealth could improve retirement outcomes without increasing contributions.",
+    "summary": "Australians are urged to reconsider retirement funding, as reliance on superannuation alone is proving inadequate for many retirees, particularly those with mortgage debt. Homesafe Wealth Release CEO Dianne Shepherd highlights the need for a broader approach that includes housing wealth in retirement planning. This shift could help address the financial challenges faced by asset-rich but cash-constrained retirees.",
     "publication": "Major global data breach rocks local schools and unis\nThe Australian08 May 2026279 words\n\nSchools, colleges and universities across Australia have been left scrambling after a major hacking scandal compromised sensitive data belonging to millions of students worldwide.",
     "author": "",
     "published_date": "2026-05-08",
@@ -336,8 +336,8 @@
     "selector_used": "trafilatura",
     "key_points": [
       "Retirement planning is overly focused on superannuation, neglecting the value of housing wealth.",
-      "Many retirees face financial challenges despite significant home equity, leading to cash constraints.",
-      "A broader perspective on retirement planning that includes the family home could enhance financial security."
+      "Many retirees face financial strain despite significant home equity, due to inadequate super balances.",
+      "A more integrated approach to retirement planning is needed to reflect the full financial position of households."
     ],
     "tags": [
       "superannuation",
@@ -345,16 +345,16 @@
       "housing wealth",
       "financial security"
     ],
-    "relevance": "This discussion is critical for actuaries and financial services professionals as it impacts retirement product design and financial planning strategies.",
+    "relevance": "This is relevant for actuaries and financial services professionals as it highlights the need for a comprehensive understanding of clients' financial situations, including housing assets, in retirement planning.",
     "summarised": true,
     "filename": "10_Family_home_rethink_sharpens_focus_on_super_gaps.json"
   },
   {
     "id": "WC47832020260507em570000d",
     "index": 11,
-    "scraped_at": "2026-05-08T00:47:25Z",
+    "scraped_at": "2026-05-08T13:56:59Z",
     "title": "LRBA property exit must be exact",
-    "summary": "SMSF members must carefully navigate the process of transferring property out of a limited recourse borrowing arrangement (LRBA) to avoid capital gains tax (CGT) and stamp duty. Proper procedures, including maintaining evidence of fund sources, are essential for ensuring tax neutrality. Failure to comply with regulations may result in significant tax liabilities.",
+    "summary": "SMSF members must follow specific procedures to transfer property out of a limited recourse borrowing arrangement (LRBA) to avoid capital gains tax (CGT) and stamp duty. Proper documentation and timing are crucial, as the transfer must demonstrate that the SMSF is 'absolutely entitled' to the property. Failure to adhere to these requirements may result in significant tax liabilities.",
     "publication": "Major global data breach rocks local schools and unis\nThe Australian08 May 2026279 words\n\nSchools, colleges and universities across Australia have been left scrambling after a major hacking scandal compromised sensitive data belonging to millions of students worldwide.",
     "author": "",
     "published_date": "2026-05-08",
@@ -370,26 +370,26 @@
     "page_title": "LRBA property exit must be exact | SMS Magazine",
     "selector_used": "trafilatura",
     "key_points": [
-      "Correct procedures must be established before transferring property from an LRBA to avoid CGT and stamp duty.",
-      "Evidence of fund sources should be collected immediately after property settlement to qualify for tax exemptions.",
-      "Restrictions from banks on property transfers can jeopardise the SMSF's 'absolute entitlement' and trigger CGT."
+      "Incorrect procedures during property transfer from LRBA can trigger CGT and stamp duty.",
+      "Documentation proving the source of funds must be collected immediately after property settlement.",
+      "The SMSF must be 'absolutely entitled' to the property to avoid CGT on the transfer."
     ],
     "tags": [
       "superannuation",
       "taxation",
       "property",
-      "investment"
+      "SMSF"
     ],
-    "relevance": "Understanding the implications of LRBA property transfers is crucial for actuaries and financial services professionals advising clients on superannuation strategies.",
+    "relevance": "Understanding the implications of LRBA property transfers is essential for actuaries and financial services professionals to provide accurate advice and ensure compliance.",
     "summarised": true,
     "filename": "11_LRBA_property_exit_must_be_exact.json"
   },
   {
     "id": "ABCNEW0020260507em57001be",
     "index": 12,
-    "scraped_at": "2026-05-08T00:47:41Z",
+    "scraped_at": "2026-05-08T13:57:18Z",
     "title": "Criticism of proposed changes to superannuation laws that allow perpetrators to financially benefit",
-    "summary": "Proposed changes to superannuation laws in Australia could allow perpetrators of domestic violence to benefit financially from the death of their victims. Current laws permit death benefits to be paid to individuals without considering evidence of abuse, prompting calls for reforms that would allow super funds to disregard claims from abusers. Stakeholders are divided on whether court involvement is necessary for determining claims related to domestic violence.",
+    "summary": "Proposed changes to superannuation laws in Australia may allow perpetrators of domestic violence to financially benefit from the death of their victims. Current laws permit death benefits to be claimed by individuals who may have abused the deceased, leading to calls for reform that considers domestic violence evidence. Advocates argue that the involvement of courts in determining claims could complicate and prolong the process for bereaved families.",
     "publication": "Major global data breach rocks local schools and unis\nThe Australian08 May 2026279 words\n\nSchools, colleges and universities across Australia have been left scrambling after a major hacking scandal compromised sensitive data belonging to millions of students worldwide.",
     "author": "",
     "published_date": "2026-05-08",
@@ -406,8 +406,8 @@
     "selector_used": "trafilatura",
     "key_points": [
       "Superannuation laws currently allow abusers to claim death benefits despite evidence of domestic violence.",
-      "Proposed reforms include allowing super funds to overrule binding nominations based on evidence of abuse.",
-      "There is debate over the necessity of court involvement in determining claims related to domestic violence."
+      "Proposed reforms include options for super funds to overrule beneficiary nominations based on abuse claims, or requiring court determinations.",
+      "Advocates warn that court involvement could burden victims' families and delay claims processing."
     ],
     "tags": [
       "superannuation",
@@ -415,16 +415,16 @@
       "law reform",
       "financial services"
     ],
-    "relevance": "These developments impact how superannuation funds manage death benefit claims, which is crucial for actuaries and financial services professionals involved in risk assessment and compliance.",
+    "relevance": "Understanding these proposed changes is crucial for actuaries and financial professionals involved in superannuation and risk management.",
     "summarised": true,
     "filename": "12_Criticism_of_proposed_changes_to_superannuation_laws_that_allow_perpetrators_to_.json"
   },
   {
     "id": "AUSTLN0020260507em5800023",
     "index": 13,
-    "scraped_at": "2026-05-08T00:48:01Z",
+    "scraped_at": "2026-05-08T13:57:39Z",
     "title": "$3.5bn surplus, and slap for RBA",
-    "summary": "Western Australia has announced a $3.5 billion operating surplus, exceeding previous forecasts, and will implement cash handouts for families and motorists despite the Reserve Bank's recent interest rate hike. The budget also includes plans for public service redundancies and cuts to discretionary spending to manage rising government expenses. Additionally, WA's net debt is projected to increase due to significant infrastructure investments.",
+    "summary": "Western Australia has announced a $3.5 billion operating surplus, exceeding previous forecasts, and will distribute cash handouts to residents amid rising cost-of-living pressures. Treasurer Rita Saffioti criticized the Reserve Bank of Australia's recent interest rate hike, arguing it could harm consumer confidence. The budget also includes plans for public service redundancies and cuts to discretionary spending to manage rising government expenses.",
     "publication": "Major global data breach rocks local schools and unis\nThe Australian08 May 2026279 words\n\nSchools, colleges and universities across Australia have been left scrambling after a major hacking scandal compromised sensitive data belonging to millions of students worldwide.",
     "author": "",
     "published_date": "2026-05-08",
@@ -440,26 +440,26 @@
     "page_title": "Dow Jones Newsletter",
     "selector_used": "trafilatura",
     "key_points": [
-      "WA's operating surplus reached $3.5 billion, surpassing expectations.",
-      "Cash handouts will be provided to families and motorists amid rising costs.",
-      "Public service redundancies and spending cuts are planned to control government expenditure."
+      "WA's operating surplus is $3.5 billion, surpassing forecasts.",
+      "Cash handouts include $100 for drivers and $700 for families with students.",
+      "Public service redundancies and spending cuts aim to control rising government costs."
     ],
     "tags": [
-      "budget",
-      "operating surplus",
+      "government budget",
       "interest rates",
-      "infrastructure"
+      "cost of living",
+      "public service"
     ],
-    "relevance": "This budget announcement impacts fiscal policy and economic conditions, which are critical considerations for actuaries and financial services professionals.",
+    "relevance": "This budget announcement impacts economic conditions and consumer behaviour, which are critical factors for actuaries and financial services professionals in their analyses and forecasts.",
     "summarised": true,
     "filename": "13_35bn_surplus_and_slap_for_RBA.json"
   },
   {
     "id": "AUSTLN0020260507em580001v",
     "index": 14,
-    "scraped_at": "2026-05-08T00:48:23Z",
+    "scraped_at": "2026-05-08T13:57:57Z",
     "title": "Inflation warning for business tax plan",
-    "summary": "Treasurer Jim Chalmers has been advised that his proposed temporary tax relief for businesses must be balanced with budget savings to prevent inflationary pressures. The Albanese government aims to stimulate business investment amid a forecasted economic slowdown, but economists warn that without net savings, inflation could rise. The Reserve Bank of Australia has also revised its inflation forecast, indicating potential challenges ahead.",
+    "summary": "Treasurer Jim Chalmers is warned that his proposed temporary tax relief for businesses must be balanced with budget savings to prevent inflationary pressures. The Albanese government plans to allow businesses to carry back tax losses, aiming to support investment amid a projected economic slowdown. Economists stress the importance of net savings in the budget to avoid exacerbating inflation, which is expected to rise to 4.8% next month.",
     "publication": "Major global data breach rocks local schools and unis\nThe Australian08 May 2026279 words\n\nSchools, colleges and universities across Australia have been left scrambling after a major hacking scandal compromised sensitive data belonging to millions of students worldwide.",
     "author": "",
     "published_date": "2026-05-08",
@@ -475,26 +475,26 @@
     "page_title": "Dow Jones Newsletter",
     "selector_used": "trafilatura",
     "key_points": [
-      "The government plans to offer temporary tax relief allowing businesses to carry back tax losses.",
-      "Economists stress the need for budget savings to offset potential inflation from the tax relief measures.",
-      "The RBA has forecasted a significant decline in business investment and an increase in inflation."
+      "The Albanese government plans to introduce temporary tax relief for businesses to support investment.",
+      "Economists warn that this relief must be offset by budget savings to prevent inflation from rising.",
+      "Inflation is projected to increase to 4.8% next month, higher than previous estimates."
     ],
     "tags": [
-      "business investment",
+      "taxation",
       "inflation",
-      "tax relief",
+      "business investment",
       "economic policy"
     ],
-    "relevance": "Understanding the government's fiscal strategies and their implications on inflation is crucial for actuaries and financial services professionals in assessing economic risks.",
+    "relevance": "Understanding fiscal policy changes is crucial for actuaries and financial services professionals as they impact economic conditions and investment strategies.",
     "summarised": true,
     "filename": "14_Inflation_warning_for_business_tax_plan.json"
   },
   {
     "id": "ABCNEW0020260507em570015q",
     "index": 15,
-    "scraped_at": "2026-05-08T00:48:44Z",
+    "scraped_at": "2026-05-08T13:58:19Z",
     "title": "Housing downturn possible as demand softens and rates kick in, Cotality warns",
-    "summary": "Cotality warns that the Australian housing market may face a downturn due to softening demand and rising interest rates. Sydney and Melbourne are already experiencing declines, with increased listings and potential risks of negative equity for recent buyers. Despite these challenges, some markets like Perth continue to show strength.",
+    "summary": "Cotality warns that the Australian housing market may face a downturn due to softening demand and rising interest rates, particularly affecting Sydney and Melbourne. Listings are increasing while prices are declining, with recent buyers at risk of negative equity. Despite these challenges, some markets like Perth continue to show strong growth.",
     "publication": "Major global data breach rocks local schools and unis\nThe Australian08 May 2026279 words\n\nSchools, colleges and universities across Australia have been left scrambling after a major hacking scandal compromised sensitive data belonging to millions of students worldwide.",
     "author": "",
     "published_date": "2026-05-08",
@@ -512,24 +512,24 @@
     "key_points": [
       "Housing market downturn possible as demand softens",
       "Sydney and Melbourne experiencing early phases of decline",
-      "Recent buyers at risk of negative equity due to falling values"
+      "Recent buyers may face negative equity risks"
     ],
     "tags": [
       "housing market",
       "interest rates",
-      "economic outlook",
-      "property values"
+      "property values",
+      "economic outlook"
     ],
-    "relevance": "Understanding housing market trends and risks is crucial for actuaries and financial services professionals involved in property financing and investment.",
+    "relevance": "Understanding housing market trends and risks is crucial for actuaries and financial services professionals involved in property finance and investment.",
     "summarised": true,
     "filename": "15_Housing_downturn_possible_as_demand_softens_and_rates_kick_in_Cotality_warns.json"
   },
   {
     "id": "WC63761020260507em57000dx",
     "index": 16,
-    "scraped_at": "2026-05-08T00:49:22Z",
+    "scraped_at": "2026-05-08T13:58:51Z",
     "title": "Australians swap higher pay for wellbeing and flexibility - report",
-    "summary": "A recent report by Real Insurance reveals that many Australians are prioritising wellbeing and flexibility over higher wages, with 59% willing to accept lower pay for improved mental health and work-life balance. The study indicates a significant shift in career expectations, particularly among younger generations, who are increasingly interested in flexible work arrangements and side hustles. Additionally, financial pressures are leading to more cautious job moves and a demand for income protection and training support.",
+    "summary": "A new report from Real Insurance reveals that many Australians are prioritising wellbeing and flexibility over higher wages, with 59% willing to accept lower pay for improved mental health and work-life balance. The study highlights a growing preference for flexible working arrangements, particularly among younger generations, and indicates that financial pressures are influencing job security and career choices. Additionally, concerns about AI's impact on employment are prompting many workers to seek upskilling opportunities.",
     "publication": "Major global data breach rocks local schools and unis\nThe Australian08 May 2026279 words\n\nSchools, colleges and universities across Australia have been left scrambling after a major hacking scandal compromised sensitive data belonging to millions of students worldwide.",
     "author": "",
     "published_date": "2026-05-08",
@@ -545,17 +545,17 @@
     "page_title": "Australians swap higher pay for wellbeing and flexibility - report | Insurance Business",
     "selector_used": "trafilatura",
     "key_points": [
-      "59% of workers would accept lower wages for better wellbeing",
-      "66% of Australians expect to have multiple careers",
-      "63% are interested in starting a side hustle to manage financial pressures"
+      "59% of workers would accept lower wages for better wellbeing and flexibility.",
+      "66% of respondents expect to have multiple careers throughout their working life.",
+      "44% of Australians have engaged in upskilling to mitigate redundancy risks linked to AI."
     ],
     "tags": [
-      "workplace flexibility",
-      "mental health",
-      "financial security",
-      "career development"
+      "workplace wellbeing",
+      "flexibility",
+      "AI impact",
+      "career trends"
     ],
-    "relevance": "Understanding these trends is crucial for actuaries and financial services professionals as they navigate the evolving labour market and its implications for financial planning and risk management.",
+    "relevance": "Understanding these trends is crucial for actuaries and financial services professionals as they navigate workforce dynamics and develop strategies for employee retention and engagement.",
     "summarised": true,
     "filename": "16_Australians_swap_higher_pay_for_wellbeing_and_flexibility_-_report.json"
   },

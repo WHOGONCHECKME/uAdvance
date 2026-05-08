@@ -1,10 +1,10 @@
 {
   "id": "AUSTLN0020260507em580000s",
   "index": 1,
-  "scraped_at": "2026-05-08T00:43:50Z",
+  "scraped_at": "2026-05-08T13:52:43Z",
   "title": "Major global data breach rocks local schools and unis",
-  "full_text": "Schools, colleges and universities across Australia have been left scrambling after a major hacking scandal compromised sensitive data belonging to millions of students worldwide.\nEducation resource provider Instructure, which serves many Australian schools, recently fell victim to a cybersecurity breach, which saw hackers claim to have obtained the personal data of more than 200 million people worldwide.\nIt has left education ministers fearing for the families of students and teachers with known family and domestic violence – as well as those known to child safety authorities.\nIt is not clear how many Australian institutions have been affected by the scandal, but it has left education leaders on red alert.\nInstructure is a multinational company which provides several resources to education institutions worldwide, including QLearn, which is the Department of Education’s online learning platform in Queensland.\nIn a statement released on Thursday, Queensland Education Minister John-Paul Langbroek said: “This incident has impacted thousands of educational institutions, including state schools and universities within Queensland, across Australia, and overseas, and early advice is this will impact more than 200 million people and more than 9000 institutions worldwide.\n“Early advice is students and staff working or studying at Education Queensland schools since 2020 have been affected.\n“Advice at this stage is names, email addresses and school locations have been compromised in the international data breach.” Mr Langbroek added that he believed there to be no evidence of passwords, dates of birth, or financial information being accessed.\nHe added: “School principals are in the process of contacting families and teachers to advise them of the breach. NEWSWIRE\nThe Australian-20260508-Australian-2-000500779237\nNationwide News Pty Ltd.\nDocument AUSTLN0020260507em580000s",
-  "summary": "A significant data breach involving education resource provider Instructure has compromised sensitive information of over 200 million individuals globally, affecting schools, colleges, and universities in Australia. Queensland Education Minister John-Paul Langbroek confirmed that names, email addresses, and school locations of students and staff from Education Queensland schools since 2020 have been exposed. Education leaders are on high alert as institutions work to inform affected families and staff.",
+  "full_text": "Schools, colleges and universities across Australia have been left scrambling after a major hacking scandal compromised sensitive data belonging to millions of students worldwide.\nEducation resource provider Instructure, which serves many Australian schools, recently fell victim to a cybersecurity breach, which saw hackers claim to have obtained the personal data of more than 200 million people worldwide.\nIt has left education ministers fearing for the families of students and teachers with known family and domestic violence – as well as those known to child safety authorities.\nIt is not clear how many Australian institutions have been affected by the scandal, but it has left education leaders on red alert.\nInstructure is a multinational company which provides several resources to education institutions worldwide, including QLearn, which is the Department of Education’s online learning platform in Queensland.\nIn a statement released on Thursday, Queensland Education Minister John-Paul Langbroek said: “This incident has impacted thousands of educational institutions, including state schools and universities within Queensland, across Australia, and overseas, and early advice is this will impact more than 200 million people and more than 9000 institutions worldwide.\n“Early advice is students and staff working or studying at Education Queensland schools since 2020 have been affected.\n“Advice at this stage is names, email addresses and school locations have been compromised in the international data breach.” Mr Langbroek added that he believed there to be no evidence of passwords, dates of birth, or financial information being accessed.\nHe added: “School principals are in the process of contacting families and teachers to advise them of the breach.",
+  "summary": "A significant cybersecurity breach at education resource provider Instructure has compromised the personal data of over 200 million individuals globally, impacting numerous Australian schools, colleges, and universities. Queensland Education Minister John-Paul Langbroek confirmed that names, email addresses, and school locations of students and staff since 2020 have been affected. Education leaders are currently notifying families and teachers about the breach's implications.",
   "publication": "Major global data breach rocks local schools and unis\nThe Australian08 May 2026279 words\n\nSchools, colleges and universities across Australia have been left scrambling after a major hacking scandal compromised sensitive data belonging to millions of students worldwide.",
   "author": "",
   "published_date": "2026-05-08",
@@ -20,16 +20,16 @@
   "page_title": "Dow Jones Newsletter",
   "selector_used": "trafilatura",
   "key_points": [
-    "Instructure's data breach affects over 200 million people worldwide.",
-    "Sensitive information compromised includes names, email addresses, and school locations.",
-    "Education institutions are notifying families and staff about the breach."
+    "Instructure's data breach affects over 200 million individuals globally",
+    "Sensitive data compromised includes names, email addresses, and school locations",
+    "Education institutions in Australia are on high alert and notifying affected parties"
   ],
   "tags": [
-    "data breach",
-    "education",
     "cybersecurity",
+    "education",
+    "data breach",
     "privacy"
   ],
-  "relevance": "This incident highlights the importance of data security and risk management, which are critical considerations for actuaries and financial services professionals.",
+  "relevance": "This incident highlights the importance of data security and risk management, critical areas for actuaries and financial services professionals.",
   "summarised": true
 }
