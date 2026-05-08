@@ -192,17 +192,17 @@
     gap: 6px;
     margin-bottom: 5px;
   }
-  .cat-pill {
+  .heading-pill {
     font-size: 10px;
     padding: 2px 7px;
     border-radius: 10px;
     font-weight: 500;
     letter-spacing: 0.04em;
     text-transform: uppercase;
+    background: rgba(200,169,110,0.08);
+    color: var(--accent);
+    border: 1px solid rgba(200,169,110,0.22);
   }
-  .cat-web  { background: var(--pill-web);  color: var(--pill-webt); }
-  .cat-news { background: var(--pill-news); color: var(--pill-newst); }
-  .cat-other{ background: var(--pill-other); color: var(--pill-othert); }
 
   .card-date {
     font-size: 11px;
@@ -745,19 +745,16 @@ function renderList() {
     return;
   }
   el.innerHTML = filteredArticles.map((a, i) => {
-    const cat = (a.category || 'Other').toLowerCase();
-    const catClass = cat === 'web' ? 'cat-web' : cat === 'news' ? 'cat-news' : 'cat-other';
+    const heading = (a.heading || '').trim();
     const date = formatDate(a.published_date);
-    const tags = (a.tags || []).slice(0,3).map(t => `<span class="tag">${t}</span>`).join('');
     const isActive = selectedArticle && selectedArticle.id === a.id ? ' active' : '';
     return `<div class="article-card${isActive}" onclick="selectArticle(${i})">
       <div class="card-meta">
-        <span class="cat-pill ${catClass}">${a.category || 'Other'}</span>
+        ${heading ? `<span class="heading-pill">${escapeHtml(heading)}</span>` : ''}
         <span class="card-date">${date}</span>
       </div>
-      <div class="card-title">${a.title || 'Untitled'}</div>
-      ${a.summary ? `<div class="card-summary">${a.summary}</div>` : ''}
-      ${tags ? `<div class="card-tags">${tags}</div>` : ''}
+      <div class="card-title">${escapeHtml(a.title || 'Untitled')}</div>
+      ${a.summary ? `<div class="card-summary">${escapeHtml(a.summary)}</div>` : ''}
     </div>`;
   }).join('');
 }
