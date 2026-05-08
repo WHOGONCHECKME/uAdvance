@@ -107,9 +107,9 @@
   {
     "id": "WC63761020260507em57000gp",
     "index": 4,
-    "scraped_at": "2026-05-08T14:25:10Z",
+    "scraped_at": "2026-05-08T14:35:32Z",
     "title": "Australia’s first climate reports expose gap between board awareness and action",
-    "summary": "A review of climate disclosures by Australian companies reveals a significant gap between board awareness of climate-related risks and the actions taken to quantify and manage those risks. While two-thirds of companies acknowledge material climate risks, fewer than one-third provide quantified financial impacts, limiting useful data for insurers and investors. The findings highlight the need for improved governance and capital allocation strategies to address climate risks effectively.",
+    "summary": "Australia's largest companies are acknowledging climate-related risks but are lagging in quantifying their financial impacts, creating challenges for insurers and investors. A review by ERM found that while two-thirds of early reporters identified material climate risks, less than one-third provided quantified estimates of these risks. The gap between recognizing climate risk and allocating capital to address it highlights a significant governance issue.",
     "publication": "Major global data breach rocks local schools and unis\nThe Australian08 May 2026279 words\n\nSchools, colleges and universities across Australia have been left scrambling after a major hacking scandal compromised sensitive data belonging to millions of students worldwide.",
     "author": "",
     "published_date": "2026-05-08",
@@ -125,17 +125,17 @@
     "page_title": "Australia’s first climate reports expose gap between board awareness and action | Insurance Business",
     "selector_used": "trafilatura",
     "key_points": [
-      "Two-thirds of early reporters identify climate risks as material, but less than one-third quantify their financial impacts.",
-      "Companies are not aligning capital allocation or governance with identified climate risks, with little capital set aside for adaptation or transition investments.",
-      "Energy and mining sectors are more advanced in quantifying climate risks compared to financial services, which may affect underwriting and investment decisions."
+      "Two-thirds of companies acknowledge climate risks, but few quantify them.",
+      "ERM estimates annualised climate-related financial risk between $2.5 billion and $4.5 billion.",
+      "Many companies defer reporting on Scope 3 emissions, limiting visibility into supply chain risks."
     ],
     "tags": [
       "climate risk",
-      "financial disclosure",
+      "financial reporting",
       "governance",
-      "investment"
+      "sustainability"
     ],
-    "relevance": "Understanding climate-related financial risks is crucial for actuaries and financial services professionals as it impacts risk assessment, underwriting, and investment strategies.",
+    "relevance": "Understanding climate-related financial risks is crucial for actuaries and financial services professionals as it impacts risk assessment, investment decisions, and regulatory compliance.",
     "summarised": true,
     "filename": "04_Australias_first_climate_reports_expose_gap_between_board_awareness_and_action.json"
   },
