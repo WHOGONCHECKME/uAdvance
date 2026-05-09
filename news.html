@@ -369,7 +369,7 @@
     flex-direction: column;
     transition: height 0.2s ease;
   }
-  .chat-panel.collapsed { height: 42px; overflow: hidden; }
+  .chat-panel.collapsed { height: 63px; overflow: hidden; }
   .chat-panel:not(.collapsed) { height: var(--chat-h); }
 
   .chat-toggle {
@@ -377,7 +377,7 @@
     align-items: center;
     gap: 8px;
     padding: 0 16px;
-    height: 42px;
+    height: 63px;
     cursor: pointer;
     flex-shrink: 0;
     border-bottom: 1px solid var(--line);
@@ -386,14 +386,14 @@
   }
   .chat-toggle:hover { background: var(--bg3); }
   .chat-toggle-label {
-    font-size: 12px;
+    font-size: 18px;
     font-weight: 500;
     color: var(--muted);
     text-transform: uppercase;
     letter-spacing: 0.06em;
   }
   .chat-model-badge {
-    font-size: 10px;
+    font-size: 20px;
     padding: 2px 7px;
     border-radius: 10px;
     background: var(--bg4);
@@ -632,7 +632,7 @@
     <!-- Chat -->
     <div class="chat-panel collapsed" id="chat-panel">
       <div class="chat-toggle" onclick="toggleChat()">
-        <span style="font-size:13px">◇</span>
+        <span style="font-size:26px">◇</span>
         <span class="chat-toggle-label">Ask ChatGPT</span>
         <span class="chat-model-badge" id="model-badge" onclick="event.stopPropagation();openKeyModal()">gpt-4o · set key</span>
         <span class="chat-chevron">▲</span>
