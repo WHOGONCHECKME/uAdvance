@@ -1,13 +1,13 @@
 {
   "id": "WC47832020260511em5b0000d",
   "index": 4,
-  "scraped_at": "2026-05-11T21:53:17Z",
+  "scraped_at": "2026-05-12T13:16:17Z",
   "title": "ASIC calls for cyber resilience focus",
   "full_text": "The Australian Securities and Investments Commission (ASIC) has compiled an open letter to industry, urging it to strengthen their cyber resilience in the wake of further advancements in artificial intelligence, stressing “the clock is at a minute to midnight”.\n“Cyber risk has entered a new era. The advent of frontier AI models creates opportunity, but also materially increases risk, with the ability to expose vulnerabilities far faster than many realise,” ASIC commissioner Simone Constant noted.\n“In this new world, weaknesses that once seemed isolated can now have a system-wide domino-effect, enabling new forms of exploitation that were previously out of reach for most malicious actors,” she added.\nThe regulator suggested licensees and directors should act now and not wait for “perfect clarity” to address this new threat. In the letter ASIC calls for urgency, focus and accountability, while also stressing it does not to stoke panic.\nThe letter outlines 12 steps the ASIC wants entities to follow, starting with reassessing cyber plans and confirming cyber risk and governance frameworks, to preparing for incident response and actively managing third-party risks.\n“Entities need to have robust incident response plans. Whether an entity faces a basic phishing attempt or a more sophisticated cyber-attack, the underlying cyber risk management principles of govern, protect, detect, respond remain the same,” Constant explained.\nEntities are also required to table the letter at their ultimate board and risk governance committees. The regulator stated it expects boards and senior executives to understand their organisation’s position, to ask the right questions and provide evidence of their final positions.\n“Governance should not rely only on assurances. It should be supported by evidence – test results, audit findings, lessons from incidents, and independent validation, supported by appropriate capability and resourcing,” the letter said.\nThe regulator has made a commitment to continually monitor cyber risks, maintain constant communications about its expectations across the financial sector and work closely with other agencies to achieve these objectives.",
-  "summary": "ASIC has urged the financial industry to enhance cyber resilience in light of increasing risks posed by artificial intelligence advancements.",
-  "publication": "Jim Chalmers is going for broke. Will we end up a poorer country?\ntheaustralian.com.au10 May 2026 22:00 GMT3,515 wordsMatthew Cranston\n\nIf Australians believe Jim Chalmers, then this Tuesday’s budget is meant to be the most consequential in decades. In front of more than one million viewers the Treasurer will frame his speech by saying the budget will not be one that just ...",
-  "author": "",
-  "published_date": "2026-05-12",
+  "summary": "ASIC has urged the financial industry to enhance cyber resilience in light of evolving AI technologies, outlining 12 key steps for organisations to follow.",
+  "publication": "SMS Magazine",
+  "author": "https://www.facebook.com/smstrusteenews",
+  "published_date": "2026-05-11T16:04:43+10:00",
   "word_count": "345",
   "heading": "Data Science and AI",
   "newsletter": "Actuaries Institute Today",
@@ -17,16 +17,16 @@
   "page_title": "ASIC calls for cyber resilience focus | SMS Magazine",
   "selector_used": "trafilatura",
   "key_points": [
-    "ASIC highlights the urgent need for improved cyber risk management due to AI advancements.",
-    "The regulator outlines 12 steps for entities to strengthen their cyber governance and incident response plans.",
-    "Boards and senior executives are expected to actively engage with and understand their organisation's cyber risk position."
+    "ASIC highlights the increased cyber risks associated with advanced AI models.",
+    "Entities must reassess their cyber plans and governance frameworks.",
+    "Boards are expected to actively engage with and understand their organisation's cyber risk position."
   ],
   "tags": [
     "cybersecurity",
     "risk management",
-    "financial services",
-    "governance"
+    "governance",
+    "ai"
   ],
-  "relevance": "This is relevant to actuaries and financial services professionals as they must ensure robust risk management frameworks to protect against evolving cyber threats.",
+  "relevance": "This is relevant to actuaries and financial services professionals as it underscores the importance of robust cyber risk management in an increasingly digital landscape.",
   "summarised": true
 }

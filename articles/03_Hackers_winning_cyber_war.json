@@ -1,13 +1,13 @@
 {
   "id": "DAITEL0020260511em5c00049",
   "index": 3,
-  "scraped_at": "2026-05-11T21:52:52Z",
+  "scraped_at": "2026-05-12T13:15:56Z",
   "title": "Hackers winning cyber war",
   "full_text": "“White hat” hackers at Australia’s biggest cybersecurity firm have warned “we are not winning” the cyber war against malicious hackers, including state actors, who are targeting Australia with “completely new” kinds of attacks.\nThe latest Hack Report from CyberCX, to be released today, contains findings from thousands of tests on businesses, institutions and government agencies, in which white hat or “good guy” hackers uncovered more than 1800 severe risks last year alone.\nAlmost one in three security assessments undertaken with CyberCX’s 1400-plus clients between 2023 and 2025 contained at least one “severe” finding, meaning if a bad actor had found it first, it could have had a catastrophic impact on the client’s systems.\nThe rate fell slightly from 33.5 per cent in 2023 to 29 per cent in 2025, but CyberCX executive director Liam O’Shannessy, who leads the company’s 200-odd ethical hackers, said clients should not “see that as a win”.\n“The bad guys are getting better at being bad guys and we are being outpaced,” he said.\n“It’s a wake-up call, because that graph should be going down really fast.” The global race to adopt artificial intelligence (AI) has also left Australian institutions further exposed, with new AI tools and systems successfully hacked by CyberCX’s team half of the time.\n“A lot of these (systems) are being rushed out, (and) there’s some that seem to be missing the security controls that you would get from typical IT projects,” Mr O’Shannessy said.\nThe education and healthcare sectors were prime targets, the Hack Report found, with a higher rate of vulnerabilities.\nThe findings come as schools and universities across Australia are still scrambling to clean up the mess left behind by a notorious gang of cyber-criminals who threatened to leak student data stolen from Canvas, an edu-tech platform, last week. The hackers, who go by the name “ShinyHunters”, have given the hacked institutions a deadline of today to pay a Bitcoin ransom before they release personal information.\nAustralians need to “be on our toes”, Mr O’Shannessy warned, because “threat actor groups like using Australia as a bit of a testing ground”.\nAnd he said while “a lot” of attackers are looking to ransom encrypted data or sell what they steal, there are also “threat actors out there who aren’t financially motivated”.\n“Some of them are nation-state actors who … don’t want to make money, (they) want to maintain persistent access to this critical infrastructure for geopolitical reasons,” he said.\n“What if there was a breach that led to Australian industries no longer being competitive in certain areas? There’s job losses. “When we’re talking about these risks, they can be a lot bigger than just ‘someone’s got some of my personal details’.”",
-  "summary": "Australia's cybersecurity landscape is deteriorating, with a recent report revealing significant vulnerabilities across various sectors and an increase in sophisticated cyber attacks.",
-  "publication": "Jim Chalmers is going for broke. Will we end up a poorer country?\ntheaustralian.com.au10 May 2026 22:00 GMT3,515 wordsMatthew Cranston\n\nIf Australians believe Jim Chalmers, then this Tuesday’s budget is meant to be the most consequential in decades. In front of more than one million viewers the Treasurer will frame his speech by saying the budget will not be one that just ...",
-  "author": "",
-  "published_date": "2026-05-12",
+  "summary": "Australia's cybersecurity landscape is deteriorating, with a significant rise in severe vulnerabilities identified by ethical hackers, highlighting the increasing sophistication of cyber threats.",
+  "publication": "Daily Telegraph",
+  "author": "Eilidh Sproul-Mellis",
+  "published_date": "12-May-2026 ,",
   "word_count": "486",
   "heading": "Data Science and AI",
   "newsletter": "Actuaries Institute Today",
@@ -17,16 +17,16 @@
   "page_title": "Dow Jones Newsletter",
   "selector_used": "trafilatura",
   "key_points": [
-    "CyberCX's Hack Report found over 1800 severe risks identified in security assessments from 2023 to 2025.",
-    "The education and healthcare sectors are particularly vulnerable, with a notable rise in cyber threats.",
-    "Nation-state actors are increasingly targeting Australia for geopolitical reasons, posing risks beyond financial loss."
+    "CyberCX's Hack Report reveals over 1800 severe risks uncovered in 2025.",
+    "One in three security assessments showed severe findings, indicating a slight improvement but still a major concern.",
+    "Education and healthcare sectors are particularly vulnerable, with new AI systems being exploited by hackers."
   ],
   "tags": [
     "cybersecurity",
-    "data protection",
+    "ai",
     "risk management",
-    "technology"
+    "data protection"
   ],
-  "relevance": "Understanding cybersecurity risks is crucial for actuaries and financial services professionals to mitigate potential impacts on business operations and client data security.",
+  "relevance": "Understanding the evolving cyber threat landscape is crucial for actuaries and financial services professionals to assess risks and protect sensitive data.",
   "summarised": true
 }
