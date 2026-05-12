@@ -554,7 +554,13 @@
     transition: background 0.15s;
   }
   .modal-btn:hover { background: var(--accent2); }
-
+  /* ── Scroll bounce effect ── */
+.article-list,
+.article-view,
+.chat-messages {
+  transition: transform 0.16s ease-out;
+  will-change: transform;
+}
   /* ── Loading spinner ── */
   .spinner {
     display: inline-block;
@@ -982,6 +988,37 @@ document.getElementById('chat-input').addEventListener('input', function() {
   this.style.height = 'auto';
   this.style.height = Math.min(this.scrollHeight, 100) + 'px';
 });
+
+// ── Scroll bounce effect ───────────────────────────────────────────────────
+function enableScrollBounce(el, amount = 14) {
+  let timeout;
+
+  function bounce(direction) {
+    el.style.transform = `translateY(${direction === 'top' ? amount : -amount}px)`;
+
+    clearTimeout(timeout);
+    timeout = setTimeout(() => {
+      el.style.transform = 'translateY(0)';
+    }, 120);
+  }
+
+  el.addEventListener('wheel', function(event) {
+    const atTop = el.scrollTop <= 0;
+    const atBottom = Math.ceil(el.scrollTop + el.clientHeight) >= el.scrollHeight;
+
+    if (atTop && event.deltaY < 0) {
+      bounce('top');
+    }
+
+    if (atBottom && event.deltaY > 0) {
+      bounce('bottom');
+    }
+  }, { passive: true });
+}
+
+enableScrollBounce(document.getElementById('article-list'));
+enableScrollBounce(document.getElementById('article-view'));
+enableScrollBounce(document.getElementById('chat-messages'), 8);
 
 init();
 </script>
