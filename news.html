@@ -34,6 +34,7 @@
     background: var(--bg);
     color: var(--text);
     height: 100vh;
+    overflow: hidden;
     display: flex;
     flex-direction: column;
     font-size: 14px;
@@ -155,6 +156,8 @@
   .article-list {
     flex: 1;
     overflow-y: auto;
+    overscroll-behavior: contain;
+    -webkit-overflow-scrolling: touch;
     padding: 6px 0;
   }
   .article-list::-webkit-scrollbar { width: 4px; }
@@ -222,20 +225,6 @@
     -webkit-box-orient: vertical;
     overflow: hidden;
   }
-  .card-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 4px;
-    margin-top: 6px;
-  }
-  .tag {
-    font-size: 10px;
-    padding: 2px 6px;
-    border-radius: 4px;
-    background: var(--bg4);
-    color: var(--faint);
-    border: 1px solid var(--line);
-  }
 
   .empty-state {
     padding: 40px 20px;
@@ -255,6 +244,8 @@
   .article-view {
     flex: 1;
     overflow-y: auto;
+    overscroll-behavior: contain;
+    -webkit-overflow-scrolling: touch;
     padding: 36px 48px 24px;
   }
   .article-view::-webkit-scrollbar { width: 4px; }
@@ -708,7 +699,6 @@ function applyFilters() {
     (a.summary || '').toLowerCase().includes(q) ||
     (a.publication || '').toLowerCase().includes(q) ||
     (a.heading || '').toLowerCase().includes(q) ||
-    (a.tags || []).some(t => t.toLowerCase().includes(q)) ||
     (a.full_text || '').toLowerCase().includes(q)
     );
 
