@@ -745,12 +745,11 @@ function renderList() {
     const heading = (a.heading || '').trim();
     const hc = heading ? headingColor(heading) : null;
     const date = formatDate(a.published_date);
-    const author = cleanAuthor(a.author);    
     const isActive = selectedArticle && selectedArticle.id === a.id ? ' active' : '';
     return `<div class="article-card${isActive}" onclick="selectArticle(${i})">
       <div class="card-meta">
         ${hc ? `<span class="heading-pill" style="background:${hc.bg};color:${hc.text};border:1px solid ${hc.border}">${escapeHtml(heading)}</span>` : ''}
-        <span class="card-date">${author ? escapeHtml(author) + ' · ' : ''}${date}</span>
+        <span class="card-date">${date}</span>
       </div>
       <div class="card-title">${escapeHtml(a.title || 'Untitled')}</div>
       ${a.summary ? `<div class="card-summary">${escapeHtml(a.summary)}</div>` : ''}
