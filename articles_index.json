@@ -34,7 +34,7 @@
   {
     "id": "WC47832020260512em5c00004",
     "index": 7,
-    "scraped_at": "2026-05-12T23:04:03Z",
+    "scraped_at": "2026-05-13T12:53:06Z",
     "title": "Government plans 'standardised' assessment for NDIS",
     "summary": "The Australian government plans to implement a standardised assessment for the NDIS to improve service quality, clarify eligibility, and reduce costs by $37.8 billion over four years.",
     "publication": "Financial Standard",
@@ -49,9 +49,9 @@
     "page_title": "Government plans 'standardised' assessment for NDIS | Financial Standard",
     "selector_used": "trafilatura",
     "key_points": [
-      "Introduction of a standardised, evidence-based assessment for NDIS access.",
-      "Investment of $49.4 million to address provider viability and improve participant support.",
-      "Tightening of reassessment criteria to control spending growth in the NDIS."
+      "$19.2 million allocated for community consultation and technical advisory group establishment.",
+      "$49.4 million to support the NDIA in enhancing participant support and provider viability.",
+      "New measures to tighten reassessment criteria and strengthen fraud prevention efforts, with expected savings of $15 billion annually by 2030."
     ],
     "tags": [
       "ndis",
@@ -98,9 +98,9 @@
   {
     "id": "WC63761020260512em5c000b7",
     "index": 5,
-    "scraped_at": "2026-05-12T23:03:14Z",
+    "scraped_at": "2026-05-13T12:52:12Z",
     "title": "IAG sets sights on $25 billion in premiums by 2030",
-    "summary": "IAG aims to achieve over $25 billion in gross written premiums and 11 million customers by 2030 through its Ambition 2030 strategy, focusing on technology and strategic partnerships.",
+    "summary": "Insurance Australia Group (IAG) aims to achieve over $25 billion in gross written premiums and 11 million customers by 2030 through its 'Ambition 2030' strategy, focusing on technology and strategic partnerships.",
     "publication": "@InsuranceBizAU",
     "author": "Jonalyn Cueto",
     "published_date": "2026-05-12T16:51:28Z",
@@ -113,9 +113,9 @@
     "page_title": "IAG sets sights on $25 billion in premiums by 2030 | Insurance Business",
     "selector_used": "trafilatura",
     "key_points": [
-      "Targeting over $25 billion in gross written premiums by 2030",
-      "Plans to grow reported insurance profit to over $2.2 billion",
-      "Significant investment in technology and AI to enhance operations"
+      "IAG targets a return on equity of 15% or more and aims to grow reported insurance profit to over $2.2 billion by FY30.",
+      "The company has consolidated its pricing and claims platforms and deployed 92 generative AI applications.",
+      "Strategic alliances with RACQ and RAC could potentially generate up to $3 billion in gross written premium."
     ],
     "tags": [
       "insurance",
@@ -130,7 +130,7 @@
   {
     "id": "WC63761020260512em5c000b6",
     "index": 6,
-    "scraped_at": "2026-05-12T23:03:34Z",
+    "scraped_at": "2026-05-13T12:52:37Z",
     "title": "WorkSafe opens comment on claimants’ rights code",
     "summary": "Victorians can provide feedback on a draft Code of Claimants’ Rights until May 27, aimed at enhancing the treatment of injured workers under the workers' compensation scheme.",
     "publication": "@InsuranceBizAU",
@@ -145,9 +145,9 @@
     "page_title": "WorkSafe opens comment on claimants’ rights code | Insurance Business",
     "selector_used": "trafilatura",
     "key_points": [
-      "Public consultation on the draft code opened in April 2026.",
-      "The code outlines rights for claimants and sets service standards for WorkSafe and its partners.",
-      "Feedback from various representative bodies has been received, and the code is expected to commence by the end of 2026."
+      "The code outlines rights for claimants, including support, clear communication, and fair treatment.",
+      "It establishes service standards and a complaints process for breaches.",
+      "The consultation follows amendments to the Workplace Injury Rehabilitation and Compensation Act and aims to improve transparency and support for injured workers."
     ],
     "tags": [
       "workers' compensation",
