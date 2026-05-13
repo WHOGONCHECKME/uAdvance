@@ -36,7 +36,6 @@
     height: 100vh;
     display: flex;
     flex-direction: column;
-    overflow: hidden;
     font-size: 14px;
   }
 
@@ -554,13 +553,7 @@
     transition: background 0.15s;
   }
   .modal-btn:hover { background: var(--accent2); }
-  /* ── Scroll bounce effect ── */
-.article-list,
-.article-view,
-.chat-messages {
-  transition: transform 0.16s ease-out;
-  will-change: transform;
-}
+
   /* ── Loading spinner ── */
   .spinner {
     display: inline-block;
@@ -762,11 +755,12 @@ function renderList() {
     const heading = (a.heading || '').trim();
     const hc = heading ? headingColor(heading) : null;
     const date = formatDate(a.published_date);
+    const author = cleanAuthor(a.author);    
     const isActive = selectedArticle && selectedArticle.id === a.id ? ' active' : '';
     return `<div class="article-card${isActive}" onclick="selectArticle(${i})">
       <div class="card-meta">
         ${hc ? `<span class="heading-pill" style="background:${hc.bg};color:${hc.text};border:1px solid ${hc.border}">${escapeHtml(heading)}</span>` : ''}
-        <span class="card-date">${date}</span>
+        <span class="card-date">${author ? escapeHtml(author) + ' · ' : ''}${date}</span>
       </div>
       <div class="card-title">${escapeHtml(a.title || 'Untitled')}</div>
       ${a.summary ? `<div class="card-summary">${escapeHtml(a.summary)}</div>` : ''}
@@ -803,6 +797,7 @@ function renderArticle(a, fullText) {
   el.style.display = 'block';
 
   const date = formatDate(a.published_date);
+  const author = cleanAuthor(a.author);
   const kps = (a.key_points || []).map(p => `<div class="kp">${p}</div>`).join('');
   const sourceLink = a.final_url
     ? `<a class="article-source-link" href="${a.final_url}" target="_blank">↗ View original source</a>`
@@ -813,7 +808,8 @@ function renderArticle(a, fullText) {
   el.innerHTML = `
     <div class="article-header">
       <div class="article-pub-row">
-        ${a.publication ? `<span class="article-publication">${a.publication}</span>` : ''}
+        ${a.publication ? `<span class="article-publication">${escapeHtml(a.publication)}</span>` : ''}
+        ${author ? `<span class="article-date">By ${escapeHtml(author)}</span>` : ''}
         ${date ? `<span class="article-date">${date}</span>` : ''}
         ${a.word_count ? `<span class="article-date">· ${a.word_count} words</span>` : ''}
       </div>
@@ -941,6 +937,19 @@ function formatDate(d) {
   } catch { return d; }
 }
 
+function cleanAuthor(author) {
+  if (!author) return '';
+  const value = String(author).trim();
+
+  if (!value) return '';
+  if (value.startsWith('http://') || value.startsWith('https://')) return '';
+
+  return value
+    .replace(/^by\s+/i, '')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
 function escapeHtml(str) {
   return String(str)
     .replace(/&/g, '&amp;')
@@ -988,37 +997,6 @@ document.getElementById('chat-input').addEventListener('input', function() {
   this.style.height = 'auto';
   this.style.height = Math.min(this.scrollHeight, 100) + 'px';
 });
-
-// ── Scroll bounce effect ───────────────────────────────────────────────────
-function enableScrollBounce(el, amount = 14) {
-  let timeout;
-
-  function bounce(direction) {
-    el.style.transform = `translateY(${direction === 'top' ? amount : -amount}px)`;
-
-    clearTimeout(timeout);
-    timeout = setTimeout(() => {
-      el.style.transform = 'translateY(0)';
-    }, 120);
-  }
-
-  el.addEventListener('wheel', function(event) {
-    const atTop = el.scrollTop <= 0;
-    const atBottom = Math.ceil(el.scrollTop + el.clientHeight) >= el.scrollHeight;
-
-    if (atTop && event.deltaY < 0) {
-      bounce('top');
-    }
-
-    if (atBottom && event.deltaY > 0) {
-      bounce('bottom');
-    }
-  }, { passive: true });
-}
-
-enableScrollBounce(document.getElementById('article-list'));
-enableScrollBounce(document.getElementById('article-view'));
-enableScrollBounce(document.getElementById('chat-messages'), 8);
 
 init();
 </script>
