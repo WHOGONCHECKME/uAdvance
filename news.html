@@ -621,7 +621,7 @@
 // ── State ──────────────────────────────────────────────────────────────────
 let allArticles = [];
 let filteredArticles = [];
-let activeHeading = 'All';
+let activeHeadings = new Set();
 let activeSort = 'date-desc';
 let selectedArticle = null;
 let openaiKey = sessionStorage.getItem('oai_key') || '';
@@ -694,8 +694,8 @@ function buildHeadingChips() {
   wrap.innerHTML = headings.map(h => {
   const c = h === 'All' ? null : headingColor(h);
   const style = c ? `style="background:${c.bg};color:${c.text};border-color:${c.border}"` : '';
-  return `<button class="chip${h === 'All' ? ' active' : ''}" ${style} onclick="setHeading(this,'${escapeForOnclick(h)}')">${escapeHtml(h)}</button>`;
-}).join('');
+  return `<button class="chip${h === 'All' ? ' active' : ''}" ${style} onclick="toggleHeading(this,'${escapeForOnclick(h)}')">${escapeHtml(h)}</button>`;
+  }).join('');
 }
 
 function buildTicker() {
@@ -720,10 +720,31 @@ function selectArticleById(id) {
   updateChatContext(article);
 }
 
-function setHeading(el, heading) {
-  document.querySelectorAll('#heading-chips .chip').forEach(c => c.classList.remove('active'));
-  el.classList.add('active');
-  activeHeading = heading;
+function toggleHeading(el, heading) {
+  const allChip = document.querySelector('#heading-chips .chip');
+
+  if (heading === 'All') {
+    activeHeadings.clear();
+    document.querySelectorAll('#heading-chips .chip').forEach(c => c.classList.remove('active'));
+    el.classList.add('active');
+    applyFilters();
+    return;
+  }
+
+  allChip.classList.remove('active');
+
+  if (activeHeadings.has(heading)) {
+    activeHeadings.delete(heading);
+    el.classList.remove('active');
+  } else {
+    activeHeadings.add(heading);
+    el.classList.add('active');
+  }
+
+  if (activeHeadings.size === 0) {
+    allChip.classList.add('active');
+  }
+
   applyFilters();
 }
 
@@ -740,7 +761,7 @@ function applyFilters() {
   const q = document.getElementById('search-input').value.toLowerCase().trim();
   let list = [...allArticles];
 
-  if (activeHeading !== 'All') list = list.filter(a => (a.heading || '').trim() === activeHeading);
+  if (activeHeadings.size > 0) list = list.filter(a => activeHeadings.has((a.heading || '').trim()));
   if (q) list = list.filter(a =>
     (a.title || '').toLowerCase().includes(q) ||
     (a.summary || '').toLowerCase().includes(q) ||
