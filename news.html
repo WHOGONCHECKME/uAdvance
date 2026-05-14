@@ -319,25 +319,6 @@
     color: var(--muted);
     max-width: 780px;
   }
-  .article-key-points {
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-    margin-bottom: 20px;
-  }
-  .kp {
-    font-size: 13px;
-    color: var(--muted);
-    padding-left: 16px;
-    position: relative;
-    line-height: 1.5;
-  }
-  .kp::before {
-    content: '—';
-    position: absolute;
-    left: 0;
-    color: var(--faint);
-  }
   .article-divider {
     border: none;
     border-top: 1px solid var(--line);
@@ -751,7 +732,6 @@ function renderArticle(a, fullText) {
     author ? `By ${author}` : '',
     wordCount
   ].filter(Boolean).map(x => `<span>${escapeHtml(x)}</span>`).join('');
-  const kps = (a.key_points || []).map(p => `<div class="kp">${escapeHtml(p)}</div>`).join('');
   const sourceLink = a.final_url
     ? `<a class="article-source-link" href="${a.final_url}" target="_blank">↗ View original source</a>`
     : a.factiva_url
@@ -763,7 +743,6 @@ function renderArticle(a, fullText) {
       <h1 class="article-title">${escapeHtml(a.title || 'Untitled')}</h1>
       ${metaParts ? `<div class="article-sticky-meta">${metaParts}</div>` : ''}
       ${summary ? `<div class="article-sticky-summary">${escapeHtml(summary)}</div>` : ''}
-      ${kps ? `<div class="article-key-points">${kps}</div>` : ''}
     </div>
     <div class="article-body">${fullText ? escapeHtml(fullText) : '<em style="color:var(--faint)">Full text not available. View the original source below.</em>'}</div>
     <div style="margin-top:24px">${sourceLink}</div>

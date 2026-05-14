@@ -2,9 +2,9 @@
   {
     "id": "WC63761020260513em5c00001",
     "index": 8,
-    "scraped_at": "2026-05-13T23:33:47Z",
+    "scraped_at": "2026-05-14T11:37:31Z",
     "title": "High Street's restructure bets against the agency roll-up model",
-    "summary": "High Street Underwriting Agency's parent company, 11th Avenue, is adopting a 'house of brands' model to maintain agency independence amid increasing consolidation in Australia's underwriting agency sector.",
+    "summary": "Australia's underwriting agency sector is growing rapidly, with around 300 agencies writing over $10 billion in premiums. High Street Underwriting Agency's parent company, 11th Avenue, is taking a different approach by keeping its agencies independent rather than merging them into a larger corporate structure, aiming to maintain their unique decision-making and service models.",
     "publication": "@InsuranceBizAU",
     "author": "Daniel Wood",
     "published_date": "2026-05-13T16:38:00Z",
@@ -17,9 +17,11 @@
     "page_title": "High Street's restructure bets against the agency roll-up model | Insurance Business",
     "selector_used": "trafilatura",
     "key_points": [
-      "The underwriting agency sector has grown 470% since 2014-15, now comprising about 300 agencies and over $10 billion in gross written premiums.",
-      "11th Avenue aims to preserve the unique risk appetites and decision-making authority of its agencies, contrasting with the typical consolidation approach.",
-      "Brokers are advised to inquire about changes in ownership and decision-making processes at agencies during renewals, as consolidation may impact their service and responsiveness."
+      "The underwriting agency sector has grown 470% since 2014-15 and 12.3% in the last financial year.",
+      "Brokers are increasingly using agencies, with 60% placing over 30% of their business through them.",
+      "11th Avenue, led by CEO Blair Whittle, aims to operate as a 'house of brands' to preserve the independence of its agencies.",
+      "APRA is concerned about the risks of outsourcing underwriting to agencies and is urging better governance.",
+      "Brokers should inquire about changes in decision-making authority after an agency is acquired."
     ],
     "summarised": true,
     "filename": "08_High_Streets_restructure_bets_against_the_agency_roll-up_model.json"
@@ -27,9 +29,9 @@
   {
     "id": "WC47832020260513em5d0000c",
     "index": 18,
-    "scraped_at": "2026-05-13T23:37:06Z",
+    "scraped_at": "2026-05-14T11:37:55Z",
     "title": "A win delivered for super members",
-    "summary": "The Australian government's federal budget has excluded superannuation, including SMSFs, from upcoming capital gains tax changes, a move welcomed by the Association of Superannuation Funds of Australia.",
+    "summary": "The Australian government has decided to keep superannuation, including self-managed super funds (SMSFs), out of changes to capital gains tax (CGT) announced in the federal budget. This decision, effective from 1 July 2027, is seen as a positive outcome for the 19 million Australians with super accounts, ensuring stable tax settings for retirement savings.",
     "publication": "SMS Magazine",
     "author": "https://www.facebook.com/smstrusteenews",
     "published_date": "2026-05-13T16:06:33+10:00",
@@ -42,9 +44,11 @@
     "page_title": "CGT exclusion a win for super members | SMS Magazine",
     "selector_used": "trafilatura",
     "key_points": [
-      "The exclusion maintains stability in superannuation tax settings for 19 million Australians.",
-      "From 1 July 2027, the capital gains tax will be replaced by cost base indexation and a 30% minimum tax on capital gains outside super.",
-      "Superannuation remains a more tax-effective vehicle for capital gains, with a flat 15% tax on earnings."
+      "The government will not apply new CGT rules to superannuation funds.",
+      "ASFA CEO Mary Delahunty praised the budget as a win for super members.",
+      "From 1 July 2027, CGT outside super will be taxed at 30% or the investor's marginal rate minus an inflation-adjusted discount.",
+      "Inside super, capital gains are taxed at a lower effective rate of 10% due to a 33% discount.",
+      "Superannuation is a key source of investment in the Australian economy, with a total savings pool of $4.5 trillion."
     ],
     "summarised": true,
     "filename": "18_A_win_delivered_for_super_members.json"
