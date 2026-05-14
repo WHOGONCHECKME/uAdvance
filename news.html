@@ -75,7 +75,7 @@
   display: flex;
   gap: 0;
   white-space: nowrap;
-  animation: ticker-scroll 60s linear infinite;
+  animation: ticker-scroll 7s linear infinite;
 }
 .ticker:hover { animation-play-state: paused; }
 .ticker-item {
@@ -529,36 +529,6 @@
   }
   .chat-send:hover { background: var(--accent2); }
   .chat-send:disabled { opacity: 0.4; cursor: not-allowed; }
-  .marquee-strip {
-    height: 28px;
-    overflow: hidden;
-    border-bottom: 1px solid var(--line);
-    background: var(--bg2);
-    color: var(--accent);
-    flex-shrink: 0;
-    display: flex;
-    align-items: center;
-  }
-  .marquee-track {
-    display: flex;
-    gap: 40px;
-    white-space: nowrap;
-    animation: marquee 22s linear infinite;
-    font-size: 12px;
-    letter-spacing: 0.04em;
-  }
-  .marquee-track span {
-    flex-shrink: 0;
-  }
-
-  @keyframes marquee {
-    from {
-      transform: translateX(100vw);
-    }
-    to {
-      transform: translateX(-100%);
-    }
-  }
 
   /* ── Loading spinner ── */
   .spinner {
@@ -714,6 +684,7 @@ async function init() {
   document.getElementById('article-count').textContent = allArticles.length;
   buildHeadingChips();
   applyFilters();
+  buildTicker();
 }
 
 // ── Filters ────────────────────────────────────────────────────────────────
@@ -725,6 +696,28 @@ function buildHeadingChips() {
   const style = c ? `style="background:${c.bg};color:${c.text};border-color:${c.border}"` : '';
   return `<button class="chip${h === 'All' ? ' active' : ''}" ${style} onclick="setHeading(this,'${escapeForOnclick(h)}')">${escapeHtml(h)}</button>`;
 }).join('');
+}
+
+function buildTicker() {
+  const items = allArticles
+    .filter(a => a.ticker_line)
+    .map(a => ({ text: a.ticker_line, id: a.id }));
+  if (!items.length) return;
+
+  const ticker = document.getElementById('ticker');
+  const html = [...items, ...items]
+    .map(item => `<span class="ticker-item" onclick="selectArticleById('${item.id}')">${escapeHtml(item.text)}</span>`)
+    .join('');
+  ticker.innerHTML = html;
+}
+
+function selectArticleById(id) {
+  const article = allArticles.find(a => a.id === id);
+  if (!article) return;
+  selectedArticle = article;
+  renderList();
+  renderArticle(article, article.full_text || '');
+  updateChatContext(article);
 }
 
 function setHeading(el, heading) {
@@ -991,6 +984,7 @@ function getSampleArticles() {
       published_date: '2026-04-23',
       word_count: 1200,
       author: 'David Leber',
+      ticker_line: "Government maintains stable tax rules for superannuation",
       key_points: ['$2bn gap identified in retirement coverage', 'Policy reform proposed', 'Actuaries central to solution'],
       final_url: '#', full_text: "New research from Real Insurance indicates a marked shift in how Australians approach their working lives, with many prepared to trade income for wellbeing and flexibility amid ongoing cost-of-living pressures and uncertainty about artificial intelligence. The Real Jobs of the Future 2026 report finds 59% of workers would accept lower wages in exchange for improved overall wellbeing, while 76% say mental health and work-life balance now influence their career decisions.\nThe Real Jobs of the Future 2026 report, produced with consumer research firm MYMAVINS, is based on an online survey of 5,011 Australians aged 18 and over conducted between January and March. The study explores attitudes to AI and technology, financial pressure, flexibility, and how different generations expect their careers to develop. The findings show younger cohorts reporting stronger preferences for flexibility and reduced hours. Among Gen Z respondents, 65% say they are more likely to consider lower pay in return for fewer working hours, similar to 64% of Gen Y. Almost three in five Gen Z workers (59%) indicate they are likely to leave their current employer in the next 12 months to pursue higher pay, more flexible arrangements, or clearer career progression.\nFlexibility has become a central feature of job choice. Nearly 89% of respondents say flexibility and autonomy are more important than they were five years ago. Around 66% indicate that a four-day workweek is appealing, with women and Gen Y reporting the highest levels of interest. Career trajectories are also shifting. Two in three respondents (66%) expect to have multiple careers or very different roles during their working life. More than four in five (86%) have either taken up or would consider non-traditional arrangements, including side businesses (44%), casual or shift-based roles (31%), or running their own business (30%).\nManaging director and recruitment specialist Keiran Hathorn said these patterns reflect long-standing dynamics in the labour market. “We are standing at a genuine inflection point in the world of work. I have seen cycles come and go, from the dot-com boom and crash through to COVID and now the rapid rise of AI. One thing that remains constant is the push and pull between employers and employees. Flexibility, purpose, and engagement have always been the forces shaping the employment market,” Hathorn said.\nThe Real Insurance data points to a mixed response to AI in the workplace. About 45% of workers say AI and automation have not affected their current role, and 38% report a positive impact. At the same time, nearly two in three respondents (64%) say they have experienced at least one negative emotional response to AI at work. The most cited concerns relate to reliability and accuracy (27%) and reduced human interaction (22%). More than one in three workers (36%) are concerned that AI could replace key tasks within their role over the next decade. In response, 44% of Australians say they have engaged in upskilling or reskilling over the past 12 months to reduce the risk of redundancy linked to technological change.\nHathorn said worker sentiment on AI is divided. “There are two dominant camps. One believes AI will replace large parts of human work, creating uncertainty about what comes next. The other, where I sit, sees AI as an enabler. A tool that removes repetitive and mundane tasks, allowing people to focus on more creative and meaningful work. The hesitation around AI is understandable. It is not just the technology, but the uncertainty of where it lands. The truth is no one fully knows yet. What I do know is that every major shift creates opportunity for those willing to adapt. AI will be no different,” Hathorn said.\nLegal and regulatory developments are evolving alongside these changes. Accredited specialist and senior lawyer Roxanne Hart noted that employees covered by the Fair Work Act who have at least 12 months’ service can request flexible hours, a reduction in working days, or remote work. “Certain employees have the right to request flexible working hours, a reduction in working hours/days, and remote working. There have been recent changes to the Fair Work Act which now give certain employees (and employers) a right to apply to the Fair Work Commission to resolve the dispute. The Fair Work Commission must try and mediate the dispute and if that is unsuccessful it can arbitrate the dispute and make a binding decision on the parties,” Hart said.\nHart also referred to the “right to disconnect,” introduced in 2024. She said the reforms were intended to support productive flexible and remote work while setting clearer expectations around contact outside contracted hours. “Essentially ‘availability creep’ has been caused by changes in technology and the line between flexibility and unreasonable expectations has been blurred, resulting in negative consequences for the wellbeing of workers,” she said.\nThe Real Insurance report links the current economic backdrop to more cautious job moves and a greater focus on security. Around two in three Australians (66%) say rising living costs since 2020 have reduced their appetite for career risk or non-traditional work. Financial pressure is also influencing tenure: 44% report staying in a job longer than they wanted because of money concerns, including 47% of women and 40% of men. Alongside this, many respondents are seeking to diversify their income. More than three in five (63%) are interested in starting a side hustle or small business, rising to 75% among Gen Z and 72% among Gen Y. About 40% already have additional income streams, primarily to manage increased expenses (48%) and to support financial security (45%).\nWhen asked what would most strengthen their sense of security in the labour market, nearly half of respondents (48%) identify income protection or other financial safety nets. Subsidised or fully funded training (41%) and flexible upskilling options (40%) are also cited. Respondents see responsibility for protecting future job prospects as shared across institutions. They assign the greatest responsibility to government (67%), followed by employers (57%), individuals (46%), and the education and training system (43%). Support for further structural changes is high: around 64% back a right-to-disconnect law and 80% favour a broader shift toward what the report describes as “life-work balance.”\nAllianz Australia’s March 2026 research and claims data align with the Real Insurance findings on workplace wellbeing, highlighting implications for insurers and employers. Allianz estimates nearly 2 million Australian employees often lose sleep due to work-related stress and pressure, and 74% of surveyed workers believe their organisation does not have a clear strategy to reduce burnout. This perception comes despite an estimated $36.2 billion in wellbeing and cultural initiatives allocated by Australian businesses, with one in 10 organisations planning to spend more than $100,000 this year.\nSurveyed employees nominate specific measures they would value: 45% point to mental health days and wellbeing leave, 31% call for steps to reduce administrative and unnecessary tasks that contribute to cognitive overload, and 35% want improved in-office benefits such as free coffee and lunches to support social interaction and breaks. Almost one in five (18%) say they would consider negotiating pay in exchange for flexible or hybrid working arrangements.\nAllianz workers’ compensation data shows a 17.3% relative increase in primary psychological claims between the 2024 and 2025 calendar years. The insurer reports that 42.3% of psychological claims are associated with mental stress and work pressure, and that psychological injuries cost about 2.7 times more than physical injuries. The research also finds nearly 2 million employees hold negative feelings toward their work, three in four say they lack clear channels to raise burnout concerns with their manager, and 15% report that work demands are affecting their relationships with friends and family.",
       filename: null
@@ -1003,6 +997,7 @@ function getSampleArticles() {
       published_date: '2026-04-24',
       word_count: 850,
       author: 'Bob Dylan',
+      ticker_line: "High Street bets on agency independence amid consolidation",
       key_points: ['$25bn commitment over 2 years', 'Focus on cloud and AI infrastructure', 'Jobs creation expected'],
       final_url: '#', full_text: "Australia’s largest listed entities are acknowledging climate-related risks to earnings and capital but, in many cases, are only beginning to quantify those exposures, leaving gaps for insurers, reinsurers, and institutional investors seeking to assess financial materiality.\nSustainability consultancy ERM has reviewed 33 climate disclosures lodged by Australian companies that report on a calendar-year basis under the new Australian Sustainability Reporting Standards (ASRS). The regime, which will phase in to 2028, requires large entities to disclose climate-related risks alongside greenhouse gas (GHG) emissions. ERM’s analysis indicates that about two-thirds of early reporters have identified at least one climate risk as material to their business. Fewer than one-third, however, have set out quantified estimates of how those risks could affect earnings, balance sheets, or cash flows. As a result, insurers and capital providers are receiving formal recognition of climate risk but limited consistent financial metrics for use in underwriting, risk modelling, and investment decisions.\nWhere companies have quantified exposure, ERM estimates that the early filers have reported between $2.5 billion and $4.5 billion in annualised climate-related financial risk. ERM notes that this represents only a portion of the total climate risk that has not historically been disclosed in financial or sustainability reports. “Australia’s mandatory climate reporting regime is doing exactly what it is designed to do, it’s getting the climate conversation tabled in the boardroom. Now companies have publicly acknowledged the financial risks associated with climate change, the next step is to build a strategy to remain profitable in world that is decarbonising and physically changing, and back their commitments with a credible transition plan,” said Dr Mary Stewart, ERM lead partner, corporate sustainability and climate change ANZ.\nAccording to ERM’s review, many companies that have identified material climate exposures have not yet aligned capital allocation or governance settings with those risks. In most cases, the consultancy found little or no capital specifically set aside for adaptation, physical risk management, or transition investments, and few examples where climate indicators are integrated into executive remuneration, internal pricing, or capital planning frameworks. “Investors in particular need decision-useful information, and the onus is on reporters to quantify the risks they are declaring as material, including financial impacts, and explain how they intend to mitigate them,” Stewart said.\nERM also observed that most early reporters have deferred complex value chain reporting. Around three-quarters relied on first‑year exemptions to postpone quantifying Scope 3 emissions, leaving major elements of transition exposure outside current public disclosures. “The important work of quantifying Scope 3 emissions can also not start soon enough. Given the scale of these value chain emissions for most businesses, this is both a major gap in Australia’s climate disclosure landscape and an opportunity for businesses, opening the door to a materially stronger position with investors and customers,” Stewart said. The deferral of Scope 3 reporting may delay fuller visibility into counterparties’ supply chain and product-use emissions, which can influence transition risk, potential liability, and long‑tail exposure across portfolios.\nERM scored the disclosures against four pillars – governance, strategy, risk management, and metrics and targets – and assessed both the presence and usefulness of reported information. Energy and mining companies, which have been under transition scrutiny for longer, are described as further advanced in quantifying climate-related financial exposures, linking those exposures to capital expenditure, and incorporating climate-related indicators into executive pay frameworks. By contrast, financial services entities – including banks and other financial institutions – were assessed as having comparatively developed governance structures, but lower scores on metrics and targets that indicate whether climate risks are being actively managed.\n“Climate disclosure maturity reflects proximity to risk. Energy and mining companies have been living with transition pressure for years, and that shows up in a more sophisticated understanding of climate risk and a more strategic approach to managing it. For financial services the exposure is just as real, but the urgency to act just isn’t there from some of the early reporters. This should worry investors,” Stewart said. For general insurers and reinsurers, the variation suggests that large emitters may be providing more detailed transition information than some financial counterparties, affecting how different sectors can be assessed from an underwriting and counterparty risk perspective.\nERM’s assessment points to several areas where practice is developing. Boards are increasingly identified as accountable for climate risk, governance structures have become more defined, and disclosure of Scope 1 and 2 emissions – often with external assurance – is becoming more common. Many companies have also started to use international climate scenario frameworks, such as those of the IPCC, to test their strategies. However, ERM found that climate considerations are not yet consistently driving key business and capital decisions. Only a minority of early reporters have explicitly linked executive pay to climate-related outcomes, and in many cases the connection between risk identification and capital deployment, business model adjustments, or portfolio changes is limited.\n“The gap between identified climate risk and capital deployed to address it is stark. Companies are disclosing significant financial exposures in one breath while allocating next to nothing to address it in another. That is not a disclosure challenge, it is a governance challenge,” Stewart said. She said the first year of mandatory reporting “was never going to be perfect,” and that the presence of significant unquantified risks and incomplete transition plans illustrates the rationale for the regime.\nThe initial ASRS reports are being released against a backdrop of inflationary pressure, energy market volatility, and geopolitical uncertainty. Stewart said entities that have mapped supply chain exposure, stress‑tested their business models, and developed climate adaptation capabilities are better positioned under these conditions. “Volatility in energy markets and escalating geopolitical uncertainty are not a reason to delay climate investment; they are the business case for it playing out in real time. Companies that did the work early are structurally more resilient. That is not a coincidence. Done well, climate risk disclosure is the foundation of business resilience and long-term performance. It is not a compliance or box-ticking exercise,” Stewart said.\nERM is encouraging investors to use AGM season to question boards on how climate risk is being addressed. Suggested topics include whether climate risk discussions go beyond emissions management to cover physical impacts; whether financial exposure has been quantified; how climate risk is integrated into strategy, executive pay, and capital deployment; the existence and status of a transition plan with defined timelines and accountability; and when deferred Scope 3 and value‑chain disclosures will be released. “What these first mandatory climate disclosures reveal is both encouraging and confronting. Governance is in place, but translating risk into strategy, capital, and accountability has just begun. Companies are recognising climate risk but still treating it as a future problem or viewing transition and physical risk as challenges to be tackled one after the other. They are not. Both demand a response now,” Stewart said.",
       filename: null
