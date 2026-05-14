@@ -1026,12 +1026,7 @@ function buildTicker() {
 }
 
 function selectArticleById(id) {
-  const article = allArticles.find(a => a.id === id);
-  if (!article) return;
-  selectedArticle = article;
-  renderList();
-  renderArticle(article, article.full_text || '');
-  updateChatContext(article);
+  selectArticle(id);
 }
 
 init();
