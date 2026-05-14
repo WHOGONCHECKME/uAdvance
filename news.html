@@ -692,9 +692,11 @@ function buildHeadingChips() {
   const headings = ['All', ...new Set(allArticles.map(a => (a.heading || '').trim()).filter(Boolean))];
   const wrap = document.getElementById('heading-chips');
   wrap.innerHTML = headings.map(h => {
-  const c = h === 'All' ? null : headingColor(h);
-  const style = c ? `style="background:${c.bg};color:${c.text};border-color:${c.border}"` : '';
-  return `<button class="chip${h === 'All' ? ' active' : ''}" ${style} onclick="toggleHeading(this,'${escapeForOnclick(h)}')">${escapeHtml(h)}</button>`;
+    const isAll = h === 'All';
+    const isActive = isAll ? activeHeadings.size === 0 : activeHeadings.has(h);
+    const c = !isAll && isActive ? headingColor(h) : null;
+    const style = c ? `style="background:${c.bg};color:${c.text};border-color:${c.border}"` : '';
+    return `<button class="chip${isActive ? ' active' : ''}" ${style} onclick="toggleHeading(this,'${escapeForOnclick(h)}')">${escapeHtml(h)}</button>`;
   }).join('');
 }
 
@@ -721,28 +723,17 @@ function selectArticleById(id) {
 }
 
 function toggleHeading(el, heading) {
-  const allChip = document.querySelector('#heading-chips .chip');
-
   if (heading === 'All') {
     activeHeadings.clear();
-    document.querySelectorAll('#heading-chips .chip').forEach(c => c.classList.remove('active'));
-    el.classList.add('active');
+    buildHeadingChips();
     applyFilters();
     return;
   }
 
-  allChip.classList.remove('active');
-
   if (activeHeadings.has(heading)) {
     activeHeadings.delete(heading);
-    el.classList.remove('active');
   } else {
     activeHeadings.add(heading);
-    el.classList.add('active');
-  }
-
-  if (activeHeadings.size === 0) {
-    allChip.classList.add('active');
   }
 
   applyFilters();
