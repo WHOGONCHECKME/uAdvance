@@ -245,7 +245,7 @@
     overflow-y: auto;
     overscroll-behavior: contain;
     -webkit-overflow-scrolling: touch;
-    padding: 36px 48px 24px;
+    padding: 0 48px 24px;
   }
   .article-view::-webkit-scrollbar { width: 4px; }
   .article-view::-webkit-scrollbar-track { background: transparent; }
@@ -270,12 +270,9 @@
     top: 0;
     z-index: 10;
     background: var(--bg);
-    padding: 0 0 14px;
-    margin-bottom: 14px; 
-  }
-  
-  .article-header { 
-    margin-bottom: 28px; 
+    padding: 36px 0 16px;
+    margin-bottom: 0;
+    border-bottom: 1px solid var(--line);
   }
   
   .article-pub-row {
@@ -300,6 +297,27 @@
     color: var(--text);
     margin-bottom: 0;
     font-weight: 400;
+  }
+    .article-sticky-meta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    font-size: 12px;
+    color: var(--faint);
+  }
+  .article-sticky-meta span:not(:last-child)::after {
+    content: '•';
+    margin-left: 10px;
+    color: var(--faint);
+  }
+  .article-sticky-summary {
+    margin-top: 12px;
+    font-size: 13px;
+    line-height: 1.55;
+    color: var(--muted);
+    max-width: 780px;
   }
   .article-key-points {
     display: flex;
@@ -330,7 +348,7 @@
     line-height: 1.75;
     padding: 15px 200px 15px 50px;
     max-width: 800px;
-    color: #c8c6bf;
+    color: var(--text);
     white-space: pre-wrap;
     text-align: justify;
     word-break: break-word;
@@ -488,62 +506,6 @@
   .chat-send:hover { background: var(--accent2); }
   .chat-send:disabled { opacity: 0.4; cursor: not-allowed; }
 
-  /* ── API key modal ── */
-  .modal-bg {
-    position: fixed;
-    inset: 0;
-    background: rgba(0,0,0,0.7);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 100;
-    backdrop-filter: blur(4px);
-  }
-  .modal-bg.hidden { display: none; }
-  .modal {
-    background: var(--bg2);
-    border: 1px solid var(--line2);
-    border-radius: 12px;
-    padding: 28px;
-    width: 400px;
-    max-width: 90vw;
-  }
-  .modal h2 {
-    font-family: var(--serif);
-    font-size: 20px;
-    color: var(--text);
-    margin-bottom: 8px;
-    font-weight: 400;
-  }
-  .modal p { font-size: 13px; color: var(--muted); margin-bottom: 16px; line-height: 1.5; }
-  .modal input {
-    width: 100%;
-    background: var(--bg3);
-    border: 1px solid var(--line2);
-    border-radius: 8px;
-    padding: 10px 14px;
-    color: var(--text);
-    font-size: 13px;
-    font-family: var(--sans);
-    outline: none;
-    margin-bottom: 12px;
-    transition: border-color 0.15s;
-  }
-  .modal input:focus { border-color: var(--accent); }
-  .modal-note { font-size: 11px; color: var(--faint); margin-bottom: 16px; line-height: 1.5; }
-  .modal-btn {
-    background: var(--accent);
-    color: var(--bg);
-    border: none;
-    border-radius: 8px;
-    padding: 10px 20px;
-    font-size: 13px;
-    font-family: var(--sans);
-    font-weight: 500;
-    cursor: pointer;
-    transition: background 0.15s;
-  }
-  .modal-btn:hover { background: var(--accent2); }
 
   /* ── Loading spinner ── */
   .spinner {
@@ -564,17 +526,6 @@
 </head>
 <body>
 
-<!-- API Key Modal -->
-<div class="modal-bg" id="key-modal">
-  <div class="modal">
-    <h2>OpenAI API Key</h2>
-    <p>Enter your OpenAI API key to enable the chat assistant. Your key is stored only in this browser session and never sent anywhere except directly to OpenAI.</p>
-    <input type="password" id="key-input" placeholder="sk-..." autocomplete="off">
-    <p class="modal-note">You can change this at any time by clicking the model badge in the chat panel.</p>
-    <button class="modal-btn" onclick="saveKey()">Save &amp; Continue</button>
-    <button class="modal-btn" style="background:transparent;color:var(--muted);margin-left:8px" onclick="dismissModal()">Skip for now</button>
-  </div>
-</div>
 
 <header>
   <div class="logo">uAdvance <span>/ news</span></div>
@@ -623,7 +574,7 @@
       <div class="chat-toggle" onclick="toggleChat()">
         <span style="font-size:26px">◇</span>
         <span class="chat-toggle-label">Ask ChatGPT</span>
-        <span class="chat-model-badge" id="model-badge" onclick="event.stopPropagation();openKeyModal()">gpt-4o · set key</span>
+        <span class="chat-model-badge" id="model-badge">gpt-4o</span>
         <span class="chat-chevron">▲</span>
       </div>
       <div class="chat-messages" id="chat-messages">
@@ -649,16 +600,19 @@ let activeSort = 'date-desc';
 let selectedArticle = null;
 let openaiKey = sessionStorage.getItem('oai_key') || '';
 
+// -- Debounce
+const debouncedApplyFilters = debounce(applyFilters, 200);
+
+// ── Debounce ───────────────────────────────────────────────────────────────
+function debounce(fn, delay = 200) {
+  let timer;
+  return (...args) => {
+    clearTimeout(timer);
+    timer = setTimeout(() => fn(...args), delay);
+  };
+}
 // ── Boot ───────────────────────────────────────────────────────────────────
 async function init() {
-  // Show key modal if no key set
-  if (!openaiKey) {
-    document.getElementById('key-modal').classList.remove('hidden');
-  } else {
-    document.getElementById('key-modal').classList.add('hidden');
-    updateModelBadge();
-  }
-
   try {
     const res = await fetch('articles_index.json');
     if (!res.ok) throw new Error('not found');
@@ -698,7 +652,7 @@ function setSort(el) {
   applyFilters();
 }
 
-document.getElementById('search-input').addEventListener('input', applyFilters);
+document.getElementById('search-input').addEventListener('input', debounce(applyFilters));
 
 function applyFilters() {
   const q = document.getElementById('search-input').value.toLowerCase().trim();
@@ -718,6 +672,7 @@ function applyFilters() {
   else if (activeSort === 'alpha') list.sort((a,b) => (a.title||'').localeCompare(b.title||''));
 
   filteredArticles = list;
+  document.getElementById('article-count').textContent = filteredArticles.length;
   renderList();
 }
 
@@ -746,7 +701,7 @@ function renderList() {
     const hc = heading ? headingColor(heading) : null;
     const date = formatDate(a.published_date);
     const isActive = selectedArticle && selectedArticle.id === a.id ? ' active' : '';
-    return `<div class="article-card${isActive}" onclick="selectArticle(${i})">
+    return `<div class="article-card${isActive}" onclick="selectArticle('${a.id}')">
       <div class="card-meta">
         ${hc ? `<span class="heading-pill" style="background:${hc.bg};color:${hc.text};border:1px solid ${hc.border}">${escapeHtml(heading)}</span>` : ''}
         <span class="card-date">${date}</span>
@@ -758,8 +713,9 @@ function renderList() {
 }
 
 // ── Select article ─────────────────────────────────────────────────────────
-async function selectArticle(index) {
-  const article = filteredArticles[index];
+async function selectArticle(id) {
+  const article = filteredArticles.find(a => a.id === id);
+  if (!article) return;
   selectedArticle = article;
   renderList(); // refresh active state
 
@@ -787,7 +743,15 @@ function renderArticle(a, fullText) {
 
   const date = formatDate(a.published_date);
   const author = cleanAuthor(a.author);
-  const kps = (a.key_points || []).map(p => `<div class="kp">${p}</div>`).join('');
+  const wordCount = a.word_count ? `${Number(a.word_count).toLocaleString()} words` : '';
+  const summary = a.summary || '';
+  const metaParts = [
+    a.publication,
+    date,
+    author ? `By ${author}` : '',
+    wordCount
+  ].filter(Boolean).map(x => `<span>${escapeHtml(x)}</span>`).join('');
+  const kps = (a.key_points || []).map(p => `<div class="kp">${escapeHtml(p)}</div>`).join('');
   const sourceLink = a.final_url
     ? `<a class="article-source-link" href="${a.final_url}" target="_blank">↗ View original source</a>`
     : a.factiva_url
@@ -796,19 +760,12 @@ function renderArticle(a, fullText) {
 
   el.innerHTML = `
     <div class="article-title-wrap">
-      <h1 class="article-title">${a.title || 'Untitled'}</h1>
-    </div>
-    <div class="article-header">
-      <div class="article-pub-row">
-        ${a.publication ? `<span class="article-publication">${escapeHtml(a.publication)}</span>` : ''}
-        ${date ? `<span class="article-date">${date}</span>` : ''}
-        ${a.word_count ? `<span class="article-date">· ${a.word_count} words</span>` : ''}
-        ${author ? `<span class="article-date">By ${escapeHtml(author)}</span>` : ''}
-      </div>
+      <h1 class="article-title">${escapeHtml(a.title || 'Untitled')}</h1>
+      ${metaParts ? `<div class="article-sticky-meta">${metaParts}</div>` : ''}
+      ${summary ? `<div class="article-sticky-summary">${escapeHtml(summary)}</div>` : ''}
       ${kps ? `<div class="article-key-points">${kps}</div>` : ''}
     </div>
-    <hr class="article-divider">
-    <div class="article-body">${fullText || '<em style="color:var(--faint)">Full text not available. View the original source below.</em>'}</div>
+    <div class="article-body">${fullText ? escapeHtml(fullText) : '<em style="color:var(--faint)">Full text not available. View the original source below.</em>'}</div>
     <div style="margin-top:24px">${sourceLink}</div>
   `;
 
@@ -828,8 +785,9 @@ function updateChatContext(article) {
     : 'No article selected — ask general questions';
 }
 
+let chatHistory = [];
+
 async function sendChat() {
-  if (!openaiKey) { openKeyModal(); return; }
   const input = document.getElementById('chat-input');
   const msg = input.value.trim();
   if (!msg) return;
@@ -842,7 +800,6 @@ async function sendChat() {
   btn.disabled = true;
   addMessage('<span class="spinner"></span>Thinking…', 'thinking');
 
-  // Build system message with article context
   let system = `You are a helpful research assistant for uAdvance, an Australian professional development platform for actuaries and financial services professionals. Answer clearly and concisely.`;
   if (selectedArticle) {
     const ctx = [
@@ -855,6 +812,8 @@ async function sendChat() {
     system += `\n\nThe user is currently reading this article:\n${ctx}`;
   }
 
+  chatHistory.push({ role: 'user', content: msg });
+
   try {
     const res = await fetch('https://api.openai.com/v1/chat/completions', {
       method: 'POST',
@@ -864,15 +823,18 @@ async function sendChat() {
         max_tokens: 600,
         messages: [
           { role: 'system', content: system },
-          { role: 'user', content: msg }
+          ...chatHistory
         ]
       })
     });
     const data = await res.json();
     removeThinking();
     if (data.error) throw new Error(data.error.message);
-    addMessage(data.choices[0].message.content, 'ai');
+    const reply = data.choices[0].message.content;
+    chatHistory.push({ role: 'assistant', content: reply });
+    addMessage(reply, 'ai');
   } catch(err) {
+    chatHistory.pop(); // remove the user message if the request failed
     removeThinking();
     addMessage(`Error: ${err.message}`, 'ai');
   }
@@ -893,26 +855,6 @@ function removeThinking() {
   if (el) el.remove();
 }
 
-// ── API key modal ──────────────────────────────────────────────────────────
-function openKeyModal() {
-  document.getElementById('key-input').value = openaiKey;
-  document.getElementById('key-modal').classList.remove('hidden');
-}
-function dismissModal() {
-  document.getElementById('key-modal').classList.add('hidden');
-}
-function saveKey() {
-  const k = document.getElementById('key-input').value.trim();
-  if (k) {
-    openaiKey = k;
-    sessionStorage.setItem('oai_key', k);
-    updateModelBadge();
-  }
-  document.getElementById('key-modal').classList.add('hidden');
-}
-function updateModelBadge() {
-  document.getElementById('model-badge').textContent = openaiKey ? 'gpt-4o · ✓ key set' : 'gpt-4o · set key';
-}
 
 // ── Helpers ────────────────────────────────────────────────────────────────
 
