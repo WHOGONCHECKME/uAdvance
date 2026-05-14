@@ -2,9 +2,9 @@
   {
     "id": "WC63761020260513em5c00001",
     "index": 8,
-    "scraped_at": "2026-05-14T11:37:31Z",
+    "scraped_at": "2026-05-14T12:23:18Z",
     "title": "High Street's restructure bets against the agency roll-up model",
-    "summary": "Australia's underwriting agency sector is growing rapidly, with around 300 agencies writing over $10 billion in premiums. High Street Underwriting Agency's parent company, 11th Avenue, is taking a different approach by keeping its agencies independent rather than merging them into a larger corporate structure, aiming to maintain their unique decision-making and service models.",
+    "summary": "High Street Underwriting Agency's new parent company, 11th Avenue, is taking a different approach to agency consolidation by keeping each agency's independence and decision-making intact, rather than merging them into a larger corporate structure.",
     "publication": "@InsuranceBizAU",
     "author": "Daniel Wood",
     "published_date": "2026-05-13T16:38:00Z",
@@ -17,21 +17,21 @@
     "page_title": "High Street's restructure bets against the agency roll-up model | Insurance Business",
     "selector_used": "trafilatura",
     "key_points": [
-      "The underwriting agency sector has grown 470% since 2014-15 and 12.3% in the last financial year.",
-      "Brokers are increasingly using agencies, with 60% placing over 30% of their business through them.",
-      "11th Avenue, led by CEO Blair Whittle, aims to operate as a 'house of brands' to preserve the independence of its agencies.",
-      "APRA is concerned about the risks of outsourcing underwriting to agencies and is urging better governance.",
-      "Brokers should inquire about changes in decision-making authority after an agency is acquired."
+      "Australia's underwriting agency sector is growing rapidly, with over 300 agencies writing more than $10 billion in premiums.",
+      "Brokers value technical expertise and responsiveness from agencies, which may be lost in larger corporate structures.",
+      "11th Avenue aims to maintain the unique culture and decision-making of its agencies while providing shared technology and support.",
+      "APRA is concerned about the risks of outsourced underwriting and is urging better governance in agencies."
     ],
+    "ticker_line": "High Street bets on agency independence amid consolidation",
     "summarised": true,
     "filename": "08_High_Streets_restructure_bets_against_the_agency_roll-up_model.json"
   },
   {
     "id": "WC47832020260513em5d0000c",
     "index": 18,
-    "scraped_at": "2026-05-14T11:37:55Z",
+    "scraped_at": "2026-05-14T12:23:39Z",
     "title": "A win delivered for super members",
-    "summary": "The Australian government has decided to keep superannuation, including self-managed super funds (SMSFs), out of changes to capital gains tax (CGT) announced in the federal budget. This decision, effective from 1 July 2027, is seen as a positive outcome for the 19 million Australians with super accounts, ensuring stable tax settings for retirement savings.",
+    "summary": "The Australian government will keep current tax rules for superannuation, including SMSFs, which means no changes to capital gains tax for super funds. This decision is seen as a positive outcome for the 19 million Australians with super accounts, ensuring stability in their retirement savings.",
     "publication": "SMS Magazine",
     "author": "https://www.facebook.com/smstrusteenews",
     "published_date": "2026-05-13T16:06:33+10:00",
@@ -44,12 +44,13 @@
     "page_title": "CGT exclusion a win for super members | SMS Magazine",
     "selector_used": "trafilatura",
     "key_points": [
-      "The government will not apply new CGT rules to superannuation funds.",
-      "ASFA CEO Mary Delahunty praised the budget as a win for super members.",
-      "From 1 July 2027, CGT outside super will be taxed at 30% or the investor's marginal rate minus an inflation-adjusted discount.",
-      "Inside super, capital gains are taxed at a lower effective rate of 10% due to a 33% discount.",
-      "Superannuation is a key source of investment in the Australian economy, with a total savings pool of $4.5 trillion."
+      "Government excludes superannuation from capital gains tax changes.",
+      "ASFA welcomes the decision, calling it a win for super members.",
+      "Current CGT settings for super remain unchanged until July 2027.",
+      "Superannuation offers lower tax rates compared to personal investments.",
+      "Super's $4.5 trillion savings pool supports Australian businesses."
     ],
+    "ticker_line": "Government maintains stable tax rules for superannuation",
     "summarised": true,
     "filename": "18_A_win_delivered_for_super_members.json"
   },
