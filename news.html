@@ -77,10 +77,28 @@
   .sidebar {
     width: var(--sidebar);
     flex-shrink: 0;
-    border-right: 1px solid var(--line);
     display: flex;
     flex-direction: column;
     background: var(--bg2);
+  }
+
+    .sidebar-resizer {
+    width: 8px;
+    flex-shrink: 0;
+    cursor: col-resize;
+    background: var(--bg2);
+    border-left: 1px solid var(--line);
+    border-right: 1px solid var(--line);
+    touch-action: none;
+    transition: background 0.12s;
+  }
+  .sidebar-resizer:hover,
+  body.resizing-sidebar .sidebar-resizer {
+    background: var(--bg3);
+  }
+  body.resizing-sidebar {
+    cursor: col-resize;
+    user-select: none;
   }
 
   .filters {
@@ -532,6 +550,8 @@
     <div class="article-list" id="article-list"></div>
   </aside>
 
+  <div class="sidebar-resizer" id="sidebar-resizer" title="Resize article list"></div>
+
   <!-- Main -->
   <div class="main">
     <div class="article-view" id="article-view">
@@ -575,6 +595,39 @@ let openaiKey = sessionStorage.getItem('oai_key') || '';
 // -- Debounce
 const debouncedApplyFilters = debounce(applyFilters, 200);
 
+initSidebarResize();
+
+// ── Sidebar resizing ──────────────────────────────────────────────────────
+function initSidebarResize() {
+  const resizer = document.getElementById('sidebar-resizer');
+  if (!resizer) return;
+
+  const minWidth = 280;
+  const maxWidth = 720;
+
+  resizer.addEventListener('pointerdown', function(e) {
+    e.preventDefault();
+    resizer.setPointerCapture(e.pointerId);
+    document.body.classList.add('resizing-sidebar');
+
+    function onPointerMove(e) {
+      const nextWidth = Math.min(maxWidth, Math.max(minWidth, e.clientX));
+      document.documentElement.style.setProperty('--sidebar', `${nextWidth}px`);
+    }
+
+    function onPointerUp(e) {
+      document.body.classList.remove('resizing-sidebar');
+      resizer.releasePointerCapture(e.pointerId);
+      resizer.removeEventListener('pointermove', onPointerMove);
+      resizer.removeEventListener('pointerup', onPointerUp);
+      resizer.removeEventListener('pointercancel', onPointerUp);
+    }
+
+    resizer.addEventListener('pointermove', onPointerMove);
+    resizer.addEventListener('pointerup', onPointerUp);
+    resizer.addEventListener('pointercancel', onPointerUp);
+  });
+}
 // ── Debounce ───────────────────────────────────────────────────────────────
 function debounce(fn, delay = 200) {
   let timer;
