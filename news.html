@@ -79,7 +79,7 @@
 }
 .ticker:hover { animation-play-state: paused; }
 .ticker-item {
-  font-size: 11px;
+  font-size: 14px;
   color: var(--faint);
   padding: 0 28px;
   cursor: pointer;
@@ -87,13 +87,7 @@
   flex-shrink: 0;
 }
 .ticker-item:hover { color: var(--accent); }
-.ticker-item::before {
-  content: '◆';
-  font-size: 6px;
-  margin-right: 10px;
-  color: var(--line2);
-  vertical-align: middle;
-}
+
 @keyframes ticker-scroll {
   from { transform: translateX(0); }
   to   { transform: translateX(-50%); }
@@ -174,7 +168,7 @@
     white-space: nowrap;
   }
   .chip:hover { border-color: var(--faint); color: var(--text); }
-  .chip.active { border-color: var(--accent); color: var(--accent); background: rgba(200,169,110,0.08); }
+  .chip.active { border-color: var(--accent); color: var(--bg); background: var(--accent); font-weight: 500; }
   .chip.inactive { color: var(--faint); border-color: var(--line); opacity: 0.5; }
   .search-wrap {
     position: relative;
@@ -694,10 +688,9 @@ function buildHeadingChips() {
   wrap.innerHTML = headings.map(h => {
     const isAll = h === 'All';
     const isActive = isAll ? activeHeadings.size === 0 : activeHeadings.has(h);
-    const isInactive = !isActive && activeHeadings.size > 0;
     const c = !isAll && isActive ? headingColor(h) : null;
     const style = c ? `style="background:${c.bg};color:${c.text};border-color:${c.border}"` : '';
-    const cls = isActive ? 'active' : isInactive ? 'inactive' : '';
+    const cls = isActive ? 'active' : '';
     return `<button class="chip ${cls}" ${style} onclick="toggleHeading(this,'${escapeForOnclick(h)}')">${escapeHtml(h)}</button>`;
   }).join('');
 }
