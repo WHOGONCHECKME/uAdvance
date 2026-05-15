@@ -1,10 +1,10 @@
 {
   "id": "WC74187020260514em5d0000a",
   "index": 15,
-  "scraped_at": "2026-05-14T23:01:57Z",
+  "scraped_at": "2026-05-15T13:19:48Z",
   "title": "Digital ID program gets $650M for expansion in Australian federal budget",
   "full_text": "Digital ID program gets $650M for expansion in Australian federal budget\nThe Australian government’s 2026-27 Federal Budget includes a major financial commitment to digital ID, in stating that “the Government is implementing a ‘tell‑us‑once’ approach and investing $654.3 million (about US$474.7 million) to expand the use of Digital ID to verify identity, reduce data storage and improve access to government services.”\nThe money comes as part of the government’s productivity agenda, which attempts to make it easier to build, do business, invest and innovate in Australia. It will fund an expansion of the Australian Government’s Digital ID System (AGDIS) and the myID platform, as Canberra aims to deliver on its promise to limit on the amount of personal data taxpayers must share to access services with a ‘tell-us-once’ approach, implying a single verification for access to more than 255 online government services.\nThe $654.3 million “supports the transition into the system’s final phase: opening the Australian Government Digital ID System,” which the government is in the process of opening up to private sector identity verification providers.\nIn the budget, there is $135.2 million for Services Australia to administer the Digital ID Exchange connecting information between government services and Digital ID providers within the AGDIS, as well as government services portal myGov, for which $24.8 million is flagged for developing the capability for advanced notifications, streamlining onboarding and enhancing the account creation and recovery process.\nThe Australian Taxation Office (ATO) will receive a $357.4 million boost to cover administration and security updates to the myID credential. The ATO recently published an RFI for biometric liveness detection, to bolster the digital ID system against advanced spoof attacks and emerging fraud threats.\nSixty-two million is being invested into the Consumer Data Right, the government’s secure data sharing program for consumers and businesses. Investments through 2028 will focus on enabling the CDR as a platform for secure sharing of tax data, and activating “efficiencies and fraud reduction benefits across government and accredited private sector providers.”\nThe Office of the Australian Information Commissioner is down for $22.2 million from the new budget. On the flip side, the Government is providing up to $70 million for ‘AI Accelerator’ grants to boost AI development, and “advancing use of AI in government, including to accelerate environmental and medicine approvals and make the National Construction Code easier to use.”\nArticle Topics\nAustralia | Australian Government Digital Identity System (AGDIS) | digital ID | government services | myGovID | myID Australia",
-  "summary": "The Australian government is investing $654.3 million in its 2026-27 budget to expand the Digital ID program, aiming to simplify access to over 255 government services and improve data security. This funding will support the final phase of the Australian Government Digital ID System and enhance the myID platform.",
+  "summary": "The Australian government is investing $654.3 million in its 2026-27 budget to expand the Digital ID program, aiming to simplify identity verification for over 255 government services. This funding will enhance the Australian Government Digital ID System and improve data sharing and security measures.",
   "publication": "Biometric Update | Biometrics News, Companies and Explainers",
   "author": "Joel R. McConvey",
   "published_date": "2026-05-13T17:13:20+00:00",
@@ -17,13 +17,12 @@
   "page_title": "Digital ID program gets $650M for expansion in Australian federal budget | Biometric Update",
   "selector_used": "trafilatura",
   "key_points": [
-    "Investment of $654.3 million for Digital ID expansion",
-    "Supports 'tell-us-once' approach for government services",
-    "$135.2 million allocated for Services Australia to connect Digital ID providers",
-    "$357.4 million boost for the Australian Taxation Office for security updates",
-    "$62 million for Consumer Data Right program",
-    "Office of the Australian Information Commissioner receives $22.2 million"
+    "Investment of $654.3 million for Digital ID expansion.",
+    "Supports a 'tell-us-once' approach for accessing services.",
+    "Includes $135.2 million for Services Australia to manage the Digital ID Exchange.",
+    "$357.4 million allocated to the Australian Taxation Office for security updates.",
+    "$62 million invested in the Consumer Data Right program."
   ],
-  "ticker_line": "Australia invests $654M in Digital ID expansion",
+  "ticker_line": "Australia boosts Digital ID program with $654M investment",
   "summarised": true
 }

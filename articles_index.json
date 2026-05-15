@@ -171,9 +171,9 @@
   {
     "id": "WC74187020260514em5d0000a",
     "index": 15,
-    "scraped_at": "2026-05-14T23:01:57Z",
+    "scraped_at": "2026-05-15T13:19:48Z",
     "title": "Digital ID program gets $650M for expansion in Australian federal budget",
-    "summary": "The Australian government is investing $654.3 million in its 2026-27 budget to expand the Digital ID program, aiming to simplify access to over 255 government services and improve data security. This funding will support the final phase of the Australian Government Digital ID System and enhance the myID platform.",
+    "summary": "The Australian government is investing $654.3 million in its 2026-27 budget to expand the Digital ID program, aiming to simplify identity verification for over 255 government services. This funding will enhance the Australian Government Digital ID System and improve data sharing and security measures.",
     "publication": "Biometric Update | Biometrics News, Companies and Explainers",
     "author": "Joel R. McConvey",
     "published_date": "2026-05-13T17:13:20+00:00",
@@ -186,14 +186,13 @@
     "page_title": "Digital ID program gets $650M for expansion in Australian federal budget | Biometric Update",
     "selector_used": "trafilatura",
     "key_points": [
-      "Investment of $654.3 million for Digital ID expansion",
-      "Supports 'tell-us-once' approach for government services",
-      "$135.2 million allocated for Services Australia to connect Digital ID providers",
-      "$357.4 million boost for the Australian Taxation Office for security updates",
-      "$62 million for Consumer Data Right program",
-      "Office of the Australian Information Commissioner receives $22.2 million"
+      "Investment of $654.3 million for Digital ID expansion.",
+      "Supports a 'tell-us-once' approach for accessing services.",
+      "Includes $135.2 million for Services Australia to manage the Digital ID Exchange.",
+      "$357.4 million allocated to the Australian Taxation Office for security updates.",
+      "$62 million invested in the Consumer Data Right program."
     ],
-    "ticker_line": "Australia invests $654M in Digital ID expansion",
+    "ticker_line": "Australia boosts Digital ID program with $654M investment",
     "summarised": true,
     "filename": "15_Digital_ID_program_gets_650M_for_expansion_in_Australian_federal_budget.json"
   },
@@ -8021,9 +8020,9 @@
   {
     "id": "AUSTOL0020260514em5e0028l",
     "index": 14,
-    "scraped_at": "2026-05-14T23:01:39Z",
+    "scraped_at": "2026-05-15T13:19:24Z",
     "title": "Matos means business: ANZ’s new bonus shake-up",
-    "summary": "ANZ CEO Nuno Matos is changing how bonuses are awarded, linking them to new corporate values to improve the bank's culture and performance. This affects thousands of managers and aims to create clearer connections between individual and group performance.",
+    "summary": "ANZ's CEO Nuno Matos is changing the bank's bonus system to link payments to new corporate values, aiming to improve culture and performance. This will affect thousands of managers and is part of a broader strategy to enhance accountability and reduce costs.",
     "publication": "theaustralian.com.au",
     "author": "Eric Johnston",
     "published_date": "14 May 2026 07:22 GMT",
@@ -8036,13 +8035,13 @@
     "page_title": "Dow Jones Newsletter",
     "selector_used": "trafilatura",
     "key_points": [
-      "Bonus changes apply to Group 3 managers and above.",
-      "New five-point performance rating system introduced.",
-      "Separate bonuses for individual and group performance combined.",
-      "Matos introduced four corporate values focused on accountability.",
-      "Approximately 4,500 jobs cut to reduce costs."
+      "Matos introduced four corporate values: put customers first, deliver with excellence, own the outcome, and work as one.",
+      "Bonus payments will now be based on individual and group performance ratings.",
+      "Changes apply to Group 3 managers and may extend to lower groups after negotiations.",
+      "Matos has already cut around 4,500 jobs to reduce costs.",
+      "The bank faced regulatory issues, leading to a $240 million fine."
     ],
-    "ticker_line": "ANZ links bonuses to new corporate values",
+    "ticker_line": "ANZ revamps bonus system to boost culture",
     "summarised": true,
     "filename": "14_Matos_means_business_ANZs_new_bonus_shake-up.json"
   },
