@@ -187,6 +187,27 @@
   }
   .search-wrap input:focus { border-color: var(--accent); }
   .search-wrap input::placeholder { color: var(--faint); }
+  
+  .date-filter-wrap {
+    display: flex;
+    gap: 6px;
+    flex: 1;
+  }
+  .date-filter-wrap input {
+    min-width: 0;
+    width: 100%;
+    background: var(--bg3);
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    padding: 7px 8px;
+    color: var(--text);
+    font-size: 12px;
+    font-family: var(--sans);
+    outline: none;
+    transition: border-color 0.15s;
+  }
+  .date-filter-wrap input:focus { border-color: var(--accent); }
+  .date-filter-wrap input::-webkit-calendar-picker-indicator { filter: invert(0.7); cursor: pointer; }
   .search-icon {
     position: absolute;
     left: 10px;
@@ -567,6 +588,13 @@
         <div class="filter-chips" id="heading-chips"></div>
       </div>
       <div class="filter-row">
+        <div class="filter-label">Date</div>
+        <div class="date-filter-wrap">
+          <input type="date" id="date-from" aria-label="Date from">
+          <input type="date" id="date-to" aria-label="Date to">
+        </div>
+      </div>
+      <div class="filter-row">
         <div class="filter-label">Sort</div>
         <div class="filter-chips">
           <button class="chip active" data-sort="date-desc" onclick="setSort(this)">Newest</button>
@@ -741,13 +769,40 @@ function setSort(el) {
 }
 
 document.getElementById('search-input').addEventListener('input', debounce(applyFilters));
+document.getElementById('date-from').addEventListener('change', applyFilters);
+document.getElementById('date-to').addEventListener('change', applyFilters);
+document.addEventListener('keydown', handleArticleArrowKeys);
+
+function handleArticleArrowKeys(e) {
+  if (!selectedArticle) return;
+  if (e.key !== 'ArrowUp' && e.key !== 'ArrowDown') return;
+
+  const tag = document.activeElement?.tagName?.toLowerCase();
+  if (tag === 'input' || tag === 'textarea' || tag === 'select') return;
+
+  const currentIndex = filteredArticles.findIndex(a => a.id === selectedArticle.id);
+  if (currentIndex === -1) return;
+
+  const nextIndex = e.key === 'ArrowUp'
+    ? Math.max(0, currentIndex - 1)
+    : Math.min(filteredArticles.length - 1, currentIndex + 1);
+
+  if (nextIndex === currentIndex) return;
+
+  e.preventDefault();
+  selectArticle(filteredArticles[nextIndex].id);
+}
 
 function applyFilters() {
   const q = document.getElementById('search-input').value.toLowerCase().trim();
+  const fromDate = document.getElementById('date-from').value;
+  const toDate = document.getElementById('date-to').value;
   let list = [...allArticles];
 
   if (activeHeadings.size > 0) list = list.filter(a => activeHeadings.has((a.heading || '').trim()));
-  if (q) list = list.filter(a =>
+  if (fromDate) list = list.filter(a => getArticleDateKey(a) >= fromDate);
+  if (toDate) list = list.filter(a => getArticleDateKey(a) <= toDate);
+    if (q) list = list.filter(a =>
     (a.title || '').toLowerCase().includes(q) ||
     (a.summary || '').toLowerCase().includes(q) ||
     (a.publication || '').toLowerCase().includes(q) ||
@@ -949,6 +1004,16 @@ function formatDate(d) {
   try {
     return new Date(d).toLocaleDateString('en-AU', { day: 'numeric', month: 'short', year: 'numeric' });
   } catch { return d; }
+}
+
+function getArticleDateKey(article) {
+  const rawDate = article.published_date || article.scraped_at || '';
+  if (!rawDate) return '';
+
+  const parsed = new Date(rawDate);
+  if (Number.isNaN(parsed.getTime())) return String(rawDate).slice(0, 10);
+
+  return parsed.toISOString().slice(0, 10);
 }
 
 function cleanAuthor(author) {
