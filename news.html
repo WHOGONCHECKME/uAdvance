@@ -558,6 +558,10 @@
   }
   @keyframes spin { to { transform: rotate(360deg); } }
 
+  .pane-focused { outline: 1px solid var(--accent); 
+    outline-offset: -1px; 
+  }
+
   /* ── Scrollbar global ── */
   * { scrollbar-width: thin; scrollbar-color: var(--line2) transparent; }
 </style>
@@ -647,6 +651,7 @@ let activeHeadings = new Set();
 let activeSort = 'date-desc';
 let selectedArticle = null;
 let openaiKey = sessionStorage.getItem('oai_key') || '';
+let focusedPane = 'sidebar';
 
 // -- Debounce
 const debouncedApplyFilters = debounce(applyFilters, 200);
@@ -1099,6 +1104,47 @@ function buildTicker() {
 function selectArticleById(id) {
   selectArticle(id);
 }
+
+document.addEventListener('keydown', (e) => {
+  // Tab cycles panes
+  if (e.key === 'Tab') {
+    e.preventDefault();
+    const panes = ['sidebar', 'article', 'chat'];
+    const next = panes[(panes.indexOf(focusedPane) + 1) % panes.length];
+    focusedPane = next;
+
+    // Visually indicate focus
+    document.getElementById('article-list').classList.toggle('pane-focused', focusedPane === 'sidebar');
+    document.getElementById('article-view').classList.toggle('pane-focused', focusedPane === 'article');
+    document.getElementById('chat-panel').classList.toggle('pane-focused', focusedPane === 'chat');
+    return;
+  }
+
+  // Don't hijack keys when typing in search or chat
+  const tag = document.activeElement.tagName;
+  if (tag === 'INPUT' || tag === 'TEXTAREA') return;
+
+  if (focusedPane === 'sidebar') {
+    if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
+      e.preventDefault();
+      const idx = filteredArticles.findIndex(a => a.id === selectedArticle?.id);
+      const next = e.key === 'ArrowDown'
+        ? Math.min(idx + 1, filteredArticles.length - 1)
+        : Math.max(idx - 1, 0);
+      if (filteredArticles[next]) selectArticle(filteredArticles[next].id);
+    }
+  }
+
+  if (focusedPane === 'article') {
+    const view = document.getElementById('article-view');
+    if (e.key === 'ArrowDown') view.scrollBy({ top: 80, behavior: 'smooth' });
+    if (e.key === 'ArrowUp')   view.scrollBy({ top: -80, behavior: 'smooth' });
+  }
+});
+
+document.getElementById('article-list').addEventListener('mousedown', () => { focusedPane = 'sidebar'; });
+document.getElementById('article-view').addEventListener('mousedown', () => { focusedPane = 'article'; });
+document.getElementById('chat-panel').addEventListener('mousedown', () => { focusedPane = 'chat'; });
 
 init();
 </script>
