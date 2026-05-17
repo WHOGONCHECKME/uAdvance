@@ -76,7 +76,7 @@
   gap: 0;
   white-space: nowrap;
   width: max-content;
-  animation: ticker-scroll 40s linear infinite;
+  animation: ticker-scroll 60s linear infinite;
 }
 .ticker:hover { animation-play-state: paused; }
 .ticker-item {
@@ -701,12 +701,20 @@ function debounce(fn, delay = 200) {
 // ── Boot ───────────────────────────────────────────────────────────────────
 async function init() {
   try {
-    const res = await fetch('articles_index.json');
-    if (!res.ok) throw new Error('not found');
+    const res = await fetch(`articles_index.json?ts=${Date.now()}`);
+    if (!res.ok) throw new Error(`Could not load articles_index.json (${res.status})`);
     allArticles = await res.json();
-  } catch {
-    // Dev fallback: use sample data so the page is usable without the file
-    allArticles = getSampleArticles();
+  } catch (err) {
+    console.error(err);
+    allArticles = [];
+    document.getElementById('article-count').textContent = '0';
+    document.getElementById('article-list').innerHTML = `
+      <div class="empty-state">
+        Could not load articles_index.json.<br><br>
+        Open this page through a local server, not directly as a file.
+      </div>
+    `;
+    return;
   }
 
   document.getElementById('article-count').textContent = allArticles.length;
