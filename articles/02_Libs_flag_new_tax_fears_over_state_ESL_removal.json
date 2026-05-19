@@ -1,10 +1,10 @@
 {
   "id": "WC59050020260518em5i00003",
   "index": 2,
-  "scraped_at": "2026-05-18T22:11:04Z",
+  "scraped_at": "2026-05-19T13:19:30Z",
   "title": "Libs flag ‘new tax’ fears over state ESL removal",
   "full_text": "Libs flag ‘new tax’ fears over state ESL removal\nNSW shadow treasurer Scott Farlow says the opposition is “very concerned” about the planned removal of the state’s emergency services levy.\nThe Labor government has committed to axing the ESL from insurance, with an inquiry looking at five options to replace it with “a more efficient property levy”.\nThe ESL has worsened insurance affordability challenges. The Insurance Council of Australia previously argued it can add 18% to a home premium and 40% to business premium.\nThe reform commitment has been welcomed by insurers and brokers following a failed attempt in 2017, which left NSW as the only mainland state with such a levy attached to insurance.\nBut now the opposition has raised concerns over “Labor’s plans for a new tax on every home”, as it describes the proposal.\n“We in the Liberals and Nationals are always concerned about any tax increases, and increases in costs to families in NSW,” Mr Farlow said on LinkedIn. “Under these proposals we’re very concerned about people who are already paying insurance being charged even more.”\nThe warning comes despite the options paper saying about 55% of insured properties in NSW would have incurred a lower levy under the replacement compared with the ESL, and insured homeowners would have saved an average of $65 a year.\nTreasurer Daniel Mookhey told 9News the reform “can only proceed with bipartisanship”.",
-  "summary": "The NSW Labor government plans to remove the emergency services levy (ESL) from insurance and replace it with a new property levy. The opposition is worried this could lead to higher costs for homeowners, despite claims that many would save money.",
+  "summary": "The NSW Labor government plans to remove the emergency services levy (ESL) from insurance and replace it with a new property levy, which they say could lower costs for many homeowners. However, the opposition warns this could lead to a new tax burden on families.",
   "publication": "Insurance News",
   "author": "",
   "published_date": "18 May 2026 04:43 GMT",
@@ -18,12 +18,11 @@
   "selector_used": "trafilatura",
   "key_points": [
     "Labor government to remove ESL from insurance.",
-    "Inquiry to explore a new property levy.",
+    "Inquiry exploring options for a more efficient property levy.",
     "ESL adds significant costs to insurance premiums.",
-    "Opposition fears a new tax on homeowners.",
-    "About 55% of properties may pay less under the new plan.",
+    "Opposition fears new tax on homes despite potential savings.",
     "Treasurer says reform needs bipartisan support."
   ],
-  "ticker_line": "Concerns rise over NSW emergency services levy removal",
+  "ticker_line": "Concerns rise over potential new tax in NSW",
   "summarised": true
 }
