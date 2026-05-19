@@ -76,7 +76,7 @@
   gap: 0;
   white-space: nowrap;
   width: max-content;
-  animation: ticker-scroll 60s linear infinite;
+  animation: ticker-scroll 200s linear infinite;
 }
 .ticker:hover { animation-play-state: paused; }
 .ticker-item {
@@ -562,12 +562,98 @@
   .pane-focused { outline: 1px solid var(--accent); 
     outline-offset: -1px; 
   }
-
+/* ── Password Gate ── */
+#password-gate {
+  position: fixed;
+  inset: 0;
+  background: var(--bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+#password-gate.hidden { display: none; }
+.gate-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: 300px;
+}
+.gate-logo {
+  font-family: var(--serif);
+  font-size: 28px;
+  color: var(--accent);
+  letter-spacing: -0.3px;
+}
+.gate-logo span { color: var(--muted); font-style: italic; }
+.gate-box input[type="password"] {
+  width: 100%;
+  background: var(--bg3);
+  border: 1px solid var(--line2);
+  border-radius: 6px;
+  color: var(--text);
+  font-family: var(--sans);
+  font-size: 14px;
+  padding: 10px 14px;
+  outline: none;
+  transition: border-color 0.15s;
+}
+.gate-box input[type="password"]:focus { border-color: var(--accent); }
+.gate-box button {
+  width: 100%;
+  background: var(--accent);
+  color: var(--bg);
+  border: none;
+  border-radius: 6px;
+  font-family: var(--sans);
+  font-size: 14px;
+  font-weight: 500;
+  padding: 10px;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+.gate-box button:hover { background: var(--accent2); }
+.gate-error {
+  font-size: 12px;
+  color: #c0614a;
+  min-height: 16px;
+}
   /* ── Scrollbar global ── */
   * { scrollbar-width: thin; scrollbar-color: var(--line2) transparent; }
 </style>
 </head>
 <body>
+
+<div id="password-gate">
+  <div class="gate-box">
+    <div class="gate-logo">uAdvance <span>/ news</span></div>
+    <input type="password" id="gate-input" placeholder="Password" autofocus />
+    <div class="gate-error" id="gate-error"></div>
+    <button onclick="checkPassword()">Enter</button>
+  </div>
+</div>
+
+<script>
+  const CORRECT_PASSWORD = "password"; // ← change this to your password
+
+  function checkPassword() {
+    const val = document.getElementById('gate-input').value;
+    if (val === CORRECT_PASSWORD) {
+      document.getElementById('password-gate').classList.add('hidden');
+    } else {
+      document.getElementById('gate-error').textContent = 'Incorrect password.';
+      document.getElementById('gate-input').value = '';
+      document.getElementById('gate-input').focus();
+    }
+  }
+
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Enter' && !document.getElementById('password-gate').classList.contains('hidden')) {
+      checkPassword();
+    }
+  });
+</script>
 
 <header>
   <div class="logo">uAdvance <span>/ news</span></div>
