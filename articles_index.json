@@ -1,31 +1,5 @@
 [
   {
-    "id": "WCSPREW020260519em5j00004",
-    "index": 9,
-    "scraped_at": "2026-05-19T22:06:12Z",
-    "title": "Super funds rebound as global markets recover through April",
-    "summary": "Superannuation funds in Australia saw a recovery in April as global markets improved, helping to boost investment returns for many funds. This rebound comes after a challenging period for financial markets earlier in the year.",
-    "publication": "",
-    "author": "",
-    "published_date": "",
-    "word_count": "",
-    "heading": "Superannuation and Investments",
-    "newsletter": "Actuaries Institute Today",
-    "factiva_url": "https://global.factiva.com/redir/default.aspx?EP=NL&AN=WCSPREW020260519em5j00004&CAT=W&napc=MC&f=nv&P=er&erc=LVfLdDTapCBrFH93tOPKccHd3xazgTKFnVNXLS29ADZY2C%2b%2fttJUlmLtB8%2fBztQb4xApiazHQK3Fbj%2foVSZmD0XZJuxbxbwaFzyguw3wIBhwEnKtZLu34kiVffUq8lnd3hTuH%2fbZqnGhNj%2fkYgATI3fR7zk0t%2fPzefAAV46jQfqT7iTwjUc64Afndv6jLPCo%2bkQuM4uVwZqwjvT254tMvtNZT2CSRrMm%7c2&nldtl=DkzATV7FuEELjedX88l%2bbTt6lBYNjNrSx2D3jDckwHXkhG%2f6ivvzpde5Huy7QPKBDbvQxbi0aPYL78CsVH%2fbZGuGHFDS%2b3s42Sl%2bvQ%2btKQfx6b44PQ%2bFasj%2bEDjuf4C3TFwH8RWNKBVP2W7VwWV2Qw%3d%3d%7c2&mod=MCT_email&page_driver=MCT_email",
-    "final_url": "https://global.factiva.com/redir/default.aspx?EP=NL&AN=WCSPREW020260519em5j00004&CAT=W&napc=MC&f=nv&P=er&erc=LVfLdDTapCBrFH93tOPKccHd3xazgTKFnVNXLS29ADZY2C%2b%2fttJUlmLtB8%2fBztQb4xApiazHQK3Fbj%2foVSZmD0XZJuxbxbwaFzyguw3wIBhwEnKtZLu34kiVffUq8lnd3hTuH%2fbZqnGhNj%2fkYgATI3fR7zk0t%2fPzefAAV46jQfqT7iTwjUc64Afndv6jLPCo%2bkQuM4uVwZqwjvT254tMvtNZT2CSRrMm%7c2&nldtl=DkzATV7FuEELjedX88l%2bbTt6lBYNjNrSx2D3jDckwHXkhG%2f6ivvzpde5Huy7QPKBDbvQxbi0aPYL78CsVH%2fbZGuGHFDS%2b3s42Sl%2bvQ%2btKQfx6b44PQ%2bFasj%2bEDjuf4C3TFwH8RWNKBVP2W7VwWV2Qw%3d%3d%7c2&mod=MCT_email&page_driver=MCT_email",
-    "redirected_to_source": false,
-    "page_title": "Factiva",
-    "selector_used": "body",
-    "key_points": [
-      "Super funds improved due to global market recovery.",
-      "April marked a positive turnaround for investments.",
-      "Funds had faced difficulties earlier in the year."
-    ],
-    "ticker_line": "Super funds bounce back with market recovery",
-    "summarised": true,
-    "filename": "09_Super_funds_rebound_as_global_markets_recover_through_April.json"
-  },
-  {
     "id": "WC47832020260519em5j0000h",
     "index": 13,
     "scraped_at": "2026-05-19T22:08:26Z",
@@ -276,6 +250,36 @@
     "ticker_line": "Cyclone insurance premiums drop 37% in risk areas",
     "summarised": true,
     "filename": "07_Home_premiums_in_top_cyclone_risk_areas_down_sharply_since_pool_launched.json"
+  },
+  {
+    "id": "WCSPREW020260519em5j00004",
+    "index": 9,
+    "scraped_at": "2026-05-20T11:03:15Z",
+    "title": "Super funds rebound as global markets recover through April",
+    "summary": "Superannuation funds saw a strong recovery in April, with median growth funds returning 2.6% after a decline in March. This rebound is attributed to improving investor sentiment and strong performance in global markets, particularly in technology stocks.",
+    "publication": "Super Review",
+    "author": "Adrian Suljanovic",
+    "published_date": "2026-05-19T01:37:06+00:00",
+    "word_count": "644",
+    "heading": "Superannuation and Investments",
+    "newsletter": "Actuaries Institute Today",
+    "factiva_url": "https://global.factiva.com/redir/default.aspx?EP=NL&AN=WCSPREW020260519em5j00004&CAT=W&napc=MC&f=nv&P=er&erc=LVfLdDTapCBrFH93tOPKccHd3xazgTKFnVNXLS29ADZY2C%2b%2fttJUlmLtB8%2fBztQb4xApiazHQK3Fbj%2foVSZmD0XZJuxbxbwaFzyguw3wIBhwEnKtZLu34kiVffUq8lnd3hTuH%2fbZqnGhNj%2fkYgATI3fR7zk0t%2fPzefAAV46jQfqT7iTwjUc64Afndv6jLPCo%2bkQuM4uVwZqwjvT254tMvtNZT2CSRrMm%7c2&nldtl=DkzATV7FuEELjedX88l%2bbTt6lBYNjNrSx2D3jDckwHXkhG%2f6ivvzpde5Huy7QPKBDbvQxbi0aPYL78CsVH%2fbZGuGHFDS%2b3s42Sl%2bvQ%2btKQfx6b44PQ%2bFasj%2bEDjuf4C3TFwH8RWNKBVP2W7VwWV2Qw%3d%3d%7c2&mod=MCT_email&page_driver=MCT_email",
+    "final_url": "https://www.superreview.com.au/super-funds-rebound-as-global-markets-recover-through-april/",
+    "redirected_to_source": true,
+    "page_title": "Super funds rebound as global markets recover through April - Super Review",
+    "selector_used": "trafilatura",
+    "key_points": [
+      "Median growth fund returned 2.6% in April.",
+      "Previous decline of 3.2% in March.",
+      "Estimated median growth fund return for FY26 is 6.4%.",
+      "Developed market shares rose 9% in hedged terms.",
+      "Emerging markets shares gained 9.3% in unhedged terms.",
+      "Australian shares increased by 2.3%.",
+      "Long-term investment approach is crucial for superannuation."
+    ],
+    "ticker_line": "Super funds bounce back with April gains",
+    "summarised": true,
+    "filename": "09_Super_funds_rebound_as_global_markets_recover_through_April.json"
   },
   {
     "id": "WC63761020260519em5i00009",
