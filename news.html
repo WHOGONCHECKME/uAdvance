@@ -67,16 +67,20 @@
   /* ── Ticker ── */
 .ticker-wrap {
   flex: 1;
-  overflow: hidden;
+  overflow-x: auto;
+  overflow-y: hidden;
+  overscroll-behavior-x: contain;
   mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
   -webkit-mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+  scrollbar-width: none;
 }
+.ticker-wrap::-webkit-scrollbar { display: none; }
 .ticker {
   display: flex;
   gap: 0;
   white-space: nowrap;
   width: max-content;
-  animation: ticker-scroll 200s linear infinite;
+  animation: ticker-scroll 400s linear infinite;
 }
 .ticker:hover { animation-play-state: paused; }
 .ticker-item {
@@ -112,7 +116,7 @@
   }
 
     .sidebar-resizer {
-    width: 8px;
+    width: 0px;
     flex-shrink: 0;
     cursor: col-resize;
     background: var(--bg2);
@@ -559,7 +563,8 @@
   }
   @keyframes spin { to { transform: rotate(360deg); } }
 
-  .pane-focused { outline: 1px solid var(--accent); 
+  .pane-focused { 
+    outline: 1px solid var(--muted); 
     outline-offset: -1px; 
   }
 /* ── Password Gate ── */
@@ -1251,6 +1256,24 @@ function selectArticleById(id) {
 }
 
 document.addEventListener('keydown', (e) => {
+  if (e.key === '/' && document.activeElement.tagName !== 'INPUT' && document.activeElement.tagName !== 'TEXTAREA') {
+    e.preventDefault();
+    const searchInput = document.getElementById('search-input');
+    searchInput.focus();
+    searchInput.select();
+    return;
+  }
+
+  if (e.key === 'Escape' && document.activeElement.id === 'search-input') {
+    e.preventDefault();
+    document.getElementById('search-input').blur();
+    focusedPane = 'sidebar';
+    document.getElementById('article-list').classList.add('pane-focused');
+    document.getElementById('article-view').classList.remove('pane-focused');
+    document.getElementById('chat-panel').classList.remove('pane-focused');
+    return;
+  }
+
   // Tab cycles panes
   if (e.key === 'Tab') {
     e.preventDefault();
