@@ -32,6 +32,70 @@ from fastapi.middleware.cors import CORSMiddleware
 # Locally it finds uadvance.db at the project root automatically.
 DB_PATH = Path(os.environ.get("DB_PATH") or str(Path(__file__).resolve().parent.parent / "uadvance.db"))
 
+def ensure_db():
+    """
+    If the database doesn't exist at DB_PATH, create it and
+    run init + migrate so the app works on first deploy.
+    """
+    if DB_PATH.exists():
+        return
+    
+    print(f"Database not found at {DB_PATH} — initialising...")
+    DB_PATH.parent.mkdir(parents=True, exist_ok=True)
+    
+    conn = sqlite3.connect(DB_PATH)
+    conn.execute("PRAGMA journal_mode = WAL;")
+    conn.execute("PRAGMA foreign_keys = ON;")
+    
+    # Create all tables (copied from init_db.py)
+    conn.executescript("""
+        CREATE TABLE IF NOT EXISTS newsletters (
+            id            INTEGER PRIMARY KEY AUTOINCREMENT,
+            subject       TEXT NOT NULL,
+            received_date TEXT
+        );
+        CREATE TABLE IF NOT EXISTS articles (
+            id               TEXT PRIMARY KEY,
+            newsletter_id    INTEGER REFERENCES newsletters(id),
+            title            TEXT NOT NULL,
+            full_text        TEXT,
+            summary          TEXT,
+            ticker_line      TEXT,
+            key_points       TEXT,
+            publication      TEXT,
+            author           TEXT,
+            published_date   TEXT,
+            word_count       INTEGER,
+            heading          TEXT,
+            newsletter       TEXT,
+            factiva_url      TEXT,
+            final_url        TEXT,
+            redirected_to_source INTEGER DEFAULT 0,
+            summarised       INTEGER DEFAULT 0,
+            scraped_at       TEXT,
+            page_title       TEXT,
+            selector_used    TEXT
+        );
+        CREATE TABLE IF NOT EXISTS tags (
+            id   INTEGER PRIMARY KEY AUTOINCREMENT,
+            name TEXT NOT NULL UNIQUE
+        );
+        CREATE TABLE IF NOT EXISTS article_tags (
+            article_id  TEXT NOT NULL REFERENCES articles(id) ON DELETE CASCADE,
+            tag_id      INTEGER NOT NULL REFERENCES tags(id) ON DELETE CASCADE,
+            PRIMARY KEY (article_id, tag_id)
+        );
+        CREATE VIRTUAL TABLE IF NOT EXISTS articles_fts USING fts5(
+            title, summary, full_text,
+            content='articles', content_rowid='rowid'
+        );
+    """)
+    conn.commit()
+    conn.close()
+    print(f"Database initialised at {DB_PATH}")
+
+ensure_db()
+
 # ── APP ───────────────────────────────────────────────────────────────────────
 
 app = FastAPI(title="uAdvance API", version="1.0.0")
@@ -75,12 +139,13 @@ def row_to_dict(row: sqlite3.Row) -> dict:
 
 @app.get("/")
 def health_check():
-    """Health check — Railway uses this to confirm the app is running."""
-    conn = get_conn()
-    count = conn.execute("SELECT COUNT(*) FROM articles").fetchone()[0]
-    conn.close()
-    return {"status": "ok", "articles": count}
-
+    try:
+        conn = get_conn()
+        count = conn.execute("SELECT COUNT(*) FROM articles").fetchone()[0]
+        conn.close()
+        return {"status": "ok", "articles": count}
+    except Exception as e:
+        return {"status": "ok", "articles": 0, "note": str(e)}
 
 @app.get("/articles")
 def get_articles():
