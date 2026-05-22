@@ -882,26 +882,42 @@ document.getElementById('date-from').addEventListener('change', applyFilters);
 document.getElementById('date-to').addEventListener('change', applyFilters);
 
 
-function applyFilters() {
-  const q = document.getElementById('search-input').value.toLowerCase().trim();
+async function applyFilters() {
+  const q = document.getElementById('search-input').value.trim();
   const fromDate = document.getElementById('date-from').value;
   const toDate = document.getElementById('date-to').value;
-  let list = [...allArticles];
+  let list;
+
+  if (q.length >= 2) {
+    // Use Railway FTS5 search for full-text queries
+    try {
+      const res = await fetch(`${API_BASE}/search?q=${encodeURIComponent(q)}`);
+      if (res.ok) {
+        list = await res.json();
+      } else {
+        throw new Error('Search API failed');
+      }
+    } catch {
+      // Fall back to client-side search
+      list = allArticles.filter(a =>
+        (a.title || '').toLowerCase().includes(q.toLowerCase()) ||
+        (a.summary || '').toLowerCase().includes(q.toLowerCase())
+      );
+    }
+  } else {
+    list = [...allArticles];
+  }
 
   if (activeHeadings.size > 0) list = list.filter(a => activeHeadings.has((a.heading || '').trim()));
   if (fromDate) list = list.filter(a => getArticleDateKey(a) >= fromDate);
   if (toDate) list = list.filter(a => getArticleDateKey(a) <= toDate);
-    if (q) list = list.filter(a =>
-    (a.title || '').toLowerCase().includes(q) ||
-    (a.summary || '').toLowerCase().includes(q) ||
-    (a.publication || '').toLowerCase().includes(q) ||
-    (a.heading || '').toLowerCase().includes(q) ||
-    (a.full_text || '').toLowerCase().includes(q)
-    );
 
-  if (activeSort === 'date-desc') list.sort((a,b) => (b.published_date||b.scraped_at||'').localeCompare(a.published_date||a.scraped_at||''));
-  else if (activeSort === 'date-asc') list.sort((a,b) => (a.published_date||a.scraped_at||'').localeCompare(b.published_date||b.scraped_at||''));
-  else if (activeSort === 'alpha') list.sort((a,b) => (a.title||'').localeCompare(b.title||''));
+  if (!q || q.length < 2) {
+    if (activeSort === 'date-desc') list.sort((a,b) => (b.published_date||b.scraped_at||'').localeCompare(a.published_date||a.scraped_at||''));
+    else if (activeSort === 'date-asc') list.sort((a,b) => (a.published_date||a.scraped_at||'').localeCompare(b.published_date||b.scraped_at||''));
+    else if (activeSort === 'alpha') list.sort((a,b) => (a.title||'').localeCompare(b.title||''));
+  }
+  // When using FTS search, results are already ranked by relevance
 
   filteredArticles = list;
   document.getElementById('article-count').textContent = filteredArticles.length;
