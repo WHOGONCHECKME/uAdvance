@@ -106,6 +106,7 @@ app.add_middleware(
     CORSMiddleware,
     allow_origins=[
         "https://uadvance.com.au",          # production domain — update to yours
+        "https://www.uadvance.com.au",
         "http://localhost:8080",             # local dev
         "http://127.0.0.1:5500",            # VS Code Live Server
         "http://localhost:5500",
