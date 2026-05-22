@@ -6,3 +6,6 @@ dowjones-news-bot/archive/
 dowjones-news-bot/__pycache__/
 dowjones-news-bot/*.pyc
 archive/
+uadvance.db
+"__pycache__/"
+"*.pyc"

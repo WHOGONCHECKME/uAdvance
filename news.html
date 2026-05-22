@@ -791,22 +791,34 @@ function debounce(fn, delay = 200) {
 }
 // ── Boot ───────────────────────────────────────────────────────────────────
 async function init() {
+  const API_BASE = 'https://your-app.railway.app'; // update after Railway deploy
+  
   try {
-    const res = await fetch(`articles_index.json?ts=${Date.now()}`);
-    if (!res.ok) throw new Error(`Could not load articles_index.json (${res.status})`);
+    // Try the API first
+    const res = await fetch(`${API_BASE}/articles`);
+    if (!res.ok) throw new Error(`API error ${res.status}`);
     allArticles = await res.json();
   } catch (err) {
-    console.error(err);
-    allArticles = [];
-    document.getElementById('article-count').textContent = '0';
-    document.getElementById('article-list').innerHTML = `
-      <div class="empty-state">
-        Could not load articles_index.json.<br><br>
-        Open this page through a local server, not directly as a file.
-      </div>
-    `;
-    return;
+    // Fall back to articles_index.json while API isn't live yet
+    try {
+      const res = await fetch(`articles_index.json?ts=${Date.now()}`);
+      if (!res.ok) throw new Error(`Could not load articles_index.json (${res.status})`);
+      allArticles = await res.json();
+    } catch (err2) {
+      console.error(err2);
+      allArticles = [];
+      document.getElementById('article-count').textContent = '0';
+      document.getElementById('article-list').innerHTML = `
+        <div class="empty-state">Could not load articles.</div>`;
+      return;
+    }
   }
+
+  document.getElementById('article-count').textContent = allArticles.length;
+  buildHeadingChips();
+  applyFilters();
+  buildTicker();
+}
 
   document.getElementById('article-count').textContent = allArticles.length;
   buildHeadingChips();
