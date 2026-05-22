@@ -4,7 +4,7 @@
     "index": 8,
     "scraped_at": "2026-05-22T00:29:33Z",
     "title": "Jobless spike stalls RBA’s next rate hike, for now",
-    "summary": "",
+    "summary": "Australia's unemployment rate rose to 4.5% in April, leading the Reserve Bank to likely hold interest rates steady at its June meeting. Economists expect a rate hike may still happen by August, depending on future economic data.",
     "publication": "The Australian",
     "author": "DAVID ROGERS, MARKETS",
     "published_date": "22 May 2026",
@@ -16,14 +16,23 @@
     "redirected_to_source": false,
     "page_title": "Dow Jones Newsletter",
     "selector_used": "trafilatura",
-    "filename": "08_Jobless_spike_stalls_RBAs_next_rate_hike_for_now.json"
+    "filename": "08_Jobless_spike_stalls_RBAs_next_rate_hike_for_now.json",
+    "key_points": [
+      "Unemployment rose to 4.5%, a four-and-a-half-year high.",
+      "Employment fell by 18,600 jobs in April, contrary to expectations.",
+      "NAB and Westpac predict rate hikes may occur later in the year.",
+      "Citi and HSBC economists urge caution regarding future hikes.",
+      "Money markets now see only a 6% chance of a June hike."
+    ],
+    "ticker_line": "Jobless rate rise delays RBA's next rate hike",
+    "summarised": true
   },
   {
     "id": "AUSTLN0020260521em5m0001c",
     "index": 9,
     "scraped_at": "2026-05-22T00:29:51Z",
     "title": "Bourse has best day in six weeks",
-    "summary": "",
+    "summary": "The Australian sharemarket had its best day in six weeks, with the S&P/ASX 200 rising 1.47% to 8621.7, driven by higher unemployment data and a positive lead from Wall Street. Mining stocks led the gains, while the unemployment rate increased to 4.5% in April, suggesting interest rates may stay steady.",
     "publication": "The Australian",
     "author": "BLAIR JACKSON, EQUITIES",
     "published_date": "22 May 2026",
@@ -35,14 +44,23 @@
     "redirected_to_source": false,
     "page_title": "Dow Jones Newsletter",
     "selector_used": "trafilatura",
-    "filename": "09_Bourse_has_best_day_in_six_weeks.json"
+    "filename": "09_Bourse_has_best_day_in_six_weeks.json",
+    "key_points": [
+      "Unemployment rate rose 0.2 points to 4.5% in April.",
+      "S&P/ASX 200 increased by 1.47% to 8621.7.",
+      "Mining sector gained 2.6%, with BHP up 3.1% and Rio Tinto up 3.2%.",
+      "SkinKandy debuted on ASX, rising 6.8% to $2.35.",
+      "NAB led bank gains, up 2.3% to $37.66."
+    ],
+    "ticker_line": "Australian sharemarket sees biggest gain in weeks",
+    "summarised": true
   },
   {
     "id": "WC66979020260521em5l000b5",
     "index": 6,
     "scraped_at": "2026-05-22T00:28:42Z",
     "title": "ASIC Warns of \"Lost Generation\" Risk if Australia Falls Behind on Fintech and AI",
-    "summary": "",
+    "summary": "ASIC warns that Australia could face a 'lost generation' if it doesn't keep up with global fintech and AI advancements. The regulator's report highlights the need for better industry engagement and innovation support to avoid a decline in living standards.",
     "publication": "Financial and Business News | Finance Magnates",
     "author": "Damian Chmiel",
     "published_date": "21 May 2026 12:00 GMT",
@@ -54,14 +72,23 @@
     "redirected_to_source": true,
     "page_title": "ASIC Warns of \"Lost Generation\" Risk if Australia Falls Behind on Fintech and AI",
     "selector_used": "trafilatura",
-    "filename": "06_ASIC_Warns_of_Lost_Generation_Risk_if_Australia_Falls_Behind_on_Fintech_and_AI.json"
+    "filename": "06_ASIC_Warns_of_Lost_Generation_Risk_if_Australia_Falls_Behind_on_Fintech_and_AI.json",
+    "key_points": [
+      "ASIC Chairman Joe Longo emphasizes the risk of falling behind in financial innovation.",
+      "Australia ranks well in buy-now-pay-later and real-time payments but lags in insurance and SME credit.",
+      "The report calls for clearer guidance on AI use in finance and better oversight of financial products.",
+      "Australia's startups raised over A$5 billion in venture capital last year.",
+      "Legislation requires crypto exchanges to hold an Australian Financial Services License."
+    ],
+    "ticker_line": "ASIC warns of risk to Australia's financial future",
+    "summarised": true
   },
   {
     "id": "BRSBTM0020260521em5l000gx",
     "index": 2,
     "scraped_at": "2026-05-22T00:26:57Z",
     "title": "CSIRO cuts climate research jobs despite budget funding boost",
-    "summary": "",
+    "summary": "CSIRO will cut 92 jobs from its climate research teams despite receiving an extra $387.4 million in funding. Critics warn this could weaken Australia's ability to model and predict climate change impacts.",
     "publication": "BrisbaneTimes.com.au",
     "author": "Bianca Hall and Mike Foley",
     "published_date": "21 May 2026 02:45 GMT",
@@ -73,7 +100,16 @@
     "redirected_to_source": false,
     "page_title": "Dow Jones Newsletter",
     "selector_used": "trafilatura",
-    "filename": "02_CSIRO_cuts_climate_research_jobs_despite_budget_funding_boost.json"
+    "filename": "02_CSIRO_cuts_climate_research_jobs_despite_budget_funding_boost.json",
+    "key_points": [
+      "92 jobs to be cut from CSIRO's environment and climate teams.",
+      "Cuts follow a review that found duplicative capabilities.",
+      "CSIRO aims to focus on climate adaptation and resilience.",
+      "Concerns raised about the future of the ACCESS climate model.",
+      "Government supports CSIRO's funding but not specific cuts."
+    ],
+    "ticker_line": "CSIRO cuts climate jobs despite funding boost",
+    "summarised": true
   },
   {
     "id": "AUSTLN0020260520em5l00026",
@@ -136,7 +172,7 @@
     "index": 1,
     "scraped_at": "2026-05-22T00:26:38Z",
     "title": "CVs losing value for hiring as use of artificial intelligence changes industry, recruiters say",
-    "summary": "",
+    "summary": "The recruitment industry is changing as more job seekers and employers use artificial intelligence (AI), making traditional CVs less effective. Experts suggest that while AI helps in creating tailored applications, candidates must still showcase their unique skills and experiences.",
     "publication": "Australian Broadcasting Corporation News",
     "author": "",
     "published_date": "21 May 2026",
@@ -148,14 +184,22 @@
     "redirected_to_source": false,
     "page_title": "Dow Jones Newsletter",
     "selector_used": "trafilatura",
-    "filename": "01_CVs_losing_value_for_hiring_as_use_of_artificial_intelligence_changes_industry_r.json"
+    "filename": "01_CVs_losing_value_for_hiring_as_use_of_artificial_intelligence_changes_industry_r.json",
+    "key_points": [
+      "67% of job seekers now use AI for CVs.",
+      "AI leads to similar-looking CVs, making it hard for employers to find good candidates.",
+      "Recruiters advise adding personal touches to AI-generated CVs.",
+      "Employers risk missing out on talent by relying too much on AI screening."
+    ],
+    "ticker_line": "AI reshapes job applications and recruitment process",
+    "summarised": true
   },
   {
     "id": "WC47832020260521em5l0000e",
     "index": 5,
     "scraped_at": "2026-05-22T00:28:23Z",
     "title": "Div 296 tax on pensions easy to map out",
-    "summary": "",
+    "summary": "A new tax under Division 296 will affect superannuation balances over $3 million, even if they are in pension phase. A specialist suggests a shortcut method to calculate the tax based on treating the fund as if it were in accumulation phase.",
     "publication": "SMS Magazine",
     "author": "https://www.facebook.com/smstrusteenews",
     "published_date": "2026-05-21T16:08:17+10:00",
@@ -167,14 +211,22 @@
     "redirected_to_source": true,
     "page_title": "Div 296 tax on pensions easy to map out | SMS Magazine",
     "selector_used": "trafilatura",
-    "filename": "05_Div_296_tax_on_pensions_easy_to_map_out.json"
+    "filename": "05_Div_296_tax_on_pensions_easy_to_map_out.json",
+    "key_points": [
+      "Division 296 tax applies to super balances over $3 million.",
+      "Tax is based on balances at the start or end of the year.",
+      "Calculations for tax differ from standard super fund tax returns.",
+      "A shortcut method involves treating the fund as in accumulation phase."
+    ],
+    "ticker_line": "New tax affects super balances over $3 million",
+    "summarised": true
   },
   {
     "id": "WC47832020260521em5l00005",
     "index": 10,
     "scraped_at": "2026-05-22T00:30:18Z",
     "title": "Macquarie shareholders question its climate change commitment",
-    "summary": "",
+    "summary": "Macquarie Group shareholders are questioning the company's commitment to climate change goals ahead of its annual meeting on July 23, particularly regarding its fossil fuel financing. A resolution has been proposed to ensure Macquarie's financing aligns with the Paris climate goals, as shareholders express concerns over its recent investment trends.",
     "publication": "Financial Standard",
     "author": "Riddhima Talwani",
     "published_date": "2026-05-21T12:35:00+10:00",
@@ -186,14 +238,23 @@
     "redirected_to_source": true,
     "page_title": "Macquarie shareholders question its climate change commitment | Financial Standard",
     "selector_used": "trafilatura",
-    "filename": "10_Macquarie_shareholders_question_its_climate_change_commitment.json"
+    "filename": "10_Macquarie_shareholders_question_its_climate_change_commitment.json",
+    "key_points": [
+      "Shareholders are concerned about Macquarie's climate commitments.",
+      "A resolution for better fossil fuel financing transparency will be discussed at the AGM on July 23.",
+      "Macquarie's green energy investments fell 65% to $700 million in FY26.",
+      "The World Benchmarking Alliance rates Macquarie's climate transition planning as 'D'.",
+      "Shareholders claim recent activities contradict climate science and increase financial risks."
+    ],
+    "ticker_line": "Macquarie faces shareholder scrutiny over climate goals",
+    "summarised": true
   },
   {
     "id": "WC47832020260521em5l00009",
     "index": 4,
     "scraped_at": "2026-05-22T00:27:55Z",
     "title": "Behavioural constraint is costing retirees greatly: Allianz Retire+",
-    "summary": "",
+    "summary": "Allianz Retire+ reports that many retirees are missing out on better financial outcomes due to hesitance in making spending decisions, costing them significant amounts from their superannuation. The report highlights the need for financial advisers to help clients manage their uncertainty and encourage more confident spending in retirement.",
     "publication": "Financial Standard",
     "author": "Matthew Wai",
     "published_date": "2026-05-21T12:32:00+10:00",
@@ -205,14 +266,23 @@
     "redirected_to_source": true,
     "page_title": "Behavioural constraint is costing retirees greatly: Allianz Retire+ | Financial Standard",
     "selector_used": "trafilatura",
-    "filename": "04_Behavioural_constraint_is_costing_retirees_greatly_Allianz_Retire.json"
+    "filename": "04_Behavioural_constraint_is_costing_retirees_greatly_Allianz_Retire.json",
+    "key_points": [
+      "Market volatility is no longer the main threat to retirees.",
+      "Around 700,000 retirees leave their superannuation in accumulation, costing up to $136,000 each.",
+      "Half of account-based pension holders only withdraw the minimum amount.",
+      "Retirees prefer flexibility over commitment, leading to cautious spending.",
+      "Advisers need to help clients manage uncertainty about the future."
+    ],
+    "ticker_line": "Retirees lose out due to decision hesitance",
+    "summarised": true
   },
   {
     "id": "WC47832020260521em5l00006",
     "index": 7,
     "scraped_at": "2026-05-22T00:29:14Z",
     "title": "APRA sharpens oversight, flags tech and geopolitical risks",
-    "summary": "",
+    "summary": "APRA is increasing its supervision of banks, insurers, and superannuation funds due to rising global risks from technology and geopolitical issues. The regulator emphasizes the need for better risk management and has introduced new rules to improve operational resilience starting July 1, 2026.",
     "publication": "Financial Standard",
     "author": "Vinny Vucago",
     "published_date": "2026-05-21T11:59:00+10:00",
@@ -224,14 +294,23 @@
     "redirected_to_source": true,
     "page_title": "APRA sharpens oversight, flags tech and geopolitical risks | Financial Standard",
     "selector_used": "trafilatura",
-    "filename": "07_APRA_sharpens_oversight_flags_tech_and_geopolitical_risks.json"
+    "filename": "07_APRA_sharpens_oversight_flags_tech_and_geopolitical_risks.json",
+    "key_points": [
+      "APRA intensifies oversight of financial institutions.",
+      "Focus on AI governance, cybersecurity, and geopolitical risks.",
+      "Australia's financial system remains resilient despite potential shocks.",
+      "New operational risk management rules effective July 1, 2026.",
+      "Limited exemptions for non-traditional service providers introduced."
+    ],
+    "ticker_line": "APRA boosts oversight amid global risk concerns",
+    "summarised": true
   },
   {
     "id": "WCSPREW020260521em5l00004",
     "index": 3,
     "scraped_at": "2026-05-22T00:27:22Z",
     "title": "Super tax appeal grows after budget backlash, survey reveals",
-    "summary": "",
+    "summary": "Investor confidence has dropped sharply after the 2026 Federal Budget, with many Australians now seeing superannuation as a more attractive and tax-efficient investment option. A recent survey shows that nearly 80% of investors view proposed capital gains tax changes negatively, leading to a significant shift towards superannuation.",
     "publication": "Super Review",
     "author": "Adrian Suljanovic",
     "published_date": "2026-05-21T00:45:32+00:00",
@@ -243,7 +322,17 @@
     "redirected_to_source": true,
     "page_title": "Super tax appeal grows after budget backlash, survey reveals - Super Review",
     "selector_used": "trafilatura",
-    "filename": "03_Super_tax_appeal_grows_after_budget_backlash_survey_reveals.json"
+    "filename": "03_Super_tax_appeal_grows_after_budget_backlash_survey_reveals.json",
+    "key_points": [
+      "Survey of over 1,400 investors conducted by VanEck.",
+      "78% of respondents view capital gains tax changes negatively.",
+      "45.5% believe superannuation deserves a larger investment allocation.",
+      "80% find residential investment property less attractive post-Budget.",
+      "51.5% plan to hold existing investments for clarity.",
+      "27.7% intend to realise gains before July 2027."
+    ],
+    "ticker_line": "Investors shift focus to superannuation post-Budget",
+    "summarised": true
   },
   {
     "id": "WC47832020260520em5k0000e",

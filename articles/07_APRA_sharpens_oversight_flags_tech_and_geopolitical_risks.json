@@ -4,7 +4,7 @@
   "scraped_at": "2026-05-22T00:29:14Z",
   "title": "APRA sharpens oversight, flags tech and geopolitical risks",
   "full_text": "APRA sharpens oversight, flags tech and geopolitical risksBY VINNY VUCAGO | THURSDAY, 21 MAY 2026 11:59AMAPRA has intensified its supervision of superannuation trustees, insurers and banks as geopolitical instability, rapid artificial intelligence (AI) adoption and growing complexity in global markets reshape the financial risk environment. In its latest System Risk Outlook, the prudential regulator said Australia's financial system remained resilient and well positioned to withstand \"severe but plausible\" shocks. This includes a deep global recession, higher funding costs and major operational disruptions. However, APRA warned heightened uncertainty globally required stronger vigilance and more robust risk management practices across regulated entities. APRA chair John Lonsdale said strong capital positions, liquidity buffers and prudential safeguards meant the financial system could continue supporting households and businesses even if economic conditions deteriorated. \"Sustaining that resilience, however, will require ongoing investment in strong risk management across the system,\" Lonsdale said. APRA identified AI governance, cybersecurity and geopolitical volatility as key areas of supervisory focus, noting AI adoption in banking, insurance and superannuation was accelerating faster than many organisations' ability to manage associated risks. The regulator said increasingly sophisticated cyber threats, including those enabled by advanced AI models, were adding to operational risk concerns. APRA recently reinforced its expectations around AI governance and risk management in a letter to the industry. The report also highlighted growing international risk in private credit markets. While Australia's domestic private credit sector remains relatively small, APRA said local institutions could face spillover risks through offshore exposures and interconnected markets. The heightened focus on operational resilience follows APRA's recent finalisation of targeted amendments to prudential standard CPS 230 Operational Risk Management, which comes to effect 1 July 2026. The amendments introduce limited exemptions from certain contractual obligations for arrangements with non-traditional service providers where strict compliance is not practical, including government agencies, payment system operator's and financial market infrastructure providers. APRA said the changes were designed to respond to industry feedback while preserving the core objectives of operational risk management. Despite the exemptions, the regulator stressed entities remain responsible for actively managing operational risks tied to outsourced third-party service arrangements. APRA said it would continue assessing how regulated entities are preparing for downside scenarios linked to overseas conflicts, market volatility and technology driven risks, while pushing further improvements in cyber resilience and governance standards. Related News |\nEditor's Choice\nHostplus, AIA lose $1.4m TPD dispute\nHUB24 expands retirement options with TAL\nInvestSMART to realise $16m from Intelligent Investor sale\nUniSuper pilots' digital estate planning partnership with Safewill\nProducts\nFeatured Profile\nSimone Constant\nAUSTRALIAN SECURITIES AND INVESTMENTS COMMISSION",
-  "summary": "",
+  "summary": "APRA is increasing its supervision of banks, insurers, and superannuation funds due to rising global risks from technology and geopolitical issues. The regulator emphasizes the need for better risk management and has introduced new rules to improve operational resilience starting July 1, 2026.",
   "publication": "Financial Standard",
   "author": "Vinny Vucago",
   "published_date": "2026-05-21T11:59:00+10:00",
@@ -15,5 +15,14 @@
   "final_url": "https://www.financialstandard.com.au/news/apra-sharpens-oversight-flags-tech-and-geopolitical-risks-179812621",
   "redirected_to_source": true,
   "page_title": "APRA sharpens oversight, flags tech and geopolitical risks | Financial Standard",
-  "selector_used": "trafilatura"
+  "selector_used": "trafilatura",
+  "key_points": [
+    "APRA intensifies oversight of financial institutions.",
+    "Focus on AI governance, cybersecurity, and geopolitical risks.",
+    "Australia's financial system remains resilient despite potential shocks.",
+    "New operational risk management rules effective July 1, 2026.",
+    "Limited exemptions for non-traditional service providers introduced."
+  ],
+  "ticker_line": "APRA boosts oversight amid global risk concerns",
+  "summarised": true
 }

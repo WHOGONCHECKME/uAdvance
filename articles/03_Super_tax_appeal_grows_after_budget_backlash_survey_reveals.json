@@ -4,7 +4,7 @@
   "scraped_at": "2026-05-22T00:27:22Z",
   "title": "Super tax appeal grows after budget backlash, survey reveals",
   "full_text": "Investor confidence in Australia’s long-term wealth creation framework has deteriorated sharply following the 2026 Federal Budget, with VanEck research suggesting more Australians could turn to superannuation as the preferred tax-efficient investment vehicle.\nThe survey of more than 1,400 Australian investors, conducted by the ETF issuer in the days following the budget, found almost eight in 10 respondents viewed the proposed changes to capital gains tax (CGT) negatively, while nearly half identified super as the most tax-efficient structure going forward.\nAccording to the findings, 45.5 per cent of respondents said super now deserved a larger allocation within their portfolio strategy, reflecting what the firm described as a growing “flight to superannuation”.\nVanEck chief executive and managing director, Arian Neiron, said investors viewed the proposed changes as undermining long-term investment planning.\n“This is the loudest signal we have ever received from Australian investors post-Budget. Three in four told us the changes to capital gains tax undermine the incentive to invest. The most experienced cohort of investors in the country, people who have built wealth carefully over twenty, thirty, even forty years, has described the Budget as a structural attack on their planning.”\n“The flight to superannuation is rational, but it is also revealing. Forty-six per cent of respondents told us super is now the most tax-efficient vehicle and deserves a bigger allocation.\n“That will likely result in Australians across every age cohort engaging more deliberately with their super and an accelerating shift toward SMSFs. We see this as a meaningful tailwind for ETFs, which provide the transparency, diversification and control investors are increasingly looking for.”\nThe research also pointed to growing concerns around Australia’s attractiveness as a destination for investment and entrepreneurship, with 78.3 per cent of respondents saying the country had become a less attractive place to start or build a private business compared with a year earlier.\nMore than 80 per cent of respondents also said residential investment property had become less attractive following the Budget, marking the largest shift in sentiment across any asset class.\nNeiron said investors were increasingly reassessing how and where they allocate capital.\n“The shift in investor appetite is striking. More than 80 per cent of respondents now consider residential investment property less attractive, while almost a third see cash and term deposits as more attractive post-Budget, pointing to a defensive shift in how investors are thinking about capital allocation,” he said.\nThe survey found 51.5 per cent of respondents planned to hold their existing investments while waiting for further legislative clarity, while 27.7 per cent intended to realise gains before 1 July 2027 to retain the current CGT discount.\nAnother 21.9 per cent said they were actively considering restructuring their portfolios.\nVanEck said the survey sample skewed towards experienced investors, with 67.7 per cent having invested for more than 20 years and 70 per cent aged over 55.",
-  "summary": "",
+  "summary": "Investor confidence has dropped sharply after the 2026 Federal Budget, with many Australians now seeing superannuation as a more attractive and tax-efficient investment option. A recent survey shows that nearly 80% of investors view proposed capital gains tax changes negatively, leading to a significant shift towards superannuation.",
   "publication": "Super Review",
   "author": "Adrian Suljanovic",
   "published_date": "2026-05-21T00:45:32+00:00",
@@ -15,5 +15,15 @@
   "final_url": "https://www.superreview.com.au/super-tax-appeal-grows-after-budget-backlash-survey-reveals/",
   "redirected_to_source": true,
   "page_title": "Super tax appeal grows after budget backlash, survey reveals - Super Review",
-  "selector_used": "trafilatura"
+  "selector_used": "trafilatura",
+  "key_points": [
+    "Survey of over 1,400 investors conducted by VanEck.",
+    "78% of respondents view capital gains tax changes negatively.",
+    "45.5% believe superannuation deserves a larger investment allocation.",
+    "80% find residential investment property less attractive post-Budget.",
+    "51.5% plan to hold existing investments for clarity.",
+    "27.7% intend to realise gains before July 2027."
+  ],
+  "ticker_line": "Investors shift focus to superannuation post-Budget",
+  "summarised": true
 }

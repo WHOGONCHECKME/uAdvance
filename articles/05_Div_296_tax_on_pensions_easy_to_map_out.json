@@ -4,7 +4,7 @@
   "scraped_at": "2026-05-22T00:28:23Z",
   "title": "Div 296 tax on pensions easy to map out",
   "full_text": "The incoming Division 296 tax will apply to people with balances over $3 million even if they are fully in pension phase, but there is a shortcut method to calculate what that will be, Heffron SMSF specialist Sean Johnston has pointed out.\nJohnston said the Division 296 tax would have a blanket effect and cover anyone whose total super balance was above $3 million, regardless of what phase it was in.\n“It is going to be based on your balance at the start or the end of the year, once we move past the first transitional year, so if you had $3 million at either end of the spectrum, it doesn’t matter how it is in the fund or multiple funds, you will be in the net,” he said.\nHe added this raised the issue of how earnings would be determined for Division 296 purposes if the fund was fully in pension phase and its taxable income was nil, pointing out the new impost would use a different set of calculations.\n“When we look at the fund’s tax return, we have this list of things that we include in it – realised capital gains, dividends, distributions, interest, rent, and we add back tax credits, franking credits and assessable contributions.\n“We have this big chunk of income and in this case 100 per cent of that is put to the side and we don’t pay tax on it because it is supporting a pension.\n“There are some deductions we don’t get to claim because you can’t claim a deduction for something that you’re not paying tax on.\n“It’s slightly different for Division 296 purposes, which starts with the same assumption of the fund’s earnings but we modify it a bit.\n“We still keep our standard income and franking credits, but don’t tax super contributions for Division 296 purposes because we’re paying tax on those at the super fund level and they are not something we have earned that contributes to an increase in our wealth.\n“What we do though is add back exempt current pension income, which is that income we would have ordinarily excluded, as that is now part of the fund’s taxable earnings for Division 296 purposes.\n“The corollary to that [add back] is those disregarded deductions we had before we can now bring those back in and claim them.\n“The way that I think about [what the tax will be] it is by using a shortcut.\n“For Division 296 purposes pretend the fund is in 100 per cent accumulation phase and you will get close enough to the tax result that you want.\n“Mechanically it is a little bit different, but that’s a really good shortcut for you.”",
-  "summary": "",
+  "summary": "A new tax under Division 296 will affect superannuation balances over $3 million, even if they are in pension phase. A specialist suggests a shortcut method to calculate the tax based on treating the fund as if it were in accumulation phase.",
   "publication": "SMS Magazine",
   "author": "https://www.facebook.com/smstrusteenews",
   "published_date": "2026-05-21T16:08:17+10:00",
@@ -15,5 +15,13 @@
   "final_url": "https://smsmagazine.com.au/news/2026/05/21/div-296-tax-on-pensions-easy-to-map-out/",
   "redirected_to_source": true,
   "page_title": "Div 296 tax on pensions easy to map out | SMS Magazine",
-  "selector_used": "trafilatura"
+  "selector_used": "trafilatura",
+  "key_points": [
+    "Division 296 tax applies to super balances over $3 million.",
+    "Tax is based on balances at the start or end of the year.",
+    "Calculations for tax differ from standard super fund tax returns.",
+    "A shortcut method involves treating the fund as in accumulation phase."
+  ],
+  "ticker_line": "New tax affects super balances over $3 million",
+  "summarised": true
 }
