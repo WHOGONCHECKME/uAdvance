@@ -745,6 +745,8 @@ let selectedArticle = null;
 let openaiKey = sessionStorage.getItem('oai_key') || '';
 let focusedPane = 'sidebar';
 
+const API_BASE = 'https://uadvance-production.up.railway.app';
+
 // -- Debounce
 const debouncedApplyFilters = debounce(applyFilters, 200);
 
@@ -791,15 +793,11 @@ function debounce(fn, delay = 200) {
 }
 // ── Boot ───────────────────────────────────────────────────────────────────
 async function init() {
-  const API_BASE = 'https://your-app.railway.app'; // update after Railway deploy
-  
   try {
-    // Try the API first
     const res = await fetch(`${API_BASE}/articles`);
     if (!res.ok) throw new Error(`API error ${res.status}`);
     allArticles = await res.json();
   } catch (err) {
-    // Fall back to articles_index.json while API isn't live yet
     try {
       const res = await fetch(`articles_index.json?ts=${Date.now()}`);
       if (!res.ok) throw new Error(`Could not load articles_index.json (${res.status})`);
@@ -808,17 +806,11 @@ async function init() {
       console.error(err2);
       allArticles = [];
       document.getElementById('article-count').textContent = '0';
-      document.getElementById('article-list').innerHTML = `
-        <div class="empty-state">Could not load articles.</div>`;
+      document.getElementById('article-list').innerHTML =
+        '<div class="empty-state">Could not load articles.</div>';
       return;
     }
   }
-
-  document.getElementById('article-count').textContent = allArticles.length;
-  buildHeadingChips();
-  applyFilters();
-  buildTicker();
-}
 
   document.getElementById('article-count').textContent = allArticles.length;
   buildHeadingChips();
@@ -968,20 +960,30 @@ async function selectArticle(id) {
   const article = filteredArticles.find(a => a.id === id);
   if (!article) return;
   selectedArticle = article;
-  renderList(); // refresh active state
+  renderList();
   scrollActiveArticleIntoView();
 
-  // Load full text from individual JSON file
   let fullText = article.full_text || '';
-  if (!fullText && article.filename) {
+  if (!fullText) {
     try {
-      const res = await fetch(`articles/${article.filename}`);
+      const res = await fetch(`${API_BASE}/articles/${encodeURIComponent(id)}`);
       if (res.ok) {
         const data = await res.json();
         fullText = data.full_text || '';
         selectedArticle = { ...article, full_text: fullText };
       }
-    } catch {}
+    } catch {
+      if (article.filename) {
+        try {
+          const res = await fetch(`articles/${article.filename}`);
+          if (res.ok) {
+            const data = await res.json();
+            fullText = data.full_text || '';
+            selectedArticle = { ...article, full_text: fullText };
+          }
+        } catch {}
+      }
+    }
   }
 
   renderArticle(selectedArticle, fullText);
