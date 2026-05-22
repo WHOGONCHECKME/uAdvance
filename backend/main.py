@@ -30,7 +30,7 @@ from fastapi.middleware.cors import CORSMiddleware
 
 # On Railway, set a DB_PATH environment variable pointing to your volume.
 # Locally it finds uadvance.db at the project root automatically.
-DB_PATH = Path(os.environ.get("DB_PATH", Path(__file__).resolve().parent.parent / "uadvance.db"))
+DB_PATH = Path(os.environ.get("DB_PATH") or str(Path(__file__).resolve().parent.parent / "uadvance.db"))
 
 # ── APP ───────────────────────────────────────────────────────────────────────
 
