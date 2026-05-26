@@ -80,7 +80,7 @@
   gap: 0;
   white-space: nowrap;
   width: max-content;
-  animation: ticker-scroll 400s linear infinite;
+  animation: ticker-scroll 500s linear infinite;
 }
 .ticker:hover { animation-play-state: paused; }
 .ticker-item {
@@ -742,7 +742,6 @@ let filteredArticles = [];
 let activeHeadings = new Set();
 let activeSort = 'date-desc';
 let selectedArticle = null;
-let openaiKey = sessionStorage.getItem('oai_key') || '';
 let focusedPane = 'sidebar';
 
 const API_BASE = 'https://uadvance-production.up.railway.app';
@@ -1068,44 +1067,42 @@ async function sendChat() {
   btn.disabled = true;
   addMessage('<span class="spinner"></span>Thinking…', 'thinking');
 
-  let system = `You are a helpful research assistant for uAdvance, an Australian professional development platform for actuaries and financial services professionals. Answer clearly and concisely.`;
-  if (selectedArticle) {
-    const ctx = [
-      selectedArticle.title && `Title: ${selectedArticle.title}`,
-      selectedArticle.publication && `Publication: ${selectedArticle.publication}`,
-      selectedArticle.published_date && `Date: ${selectedArticle.published_date}`,
-      selectedArticle.summary && `Summary: ${selectedArticle.summary}`,
-      selectedArticle.full_text && `Article text (first 3000 chars):\n${(selectedArticle.full_text || '').slice(0, 3000)}`,
-    ].filter(Boolean).join('\n');
-    system += `\n\nThe user is currently reading this article:\n${ctx}`;
-  }
-
   chatHistory.push({ role: 'user', content: msg });
 
+  // Build request body — send article context alongside conversation history
+  const body = {
+    messages: chatHistory,
+    article_title:       selectedArticle?.title       || null,
+    article_publication: selectedArticle?.publication || null,
+    article_date:        selectedArticle?.published_date || null,
+    article_summary:     selectedArticle?.summary     || null,
+    article_text:        selectedArticle?.full_text
+                           ? selectedArticle.full_text.slice(0, 3000)
+                           : null,
+  };
+
   try {
-    const res = await fetch('https://api.openai.com/v1/chat/completions', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${openaiKey}` },
-      body: JSON.stringify({
-        model: 'gpt-4o',
-        max_tokens: 600,
-        messages: [
-          { role: 'system', content: system },
-          ...chatHistory
-        ]
-      })
+    const res = await fetch(`${API_BASE}/chat`, {
+      method:  'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body:    JSON.stringify(body),
     });
+
     const data = await res.json();
     removeThinking();
-    if (data.error) throw new Error(data.error.message);
-    const reply = data.choices[0].message.content;
+
+    if (!res.ok) throw new Error(data.detail || `Server error ${res.status}`);
+
+    const reply = data.reply;
     chatHistory.push({ role: 'assistant', content: reply });
     addMessage(reply, 'ai');
-  } catch(err) {
-    chatHistory.pop(); // remove the user message if the request failed
+
+  } catch (err) {
+    chatHistory.pop();
     removeThinking();
     addMessage(`Error: ${err.message}`, 'ai');
   }
+
   btn.disabled = false;
 }
 

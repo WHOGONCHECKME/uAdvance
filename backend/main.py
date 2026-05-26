@@ -16,6 +16,8 @@ ENDPOINTS
   GET  /articles              → full article list (replaces articles_index.json)
   GET  /articles/{id}         → single article including full_text
   GET  /search?q=inflation    → full-text search via FTS5
+  GET  /tags                  → all tags with article counts
+  POST /chat                  → AI chat via OpenAI (key stored server-side)
 """
 
 import json
@@ -23,14 +25,15 @@ import os
 import sqlite3
 from pathlib import Path
 
+import httpx
 from fastapi import FastAPI, HTTPException, Query
 from fastapi.middleware.cors import CORSMiddleware
+from pydantic import BaseModel
 
 # ── CONFIG ────────────────────────────────────────────────────────────────────
 
-# On Railway, set a DB_PATH environment variable pointing to your volume.
-# Locally it finds uadvance.db at the project root automatically.
 DB_PATH = Path(os.environ.get("DB_PATH") or str(Path(__file__).resolve().parent.parent / "uadvance.db"))
+OPENAI_API_KEY = os.environ.get("OPENAI_API_KEY", "")
 
 def ensure_db():
     """
@@ -39,15 +42,14 @@ def ensure_db():
     """
     if DB_PATH.exists():
         return
-    
+
     print(f"Database not found at {DB_PATH} — initialising...")
     DB_PATH.parent.mkdir(parents=True, exist_ok=True)
-    
+
     conn = sqlite3.connect(DB_PATH)
     conn.execute("PRAGMA journal_mode = WAL;")
     conn.execute("PRAGMA foreign_keys = ON;")
-    
-    # Create all tables (copied from init_db.py)
+
     conn.executescript("""
         CREATE TABLE IF NOT EXISTS newsletters (
             id            INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -74,7 +76,11 @@ def ensure_db():
             summarised       INTEGER DEFAULT 0,
             scraped_at       TEXT,
             page_title       TEXT,
-            selector_used    TEXT
+            selector_used    TEXT,
+            is_regulator       INTEGER DEFAULT 0,
+            regulator_name     TEXT,
+            regulator_full_name TEXT,
+            source_type        TEXT DEFAULT 'newsletter'
         );
         CREATE TABLE IF NOT EXISTS tags (
             id   INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -100,18 +106,16 @@ ensure_db()
 
 app = FastAPI(title="uAdvance API", version="1.0.0")
 
-# CORS — allows your GitHub Pages frontend to call this API.
-# Replace the GitHub Pages URL with your actual domain once live.
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
-        "https://uadvance.com.au",          # production domain — update to yours
+        "https://uadvance.com.au",
         "https://www.uadvance.com.au",
-        "http://localhost:8080",             # local dev
-        "http://127.0.0.1:5500",            # VS Code Live Server
+        "http://localhost:8080",
+        "http://127.0.0.1:5500",
         "http://localhost:5500",
     ],
-    allow_methods=["GET"],
+    allow_methods=["GET", "POST"],
     allow_headers=["*"],
 )
 
@@ -127,7 +131,6 @@ def get_conn() -> sqlite3.Connection:
 
 
 def row_to_dict(row: sqlite3.Row) -> dict:
-    """Convert a Row to a dict and parse key_points back to a list."""
     d = dict(row)
     try:
         d["key_points"] = json.loads(d.get("key_points") or "[]")
@@ -148,13 +151,9 @@ def health_check():
     except Exception as e:
         return {"status": "ok", "articles": 0, "note": str(e)}
 
+
 @app.get("/articles")
 def get_articles():
-    """
-    Returns all summarised articles as a JSON array.
-    This is a drop-in replacement for articles_index.json —
-    the response format is identical so the frontend needs no changes.
-    """
     conn = get_conn()
     rows = conn.execute("""
         SELECT
@@ -172,7 +171,11 @@ def get_articles():
             a.final_url,
             a.factiva_url,
             a.summarised,
-            a.scraped_at
+            a.scraped_at,
+            a.is_regulator,
+            a.regulator_name,
+            a.regulator_full_name,
+            a.source_type
         FROM articles a
         ORDER BY a.published_date DESC, a.scraped_at DESC
     """).fetchall()
@@ -182,10 +185,6 @@ def get_articles():
 
 @app.get("/articles/{article_id}")
 def get_article(article_id: str):
-    """
-    Returns a single article by id, including full_text.
-    Used when the user opens an article to read it in full.
-    """
     conn = get_conn()
     row = conn.execute(
         "SELECT * FROM articles WHERE id = ?", (article_id,)
@@ -198,12 +197,6 @@ def get_article(article_id: str):
 
 @app.get("/search")
 def search_articles(q: str = Query(..., min_length=2, description="Search query")):
-    """
-    Full-text search across title, summary, and full_text using FTS5.
-    Returns matching articles ordered by relevance (bm25 rank).
-
-    Example: GET /search?q=inflation
-    """
     conn = get_conn()
     rows = conn.execute("""
         SELECT
@@ -219,7 +212,9 @@ def search_articles(q: str = Query(..., min_length=2, description="Search query"
             a.heading,
             a.newsletter,
             a.final_url,
-            a.scraped_at
+            a.scraped_at,
+            a.is_regulator,
+            a.regulator_name
         FROM articles_fts
         JOIN articles a ON articles_fts.rowid = a.rowid
         WHERE articles_fts MATCH ?
@@ -232,7 +227,6 @@ def search_articles(q: str = Query(..., min_length=2, description="Search query"
 
 @app.get("/tags")
 def get_tags():
-    """Returns all tags with article counts."""
     conn = get_conn()
     rows = conn.execute("""
         SELECT t.id, t.name, COUNT(at.article_id) as article_count
@@ -243,3 +237,78 @@ def get_tags():
     """).fetchall()
     conn.close()
     return [dict(r) for r in rows]
+
+
+# ── CHAT ──────────────────────────────────────────────────────────────────────
+
+class ChatMessage(BaseModel):
+    role: str    # 'user' or 'assistant'
+    content: str
+
+class ChatRequest(BaseModel):
+    messages: list[ChatMessage]          # full conversation history
+    article_title: str | None = None     # currently selected article (optional)
+    article_summary: str | None = None
+    article_text: str | None = None      # first 3000 chars passed from frontend
+    article_publication: str | None = None
+    article_date: str | None = None
+
+
+@app.post("/chat")
+async def chat(req: ChatRequest):
+    """
+    Proxies chat requests to OpenAI server-side so the API key
+    is never exposed to the browser.
+
+    The frontend sends the conversation history plus optional article
+    context. This endpoint adds the system prompt and calls OpenAI,
+    returning just the assistant's reply text.
+    """
+    if not OPENAI_API_KEY:
+        raise HTTPException(status_code=503, detail="OpenAI API key not configured")
+
+    # Build system prompt
+    system = (
+        "You are a helpful research assistant for uAdvance, an Australian "
+        "professional development platform for actuaries and financial services "
+        "professionals. Answer clearly and concisely."
+    )
+
+    # Append article context if an article is selected
+    if req.article_title:
+        ctx_parts = [
+            req.article_title  and f"Title: {req.article_title}",
+            req.article_publication and f"Publication: {req.article_publication}",
+            req.article_date   and f"Date: {req.article_date}",
+            req.article_summary and f"Summary: {req.article_summary}",
+            req.article_text   and f"Article text (first 3000 chars):\n{req.article_text}",
+        ]
+        ctx = "\n".join(p for p in ctx_parts if p)
+        system += f"\n\nThe user is currently reading this article:\n{ctx}"
+
+    messages = [{"role": "system", "content": system}]
+    messages += [{"role": m.role, "content": m.content} for m in req.messages]
+
+    try:
+        async with httpx.AsyncClient(timeout=30) as client:
+            response = await client.post(
+                "https://api.openai.com/v1/chat/completions",
+                headers={
+                    "Content-Type":  "application/json",
+                    "Authorization": f"Bearer {OPENAI_API_KEY}",
+                },
+                json={
+                    "model":      "gpt-4o",
+                    "max_tokens": 600,
+                    "messages":   messages,
+                },
+            )
+            response.raise_for_status()
+            data = response.json()
+    except httpx.HTTPStatusError as e:
+        raise HTTPException(status_code=502, detail=f"OpenAI error: {e.response.text}")
+    except Exception as e:
+        raise HTTPException(status_code=502, detail=f"OpenAI request failed: {str(e)}")
+
+    reply = data["choices"][0]["message"]["content"]
+    return {"reply": reply}
