@@ -35,15 +35,6 @@ from pydantic import BaseModel
 DB_PATH = Path(os.environ.get("DB_PATH") or str(Path(__file__).resolve().parent.parent / "uadvance.db"))
 OPENAI_API_KEY = os.environ.get("OPENAI_API_KEY", "")
 
-@app.get("/debug-key")
-def debug_key():
-    key = OPENAI_API_KEY
-    return {
-        "key_found": bool(key),
-        "key_length": len(key),
-        "starts_with_sk": key.startswith("sk-") if key else False
-    }
-
 def ensure_db():
     """
     If the database doesn't exist at DB_PATH, create it and
