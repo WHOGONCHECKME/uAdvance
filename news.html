@@ -1013,6 +1013,13 @@ function toggleChat() {
   document.getElementById('chat-panel').classList.toggle('collapsed');
 }
 
+function handleChatKey(e) {
+  if (e.key === 'Enter' && (e.metaKey || e.ctrlKey)) {
+    e.preventDefault();
+    sendChat();
+  }
+}
+
 function updateChatContext(article) {
   const note = document.getElementById('chat-context-note');
   note.textContent = article
