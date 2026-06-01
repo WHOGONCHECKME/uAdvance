@@ -887,7 +887,7 @@ async function applyFilters() {
   const toDate = document.getElementById('date-to').value;
   let list;
 
-  if (q.length >= 2) {
+  if (q.length >= 2) { // searching for 2+ chars triggers FTS search; shorter queries filter client-side to avoid overhead
     // Use Railway FTS5 search for full-text queries
     try {
       const res = await fetch(`${API_BASE}/search?q=${encodeURIComponent(q)}`);

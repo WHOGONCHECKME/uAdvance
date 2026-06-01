@@ -198,6 +198,10 @@ def get_article(article_id: str):
 @app.get("/search")
 def search_articles(q: str = Query(..., min_length=2, description="Search query")):
     conn = get_conn()
+
+    escaped_q = q.replace('"', '""')
+    phrase_q = f'"{escaped_q}"'
+
     rows = conn.execute("""
         SELECT
             a.id,
@@ -220,7 +224,7 @@ def search_articles(q: str = Query(..., min_length=2, description="Search query"
         WHERE articles_fts MATCH ?
         ORDER BY rank
         LIMIT 50
-    """, (q,)).fetchall()
+    """, (phrase_q,)).fetchall()
     conn.close()
     return [row_to_dict(r) for r in rows]
 
