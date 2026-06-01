@@ -200,12 +200,15 @@ def search_articles(q: str = Query(..., min_length=2, description="Search query"
     conn = get_conn()
 
     tokens = q.split()
-    escaped_tokens = [token.replace('"', '""') for token in tokens]
+    escaped = [t.replace('"', '""') for t in tokens]
+    fts_q = " ".join(f'"{t}"*' for t in escaped)   # e.g. '"gov"* "uni"*'
 
     if len(escaped_tokens) == 1:
         fts_q = f'"{escaped_tokens[0]}"*'
     else:
-        fts_q = '"' + " ".join(escaped_tokens[:-1]) + f' {escaped_tokens[-1]}*' + '"'
+        exact_tokens = [f'"{token}"' for token in escaped_tokens[:-1]]
+        prefix_token = f'"{escaped_tokens[-1]}"*'
+        fts_q = " + ".join(exact_tokens + [prefix_token])
 
     rows = conn.execute("""
         SELECT
