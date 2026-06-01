@@ -680,13 +680,6 @@
           <input type="date" id="date-to" aria-label="Date to">
         </div>
       </div>
-      <div class="filter-row">
-        <div class="filter-label">Sort</div>
-        <div class="filter-chips">
-          <button class="chip active" data-sort="date-desc" onclick="setSort(this)">Newest</button>
-          <button class="chip inactive" data-sort="date-asc" onclick="setSort(this)">Oldest</button>
-        </div>
-      </div>
     </div>
     <div class="article-list" id="article-list"></div>
   </aside>
@@ -729,7 +722,6 @@
 let allArticles = [];
 let filteredArticles = [];
 let activeHeadings = new Set();
-let activeSort = 'date-desc';
 let selectedArticle = null;
 let focusedPane = 'sidebar';
 
@@ -854,17 +846,6 @@ function toggleHeading(el, heading) {
   applyFilters();
 }
 
-function setSort(el) {
-  document.querySelectorAll('[data-sort]').forEach(c => {
-    c.classList.remove('active');
-    c.classList.add('inactive');
-  });
-  el.classList.remove('inactive');
-  el.classList.add('active');
-  activeSort = el.dataset.sort;
-  applyFilters();
-}
-
 document.getElementById('search-input').addEventListener('input', debounce(applyFilters));
 document.getElementById('date-from').addEventListener('change', applyFilters);
 document.getElementById('date-to').addEventListener('change', applyFilters);
@@ -901,8 +882,7 @@ async function applyFilters() {
   if (toDate) list = list.filter(a => getArticleDateKey(a) <= toDate);
 
   if (!q || q.length < 2) {
-    if (activeSort === 'date-desc') list.sort((a,b) => (b.published_date||b.scraped_at||'').localeCompare(a.published_date||a.scraped_at||''));
-    else if (activeSort === 'date-asc') list.sort((a,b) => (a.published_date||a.scraped_at||'').localeCompare(b.published_date||b.scraped_at||''));
+    list.sort((a,b) => (b.published_date||b.scraped_at||'').localeCompare(a.published_date||a.scraped_at||''));
   }
   // When using FTS search, results are already ranked by relevance
 
