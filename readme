@@ -4,3 +4,4 @@
 3. python dowjones-news-bot/fetch_regulators.py
 4. python dowjones-news-bot/summarise3.py
 5. railway volume files upload uadvance.db /data/uadvance.db --overwrite
+6. git push "uda" = "update daily articles"

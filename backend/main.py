@@ -199,8 +199,13 @@ def get_article(article_id: str):
 def search_articles(q: str = Query(..., min_length=2, description="Search query")):
     conn = get_conn()
 
-    escaped_q = q.replace('"', '""')
-    phrase_q = f'"{escaped_q}"'
+    tokens = q.split()
+    escaped_tokens = [token.replace('"', '""') for token in tokens]
+
+    if len(escaped_tokens) == 1:
+        fts_q = f'"{escaped_tokens[0]}"*'
+    else:
+        fts_q = '"' + " ".join(escaped_tokens[:-1]) + f' {escaped_tokens[-1]}*' + '"'
 
     rows = conn.execute("""
         SELECT
@@ -224,7 +229,8 @@ def search_articles(q: str = Query(..., min_length=2, description="Search query"
         WHERE articles_fts MATCH ?
         ORDER BY rank
         LIMIT 50
-    """, (phrase_q,)).fetchall()
+    """, (fts_q,)).fetchall()
+
     conn.close()
     return [row_to_dict(r) for r in rows]
 
