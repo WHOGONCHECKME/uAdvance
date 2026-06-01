@@ -183,7 +183,7 @@
     background: var(--bg3);
     border: 1px solid var(--line);
     border-radius: 6px;
-    padding: 7px 10px 7px 32px;
+    padding: 7px 10px;
     color: var(--text);
     font-size: 13px;
     font-family: var(--sans);
@@ -213,15 +213,6 @@
   }
   .date-filter-wrap input:focus { border-color: var(--accent); }
   .date-filter-wrap input::-webkit-calendar-picker-indicator { filter: invert(0.7); cursor: pointer; }
-  .search-icon {
-    position: absolute;
-    left: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-    color: var(--faint);
-    font-size: 13px;
-    pointer-events: none;
-  }
 
   /* ── Article list ── */
   .article-list {
@@ -675,7 +666,6 @@
       <div class="filter-row">
         <div class="filter-label">Search</div>
         <div class="search-wrap" style="flex:1">
-          <span class="search-icon">⌕</span>
           <input type="text" id="search-input" placeholder="Search titles, summaries…">
         </div>
       </div>
