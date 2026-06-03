@@ -34,6 +34,7 @@
     background: var(--bg);
     color: var(--text);
     height: 100vh;
+    height: 100dvh; /* mobile: accounts for address bar show/hide */
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -615,6 +616,96 @@
   color: #c0614a;
   min-height: 16px;
 }
+  /* ── Mobile nav bar (hidden on desktop) ── */
+  .mobile-bar {
+    display: none;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 14px;
+    border-bottom: 1px solid var(--line);
+    flex-shrink: 0;
+    background: var(--bg);
+  }
+  .mobile-back {
+    background: transparent;
+    border: 1px solid var(--line2);
+    color: var(--text);
+    border-radius: 6px;
+    padding: 7px 12px;
+    font-family: var(--sans);
+    font-size: 14px;
+    cursor: pointer;
+    transition: border-color 0.15s, color 0.15s;
+  }
+  .mobile-back:hover { border-color: var(--accent); color: var(--accent); }
+  .mobile-bar-title {
+    font-family: var(--serif);
+    font-size: 15px;
+    color: var(--muted);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  /* ── Mobile (≤768px) ──────────────────────────────────────────────
+     Each panel becomes a full-screen VIEW; we switch between them via
+     body[data-mview]. Chat is a separate full-screen overlay driven by
+     the existing .collapsed toggle. Treating chat as a peer view here
+     means a future desktop right-rail needs ZERO mobile rework.
+     All rules live inside this query, so desktop layout is untouched. */
+  @media (max-width: 768px) {
+    body { font-size: 15px; }
+
+    /* Header: reclaim horizontal space */
+    header { padding: 0 14px; gap: 10px; }
+    .logo { font-size: 17px; }
+    .header-meta { display: none; }
+
+    /* Single column; drop the desktop-only resizer */
+    .sidebar-resizer { display: none; }
+    .sidebar { width: 100%; flex: 1; min-width: 0; }
+    .main { width: 100%; }
+
+    /* Show exactly one panel at a time */
+    body[data-mview="article"] .sidebar { display: none; }
+    body[data-mview="list"]    .main    { display: none; }
+
+    .filters { padding: 12px 14px; }
+    .article-list { padding-bottom: 72px; } /* clear the chat launcher */
+
+    /* Back bar appears whenever the reader (main) is visible */
+    .mobile-bar { display: flex; }
+
+    /* Reader spacing — kill the 200px right padding from desktop */
+    .article-view { padding: 0 16px 88px; }
+    .article-title-wrap { padding: 18px 0 12px; }
+    .article-title { font-size: 22px; }
+    .article-sticky-summary { font-size: 14px; }
+    .article-body {
+      padding: 14px 0 8px;
+      max-width: none;
+      text-align: left;
+      font-size: 15px;
+    }
+
+    /* Chat → full-screen overlay launched from a pinned bottom bar */
+    .chat-panel {
+      position: fixed;
+      left: 0; right: 0; bottom: 0;
+      z-index: 200;
+      border-top: 1px solid var(--line);
+    }
+    .chat-panel.collapsed { height: 56px; }
+    .chat-panel:not(.collapsed) { top: 0; height: 100dvh; }
+    .chat-toggle { height: 56px; }
+    .msg { max-width: 92%; }
+
+    /* iOS zooms the page on focus for any input under 16px — prevent it */
+    .search-wrap input,
+    .date-filter-wrap input,
+    .chat-input { font-size: 16px; }
+  }
+
   /* ── Scrollbar global ── */
   * { scrollbar-width: thin; scrollbar-color: var(--line2) transparent; }
 </style>
@@ -688,6 +779,10 @@
 
   <!-- Main -->
   <div class="main">
+    <div class="mobile-bar" id="mobile-bar">
+      <button class="mobile-back" onclick="setMobileView('list')">← Articles</button>
+      <span class="mobile-bar-title" id="mobile-bar-title"></span>
+    </div>
     <div class="article-view" id="article-view">
       <div class="placeholder" id="placeholder">
         <div class="placeholder-icon">◈</div>
@@ -724,6 +819,15 @@ let filteredArticles = [];
 let activeHeadings = new Set();
 let selectedArticle = null;
 let focusedPane = 'sidebar';
+
+// ── Mobile view router ───────────────────────────────────────────────────────
+// Chat is treated as a peer full-screen view (its overlay is CSS-driven via the
+// existing .collapsed toggle), so moving chat to a desktop right-rail later
+// requires no change here.
+const mobileMQ = window.matchMedia('(max-width: 768px)');
+function isMobile() { return mobileMQ.matches; }
+function setMobileView(view) { document.body.setAttribute('data-mview', view); }
+document.body.setAttribute('data-mview', 'list'); // start on the list (mobile only)
 
 const API_BASE = 'https://uadvance-production.up.railway.app';
 
@@ -832,6 +936,10 @@ function selectArticleById(id) {
   renderList();
   renderArticle(article, article.full_text || '');
   updateChatContext(article);
+  if (isMobile()) {
+    document.getElementById('mobile-bar-title').textContent = article.publication || '';
+    setMobileView('article');
+  }
 }
 
 function toggleHeading(el, heading) {
@@ -971,6 +1079,10 @@ async function selectArticle(id) {
 
   renderArticle(selectedArticle, fullText);
   updateChatContext(selectedArticle);
+  if (isMobile()) {
+    document.getElementById('mobile-bar-title').textContent = selectedArticle.publication || '';
+    setMobileView('article');
+  }
 }
 
 function renderArticle(a, fullText) {
