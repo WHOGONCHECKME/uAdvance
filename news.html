@@ -989,9 +989,11 @@ async function applyFilters() {
   if (fromDate) list = list.filter(a => getArticleDateKey(a) >= fromDate);
   if (toDate) list = list.filter(a => getArticleDateKey(a) <= toDate);
 
-  if (!q || q.length < 2) {
-    list.sort((a,b) => (b.published_date||b.scraped_at||'').localeCompare(a.published_date||a.scraped_at||''));
-  }
+  list.sort((a, b) => {
+  const dateA = new Date(a.published_date || a.scraped_at || 0);
+  const dateB = new Date(b.published_date || b.scraped_at || 0);
+  return dateB - dateA;
+});
   // When using FTS search, results are already ranked by relevance
 
   filteredArticles = list;
