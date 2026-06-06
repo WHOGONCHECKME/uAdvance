@@ -27,6 +27,7 @@
     --sans:  'DM Sans', sans-serif;
     --sidebar: 360px;
     --chat-h: 320px;
+    --chat-rail-w: 320px;
   }
 
   body {
@@ -706,6 +707,64 @@
     .chat-input { font-size: 16px; }
   }
 
+  /* Collapsed tab is desktop-only; hidden by default, shown via min-width query */
+  .chat-collapsed-tab { display: none; }
+
+  /* ── Chat right rail (desktop ≥769px) ──────────────────────────────────────
+     On mobile the chat-panel stays as a position:fixed bottom overlay (see the
+     max-width:768px block above). Everything here is desktop-only.           */
+  @media (min-width: 769px) {
+    /* Width-based expand/collapse instead of height-based */
+    .chat-panel {
+      border-top: none;
+      border-left: 1px solid var(--line);
+      height: auto !important;
+      overflow: hidden;
+      transition: width 0.25s ease;
+      flex-shrink: 0;
+    }
+    .chat-panel.collapsed     { width: 44px; }
+    .chat-panel:not(.collapsed) { width: var(--chat-rail-w); }
+
+    /* When collapsed: show the vertical tab, hide the main chat UI */
+    .chat-panel.collapsed .chat-collapsed-tab { display: flex; }
+    .chat-panel.collapsed .chat-toggle,
+    .chat-panel.collapsed .chat-messages,
+    .chat-panel.collapsed .chat-input-row { display: none; }
+
+    /* Vertical collapsed strip */
+    .chat-collapsed-tab {
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      padding-top: 20px;
+      gap: 12px;
+      height: 100%;
+      cursor: pointer;
+      transition: background 0.12s;
+    }
+    .chat-collapsed-tab:hover { background: var(--bg3); }
+    .chat-tab-label {
+      writing-mode: vertical-rl;
+      font-size: 10px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      white-space: nowrap;
+    }
+
+    /* Toggle header in expanded state */
+    .chat-toggle {
+      height: 52px;
+      border-top: none;
+      border-bottom: 1px solid var(--line);
+    }
+    /* Replace the up-arrow with a close × */
+    .chat-chevron { font-size: 0; }
+    .chat-chevron::before { content: '✕'; font-size: 12px; }
+    .chat-panel:not(.collapsed) .chat-chevron { transform: none; }
+  }
+
   /* ── Scrollbar global ── */
   * { scrollbar-width: thin; scrollbar-color: var(--line2) transparent; }
 </style>
@@ -790,24 +849,31 @@
       </div>
       <div id="article-content" style="display:none"></div>
     </div>
+  </div>
 
-    <!-- Chat -->
-    <div class="chat-panel collapsed" id="chat-panel">
-      <div class="chat-toggle" onclick="toggleChat()">
-        <span style="font-size:26px">◇</span>
-        <span class="chat-toggle-label">Ask NewsAI</span>
-        <span class="chat-chevron">▲</span>
+  <!-- Chat rail — sibling of .main so it forms the 3rd column on desktop.
+       On mobile it stays a position:fixed bottom overlay (CSS-driven).   -->
+  <div class="chat-panel collapsed" id="chat-panel">
+    <!-- Collapsed tab: visible on desktop only when panel is collapsed -->
+    <div class="chat-collapsed-tab" onclick="toggleChat()">
+      <span style="font-size:18px;color:var(--accent)">◇</span>
+      <span class="chat-tab-label">Ask NewsAI</span>
+    </div>
+    <!-- Expanded header -->
+    <div class="chat-toggle" onclick="toggleChat()">
+      <span style="font-size:26px">◇</span>
+      <span class="chat-toggle-label">Ask NewsAI</span>
+      <span class="chat-chevron">▲</span>
+    </div>
+    <div class="chat-messages" id="chat-messages">
+      <div class="msg msg-ai">Hi! Ask me anything about the articles you're reading. I'll use the current article as context when you have one open.</div>
+    </div>
+    <div class="chat-input-row">
+      <div class="chat-input-wrap">
+        <div class="chat-context-note" id="chat-context-note">No article selected — ask general questions</div>
+        <textarea class="chat-input" id="chat-input" placeholder="Ask a question…" rows="1" onkeydown="handleChatKey(event)"></textarea>
       </div>
-      <div class="chat-messages" id="chat-messages">
-        <div class="msg msg-ai">Hi! Ask me anything about the articles you're reading. I'll use the current article as context when you have one open.</div>
-      </div>
-      <div class="chat-input-row">
-        <div class="chat-input-wrap">
-          <div class="chat-context-note" id="chat-context-note">No article selected — ask general questions</div>
-          <textarea class="chat-input" id="chat-input" placeholder="Ask a question…" rows="1" onkeydown="handleChatKey(event)"></textarea>
-        </div>
-        <button class="chat-send" id="chat-send" onclick="sendChat()">Send</button>
-      </div>
+      <button class="chat-send" id="chat-send" onclick="sendChat()">Send</button>
     </div>
   </div>
 </div>
