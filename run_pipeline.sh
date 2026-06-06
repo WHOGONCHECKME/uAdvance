@@ -32,6 +32,8 @@ echo "▶  Step 3/4 — Summarise"
 echo ""
 echo "▶  Step 4/4 — Upload to Railway"
 cd "$SCRIPT_DIR"
+echo "  Checkpointing WAL..."
+sqlite3 uadvance.db "PRAGMA wal_checkpoint(TRUNCATE);"
 railway volume files upload uadvance.db /data/uadvance.db --overwrite
 
 echo ""
