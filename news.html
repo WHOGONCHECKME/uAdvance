@@ -421,10 +421,12 @@
     flex-shrink: 0;
     display: flex;
     flex-direction: column;
+    position: relative;
     transition: height 0.2s ease;
   }
   .chat-panel.collapsed { height: 63px; overflow: hidden; }
   .chat-panel:not(.collapsed) { height: var(--chat-h); }
+  .chat-resizer { display: none; }
 
   .chat-toggle {
     display: flex;
@@ -723,8 +725,40 @@
       transition: width 0.25s ease;
       flex-shrink: 0;
     }
+    body.resizing-chat .chat-panel { transition: none; }
     .chat-panel.collapsed     { width: 44px; }
     .chat-panel:not(.collapsed) { width: var(--chat-rail-w); }
+
+    .chat-resizer {
+      display: block;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: -4px;
+      width: 8px;
+      cursor: col-resize;
+      touch-action: none;
+      z-index: 2;
+      transition: background 0.12s;
+    }
+    .chat-resizer::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 4px;
+      width: 3px;
+      background: var(--line);
+    }
+    .chat-resizer:hover,
+    body.resizing-chat .chat-resizer {
+      background: var(--bg3);
+    }
+    .chat-panel.collapsed .chat-resizer { display: none; }
+    body.resizing-chat {
+      cursor: col-resize;
+      user-select: none;
+    }
 
     /* When collapsed: show the vertical tab, hide the main chat UI */
     .chat-panel.collapsed .chat-collapsed-tab { display: flex; }
@@ -854,6 +888,7 @@
   <!-- Chat rail — sibling of .main so it forms the 3rd column on desktop.
        On mobile it stays a position:fixed bottom overlay (CSS-driven).   -->
   <div class="chat-panel collapsed" id="chat-panel">
+    <div class="chat-resizer" id="chat-resizer" title="Resize chat panel"></div>
     <!-- Collapsed tab: visible on desktop only when panel is collapsed -->
     <div class="chat-collapsed-tab" onclick="toggleChat()">
       <span style="font-size:18px;color:var(--accent)">◇</span>
@@ -901,6 +936,7 @@ const API_BASE = 'https://uadvance-production.up.railway.app';
 const debouncedApplyFilters = debounce(applyFilters, 200);
 
 initSidebarResize();
+initChatResize();
 
 // ── Sidebar resizing ──────────────────────────────────────────────────────
 function initSidebarResize() {
@@ -922,6 +958,47 @@ function initSidebarResize() {
 
     function onPointerUp(e) {
       document.body.classList.remove('resizing-sidebar');
+      resizer.releasePointerCapture(e.pointerId);
+      resizer.removeEventListener('pointermove', onPointerMove);
+      resizer.removeEventListener('pointerup', onPointerUp);
+      resizer.removeEventListener('pointercancel', onPointerUp);
+    }
+
+    resizer.addEventListener('pointermove', onPointerMove);
+    resizer.addEventListener('pointerup', onPointerUp);
+    resizer.addEventListener('pointercancel', onPointerUp);
+  });
+}
+
+// ── Chat rail resizing ────────────────────────────────────────────────────
+function initChatResize() {
+  const resizer = document.getElementById('chat-resizer');
+  const panel = document.getElementById('chat-panel');
+  if (!resizer || !panel) return;
+
+  const minWidth = 280;
+  const maxWidth = 720;
+  const minArticleWidth = 320;
+
+  resizer.addEventListener('pointerdown', function(e) {
+    if (window.matchMedia('(max-width: 768px)').matches || panel.classList.contains('collapsed')) return;
+
+    e.preventDefault();
+    resizer.setPointerCapture(e.pointerId);
+    document.body.classList.add('resizing-chat');
+
+    function onPointerMove(e) {
+      const sidebarWidth = document.querySelector('.sidebar')?.getBoundingClientRect().width || 0;
+      const sidebarResizerWidth = document.getElementById('sidebar-resizer')?.getBoundingClientRect().width || 0;
+      const availableWidth = window.innerWidth - sidebarWidth - sidebarResizerWidth - minArticleWidth;
+      const nextMaxWidth = Math.max(minWidth, Math.min(maxWidth, availableWidth));
+      const nextWidth = Math.min(nextMaxWidth, Math.max(minWidth, window.innerWidth - e.clientX));
+
+      document.documentElement.style.setProperty('--chat-rail-w', `${nextWidth}px`);
+    }
+
+    function onPointerUp(e) {
+      document.body.classList.remove('resizing-chat');
       resizer.releasePointerCapture(e.pointerId);
       resizer.removeEventListener('pointermove', onPointerMove);
       resizer.removeEventListener('pointerup', onPointerUp);
