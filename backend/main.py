@@ -20,7 +20,6 @@ ENDPOINTS
   POST /chat                  → AI chat via OpenAI (key stored server-side)
 """
 
-import json
 import os
 import sqlite3
 from pathlib import Path
@@ -51,25 +50,17 @@ def ensure_db():
     conn.execute("PRAGMA foreign_keys = ON;")
 
     conn.executescript("""
-        CREATE TABLE IF NOT EXISTS newsletters (
-            id            INTEGER PRIMARY KEY AUTOINCREMENT,
-            subject       TEXT NOT NULL,
-            received_date TEXT
-        );
         CREATE TABLE IF NOT EXISTS articles (
             id               TEXT PRIMARY KEY,
-            newsletter_id    INTEGER REFERENCES newsletters(id),
             title            TEXT NOT NULL,
             full_text        TEXT,
             summary          TEXT,
             ticker_line      TEXT,
-            key_points       TEXT,
             publication      TEXT,
             author           TEXT,
             published_date   TEXT,
             word_count       INTEGER,
             heading          TEXT,
-            newsletter       TEXT,
             factiva_url      TEXT,
             final_url        TEXT,
             redirected_to_source INTEGER DEFAULT 0,
@@ -131,12 +122,7 @@ def get_conn() -> sqlite3.Connection:
 
 
 def row_to_dict(row: sqlite3.Row) -> dict:
-    d = dict(row)
-    try:
-        d["key_points"] = json.loads(d.get("key_points") or "[]")
-    except (json.JSONDecodeError, TypeError):
-        d["key_points"] = []
-    return d
+    return dict(row)
 
 
 # ── ROUTES ────────────────────────────────────────────────────────────────────
@@ -161,13 +147,11 @@ def get_articles():
             a.title,
             a.summary,
             a.ticker_line,
-            a.key_points,
             a.publication,
             a.author,
             a.published_date,
             a.word_count,
             a.heading,
-            a.newsletter,
             a.final_url,
             a.factiva_url,
             a.summarised,
@@ -177,6 +161,7 @@ def get_articles():
             a.regulator_full_name,
             a.source_type
         FROM articles a
+        WHERE a.summarised = 1
         ORDER BY a.published_date DESC, a.scraped_at DESC
     """).fetchall()
     conn.close()
@@ -201,13 +186,12 @@ def search_articles(q: str = Query(..., min_length=2, description="Search query"
 
     tokens = q.split()
     escaped = [t.replace('"', '""') for t in tokens]
-    fts_q = " ".join(f'"{t}"*' for t in escaped)   # e.g. '"gov"* "uni"*'
 
-    if len(escaped_tokens) == 1:
-        fts_q = f'"{escaped_tokens[0]}"*'
+    if len(escaped) == 1:
+        fts_q = f'"{escaped[0]}"*'
     else:
-        exact_tokens = [f'"{token}"' for token in escaped_tokens[:-1]]
-        prefix_token = f'"{escaped_tokens[-1]}"*'
+        exact_tokens = [f'"{t}"' for t in escaped[:-1]]
+        prefix_token = f'"{escaped[-1]}"*'
         fts_q = " + ".join(exact_tokens + [prefix_token])
 
     rows = conn.execute("""
@@ -216,13 +200,11 @@ def search_articles(q: str = Query(..., min_length=2, description="Search query"
             a.title,
             a.summary,
             a.ticker_line,
-            a.key_points,
             a.publication,
             a.author,
             a.published_date,
             a.word_count,
             a.heading,
-            a.newsletter,
             a.final_url,
             a.scraped_at,
             a.is_regulator,
@@ -230,6 +212,7 @@ def search_articles(q: str = Query(..., min_length=2, description="Search query"
         FROM articles_fts
         JOIN articles a ON articles_fts.rowid = a.rowid
         WHERE articles_fts MATCH ?
+        AND a.summarised = 1
         ORDER BY rank
         LIMIT 50
     """, (fts_q,)).fetchall()
