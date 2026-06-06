@@ -9,3 +9,5 @@ archive/
 uadvance.db
 "__pycache__/"
 "*.pyc"
+uadvance.db-wal
+uadvance.db-shm
