@@ -37,7 +37,7 @@
     height: 100vh;
     height: 100dvh; /* mobile: accounts for address bar show/hide */
     overflow: hidden;
-    display: flex;
+    display: block;
     flex-direction: column;
     font-size: 14px;
   }
@@ -103,8 +103,7 @@
 
   /* ── Layout ── */
   .layout {
-    display: flex;
-    flex: 1;
+    display: block;
     min-height: 0;
   }
 
@@ -668,28 +667,34 @@
     body { font-size: 15px; }
 
     /* Header: reclaim horizontal space */
-    header { padding: 0 14px; gap: 10px; }
+    header { padding: 0 14px; gap: 10px; position: sticky; top: 0; z-index: 120; }
     .logo { font-size: 17px; }
     .header-meta { display: none; }
 
     /* Single column; drop the desktop-only resizer */
     .sidebar-resizer { display: none; }
-    .sidebar { width: 100%; flex: 1; min-width: 0; }
-    .main { width: 100%; }
+    .sidebar { width: 100%; display: block; min-width: 0; }
+    .main { width: 100%; display: block;}
 
     /* Show exactly one panel at a time */
     body[data-mview="article"] .sidebar { display: none; }
     body[data-mview="list"]    .main    { display: none; }
 
-    .filters { padding: 12px 14px; }
-    .article-list { padding-bottom: 72px; } /* clear the chat launcher */
+    .filters { 
+      padding: 12px 14px;
+      position: sticky; 
+      top: 52px;
+      z-index: 110;
+      background: var(-bg2); 
+    }
+    .article-list { padding-bottom: 72px; overflow: visible; } /* clear the chat launcher */
 
     /* Back bar appears whenever the reader (main) is visible */
-    .mobile-bar { display: flex; }
+    .mobile-bar { display: flex; position: sticky; top: 52px; z-index: 110; }
 
     /* Reader spacing — kill the 200px right padding from desktop */
-    .article-view { padding: 0 16px 88px; }
-    .article-title-wrap { padding: 18px 0 12px; }
+    .article-view { padding: 0 16px 88px; overflow: visible; }
+    .article-title-wrap { padding: 18px 0 12px; position: static;}
     .article-title { font-size: 22px; }
     .article-sticky-summary { font-size: 14px; }
     .article-body {
@@ -935,7 +940,10 @@ let focusedPane = 'sidebar';
 // requires no change here.
 const mobileMQ = window.matchMedia('(max-width: 768px)');
 function isMobile() { return mobileMQ.matches; }
-function setMobileView(view) { document.body.setAttribute('data-mview', view); }
+function setMobileView(view) { 
+  document.body.setAttribute('data-mview', view); 
+  if (isMobile()) window.scrollTo(0, 0); // scroll to top when switching views on mobile
+}
 document.body.setAttribute('data-mview', 'list'); // start on the list (mobile only)
 
 const API_BASE = 'https://uadvance-production.up.railway.app';
@@ -1189,6 +1197,7 @@ function renderList() {
 }
 
 function scrollActiveArticleIntoView() {
+  if (isMobile()) return; // on mobile we switch to a full-screen article view, so no need to scroll the list
   const list = document.getElementById('article-list');
   const activeCard = list.querySelector('.article-card.active');
   if (!activeCard) return;
@@ -1270,7 +1279,11 @@ function renderArticle(a, fullText) {
   `;
 
   // Scroll article view to top
-  document.getElementById('article-view').scrollTo({ top: 0, behavior: 'smooth' });
+  if (isMobile()) {
+    window.scrollTo(0, 0);
+  } else {
+    document.getElementById('article-view').scrollTo(0, 0);
+  }
 }
 
 // ── Chat ───────────────────────────────────────────────────────────────────
