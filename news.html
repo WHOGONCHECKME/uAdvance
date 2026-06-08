@@ -37,7 +37,7 @@
     height: 100vh;
     height: 100dvh; /* mobile: accounts for address bar show/hide */
     overflow: hidden;
-    display: block;
+    display: flex;
     flex-direction: column;
     font-size: 14px;
   }
@@ -664,7 +664,14 @@
      means a future desktop right-rail needs ZERO mobile rework.
      All rules live inside this query, so desktop layout is untouched. */
   @media (max-width: 768px) {
-    body { font-size: 15px; }
+    body {
+      font-size: 15px;
+      height: auto;
+      min-height: 100dvh;
+      overflow: visible;
+      display: block;
+      scroll-behavior: smooth;
+    }
 
     /* Header: reclaim horizontal space */
     header { padding: 0 14px; gap: 10px; position: sticky; top: 0; z-index: 120; }
@@ -945,6 +952,7 @@ let filteredArticles = [];
 let activeHeadings = new Set();
 let selectedArticle = null;
 let focusedPane = 'sidebar';
+let listScrollY = 0;
 
 // ── Mobile view router ───────────────────────────────────────────────────────
 // Chat is treated as a peer full-screen view (its overlay is CSS-driven via the
@@ -952,9 +960,20 @@ let focusedPane = 'sidebar';
 // requires no change here.
 const mobileMQ = window.matchMedia('(max-width: 768px)');
 function isMobile() { return mobileMQ.matches; }
-function setMobileView(view) { 
-  document.body.setAttribute('data-mview', view); 
-  if (isMobile()) window.scrollTo(0, 0); // scroll to top when switching views on mobile
+function setMobileView(view) {
+  if (!isMobile()) {
+    document.body.setAttribute('data-mview', view);
+    return;
+  }
+  if (view === 'article' && document.body.getAttribute('data-mview') === 'list') {
+    listScrollY = window.scrollY;
+  }
+  document.body.setAttribute('data-mview', view);
+  if (view === 'list') {
+    requestAnimationFrame(() => window.scrollTo(0, listScrollY));
+  } else {
+    window.scrollTo(0, 0);
+  }
 }
 document.body.setAttribute('data-mview', 'list'); // start on the list (mobile only)
 
@@ -1291,9 +1310,7 @@ function renderArticle(a, fullText) {
   `;
 
   // Scroll article view to top
-  if (isMobile()) {
-    window.scrollTo(0, 0);
-  } else {
+  if (!isMobile()) {
     document.getElementById('article-view').scrollTo(0, 0);
   }
 }
