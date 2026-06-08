@@ -718,6 +718,22 @@
     .chat-input { font-size: 16px; }
   }
 
+  @media (max-width: 768px) {
+    .layout {
+      display: block;
+    }
+    .sidebar,
+    .main,
+    .article-list,
+    .article-view {
+      height: auto;
+      max-height: none;
+      overflow: visible;
+      -webkit-overflow-scrolling: auto;
+    }
+  }
+
+
   /* Collapsed tab is desktop-only; hidden by default, shown via min-width query */
   .chat-collapsed-tab { display: none; }
 
