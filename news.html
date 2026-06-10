@@ -70,6 +70,7 @@
   /* ── Ticker ── */
 .ticker-wrap {
   flex: 1;
+  min-width: 0;
   overflow-x: hidden;
   overflow-y: hidden;
   overscroll-behavior-x: contain;
@@ -699,25 +700,48 @@
      means a future desktop right-rail needs ZERO mobile rework.
      All rules live inside this query, so desktop layout is untouched. */
   @media (max-width: 768px) {
+    html,
+    body {
+      width: 100%;
+      max-width: 100%;
+      overflow-x: hidden;
+    }
     body {
       font-size: 15px;
       height: auto;
       min-height: 100dvh;
-      overflow: visible;
+      overflow-y: visible;
       display: block;
       scroll-behavior: smooth;
     }
 
     /* Header: reclaim horizontal space */
-    header { padding: 0 14px; gap: 10px; position: sticky; top: 0; z-index: 120; }
+    header {
+      width: 100%;
+      max-width: 100%;
+      min-width: 0;
+      padding: 0 14px;
+      gap: 10px;
+      position: sticky;
+      top: 0;
+      z-index: 120;
+    }
     .logo { font-size: 17px; }
     .header-meta { display: none; }
 
     /* Single column; drop the desktop-only resizer */
     .sidebar-resizer { display: none; }
-    .sidebar { width: 100%; display: block; min-width: 0; }
-    .main { width: 100%; display: block;}
+    .sidebar { width: 100%; max-width: 100%; display: block; min-width: 0; }
+    .main { width: 100%; max-width: 100%; display: block; min-width: 0; }
 
+    .layout,
+    .filters,
+    .article-list,
+    .article-view,
+    .chat-panel {
+      max-width: 100%;
+    }
+    
     /* Show exactly one panel at a time */
     body[data-mview="article"] .sidebar { display: none; }
     body[data-mview="list"]    .main    { display: none; }
