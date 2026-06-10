@@ -870,6 +870,51 @@
     "scraped_at": "2026-05-20T23:22:05Z"
   },
   {
+    "id": "reg_798d2809ba160d02",
+    "title": "Super stragglers dampen progress on death benefits delivery for grieving Australians",
+    "summary": "Many superannuation trustees in Australia are struggling to improve their death benefit claims processes, which is causing delays for grieving families. A report from ASIC highlights that while some trustees are making progress, others have not followed important recommendations to enhance their services.",
+    "ticker_line": "Super trustees lag in death benefit claims handling",
+    "publication": "\"ASIC Media Unit\" <media@newsletters.asic.gov.au> ",
+    "author": "\"ASIC Media Unit\" <media@newsletters.asic.gov.au> ",
+    "published_date": "2026-06-09T23:13:32Z",
+    "word_count": 208,
+    "heading": "Superannuation",
+    "final_url": null,
+    "factiva_url": null,
+    "summarised": 1,
+    "scraped_at": "2026-06-10T04:46:30Z"
+  },
+  {
+    "id": "reg_c806bce0832c4230",
+    "title": "AFCA authorised as External Dispute Resolution service for Scams\r\n Prevention Framework",
+    "summary": "The Australian Financial Complaints Authority (AFCA) has been approved as the main service for handling scam complaints under the new Scams Prevention Framework. From September 1, 2026, banks, telcos, and digital platforms must join AFCA, which will start addressing these complaints from March 31, 2027.",
+    "ticker_line": "AFCA to handle scam complaints from 2026",
+    "publication": "Medianet Press Release <medianet@releases.medianet.com.au>",
+    "author": "Medianet Press Release <medianet@releases.medianet.com.au>",
+    "published_date": "2026-06-09T00:34:55Z",
+    "word_count": 970,
+    "heading": "Regulation",
+    "final_url": null,
+    "factiva_url": null,
+    "summarised": 1,
+    "scraped_at": "2026-06-10T04:46:27Z"
+  },
+  {
+    "id": "reg_01444f9eff6fbe25",
+    "title": "=?utf-8?Q?APRA=20Deputy=20Chair=20Margaret=20Cole=20recognised=20in=20King=E2=80=99s=20Birthday=20Honours?=",
+    "summary": "Margaret Cole, Deputy Chair of APRA, has been awarded a Member of the Order of Australia in the 2026 King's Birthday Honours for her contributions to financial regulation, particularly in the superannuation sector. Since joining APRA in 2021, she has led significant reforms to improve governance and protect fund members' interests.",
+    "ticker_line": "APRA's Margaret Cole honoured for regulatory reforms",
+    "publication": "APRA web updates <subscriptions@apra.gov.au>",
+    "author": "APRA web updates <subscriptions@apra.gov.au>",
+    "published_date": "2026-06-08T23:24:31Z",
+    "word_count": 541,
+    "heading": "Regulation",
+    "final_url": null,
+    "factiva_url": null,
+    "summarised": 1,
+    "scraped_at": "2026-06-10T04:46:21Z"
+  },
+  {
     "id": "WCMNYMA020260608em6700001",
     "title": "Court eyes earlier ASIC intervention after MIS failures",
     "summary": "ASIC chair Sarah Court updated a parliamentary committee on the regulator's efforts to improve oversight of managed investment schemes (MISs) following recent fund failures. The government is providing funds to enhance ASIC's data collection and supervision capabilities to prevent future collapses.",
@@ -898,6 +943,36 @@
     "factiva_url": "https://global.factiva.com/redir/default.aspx?EP=NL&AN=WC79722020260606em6400004&CAT=W&napc=MC&f=nv&P=er&erc=LVfLdDTapCBrFH93tOPKccHd3xazgTKFnVNXLS29ADZY2C%2b%2fttJUljMwQOaPt2LAg7QgPJVLLlJvfldjUXTspoIigx00MwoP%2bHrB%2fmcrGNbtN5rAyVFECz0oYrZnFPiyxBCA6%2bw7FYX7cKFO9h%2fiWaPV1KTEi4dIVFfE2tpINkbWA0gdv0r9ca0sviJ9QztzkRG70XTMQEi7htPPmedXOnFK2cIK4ZrB%7c2&nldtl=DkzATV7FuEELjedX88l%2bbTt6lBYNjNrSx2D3jDckwHXkhG%2f6ivvzpde5Huy7QPKBdNohgqWjUnVjvVqeDsIQa9peiyUZTJOqGufQ%2fap8Qd1kybh7%2b98DLe00Q6xIDisgfCZn82M5Pe9iuO52HrtVoQ%3d%3d%7c2&mod=MCT_email&page_driver=MCT_email",
     "summarised": 1,
     "scraped_at": "2026-06-08T13:32:50Z"
+  },
+  {
+    "id": "reg_451449e7d28a4fcc",
+    "title": "=?utf-8?Q?APRA=20publishes=20Chair=20John=20Lonsdale=27s=20Opening=20Statement=20to=20the=20Senate=20Economics=20Legislation=20Committee?=",
+    "summary": "The Australian Prudential Regulation Authority (APRA) has released Chair John Lonsdale's Opening Statement to the Senate Economics Legislation Committee, outlining key regulatory updates and priorities. The full statement is available on APRA's website.",
+    "ticker_line": "APRA shares key updates to Senate Committee",
+    "publication": "APRA web updates <subscriptions@apra.gov.au>",
+    "author": "APRA web updates <subscriptions@apra.gov.au>",
+    "published_date": "2026-06-05T02:26:54Z",
+    "word_count": 257,
+    "heading": "Regulation",
+    "final_url": null,
+    "factiva_url": null,
+    "summarised": 1,
+    "scraped_at": "2026-06-10T04:46:22Z"
+  },
+  {
+    "id": "reg_686245e7f52bb81e",
+    "title": "=?utf-8?Q?Media=20release=3A=20Thousands=20of=20scam=20websites=20taken=20down=20as=20online=20scams=20continue=20to=20cost=20Australians?=",
+    "summary": "The National Anti-Scam Centre has taken down thousands of scam websites as online scams continue to harm Australians. In the first quarter of 2026, Scamwatch received 45,816 reports of scams, which is a 17.8% decrease from the same period in 2025.",
+    "ticker_line": "Thousands of scam websites shut down in Australia",
+    "publication": "ACCC Media <do-not-reply@accc.gov.au>",
+    "author": "ACCC Media <do-not-reply@accc.gov.au>",
+    "published_date": "2026-06-04T22:50:23Z",
+    "word_count": 121,
+    "heading": "Regulation",
+    "final_url": null,
+    "factiva_url": null,
+    "summarised": 1,
+    "scraped_at": "2026-06-10T04:46:32Z"
   },
   {
     "id": "WC47832020260604em6400035",
@@ -990,6 +1065,21 @@
     "scraped_at": "2026-06-05T01:14:34Z"
   },
   {
+    "id": "reg_075191a508bcb76d",
+    "title": "=?utf-8?Q?Media=20release=3A=20ACCC=20calls=20for=20a=20stronger=20Horticulture=20Code=20as=20Fruitico=20and=20Fresh=20Express=20pay=20record=20penalties=20for=20alleged=20breaches?=",
+    "summary": "The ACCC has called for a stronger Horticulture Code after Fruitico and Fresh Express each paid $99,000 in penalties for not following the rules. Fruitico was found to have traded with grape growers without a proper agreement in place.",
+    "ticker_line": "ACCC demands stronger Horticulture Code after penalties",
+    "publication": "ACCC Media <do-not-reply@accc.gov.au>",
+    "author": "ACCC Media <do-not-reply@accc.gov.au>",
+    "published_date": "2026-06-04T01:32:24Z",
+    "word_count": 138,
+    "heading": "Regulation",
+    "final_url": null,
+    "factiva_url": null,
+    "summarised": 1,
+    "scraped_at": "2026-06-10T04:46:33Z"
+  },
+  {
     "id": "WCSPREW020260604em640002u",
     "title": "Research claims $450bn in unwanted super fund investments",
     "summary": "A report reveals that up to $450 billion of Australians' superannuation savings may be invested in industries like fossil fuels and weapons that many members want to avoid. The findings highlight a gap between what Australians expect from their super funds and where their money is actually invested.",
@@ -1033,6 +1123,21 @@
     "factiva_url": "https://global.factiva.com/redir/default.aspx?EP=NL&AN=WCSPREW020260604em640002v&CAT=W&napc=MC&f=nv&P=er&erc=LVfLdDTapCBrFH93tOPKccHd3xazgTKFnVNXLS29ADZY2C%2b%2fttJUlpwh%2btAFwel%2bfLOh%2fqvlA%2fHd0hujZGFewa%2bhVutT91x9NIddn1yj1p8%2fOZoC2ISkt2noK4iebBmCblHxGquiCn5LX1HyTjrV0byD3rv7O2PfMRsRtt0JWnsW%2fkbOWr8xfkRD6peGwYxgNKAGhjAMcsqfHVdk%2bKXrksaLtoNFR3OV%7c2&nldtl=DkzATV7FuEELjedX88l%2bbTt6lBYNjNrSx2D3jDckwHXkhG%2f6ivvzpde5Huy7QPKBQxk43mkIVFWZf6r4KChynsD3HcffS%2fPDNL%2fwTq7eeRWPKOYIS8cn30gdVqwyfG6osA0P%2fQybJNSpt24BoAXc0w%3d%3d%7c2&mod=MCT_email&page_driver=MCT_email",
     "summarised": 1,
     "scraped_at": "2026-06-05T01:16:37Z"
+  },
+  {
+    "id": "reg_4ae5addb0eb71b4b",
+    "title": "=?utf-8?Q?APRA=20finalises=20new=20IRB=20accreditation=20pathway=20for=20banks?=",
+    "summary": "APRA has introduced a new, easier pathway for banks to gain accreditation for the internal ratings-based (IRB) approach to calculate credit risk. This change aims to improve competition among banks while ensuring financial safety and encouraging better risk management practices.",
+    "ticker_line": "APRA simplifies IRB accreditation for banks",
+    "publication": "APRA web updates <subscriptions@apra.gov.au>",
+    "author": "APRA web updates <subscriptions@apra.gov.au>",
+    "published_date": "2026-06-04T00:10:16Z",
+    "word_count": 450,
+    "heading": "Banking",
+    "final_url": null,
+    "factiva_url": null,
+    "summarised": 1,
+    "scraped_at": "2026-06-10T04:46:23Z"
   },
   {
     "id": "reg_0e52b8c53fd4f59e",
@@ -1125,6 +1230,21 @@
     "scraped_at": "2026-06-03T22:36:54.779389+00:00"
   },
   {
+    "id": "reg_fbba25162d680410",
+    "title": "=?utf-8?Q?Media=20release=3A=20ACCC=20approves=20Ampol=27s=20acquisition=20of=20EG=20Australia=2C=20subject=20to=20conditions?=",
+    "summary": "The ACCC has approved Ampol's purchase of EG Australia, but Ampol must sell 41 fuel sites to an approved buyer to ensure competition. Ampol currently operates 576 sites, while EG Australia has 512.",
+    "ticker_line": "ACCC approves Ampol's acquisition of EG Australia",
+    "publication": "ACCC Media <do-not-reply@accc.gov.au>",
+    "author": "ACCC Media <do-not-reply@accc.gov.au>",
+    "published_date": "2026-06-02T23:23:51Z",
+    "word_count": 159,
+    "heading": "Regulation",
+    "final_url": null,
+    "factiva_url": null,
+    "summarised": 1,
+    "scraped_at": "2026-06-10T04:46:35Z"
+  },
+  {
     "id": "WCMNYMA020260603em6200003",
     "title": "AFCA on track to hit record high complaints in FY26",
     "summary": "The Australian Financial Complaints Authority (AFCA) is set to reach a record number of complaints in the 2025-26 financial year, with over 95,000 complaints received so far. Factors like the collapses of Shield and First Guardian have contributed to this increase, and AFCA is expanding its ability to handle more types of complaints.",
@@ -1168,6 +1288,21 @@
     "factiva_url": "https://global.factiva.com/redir/default.aspx?EP=NL&AN=5&napc=MC&f=nv&P=er&erc=LVfLdDTapCBrFH93tOPKccHd3xazgTKFnVNXLS29ADZY2C%2b%2fttJUlojSSd3CWGVNEwlgNTZKZy2vpuqKIg5oq%2f8J%2fHcD9rjYCvxbtnGlydzMhOC1lVbYIVXhFqXOH1TrDbzPGzvDXLHy6Lgjctu0N6KVT32hK3k5g%2fzY7JOXQQ9Prl2X3Xoopn5dbLMCSTTdlHcNFnv3mc69iPlfFML4nshZYiLErrvC%7c2&nldtl=DkzATV7FuEELjedX88l%2bbTt6lBYNjNrSx2D3jDckwHXkhG%2f6ivvzpde5Huy7QPKBt9Opm4fT6vKvw9BlhzxP5zxUF9jNp%2f%2bAxEgm3vsBQH6jVv3BiaFQpxODxDoOIPK4h7o%2bcY5v5QqX3XXL51GuQg%3d%3d%7c2&mod=MCT_email&page_driver=MCT_email",
     "summarised": 1,
     "scraped_at": "2026-06-02T22:10:23Z"
+  },
+  {
+    "id": "reg_15ac8935ce0d5a03",
+    "title": "=?utf-8?Q?Media=20release=3A=20Peter=20Warren=27s=20acquisition=20of=20Wakeling=20Automotive=20sites=20requires=20Phase=202=20review?=",
+    "summary": "Peter Warren Automotive Holdings' plan to buy 30 car dealership sites from Wakeling Automotive Group needs a deeper review by the ACCC, as the initial assessment found it could harm competition.",
+    "ticker_line": "ACCC to review Peter Warren's dealership acquisition",
+    "publication": "ACCC Media <do-not-reply@accc.gov.au>",
+    "author": "ACCC Media <do-not-reply@accc.gov.au>",
+    "published_date": "2026-06-02T07:25:00Z",
+    "word_count": 129,
+    "heading": "Regulation",
+    "final_url": null,
+    "factiva_url": null,
+    "summarised": 1,
+    "scraped_at": "2026-06-10T04:46:36Z"
   },
   {
     "id": "3",
@@ -1453,6 +1588,51 @@
     "factiva_url": "",
     "summarised": 1,
     "scraped_at": "2026-06-02T22:16:29.225523+00:00"
+  },
+  {
+    "id": "reg_b565a79a09b33cc7",
+    "title": "=?utf-8?Q?APRA=20finalises=20guidance=20on=20liquidity=20treatment=20of=20deposits=20with=20settlement=20service=20providers?=",
+    "summary": "The Australian Prudential Regulation Authority (APRA) has finalised guidance on how deposits with settlement service providers should be treated for liquidity purposes. This follows feedback from the industry and is aimed at authorised deposit-taking institutions.",
+    "ticker_line": "APRA finalises liquidity rules for deposits",
+    "publication": "APRA web updates <subscriptions@apra.gov.au>",
+    "author": "APRA web updates <subscriptions@apra.gov.au>",
+    "published_date": "2026-06-01T23:59:01Z",
+    "word_count": 288,
+    "heading": "Regulation",
+    "final_url": null,
+    "factiva_url": null,
+    "summarised": 1,
+    "scraped_at": "2026-06-10T04:46:25Z"
+  },
+  {
+    "id": "reg_2a5fab1916e8c68e",
+    "title": "AFCA opens consultation on Rules change for genetic testing in life\r\n insurance",
+    "summary": "The Australian Financial Complaints Authority (AFCA) is seeking public feedback on proposed rule changes regarding genetic testing in life insurance. This follows a new law that prevents insurers from using adverse genetic test results when offering policies, with changes expected to take effect on 8 October 2026.",
+    "ticker_line": "AFCA consults on genetic testing rules for life insurance",
+    "publication": "Medianet Press Release <medianet@releases.medianet.com.au>",
+    "author": "Medianet Press Release <medianet@releases.medianet.com.au>",
+    "published_date": "2026-06-01T23:32:31Z",
+    "word_count": 705,
+    "heading": "Life Insurance",
+    "final_url": null,
+    "factiva_url": null,
+    "summarised": 1,
+    "scraped_at": "2026-06-10T04:46:28Z"
+  },
+  {
+    "id": "reg_f54ff3b8bf7504db",
+    "title": "=?utf-8?Q?Media=20release=3A=20ACCC=20issues=20takedown=20requests=20to=20Amazon=2C=20eBay=2C=20Kogan=20and=20Fruugo=20for=20toys=20and=20games=20containing=20potentially=20deadly=20small=20magnets?=",
+    "summary": "The ACCC has asked Amazon, eBay, Kogan, and Fruugo to remove toys and games that contain small magnets, which could be dangerous. They also warned consumers to be cautious of scams related to this issue.",
+    "ticker_line": "ACCC orders takedown of dangerous toys online",
+    "publication": "ACCC Media <do-not-reply@accc.gov.au>",
+    "author": "ACCC Media <do-not-reply@accc.gov.au>",
+    "published_date": "2026-06-01T22:51:28Z",
+    "word_count": 135,
+    "heading": "Regulation",
+    "final_url": null,
+    "factiva_url": null,
+    "summarised": 1,
+    "scraped_at": "2026-06-10T04:46:37Z"
   },
   {
     "id": "WC47832020260601em610000c",

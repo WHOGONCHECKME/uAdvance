@@ -1129,7 +1129,26 @@ async function init() {
 
 // ── Filters ────────────────────────────────────────────────────────────────
 function buildHeadingChips() {
-  const headings = ['All', ...new Set(allArticles.map(a => (a.heading || '').trim()).filter(Boolean))];
+  const TAG_ORDER = [
+  'AI',
+  'Banking',
+  'Economy',
+  'General Insurance',
+  'Health Insurance',
+  'Investments',
+  'Life Insurance',
+  'Regulation',
+  'Superannuation',
+  'ACCC',
+  'AFCA',
+  'APRA',
+  'ASIC',
+  'ATO',
+  'AUSTRAC',
+  'RBA'
+  ]
+
+  const headings = ['All', ...TAG_ORDER.filter(t => allArticles.some(a => (a.heading || '').trim() === t))];
   const wrap = document.getElementById('heading-chips');
   wrap.innerHTML = headings.map(h => {
     const isAll = h === 'All';
