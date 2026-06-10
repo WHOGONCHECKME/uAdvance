@@ -1,7 +1,8 @@
 # Instruction
 1. python dowjones-news-bot/extract_article_links.py
 2. python dowjones-news-bot/extract_article_content_2.py
-3. python dowjones-news-bot/fetch_regulators.py
-4. python dowjones-news-bot/summarise3.py
-5. railway volume files upload uadvance.db /data/uadvance.db --overwrite
-6. git push "uda" = "update daily articles"
+3. python dowjones-news-bot/extract_regulator_emails.py
+4. python dowjones-news-bot/fetch_regulators.py
+5. python dowjones-news-bot/summarise3.py
+6. railway volume files upload uadvance.db /data/uadvance.db --overwrite
+7. git push "uda" = "update daily articles"

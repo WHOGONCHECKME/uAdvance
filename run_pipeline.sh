@@ -18,19 +18,23 @@ echo "  uAdvance pipeline — $(date '+%Y-%m-%d %H:%M')"
 echo "═══════════════════════════════════════════"
 
 echo ""
-echo "▶  Step 1/4 — Extract article links"
+echo "▶  Step 1/5 — Extract article links"
 "$PYTHON" "$SCRIPT_DIR/dowjones-news-bot/extract_article_links.py"
 
 echo ""
-echo "▶  Step 2/4 — Extract article content"
+echo "▶  Step 2/5 — Extract article content"
 "$PYTHON" "$SCRIPT_DIR/dowjones-news-bot/extract_article_content.py"
 
 echo ""
-echo "▶  Step 3/4 — Summarise"
+echo "▶  Step 3/5 — Extract regulator emails"
+"$PYTHON" "$SCRIPT_DIR/dowjones-news-bot/extract_regulator_emails.py"
+
+echo ""
+echo "▶  Step 4/5 — Summarise"
 "$PYTHON" "$SCRIPT_DIR/dowjones-news-bot/summarise.py"
 
 echo ""
-echo "▶  Step 4/4 — Upload to Railway"
+echo "▶  Step 5/5 — Upload to Railway"
 cd "$SCRIPT_DIR"
 echo "  Checkpointing WAL..."
 sqlite3 uadvance.db "PRAGMA wal_checkpoint(TRUNCATE);"
