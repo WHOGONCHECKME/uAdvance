@@ -1012,7 +1012,7 @@ const CORRECT_PASSWORD = "password"; // ← change this to your password
           <input type="text" id="search-input" placeholder="Search titles, summaries…">
         </div>
       </div>
-      <div class="filter-row" id="industry-row">
+      <div class="filter-row" id="industry-row" style="display:none">
         <div class="filter-label">Industry</div>
         <div class="filter-chips" id="industry-chips"></div>
       </div>
@@ -1274,32 +1274,6 @@ function buildHeadingChips() {
     ['All', ...industryTags].map(chipHtml).join('');
   document.getElementById('gov-chips').innerHTML =
     (showIndustry ? govTags : ['All', ...govTags]).map(chipHtml).join('');
-}
-
-function buildTicker() {
-  const items = allArticles
-    .filter(a => a.ticker_line || a.title)
-    .map(a => ({ text: a.ticker_line || a.title, id: a.id }));
-  if (!items.length) return;
-
-  const ticker = document.getElementById('ticker');
-  const html = [...items, ...items]
-    .map(item => `<span class="ticker-item" onclick="selectArticleById('${item.id}')">${escapeHtml(item.text)}</span>`)
-    .join('');
-  ticker.innerHTML = html;
-}
-
-function selectArticleById(id) {
-  const article = allArticles.find(a => a.id === id);
-  if (!article) return;
-  selectedArticle = article;
-  renderList();
-  renderArticle(article, article.full_text || '');
-  updateChatContext(article);
-  if (isMobile()) {
-    document.getElementById('mobile-bar-title').textContent = article.publication || '';
-    setMobileView('article');
-  }
 }
 
 function toggleHeading(el, heading) {
