@@ -604,11 +604,13 @@
     outline: 1px solid var(--muted); 
     outline-offset: -1px; 
   }
-/* ── Password Gate ── */
+/* ── Access modal (password) ── */
 #password-gate {
   position: fixed;
   inset: 0;
-  background: var(--bg);
+  background: rgba(8,8,7,0.72);
+  -webkit-backdrop-filter: blur(2px);
+  backdrop-filter: blur(2px);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -616,19 +618,54 @@
 }
 #password-gate.hidden { display: none; }
 .gate-box {
+  position: relative;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 20px;
-  width: 300px;
+  align-items: stretch;
+  gap: 16px;
+  width: 340px;
+  max-width: calc(100vw - 32px);
+  background: var(--bg2);
+  border: 1px solid var(--line2);
+  border-radius: 12px;
+  padding: 30px 26px 26px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.55);
 }
+.gate-box .gate-close {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  width: auto;
+  background: transparent;
+  border: none;
+  color: var(--faint);
+  font-size: 16px;
+  line-height: 1;
+  padding: 4px 6px;
+  cursor: pointer;
+  transition: color 0.15s;
+}
+.gate-box .gate-close:hover { color: var(--text); background: transparent; }
 .gate-logo {
+  text-align: center;
   font-family: var(--serif);
-  font-size: 28px;
+  font-size: 26px;
   color: var(--accent);
   letter-spacing: -0.3px;
 }
 .gate-logo span { color: var(--muted); font-style: italic; }
+.gate-blurb {
+  font-size: 12px;
+  line-height: 1.55;
+  color: var(--muted);
+  background: var(--bg3);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 10px 12px;
+}
+.gate-blurb b { color: var(--text); font-weight: 500; }
+.gate-blurb ul { margin: 6px 0 0; padding-left: 18px; }
+.gate-blurb li { margin: 2px 0; }
 .gate-box input[type="password"] {
   width: 100%;
   background: var(--bg3);
@@ -656,6 +693,28 @@
   transition: background 0.15s;
 }
 .gate-box button:hover { background: var(--accent2); }
+.gate-error {
+  font-size: 12px;
+  color: #c0614a;
+  min-height: 16px;
+  text-align: center;
+}
+
+/* Header access button */
+.access-btn {
+  flex-shrink: 0;
+  background: transparent;
+  border: 1px solid var(--line2);
+  color: var(--muted);
+  border-radius: 6px;
+  padding: 6px 12px;
+  font-family: var(--sans);
+  font-size: 12px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: border-color 0.15s, color 0.15s;
+}
+.access-btn:hover { border-color: var(--accent); color: var(--accent); }
 .gate-error {
   font-size: 12px;
   color: #c0614a;
@@ -872,22 +931,47 @@
 </head>
 <body>
 
-<div id="password-gate">
+<div id="password-gate" class="hidden">
   <div class="gate-box">
+    <button class="gate-close" onclick="closeAccessModal()" aria-label="Close">✕</button>
     <div class="gate-logo">uAdvance <span>/ news</span></div>
-    <input type="password" id="gate-input" placeholder="Password" autofocus />
+    <div class="gate-blurb">
+      <b>Full access unlocks:</b>
+      <ul>
+        <li>All industry coverage, not just regulator updates</li>
+        <li>The full article archive and search</li>
+        <li>Ask NewsAI chat across every article</li>
+      </ul>
+    </div>
+    <input type="password" id="gate-input" placeholder="Password" />
     <div class="gate-error" id="gate-error"></div>
-    <button onclick="checkPassword()">Enter</button>
+    <button onclick="checkPassword()">Enter full access</button>
   </div>
 </div>
 
 <script>
-  const CORRECT_PASSWORD = "password"; // ← change this to your password
+const CORRECT_PASSWORD = "password"; // ← change this to your password
+
+  function openAccessModal() {
+    const gate = document.getElementById('password-gate');
+    gate.classList.remove('hidden');
+    document.getElementById('gate-error').textContent = '';
+    const input = document.getElementById('gate-input');
+    input.value = '';
+    setTimeout(() => input.focus(), 0);
+  }
+
+  function closeAccessModal() {
+    document.getElementById('password-gate').classList.add('hidden');
+  }
 
   function checkPassword() {
     const val = document.getElementById('gate-input').value;
     if (val === CORRECT_PASSWORD) {
-      document.getElementById('password-gate').classList.add('hidden');
+      closeAccessModal();
+      setAccess('full');                          // defined in the main script
+      const btn = document.getElementById('access-btn');
+      if (btn) btn.style.display = 'none';
     } else {
       document.getElementById('gate-error').textContent = 'Incorrect password.';
       document.getElementById('gate-input').value = '';
@@ -895,10 +979,16 @@
     }
   }
 
+  // Click the dark backdrop (not the card) to dismiss
+  document.getElementById('password-gate').addEventListener('click', function(e) {
+    if (e.target === this) closeAccessModal();
+  });
+
   document.addEventListener('keydown', function(e) {
-    if (e.key === 'Enter' && !document.getElementById('password-gate').classList.contains('hidden')) {
-      checkPassword();
-    }
+    const gate = document.getElementById('password-gate');
+    if (gate.classList.contains('hidden')) return;
+    if (e.key === 'Enter')  checkPassword();
+    if (e.key === 'Escape') closeAccessModal();
   });
 </script>
 
@@ -908,6 +998,7 @@
     <div class="ticker" id="ticker"></div>
   </div>
   <div class="header-meta"><span id="article-count">0</span> articles loaded</div>
+  <button class="access-btn" id="access-btn" onclick="openAccessModal()">Full access</button>
 </header>
 
 <div class="layout">
@@ -1139,10 +1230,18 @@ async function init() {
   }
 
   document.getElementById('article-count').textContent = visibleArticles().length;
-  buildHeadingChips();
-  applyFilters();
-  buildTicker();
-}
+    buildHeadingChips();
+    applyFilters();
+    buildTicker();
+  }
+
+  // Switch access level and re-render everything from the gated source-of-truth.
+  function setAccess(level) {
+    accessLevel = level;
+    buildHeadingChips();
+    buildTicker();
+    applyFilters();   // also refreshes the article count
+  }
 
 // ── Filters ────────────────────────────────────────────────────────────────
 function buildHeadingChips() {
@@ -1250,7 +1349,7 @@ async function applyFilters() {
   if (accessLevel !== 'full') {
     list = list.filter(a => Number(a.is_regulator) === 1);
   }
-  
+
   if (activeHeadings.size > 0) list = list.filter(a => activeHeadings.has((a.heading || '').trim()));
   if (fromDate) list = list.filter(a => getArticleDateKey(a) >= fromDate);
   if (toDate) list = list.filter(a => getArticleDateKey(a) <= toDate);
