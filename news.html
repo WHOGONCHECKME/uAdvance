@@ -988,6 +988,23 @@ let activeHeadings = new Set();
 let selectedArticle = null;
 let focusedPane = 'sidebar';
 let listScrollY = 0;
+let accessLevel = 'public';   // 'public' = is_regulator only | 'full' = everything
+
+const INDUSTRY_TAGS = new Set([
+  'AI','Banking','Economy','General Insurance','Health Insurance',
+  'Investments','Life Insurance','Regulation','Superannuation'
+]);
+const GOVERNMENT_TAGS = new Set([
+  'ACCC','AFCA','APRA','ASIC','ATO','AUSTRAC','RBA'
+]);
+
+// Single gated source-of-truth. Public mode shows only is_regulator articles.
+// If gating later moves server-side, this becomes a passthrough and nothing
+// downstream needs to change.
+function visibleArticles() {
+  if (accessLevel === 'full') return allArticles;
+  return allArticles.filter(a => Number(a.is_regulator) === 1);
+}
 
 // ── Mobile view router ───────────────────────────────────────────────────────
 // Chat is treated as a peer full-screen view (its overlay is CSS-driven via the
@@ -1121,7 +1138,7 @@ async function init() {
     }
   }
 
-  document.getElementById('article-count').textContent = allArticles.length;
+  document.getElementById('article-count').textContent = visibleArticles().length;
   buildHeadingChips();
   applyFilters();
   buildTicker();
@@ -1148,7 +1165,7 @@ function buildHeadingChips() {
   'RBA'
   ]
 
-  const headings = ['All', ...TAG_ORDER.filter(t => allArticles.some(a => (a.heading || '').trim() === t))];
+  const headings = ['All', ...TAG_ORDER.filter(t => visibleArticles().some(a => (a.heading || '').trim() === t))];
   const wrap = document.getElementById('heading-chips');
   wrap.innerHTML = headings.map(h => {
     const isAll = h === 'All';
@@ -1226,9 +1243,14 @@ async function applyFilters() {
       );
     }
   } else {
-    list = [...allArticles];
+    list = [...visibleArticles()];
   }
-
+  // Enforce the access gate on every path — including backend FTS results,
+  // which search all articles regardless of mode.
+  if (accessLevel !== 'full') {
+    list = list.filter(a => Number(a.is_regulator) === 1);
+  }
+  
   if (activeHeadings.size > 0) list = list.filter(a => activeHeadings.has((a.heading || '').trim()));
   if (fromDate) list = list.filter(a => getArticleDateKey(a) >= fromDate);
   if (toDate) list = list.filter(a => getArticleDateKey(a) <= toDate);
@@ -1511,7 +1533,7 @@ document.getElementById('chat-input').addEventListener('input', function() {
 });
 
 function buildTicker() {
-  const items = allArticles
+  const items = visibleArticles()
     .filter(a => a.ticker_line)
     .map(a => ({ text: a.ticker_line, id: a.id }));
   if (!items.length) return;
