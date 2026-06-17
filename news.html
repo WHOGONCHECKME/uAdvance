@@ -155,8 +155,9 @@
     text-transform: uppercase;
     letter-spacing: 0.08em;
     color: var(--faint);
-    width: 44px;
+    width: 72px;
     flex-shrink: 0;
+    white-space: nowrap;
   }
   .filter-chips {
     display: flex;
@@ -1011,9 +1012,13 @@ const CORRECT_PASSWORD = "password"; // ← change this to your password
           <input type="text" id="search-input" placeholder="Search titles, summaries…">
         </div>
       </div>
-      <div class="filter-row">
+      <div class="filter-row" id="industry-row">
         <div class="filter-label">Industry</div>
-        <div class="filter-chips" id="heading-chips"></div>
+        <div class="filter-chips" id="industry-chips"></div>
+      </div>
+      <div class="filter-row" id="gov-row">
+        <div class="filter-label">Government</div>
+        <div class="filter-chips" id="gov-chips"></div>
       </div>
       <div class="filter-row">
         <div class="filter-label">Date</div>
@@ -1244,36 +1249,31 @@ async function init() {
   }
 
 // ── Filters ────────────────────────────────────────────────────────────────
-function buildHeadingChips() {
-  const TAG_ORDER = [
-  'AI',
-  'Banking',
-  'Economy',
-  'General Insurance',
-  'Health Insurance',
-  'Investments',
-  'Life Insurance',
-  'Regulation',
-  'Superannuation',
-  'ACCC',
-  'AFCA',
-  'APRA',
-  'ASIC',
-  'ATO',
-  'AUSTRAC',
-  'RBA'
-  ]
+function chipHtml(h) {
+  const isAll = h === 'All';
+  const isActive = isAll ? activeHeadings.size === 0 : activeHeadings.has(h);
+  const c = !isAll && isActive ? headingColor(h) : null;
+  const style = c ? `style="background:${c.bg};color:${c.text};border-color:${c.border}"` : '';
+  const cls = isActive ? 'active' : '';
+  return `<button class="chip ${cls}" ${style} onclick="toggleHeading(this,'${escapeForOnclick(h)}')">${escapeHtml(h)}</button>`;
+}
 
-  const headings = ['All', ...TAG_ORDER.filter(t => visibleArticles().some(a => (a.heading || '').trim() === t))];
-  const wrap = document.getElementById('heading-chips');
-  wrap.innerHTML = headings.map(h => {
-    const isAll = h === 'All';
-    const isActive = isAll ? activeHeadings.size === 0 : activeHeadings.has(h);
-    const c = !isAll && isActive ? headingColor(h) : null;
-    const style = c ? `style="background:${c.bg};color:${c.text};border-color:${c.border}"` : '';
-    const cls = isActive ? 'active' : '';
-    return `<button class="chip ${cls}" ${style} onclick="toggleHeading(this,'${escapeForOnclick(h)}')">${escapeHtml(h)}</button>`;
-  }).join('');
+function buildHeadingChips() {
+  const visible = visibleArticles();
+  const present = tag => visible.some(a => (a.heading || '').trim() === tag);
+
+  const industryTags = [...INDUSTRY_TAGS].filter(present);
+  const govTags      = [...GOVERNMENT_TAGS].filter(present);
+
+  // The regulator-only view has no industry articles, so hide that row in public mode.
+  const showIndustry = accessLevel === 'full';
+  document.getElementById('industry-row').style.display = showIndustry ? '' : 'none';
+
+  // One "All" reset, parked at the front of whichever group is actually on screen.
+  document.getElementById('industry-chips').innerHTML =
+    ['All', ...industryTags].map(chipHtml).join('');
+  document.getElementById('gov-chips').innerHTML =
+    (showIndustry ? govTags : ['All', ...govTags]).map(chipHtml).join('');
 }
 
 function buildTicker() {
