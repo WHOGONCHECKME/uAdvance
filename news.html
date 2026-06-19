@@ -8,10 +8,12 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
-  /* ── Reset & Variables ── */
+/* ── Reset & Variables ── */
+/* Applies a consistent box model and removes default browser spacing from all elements. */
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 /* Test comment */
-  :root {
+/* Global design tokens used throughout the page: colours, fonts, and layout widths. */
+:root {
     --bg:        #0f0f0e;
     --bg2:       #161614;
     --bg3:       #1e1e1b;
@@ -30,6 +32,7 @@
     --chat-rail-w: 320px;
   }
 
+  /* Main page container: sets the dark theme, full-height layout, and base typography. */
   body {
     font-family: var(--sans);
     background: var(--bg);
@@ -43,6 +46,7 @@
   }
 
   /* ── Top bar ── */
+  /* Top navigation bar containing the logo, ticker, article count, and access button. */
   header {
     overflow: hidden;
     display: flex;
@@ -54,6 +58,7 @@
     flex-shrink: 0;
     background: var(--bg);
   }
+  /* uAdvance logo styling in the header. */
   .logo {
     font-family: var(--serif);
     font-size: 20px;
@@ -61,13 +66,16 @@
     letter-spacing: -0.3px;
     white-space: nowrap;
   }
+  /* Muted italic styling for the `/ news` part of the logo. */
   .logo span { color: var(--muted); font-style: italic; }
+  /* Small article-count text on the right side of the header. */  
   .header-meta {
     font-size: 12px;
     color: var(--faint);
     margin-left: auto;
   }
   /* ── Ticker ── */
+/* Viewport mask and scroll container for the horizontal news ticker. */
 .ticker-wrap {
   flex: 1;
   overflow-x: hidden;
@@ -77,7 +85,9 @@
   -webkit-mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
   scrollbar-width: none;
 }
+/* Hides the ticker scrollbar in WebKit browsers. */
 .ticker-wrap::-webkit-scrollbar { display: none; }
+/* Moving ticker strip that holds all ticker items in one horizontal row. */
 .ticker {
   display: flex;
   gap: 0;
@@ -85,7 +95,9 @@
   width: max-content;
   animation: ticker-scroll 1000s linear infinite;
 }
+/* Pauses the ticker animation when the user hovers over it. */
 .ticker:hover { animation-play-state: paused; }
+/* Individual clickable headline inside the ticker. */
 .ticker-item {
   font-size: 14px;
   color: var(--accent);
@@ -94,15 +106,19 @@
   transition: color 0.15s;
   flex-shrink: 0;
 }
+/* Keeps ticker headline colour consistent on hover. */
 .ticker-item:hover { color: var(--accent); }
 
+/* Animation that continuously moves the ticker content left. */
 @keyframes ticker-scroll {
   from { transform: translateX(0); }
   to   { transform: translateX(-50%); }
 }
+  /* Highlights the number of currently loaded or filtered articles. */
   #article-count { color: var(--accent); font-weight: 500; }
 
   /* ── Layout ── */
+  /* Main desktop layout wrapper containing the sidebar, article reader, and chat rail. */
   .layout {
     display: flex;
     flex: 1;
@@ -110,6 +126,7 @@
   }
 
   /* ── Sidebar ── */
+  /* Left article-list panel containing filters and article cards. */
   .sidebar {
     width: var(--sidebar);
     flex-shrink: 0;
@@ -118,7 +135,8 @@
     background: var(--bg2);
   }
 
-    .sidebar-resizer {
+  /* Thin draggable handle used to resize the article sidebar on desktop. */
+  .sidebar-resizer {
     width: 0px;
     flex-shrink: 0;
     cursor: col-resize;
@@ -128,28 +146,34 @@
     touch-action: none;
     transition: background 0.12s;
   }
+  /* Visual feedback while hovering over or dragging the sidebar resizer. */
   .sidebar-resizer:hover,
   body.resizing-sidebar .sidebar-resizer {
     background: var(--bg3);
   }
+  /* Prevents text selection and shows the resize cursor while dragging the sidebar. */
   body.resizing-sidebar {
     cursor: col-resize;
     user-select: none;
   }
 
+  /* Filter panel at the top of the sidebar. */
   .filters {
     padding: 14px 16px 12px;
     border-bottom: 1px solid var(--line);
     flex-shrink: 0;
   }
+  /* One horizontal row inside the filter panel. */
   .filter-row {
     display: flex;
     gap: 8px;
     align-items: center;
     margin-bottom: 8px;
   }
+  /* Removes extra spacing after the final filter row. */
   .filter-row:last-child { margin-bottom: 0; }
 
+  /* Small uppercase labels such as Search, Industry, Government, and Date. */
   .filter-label {
     font-size: 10px;
     text-transform: uppercase;
@@ -159,12 +183,14 @@
     flex-shrink: 0;
     white-space: nowrap;
   }
+  /* Container that wraps filter chips onto multiple lines when needed. */
   .filter-chips {
     display: flex;
     flex-wrap: wrap;
     gap: 5px;
   }
   
+  /* Base appearance for clickable filter chips. */
   .chip {
     font-size: 11px;
     padding: 3px 9px;
@@ -177,14 +203,19 @@
     font-family: var(--sans);
     white-space: nowrap;
   }
-  
+
+  /* Hover state for inactive filter chips. */  
   .chip:hover { border-color: var(--faint); color: var(--text); }
+  /* Active filter-chip state. */
   .chip.active { border-color: var(--accent); color: var(--bg); background: var(--accent); font-weight: 500; }
+  /* Disabled-looking chip state for unavailable filters. */
   .chip.inactive { color: var(--faint); border-color: var(--line); opacity: 0.5; }
+  /* Wrapper for the search input. */
   .search-wrap {
     position: relative;
   }
   
+  /* Search field appearance inside the sidebar. */
   .search-wrap input {
     width: 100%;
     background: var(--bg3);
@@ -197,19 +228,23 @@
     outline: none;
     transition: border-color 0.15s;
   }
+  /* Accent border shown when the search field is focused. */
   .search-wrap input:focus { 
     border-color: var(--accent); 
   }
   
+  /* Muted placeholder text inside the search field. */
   .search-wrap input::placeholder { 
     color: var(--faint); 
   }
   
+  /* Container for the from-date and to-date filter inputs. */
   .date-filter-wrap {
     display: flex;
     gap: 6px;
     flex: 1;
   }
+  /* Date input styling for the date range filters. */
   .date-filter-wrap input {
     min-width: 0;
     width: 100%;
@@ -223,10 +258,13 @@
     outline: none;
     transition: border-color 0.15s;
   }
+  /* Accent border shown when a date input is focused. */
   .date-filter-wrap input:focus { border-color: var(--accent); }
+  /* Makes the native date picker icon visible on the dark background. */
   .date-filter-wrap input::-webkit-calendar-picker-indicator { filter: invert(0.7); cursor: pointer; }
 
   /* ── Article list ── */
+  /* Scrollable list of article cards in the sidebar. */
   .article-list {
     flex: 1;
     overflow-y: auto;
@@ -234,10 +272,14 @@
     -webkit-overflow-scrolling: touch;
     padding: 6px 0;
   }
+  /* Narrow custom scrollbar for the article list. */
   .article-list::-webkit-scrollbar { width: 4px; }
+  /* Transparent scrollbar track for the article list. */
   .article-list::-webkit-scrollbar-track { background: transparent; }
+  /* Rounded scrollbar thumb for the article list. */
   .article-list::-webkit-scrollbar-thumb { background: var(--line2); border-radius: 2px; }
 
+  /* Individual clickable article preview card in the sidebar. */
   .article-card {
     padding: 13px 16px;
     border-bottom: 1px solid var(--line);
@@ -245,8 +287,11 @@
     transition: background 0.12s;
     position: relative;
   }
+  /* Hover background for an article card. */
   .article-card:hover { background: var(--bg3); }
+  /* Background for the currently selected article card. */
   .article-card.active { background: var(--bg3); }
+  /* Accent strip shown on the selected article card. */
   .article-card.active::before {
     content: '';
     position: absolute;
@@ -256,12 +301,14 @@
     border-radius: 0 2px 2px 0;
   }
 
+  /* Metadata row inside each article card. */  
   .card-meta {
     display: flex;
     align-items: center;
     gap: 6px;
     margin-bottom: 5px;
   }
+  /* Coloured category pill shown on article cards. */
   .heading-pill {
     font-size: 10px;
     padding: 2px 7px;
@@ -274,11 +321,13 @@
     border: 1px solid rgba(200,169,110,0.22);
   }
 
+  /* Publication date shown on the right side of an article card. */
   .card-date {
     font-size: 11px;
     color: var(--faint);
     margin-left: auto;
   }
+  /* Article-card title text with two-line truncation. */
   .card-title {
     font-family: var(--serif);
     font-size: 14.5px;
@@ -290,6 +339,7 @@
     -webkit-box-orient: vertical;
     overflow: hidden;
   }
+  /* Article-card summary text with two-line truncation. */
   .card-summary {
     font-size: 12px;
     line-height: 1.5;
@@ -300,6 +350,7 @@
     overflow: hidden;
   }
 
+  /* Message shown when no articles are available or no filters match. */
   .empty-state {
     padding: 40px 20px;
     text-align: center;
@@ -308,6 +359,7 @@
   }
 
   /* ── Main panel ── */
+  /* Main article reading area. */
   .main {
     flex: 1;
     min-width: 0;
@@ -315,6 +367,7 @@
     flex-direction: column;
   }
 
+  /* Scrollable article reader viewport. */
   .article-view {
     flex: 1;
     overflow-y: auto;
@@ -323,20 +376,24 @@
     padding: 0 48px 24px;
   }
 
+  /* Narrow custom scrollbar for the article reader. */
   .article-view::-webkit-scrollbar { 
     width: 4px; 
   }
   
+  /* Transparent scrollbar track for the article reader. */
   .article-view::-webkit-scrollbar-track { 
     background: transparent; 
   }
   
+  /* Rounded scrollbar thumb for the article reader. */
   .article-view::-webkit-scrollbar-thumb { 
     background: var(--line2); 
     border-radius: 2px; 
   }
 
   /* Placeholder state */
+  /* Empty reader state shown before an article is selected. */
   .placeholder {
     display: flex;
     flex-direction: column;
@@ -347,16 +404,19 @@
     color: var(--faint);
   }
   
+  /* Decorative icon inside the empty reader state. */
   .placeholder-icon { 
     font-size: 32px; 
     opacity: 0.4; 
   }
 
+  /* Helper text inside the empty reader state. */
   .placeholder p { 
     font-size: 14px; 
   }
 
   /* Article content */
+  /* Sticky article header containing title, metadata, and summary. */
   .article-title-wrap { 
     position: sticky;
     top: 0;
@@ -367,6 +427,7 @@
     border-bottom: 1px solid var(--line);
   }
   
+  /* Flexible row for publication and date metadata when used. */
   .article-pub-row {
     display: flex;
     align-items: center;
@@ -375,6 +436,7 @@
     flex-wrap: wrap;
   }
 
+  /* Publication name styling in the article header. */
   .article-publication {
     font-size: 12px;
     color: var(--accent);
@@ -383,11 +445,13 @@
     letter-spacing: 0.06em;
   }
 
+  /* Article date styling in the article header. */
   .article-date { 
     font-size: 12px; 
     color: var(--faint); 
   }
 
+  /* Main article title styling. */
   .article-title {
     font-family: var(--serif);
     font-size: 28px;
@@ -397,7 +461,8 @@
     font-weight: 400;
   }
 
-    .article-sticky-meta {
+    /* Metadata row displayed beneath the article title. */
+  .article-sticky-meta {
     display: flex;
     align-items: center;
     gap: 10px;
@@ -407,11 +472,13 @@
     color: var(--faint);
   }
 
+  /* Dot separator between article metadata fields. */
   .article-sticky-meta span:not(:last-child)::after {
     content: '•';
     margin-left: 10px;
     color: var(--faint);
   }
+  /* Article summary displayed in the sticky header. */
   .article-sticky-summary {
     margin-top: 12px;
     font-size: 15px;
@@ -419,11 +486,13 @@
     color: var(--text);
     max-width: 780px;
   }
+  /* Horizontal divider for article content sections when used. */
   .article-divider {
     border: none;
     border-top: 1px solid var(--line);
     margin: 24px 0;
   }
+  /* Full article text area. */
   .article-body {
     font-size: 15px;
     line-height: 1.75;
@@ -434,6 +503,7 @@
     text-align: justify;
     word-break: break-word;
   }
+  /* Link button for opening the original source or Factiva article. */
   .article-source-link {
     display: inline-flex;
     align-items: center;
@@ -447,9 +517,11 @@
     border-radius: 6px;
     transition: background 0.15s;
   }
+  /* Hover background for the source link button. */
   .article-source-link:hover { background: rgba(200,169,110,0.08); }
 
   /* ── Chat panel ── */
+  /* Chat panel container used as a bottom panel on mobile and right rail on desktop. */
   .chat-panel {
     border-top: 1px solid var(--line);
     background: var(--bg2);
@@ -459,10 +531,14 @@
     position: relative;
     transition: height 0.2s ease;
   }
+  /* Collapsed chat height for the default/mobile bottom-panel layout. */
   .chat-panel.collapsed { height: 63px; overflow: hidden; }
+  /* Expanded chat height for the default/mobile bottom-panel layout. */
   .chat-panel:not(.collapsed) { height: var(--chat-h); }
+  /* Chat resizer is hidden by default and enabled only on desktop. */
   .chat-resizer { display: none; }
 
+  /* Clickable chat header used to expand or collapse the chat panel. */
   .chat-toggle {
     display: flex;
     align-items: center;
@@ -475,21 +551,26 @@
     user-select: none;
     transition: background 0.12s;
   }
+  /* Hover background for the chat header. */
   .chat-toggle:hover { background: var(--bg3); }
+  /* Text label inside the chat header. */
   .chat-toggle-label {
     font-size: 18px;
     font-weight: 500;
     color: var(--muted);
     letter-spacing: 0.06em;
   }
+  /* Expand/collapse icon inside the chat header. */
   .chat-chevron {
     font-size: 13px;
     color: var(--faint);
     transition: transform 0.2s;
     margin-left: auto;
   }
+  /* Rotates the chat chevron when chat is expanded. */
   .chat-panel:not(.collapsed) .chat-chevron { transform: rotate(180deg); }
 
+  /* Scrollable message history inside the chat panel. */
   .chat-messages {
     flex: 1;
     overflow-y: auto;
@@ -499,9 +580,12 @@
     gap: 8px;
     min-height: 0;
   }
+  /* Narrow scrollbar for chat messages. */
   .chat-messages::-webkit-scrollbar { width: 3px; }
+  /* Rounded scrollbar thumb for chat messages. */
   .chat-messages::-webkit-scrollbar-thumb { background: var(--line2); border-radius: 2px; }
 
+  /* Shared bubble styling for all chat messages. */
   .msg {
     max-width: 85%;
     padding: 8px 12px;
@@ -509,18 +593,21 @@
     font-size: 13px;
     line-height: 1.5;
   }
+  /* Chat bubble for messages sent by the user. */
   .msg-user {
     background: rgba(200,169,110,0.12);
     color: var(--text);
     align-self: flex-end;
     border: 1px solid rgba(200,169,110,0.2);
   }
+  /* Chat bubble for responses from NewsAI. */
   .msg-ai {
     background: var(--bg3);
     color: var(--muted);
     align-self: flex-start;
     border: 1px solid var(--line);
   }
+  /* Temporary thinking indicator shown while waiting for the chat response. */
   .msg-thinking {
     color: var(--faint);
     font-style: italic;
@@ -528,6 +615,7 @@
     align-self: flex-start;
   }
 
+  /* Bottom row containing the chat textarea and Send button. */
   .chat-input-row {
     min-width: 0;
     display: flex;
@@ -537,6 +625,7 @@
     flex-shrink: 0;
     align-items: flex-end;
   }
+  /* Small note showing which article is being used as chat context. */
   .chat-context-note {
     font-size: 10px;
     color: var(--faint);
@@ -546,11 +635,13 @@
     text-overflow: ellipsis;
     max-width: 100%;
   }
+  /* Wrapper that stacks the chat context note above the textarea. */
   .chat-input-wrap { 
   flex: 1; 
   min-width: 0;
   display: flex; 
   flex-direction: column; }
+  /* Chat textarea where the user types a question. */
   .chat-input {
     background: var(--bg3);
     border: 1px solid var(--line);
@@ -568,8 +659,11 @@
     box-sizing: border-box;
     line-height: 1.4;
   }
+  /* Accent border shown when the chat textarea is focused. */
   .chat-input:focus { border-color: var(--accent); }
+  /* Muted placeholder text inside the chat textarea. */
   .chat-input::placeholder { color: var(--faint); }
+  /* Send button for the chat form. */
   .chat-send {
     background: var(--accent);
     color: var(--bg);
@@ -585,10 +679,13 @@
     white-space: nowrap;
     height: 38px;
   }
+  /* Lighter hover state for the chat Send button. */
   .chat-send:hover { background: var(--accent2); }
+  /* Disabled state while the chat request is running. */
   .chat-send:disabled { opacity: 0.4; cursor: not-allowed; }
 
   /* ── Loading spinner ── */
+  /* Small loading spinner shown inside the thinking message. */
   .spinner {
     display: inline-block;
     width: 14px; height: 14px;
@@ -599,13 +696,16 @@
     vertical-align: middle;
     margin-right: 6px;
   }
+  /* Rotation animation for the loading spinner. */
   @keyframes spin { to { transform: rotate(360deg); } }
 
+  /* Keyboard-focus outline used when cycling between panes. */
   .pane-focused { 
     outline: 1px solid var(--muted); 
     outline-offset: -1px; 
   }
 /* ── Access modal (password) ── */
+/* Full-screen password modal backdrop. */
 #password-gate {
   position: fixed;
   inset: 0;
@@ -617,7 +717,9 @@
   justify-content: center;
   z-index: 9999;
 }
+/* Hides the password modal when access is not being requested. */
 #password-gate.hidden { display: none; }
+/* Centered password modal card. */
 .gate-box {
   position: relative;
   display: flex;
@@ -632,6 +734,7 @@
   padding: 30px 26px 26px;
   box-shadow: 0 20px 60px rgba(0,0,0,0.55);
 }
+/* Close button in the password modal. */
 .gate-box .gate-close {
   position: absolute;
   top: 10px;
@@ -646,7 +749,9 @@
   cursor: pointer;
   transition: color 0.15s;
 }
+/* Hover state for the password modal close button. */
 .gate-box .gate-close:hover { color: var(--text); background: transparent; }
+/* Logo inside the password modal. */
 .gate-logo {
   text-align: center;
   font-family: var(--serif);
@@ -654,7 +759,9 @@
   color: var(--accent);
   letter-spacing: -0.3px;
 }
+/* Muted italic `/ news` text inside the password modal logo. */
 .gate-logo span { color: var(--muted); font-style: italic; }
+/* Explanatory feature list inside the password modal. */
 .gate-blurb {
   font-size: 12px;
   line-height: 1.55;
@@ -664,9 +771,13 @@
   border-radius: 8px;
   padding: 10px 12px;
 }
+/* Emphasised text inside the password modal blurb. */
 .gate-blurb b { color: var(--text); font-weight: 500; }
+/* List spacing inside the password modal blurb. */
 .gate-blurb ul { margin: 6px 0 0; padding-left: 18px; }
+/* List item spacing inside the password modal blurb. */
 .gate-blurb li { margin: 2px 0; }
+/* Password input field inside the access modal. */
 .gate-box input[type="password"] {
   width: 100%;
   background: var(--bg3);
@@ -679,7 +790,9 @@
   outline: none;
   transition: border-color 0.15s;
 }
+/* Accent border shown when the password field is focused. */
 .gate-box input[type="password"]:focus { border-color: var(--accent); }
+/* Primary button styling inside the password modal. */
 .gate-box button {
   width: 100%;
   background: var(--accent);
@@ -693,7 +806,9 @@
   cursor: pointer;
   transition: background 0.15s;
 }
+/* Hover state for password modal buttons. */
 .gate-box button:hover { background: var(--accent2); }
+/* Password error message below the password field. */
 .gate-error {
   font-size: 12px;
   color: #c0614a;
@@ -702,6 +817,7 @@
 }
 
 /* Header access button */
+/* Header button that opens the full-access password modal. */
 .access-btn {
   flex-shrink: 0;
   background: transparent;
@@ -715,13 +831,16 @@
   white-space: nowrap;
   transition: border-color 0.15s, color 0.15s;
 }
+/* Hover state for the full-access header button. */
 .access-btn:hover { border-color: var(--accent); color: var(--accent); }
+/* Duplicate password-error styling kept for the modal error text. */
 .gate-error {
   font-size: 12px;
   color: #c0614a;
   min-height: 16px;
 }
   /* ── Mobile nav bar (hidden on desktop) ── */
+  /* Mobile-only bar with the back button above the article reader. */
   .mobile-bar {
     display: none;
     align-items: center;
@@ -731,6 +850,7 @@
     flex-shrink: 0;
     background: var(--bg);
   }
+  /* Back-to-articles button shown on mobile. */
   .mobile-back {
     background: transparent;
     border: 1px solid var(--line2);
@@ -742,7 +862,9 @@
     cursor: pointer;
     transition: border-color 0.15s, color 0.15s;
   }
+  /* Hover state for the mobile back button. */
   .mobile-back:hover { border-color: var(--accent); color: var(--accent); }
+  /* Truncated article/publication title inside the mobile bar. */  
   .mobile-bar-title {
     font-family: var(--serif);
     font-size: 15px;
@@ -758,7 +880,9 @@
      the existing .collapsed toggle. Treating chat as a peer view here
      means a future desktop right-rail needs ZERO mobile rework.
      All rules live inside this query, so desktop layout is untouched. */
+  /* Mobile layout rules: convert the three-column desktop UI into single-screen views. */     
   @media (max-width: 768px) {
+    /* Mobile body allows normal page scrolling instead of fixed desktop panes. */
     body {
       font-size: 15px;
       height: auto;
@@ -768,33 +892,44 @@
       scroll-behavior: smooth;
     }
 
-    /* Header: reclaim horizontal space */
+    /* Sticky compact header for mobile. */
     header { padding: 0 14px; gap: 10px; position: sticky; top: 0; z-index: 120; }
+    /* Smaller logo on mobile. */
     .logo { font-size: 17px; }
+    /* Hide article count text on mobile to save space. */
     .header-meta { display: none; }
 
-    /* Single column; drop the desktop-only resizer */
+    /* Hide the desktop sidebar resizer on mobile. */
     .sidebar-resizer { display: none; }
+    /* Sidebar becomes a full-width mobile view. */
     .sidebar { width: 100%; display: block; min-width: 0; }
+    /* Main reader becomes a full-width mobile view. */
     .main { width: 100%; display: block;}
 
+    /* Hide the article list when mobile is showing the reader view. */
     /* Show exactly one panel at a time */
+    /* Hide the reader when mobile is showing the article list view. */
     body[data-mview="article"] .sidebar { display: none; }
     body[data-mview="list"]    .main    { display: none; }
-
+    /* Tighter filter spacing on mobile. */
     .filters { 
       padding: 12px 14px;
     }
+    /* Let the article list scroll with the page and clear the chat launcher. */
     .article-list { padding-bottom: 72px; overflow: visible; } /* clear the chat launcher */
 
-    /* Back bar appears whenever the reader (main) is visible */
+    /* Show the mobile back bar above the reader. */
     .mobile-bar { display: flex; position: sticky; top: 52px; z-index: 110; }
 
-    /* Reader spacing — kill the 200px right padding from desktop */
+    /* Mobile reader spacing and normal page scrolling. */
     .article-view { padding: 0 16px 88px; overflow: visible; }
+    /* Disable sticky article header on mobile. */
     .article-title-wrap { padding: 18px 0 12px; position: static;}
+    /* Smaller article title on mobile. */
     .article-title { font-size: 22px; }
+    /* Smaller summary text on mobile. */
     .article-sticky-summary { font-size: 14px; }
+    /* Mobile article body spacing and left-aligned text. */
     .article-body {
       padding: 14px 0 8px;
       max-width: none;
@@ -802,28 +937,35 @@
       font-size: 15px;
     }
 
-    /* Chat → full-screen overlay launched from a pinned bottom bar */
+    /* Chat becomes a fixed bottom launcher or full-screen overlay on mobile. */
     .chat-panel {
       position: fixed;
       left: 0; right: 0; bottom: 0;
       z-index: 200;
       border-top: 1px solid var(--line);
     }
+    /* Shorter collapsed chat launcher on mobile. */
     .chat-panel.collapsed { height: 56px; }
+    /* Expanded chat covers the full mobile screen. */
     .chat-panel:not(.collapsed) { top: 0; height: 100dvh; }
+    /* Shorter chat header on mobile. */
     .chat-toggle { height: 56px; }
+    /* Wider chat bubbles on narrow screens. */
     .msg { max-width: 92%; }
 
+    /* Prevent iOS auto-zoom by keeping form controls at least 16px. */
     /* iOS zooms the page on focus for any input under 16px — prevent it */
     .search-wrap input,
     .date-filter-wrap input,
     .chat-input { font-size: 16px; }
   }
-
+  /* Additional mobile rules that let the list and reader use natural page height. */
   @media (max-width: 768px) {
+    /* Stack the overall layout as a normal block on mobile. */
     .layout {
       display: block;
     }
+    /* Remove fixed desktop pane heights and overflow behaviour on mobile. */
     .sidebar,
     .main,
     .article-list,
@@ -837,13 +979,15 @@
 
 
   /* Collapsed tab is desktop-only; hidden by default, shown via min-width query */
+  /* Collapsed vertical chat tab is hidden by default and enabled on desktop only. */
   .chat-collapsed-tab { display: none; }
 
   /* ── Chat right rail (desktop ≥769px) ──────────────────────────────────────
      On mobile the chat-panel stays as a position:fixed bottom overlay (see the
      max-width:768px block above). Everything here is desktop-only.           */
+  /* Desktop chat rules: convert chat from a bottom panel into a resizable right rail. */
   @media (min-width: 769px) {
-    /* Width-based expand/collapse instead of height-based */
+    /* Desktop chat rail container. */
     .chat-panel {
       border-top: none;
       border-left: 1px solid var(--line);
@@ -852,10 +996,14 @@
       transition: width 0.25s ease;
       flex-shrink: 0;
     }
+    /* Disable width animation while the chat rail is being resized. */
     body.resizing-chat .chat-panel { transition: none; }
+    /* Narrow collapsed width for the desktop chat rail. */
     .chat-panel.collapsed     { width: 44px; }
+    /* Expanded desktop chat rail width. */
     .chat-panel:not(.collapsed) { width: var(--chat-rail-w); }
 
+    /* Draggable handle used to resize the desktop chat rail. */
     .chat-resizer {
       display: block;
       position: absolute;
@@ -868,6 +1016,7 @@
       z-index: 2;
       transition: background 0.12s;
     }
+    /* Visible divider line inside the chat rail resizer. */
     .chat-resizer::after {
       content: '';
       position: absolute;
@@ -877,23 +1026,27 @@
       width: 3px;
       background: var(--line);
     }
+    /* Visual feedback while hovering over or dragging the chat resizer. */
     .chat-resizer:hover,
     body.resizing-chat .chat-resizer {
       background: var(--bg3);
     }
+    /* Hide the chat resizer when the rail is collapsed. */
     .chat-panel.collapsed .chat-resizer { display: none; }
+    /* Prevent text selection and show resize cursor while dragging the chat rail. */
     body.resizing-chat {
       cursor: col-resize;
       user-select: none;
     }
 
-    /* When collapsed: show the vertical tab, hide the main chat UI */
+    /* Show the vertical collapsed chat tab on desktop. */
     .chat-panel.collapsed .chat-collapsed-tab { display: flex; }
+    /* Hide full chat controls while the desktop rail is collapsed. */
     .chat-panel.collapsed .chat-toggle,
     .chat-panel.collapsed .chat-messages,
     .chat-panel.collapsed .chat-input-row { display: none; }
 
-    /* Vertical collapsed strip */
+    /* Vertical collapsed chat tab layout. */
     .chat-collapsed-tab {
       flex-direction: column;
       align-items: center;
@@ -904,7 +1057,9 @@
       cursor: pointer;
       transition: background 0.12s;
     }
+    /* Hover background for the collapsed chat tab. */
     .chat-collapsed-tab:hover { background: var(--bg3); }
+    /* Vertical text label inside the collapsed chat tab. */
     .chat-tab-label {
       writing-mode: vertical-rl;
       font-size: 10px;
@@ -914,20 +1069,23 @@
       white-space: nowrap;
     }
 
-    /* Toggle header in expanded state */
+    /* Desktop expanded chat header. */
     .chat-toggle {
       height: 52px;
       border-top: none;
       border-bottom: 1px solid var(--line);
     }
-    /* Replace the up-arrow with a close × */
+    /* Hide the original chevron glyph on desktop. */
     .chat-chevron { font-size: 0; }
+    /* Replace the desktop chevron with a close icon. */
     .chat-chevron::before { content: '✕'; font-size: 12px; }
+    /* Prevent desktop close icon rotation when chat is expanded. */
     .chat-panel:not(.collapsed) .chat-chevron { transform: none; }
   }
 
   /* ── Scrollbar global ── */
-  * { scrollbar-width: thin; scrollbar-color: var(--line2) transparent; }
+  /* Firefox scrollbar styling applied globally. */
+* { scrollbar-width: thin; scrollbar-color: var(--line2) transparent; }
 </style>
 </head>
 <body>
