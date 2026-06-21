@@ -900,6 +900,21 @@
     "scraped_at": "2026-06-19T11:18:53Z"
   },
   {
+    "id": "reg_cf7512f069a6e4b9",
+    "title": "Update from the Treasury",
+    "summary": "The Treasury has released an explainer on the recent reforms to Capital Gains Tax and Discretionary Trusts that affect small businesses, published on June 18, 2026.",
+    "ticker_line": "Treasury outlines tax reforms for small businesses",
+    "publication": "The Treasury <no-reply@treasury.gov.au>",
+    "author": "The Treasury <no-reply@treasury.gov.au>",
+    "published_date": "2026-06-19T06:55:05Z",
+    "word_count": 79,
+    "heading": "Treasury",
+    "final_url": null,
+    "factiva_url": null,
+    "summarised": 1,
+    "scraped_at": "2026-06-21T12:37:10Z"
+  },
+  {
     "id": "reg_b5f301930d4f0cae",
     "title": "Full Federal Court dismisses ASIC appeal on HCF Life unfair contract term finding",
     "summary": "The Full Federal Court has rejected an appeal by ASIC regarding HCF Life's use of a 'pre-existing condition' term in its insurance products, confirming it is not an unfair contract term.",
@@ -1078,6 +1093,21 @@
     "factiva_url": null,
     "summarised": 1,
     "scraped_at": "2026-06-18T23:04:37Z"
+  },
+  {
+    "id": "reg_4bc61c6bbf792fba",
+    "title": "Update from the Treasury",
+    "summary": "The Treasury is seeking public feedback on proposed changes to capital gains tax rules that will benefit innovative start-ups. This consultation is open as of June 18, 2026.",
+    "ticker_line": "Treasury consults on capital gains tax reforms",
+    "publication": "The Treasury <no-reply@treasury.gov.au>",
+    "author": "The Treasury <no-reply@treasury.gov.au>",
+    "published_date": "2026-06-18T06:31:36Z",
+    "word_count": 78,
+    "heading": "Treasury",
+    "final_url": null,
+    "factiva_url": null,
+    "summarised": 1,
+    "scraped_at": "2026-06-21T12:37:12Z"
   },
   {
     "id": "WC63761020260617em6h000dx",
@@ -1543,6 +1573,21 @@
     "factiva_url": "https://global.factiva.com/redir/default.aspx?EP=NL&AN=WC47832020260616em6g00006&CAT=W&napc=MC&f=nv&P=er&erc=LVfLdDTapCBrFH93tOPKccHd3xazgTKFnVNXLS29ADZY2C%2b%2fttJUlvx1q1Vnx6ZJbM3eJgdTN2nLw3VQ%2b3fU%2bYFEQrpTb4cZqDJCzrMeRY6kfhIkf%2bW4KQ5l22HlRjXinwgBt0zW0qqFNM0mhDuyf4QmhaQUoJsgLKhsMzOJqZyqoGpHOjsmFZP%2fffKvi3hFRHDvpkaQNV1gskF6HeA%2fZVm6UOl1uquE%7c2&nldtl=DkzATV7FuEELjedX88l%2bbTt6lBYNjNrSx2D3jDckwHXkhG%2f6ivvzpde5Huy7QPKBB8mFIP0bbYXHzcRr6XPLVwtnNnFnBIExFN7EPH12Tyg9c%2bseCv5PCaigyd9y3Pnk1D4lJZIZzpaC9kZRhoSz7w%3d%3d%7c2&mod=MCT_email&page_driver=MCT_email",
     "summarised": 1,
     "scraped_at": "2026-06-16T22:12:45Z"
+  },
+  {
+    "id": "reg_775cc89de88da3a0",
+    "title": "Update from the Treasury",
+    "summary": "The Australian government has responded to a Senate report on the Treasury Laws Amendment (Tax Accountability and Fairness) Bill 2023, which aims to improve tax fairness and accountability. This update was published on June 16, 2026.",
+    "ticker_line": "Government responds to tax fairness bill report",
+    "publication": "The Treasury <no-reply@treasury.gov.au>",
+    "author": "The Treasury <no-reply@treasury.gov.au>",
+    "published_date": "2026-06-16T07:15:25Z",
+    "word_count": 85,
+    "heading": "Treasury",
+    "final_url": null,
+    "factiva_url": null,
+    "summarised": 1,
+    "scraped_at": "2026-06-21T12:37:13Z"
   },
   {
     "id": "reg_308f8c6658299cbf",
