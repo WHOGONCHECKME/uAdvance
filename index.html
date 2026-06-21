@@ -162,6 +162,17 @@ section{padding:clamp(3.5rem,7vw,6rem) 0}
 .steps p{font-size:.9rem;color:var(--ink-soft)}
 
 /* ===========================================================
+   WHY / PHILOSOPHY  +  BENEFITS
+   =========================================================== */
+.why-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:3rem;align-items:start;margin-top:1.5rem}
+.why-grid p{color:var(--ink-soft);margin-bottom:1rem;max-width:56ch}
+.benefits{border:1px solid var(--line);border-radius:6px;padding:1.6rem;background:var(--bg)}
+.benefits h3{font-family:var(--sans);font-size:.95rem;font-weight:600;margin-bottom:1rem}
+.benefits li{position:relative;padding-left:1.3rem;margin-bottom:.7rem;font-size:.92rem;color:var(--ink-soft)}
+.benefits li::before{content:"";position:absolute;left:0;top:.55em;width:.4rem;height:.4rem;background:var(--accent);border-radius:50%}
+@media(max-width:820px){.why-grid{grid-template-columns:1fr;gap:2rem}}
+
+/* ===========================================================
    ABOUT  (replace placeholder copy with your real bio)
    =========================================================== */
 .about p{max-width:62ch;color:var(--ink-soft);margin-top:1rem}
@@ -270,6 +281,35 @@ section{padding:clamp(3.5rem,7vw,6rem) 0}
   </div>
 </section>
 -->
+
+<!-- ===================== WHY UADVANCE / PHILOSOPHY ===================== -->
+<section>
+  <div class="wrap">
+    <p class="kicker">Why uAdvance</p>
+    <h2>Tailored to financial services in Australia</h2>
+
+    <div class="why-grid">
+      <div>
+        <p>We train financial services teams in Australia. The aim is simple. Your staff build the technical skills and keep the domain knowledge that makes those skills useful at work.</p>
+        <p>Most analytics courses teach the tool and little else. The worked examples come from retail or marketing, and your team is left to translate everything back to its own work. We start from the work instead. Every example is drawn from banking, insurance, super or wealth.</p>
+        <p>We teach the way people learn on the job. Each session builds toward a realistic workplace task, and your team applies the tools and skills as they are introduced.</p>
+        <p>Because the content is specific to the industry, your team may be able to claim CPD hours. Check the requirements with your relevant professional body.</p>
+      </div>
+
+      <div class="benefits">
+        <h3>What your team gets</h3>
+        <ul>
+          <li>Industry-specific content</li>
+          <li>Hands-on practical work with minimal theory</li>
+          <li>CPD hours may be available</li>
+          <li>Certificate on completion</li>
+          <li>Often covered by an employer professional development budget</li>
+          <!-- add more benefits here -->
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- ===================== FEATURED: AI COURSE ===================== -->
 <section class="tint" id="ai-course">
@@ -389,10 +429,6 @@ section{padding:clamp(3.5rem,7vw,6rem) 0}
         <p>A short skills survey sets the baseline so we pitch the pace and examples to your cohort.</p>
       </div>
       <div>
-        <h3>Industry-specific content</h3>
-        <p>Case studies and datasets are drawn from banking, insurance, super and wealth.</p>
-      </div>
-      <div>
         <h3>BYO datasets under NDA</h3>
         <p>For select programs your team can practise on its own data, covered by an NDA.</p>
       </div>
@@ -420,9 +456,11 @@ section{padding:clamp(3.5rem,7vw,6rem) 0}
   <div class="wrap">
     <p class="kicker">Who runs this</p>
     <h2>About uAdvance</h2>
-    <!-- TODO: replace with your real bio. e.g. years in FS data/analytics,
-         actuarial qualification, the kind of work you've delivered. -->
-    <p>uAdvance is run by a qualified actuary with a background in financial services data and analytics. [Add a sentence or two on your experience, qualifications and the kind of teams you've worked with.]</p>
+    <!-- Bio drawn from your CV. Check the facts and add specifics where marked:
+         employer names if you want them, your actuarial qualification (e.g. FIAA),
+         and the kinds of teams or projects you've delivered. -->
+    <p>uAdvance is run by David Leber, a qualified actuary with around ten years in data and analytics. David has worked as a Principal Data Scientist, building self-service analytics and data strategy for financial services teams, and he teaches data science to analysts and managers.</p>
+    <p>That mix is the point of uAdvance. The technical depth of a working data scientist, with the industry grounding of an actuary, so the training stays close to the work your team actually does.</p>
   </div>
 </section>
 
