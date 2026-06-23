@@ -1775,6 +1775,19 @@ function buildTicker() {
     .map(item => `<span class="ticker-item" onclick="selectArticleById('${item.id}')">${escapeHtml(item.text)}</span>`)
     .join('');
   ticker.innerHTML = html;
+
+  // Keep scroll speed constant regardless of how many headlines are showing.
+  // The animation travels translateX(-50%), i.e. one full set of items (half the
+  // duplicated track). Setting duration = distance / speed makes pixels-per-second
+  // fixed, so the public and full-access views scroll at the same pace.
+  const PX_PER_SEC = 50;   // higher = faster; tune to taste
+  const setSpeed = () => {
+    const distance = ticker.scrollWidth / 2;        // one set of items, in px
+    if (distance > 0) ticker.style.animationDuration = (distance / PX_PER_SEC) + 's';
+  };
+  requestAnimationFrame(setSpeed);
+  // Recompute once webfonts have settled, since text width can change on swap.
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(setSpeed);
 }
 
 function selectArticleById(id) {
