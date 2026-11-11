@@ -1,0 +1,974 @@
+\n=== 0. Integrity ===
+integrity_check
+---------------
+ok             
+\n=== 1. Overview ===
+total  regulator  dowjones  no_text  no_summary
+-----  ---------  --------  -------  ----------
+2562   489        2073      19       19        
+source_type      n   
+---------------  ----
+newsletter       2073
+regulator_email  450 
+rss              39  
+\n=== 2. Junk content ===
+-- 2a. Empty or very short text (non-regulator)
+id                         title                                                         chars
+-------------------------  ------------------------------------------------------------  -----
+WC90132020261102emb200003  Westpac reveals AI cut data warehouse migration cost from $7  210  
+WC66026020260927em9r00003  Suncorp appoints new non-executive director                   0    
+WC63761020260925em9p000ru  Unsigned agreement costs WA earthmoving firm's estate in $23  0    
+WC63761020260908em98000ul  Choosi misled customers on insurer range, Federal Court rule  225  
+WC47832020260925em9p00008  Third of Aussies think retirement will be funded by inherita  0    
+WC47832020260925em9p00005  RBA workers slam 'copy and paste' pay offer                   0    
+WC45426020260529em5t0005l  AI Data Centers Now Account for 17% of Australia’s Private I  335  
+SMHHOL0020260925em9p001p5  Nick’s bosses urged him not to worry about work. Most cancer  0    
+SMHH000020260927em9s0000o  Chalmers to reveal $6bn budget boost as interest rates set t  0    
+AUSTOL0020260927em9r0018k  ‘Obvious conflict’: legal insurance monopoly under scrutiny   0    
+AUSTOL0020260927em9r000m9  Run advanced AI here, or lose national identity, says CDC fo  0    
+AUSTOL0020260927em9q000b5  Australia recession risk is more like 50-50 on HSBC’s estima  0    
+AUSTOL0020260927em9q0002v  Advisers hard at work on insurance mega deal: sources         0    
+AUSTLN0020260925em9q0004t  IAG shares rise after insurer settles another Greensill-link  0    
+AUSTLN0020260925em9q00035  Investors put off by budget changes                           0    
+AFNROL0020260927em9o000ul  ANZ restructures 400 tech roles as Matos pushes offshoring    0    
+AFNR000020260926em9o0000w  Westpac links banker pay to SME risk                          0    
+AFNR000020260926em9o0000t  AI shopping agents get big banks hot under the collar         0    
+AFNR000020260926em9o00008  IAG risks growth strategy in WA battle                        0    
+ABCNEW0020260927em9r00132  Rewards programs and insurance perks in firing line after ch  0    
+ABCNEW0020260927em9r0005n  OpenAI breach proves need for 'seat at the AI table' through  0    
+ABCNEW0020260926em9q00130  NDIS housing provider Fairy Meadow House goes under after po  0    
+-- 2b. Registration / error / login pages saved as articles
+id                         title                                                         chars
+-------------------------  ------------------------------------------------------------  -----
+WC63761020261102emb2000rt  Parliamentary inquiry puts SME cyber insurance gap under scr  760  
+WC63761020261102emb2000jh  Brokers gain new capacity as Munich Re Specialty enters Aust  760  
+WC63761020261102emb2000gp  EML Group finalises 80% stake in Guild Insurance              760  
+WC63761020261102emb2000dx  Vendor cyber risk in focus as Amadeus breach hits airlines g  760  
+SMHHOL0020261102emb2001p5  AI is coming for office workers. How vulnerable is Brisbane?  760  
+-- 2c. Factiva footer or boilerplate left in text
+id                         title                                                       
+-------------------------  ------------------------------------------------------------
+WC47832020260505em550000b  Rest calls on government to fix 'motherhood penalty'        
+WC47832020260504em5400008  Cbus members to see 46% increase in insurance fees          
+WC47832020260504em5400005  Super funds score win on stamp duty disclosure              
+WC47832020260501em510000b  Global shares sink for CareSuper in first quarter           
+WC47832020260501em510000a  SMC backs proposal to close family violence super loophole  
+WC47832020260430em4u00005  TPD and disability claims behind 88% of life insurance dispu
+WC47832020260428em4s00008  Generation Life reports cyber attack                        
+WC47832020260428em4s00007  Cbus calls for mandatory insurance warnings                 
+WC45571020260514em5e00001  Most AI Initiatives miss Expected ROI - ISACA               
+WC20350020260423em4l00003  2 billion reasons to fix retirement income                  
+SMHHOL0020260423em4n000xe  Digital driver’s licences coming to WA                      
+SMHH000020260503em540001d  Technology: AI tool 'too dangerous to release' could wreak h
+NLADLW0020260501em4u0005n  Nearly 300,000 insurance claims reveal mounting impact of wi
+MRCURY0020260501em5200008  Older Australians on low incomes are at risk of being pushed
+GRDN000020260423em4n004h6  Labor’s NDIS cuts leave many questions unanswered. Here’s wh
+DJDN000020260428em4s00034  Australia's Economy Slowing Sharply With Jobs Set to Be Lost
+DAITEL0020260504em550002m  Seniors to cop a $1600 health cover hike                    
+DAITEL0020260503em530004y  A $1.8bn injection to boost health                          
+DAITEL0020260429em4u00028  Rate hike fears grow as inflation surges                    
+COUMAI0020260502em530003y  Job’s too hot to handle                                     
+COUMAI0020260423em4o0004r  AI fraud pushes up insurance                                
+AUSTOL0020260513em5d002s5  Is it time to reimagine risk management?                    
+AUSTOL0020260511em5b0033a  Stop training people for yesterday’s jobs: AI demands we red
+AUSTOL0020260505em55002bf  Aussies ‘are poorer’: RBA boss’ blunt admission as rates hik
+AUSTOL0020260505em54000m9  Aussies reject AI – but it’s not for the reason you think   
+AUSTOL0020260504em540033d  The rise of the agentic customer: the trillion-dollar shift 
+AUSTOL0020260504em54000p1  ‘Big trouble’: RBA poised to unleash rate rise blitz        
+AUSTOL0020260503em53000rt  A ‘giant hole in consumer safety’: super test up for revamp 
+AUSTOL0020260502em5100002  Unpaid super hotspots: The ‘silent pay cut’ costing Aussies 
+AUSTOL0020260428em4s0028l  Inflation surge to ‘rubber stamp’ fresh wave of interest rat
+AUSTOL0020260423em4m0002u  Super tax change threatens to ignite family feuds           
+AUSTLN0020260505em560004p  ‘Let’s have some more ambition’: Westpac boss calls for visi
+AUSTLN0020260505em560004i  Budget bonfire amid inflation inferno                       
+AUSTLN0020260505em560002y  Cost-of-living crunch bites                                 
+AUSTLN0020260504em550001x  ‘Can’t waste a crisis’: NAB’s reform call                   
+AUSTLN0020260504em550001w  Bourse falls again ahead of looming RBA rates call          
+AUSTLN0020260504em5500013  GPs want to monitor kids’ first five years                  
+AUSTLN0020260503em540001u  NextDC, Suncorp raise $950m                                 
+AUSTLN0020260503em540001s  RBA left with no wiggle room on rates                       
+AUSTLN0020260503em540001j  Australia more favourable for private debt: Metrics         
+AUSTLN0020260501em520002o  Recession unlikely, but war fallout yet to be felt: ANZ     
+AUSTLN0020260501em520001y  Latest risk review highlights issues around hiring          
+AUSTLN0020260501em520001d  Clock is ticking for Big Tech to make AI pay                
+AUSTLN0020260430em510003y  AI push not protectionism: Charlton                         
+AUSTLN0020260430em510003s  APRA warns banks on lack of AI guardrails                   
+AUSTLN0020260430em510002u  Cyber defences to play catch-up                             
+AUSTLN0020260429em4u00025  Treasurer waves off economists’ warnings                    
+AUSTLN0020260429em4u00018  Demand for bigger low-paid wage rise                        
+AUSTLN0020260428em4t0001o  Big rebates for over-65s good for taxpayers                 
+AUSTLN0020260428em4t0000y  Banks’ new stress test as inflation, rates bite             
+-- 2d. Suspiciously long text (may include page chrome or multiple articles)
+id                         title                                       chars
+-------------------------  ------------------------------------------  -----
+WC20350020260423em4l00003  2 billion reasons to fix retirement income  49675
+reg_5364901bbde1f176       2024 Completed matters                      44765
+reg_4f784566b19d28e2       2025 Completed matters                      41586
+reg_30a2ccea3e3e4a0c       Speech: Economics and the Public Good       31654
+\n=== 3. Duplicates ===
+-- 3a. Same title
+title                                                         n   ids                                                         
+------------------------------------------------------------  --  ------------------------------------------------------------
+Update from the Treasury                                      40  reg_cf7512f069a6e4b9,reg_4bc61c6bbf792fba,reg_775cc89de88da3
+                                                                  a0,reg_bf319b4e1fdee6bf,reg_6bfbaec2c00f1087,reg_ab5e6c09c60
+                                                                  92c7a,reg_2e6b3954dd46ea17,reg_4ddd51352ea1fa94,reg_ad0911fe
+                                                                  6de16302,reg_c13d1a2d371b92bd,reg_41db1146de34efdf,reg_f1636
+                                                                  c9d22e0a8ea,reg_e84a7911ea08eead,reg_ca039773a6c9f4d6,reg_1a
+                                                                  ca5709c3abe730,reg_35285b57a6481d38,reg_ae0493c9c350d617,reg
+                                                                  _ebde2448ffdb0c93,reg_820311c84ab5cd9b,reg_44256ac3a63dc4d7,
+                                                                  reg_e8706b772da709bd,reg_d4cc970bf5fc7d97,reg_fac57feb726cc6
+                                                                  22,reg_c796c3590be4073e,reg_e495b1d554022135,reg_78adf8cd0b6
+                                                                  05155,reg_7558587f74698482,reg_5bf3fb360726c73a,reg_09bc89f6
+                                                                  c3659be7,reg_00f560548507d63a,reg_8b98974f7bb69f4a,reg_79c1f
+                                                                  246986a51f0,reg_17c4305fc44065fb,reg_16314e189ff4c9ae,reg_d9
+                                                                  ac3acf3d1680ec,reg_f96c5affa1f171fb,reg_900724bc6b9861b5,reg
+                                                                  _6e77990233683735,reg_ee2a3cabc1e5d2d0,reg_5e3f09cabef2ec32 
+
+NEW RESEARCH REVEALS HIDDEN SCALE OF CHILD HOMELESSNESS       6   NELSON0020260607em680000b,WAIKTI0020260607em680000k,SLANDT00
+                                                                  20260607em680000i,THDAIL0020260607em680000k,TIMRUH0020260607
+                                                                  em680000g,TEVEST0020260607em680000e                         
+
+NSW concrete contractor Ali Youssef charged with dishonesty   2   reg_374ef230828505c6,reg_a39db2d9bfe8b187                   
+offences and dealing with proceeds of crime                                                                                   
+
+Media release: Express Online Training found to have made mi  2   reg_76a7031803dac49f,reg_8cfa0b1e874a537b                   
+sled consumers about RSA and White Card courses                                                                               
+
+Media release: ACCC welcomes new mobile coverage map standar  2   reg_a51def8e1b4c6879,reg_9aaffe84626c50ad                   
+d and warns on misleading coverage claims                                                                                     
+
+Domestic inflation ‘a key risk’ for RBA                       2   AUSTOL0020260809em89001ba,AUSTLN0020260810em8a0000e         
+-- 3b. Same Factiva AN code (same underlying article, different email link)
+-- 3c. Same text body (first 300 chars)
+starts_with                                                   n   ids                                                         
+------------------------------------------------------------  --  ------------------------------------------------------------
+We use essential cookies to make our site work. With your co  21  WC63761020260428em4r000b5,WC63761020260505em54000b5,WC637610
+                                                                  20260504em54000ul,WC63761020260430em4t00001,WC63761020260428
+                                                                  em4s000jh,WC63761020260505em54000dx,WC63761020260423em4m0005
+                                                                  m,WC63761020260428em4r0008d,WC63761020260504em530005l,WC6376
+                                                                  1020260505em540008d,WC63761020260428em4r0005l,WC637610202605
+                                                                  04em54000rt,WC63761020260423em4m00001,WC63761020260430em4t00
+                                                                  0dx,WC63761020260504em53000b5,WC63761020260429em4t000dx,WC63
+                                                                  761020260501em51000rt,WC63761020260501em4u000jh,WC6376102026
+                                                                  0430em4t000b5,WC63761020260505em540002t,WC63761020260501em51
+                                                                  000m9                                                       
+
+Poverty                                                       6   NELSON0020260607em680000b,WAIKTI0020260607em680000k,SLANDT00
+More than 33,000 children and young people in Aotear              20260607em680000i,THDAIL0020260607em680000k,TIMRUH0020260607
+                                                                  em680000g,TEVEST0020260607em680000e                         
+
+This is a one-time registration process that offers seamless  5   SMHHOL0020261102emb2001p5,WC63761020261102emb2000rt,WC637610
+                                                                  20261102emb2000dx,WC63761020261102emb2000gp,WC63761020261102
+                                                                  emb2000jh                                                   
+
+Editor's Choice                                               4   WC47832020260911em9b0000d,WC47832020260911em9b00009,WC478320
+Trust emerges as key drivers of super fund l                      20260911em9a0000c,WC47832020260911em9a0000b                 
+
+Editor's Choice                                               3   WC47832020260522em5m00008,WC47832020260522em5m00009,WC478320
+Platforms should be wary of cutting options:                      20260522em5m00003                                           
+
+Editor's Choice                                               3   WC47832020260903em9300008,WC47832020260903em9300007,WC478320
+Is demand for active ETPs genuine beyond out                      20260903em9300009                                           
+
+Editor's Choice                                               3   WC47832020260807em8700008,WC47832020260807em8700006,WC478320
+FS Power50 voting opens                                           20260806em860000b                                           
+|Voting for Australi                                                                                                          
+
+The SMSF Association has released a more detailed response t  2   WC64005020260825em8o00002,WC47832020260825em8p0000a         
+
+Labor did not model how housing supply would be impacted by   2   AUSTLN0020260906em9700014,AUSTOL0020260906em96001e3         
+
+Insurers have backed a NSW Treasury plan that would save hou  2   AFNROL0020260712em79000mb,AFNR000020260712em7a0000e         
+
+Home-grown inflation is becoming the key risk for the Reserv  2   AUSTOL0020260809em89001ba,AUSTLN0020260810em8a0000e         
+
+Editor's Choice                                               2   WC47832020260706em7600005,WC47832020260706em7600007         
+arcpoint OCIO scores more mandates, Larapint                                                                                  
+
+Editor's Choice                                               2   WC47832020260713em7d00006,WC47832020260713em7d00008         
+WAM active strategy delivers 75.5%                                                                                            
+|WAM Acti                                                                                                                     
+
+Editor's Choice                                               2   WC47832020260722em7m00007,WC47832020260722em7m00005         
+Viridian promotes to investment team, launch                                                                                  
+
+Editor's Choice                                               2   WC47832020260918em9i00003,WC47832020260918em9i00008         
+Shield investors launch Macquarie class acti                                                                                  
+
+Editor's Choice                                               2   WC47832020260902em9200009,WC47832020260902em9200006         
+Pengana takes WAM feud over PIA to Takeovers                                                                                  
+
+Editor's Choice                                               2   WC47832020261015emaf00003,WC47832020261015emaf00008         
+Netwealth reports record $36bn FUM in Q1                                                                                      
+Net                                                                                                                           
+
+Editor's Choice                                               2   WC47832020260909em990000c,WC47832020260909em990000b         
+NSX to focus on dual listings over the next                                                                                   
+
+Editor's Choice                                               2   WC47832020260624em6o0000e,WC47832020260624em6n0000f         
+Greens, Labor agree on LRBA ban on SMSFs                                                                                      
+The                                                                                                                           
+
+Editor's Choice                                               2   WC47832020260709em7900009,WC47832020260709em7900008         
+Government consults on discretionary trust t                                                                                  
+
+Editor's Choice                                               2   WC47832020260730em7u00009,WC47832020260730em7u0000g         
+Colchester launches first two ETFs in Austra                                                                                  
+
+Editor's Choice                                               2   WC47832020260804em8400006,WC47832020260804em8400007         
+AustralianSuper ups admin fees                                                                                                
+The $430 bill                                                                                                                 
+
+Editor's Choice                                               2   WC47832020260818em8i00007,WC47832020260818em8i00004         
+Asset management tops salaries in product ma                                                                                  
+
+Editor's Choice                                               2   WC47832020260727em7r00003,WC47832020260727em7r00005         
+Apostle taps former Platinum AM chief                                                                                         
+Apostl                                                                                                                        
+
+Editor's Choice                                               2   WC47832020260805em8500002,WC47832020260805em8500004         
+Advisers should rethink portfolio constructi                                                                                  
+
+Editor's Choice                                               2   WC47832020260731em7v00005,WC47832020260731em7v00006         
+ASIC sues First Guardian-linked auditors                                                                                      
+ASI                                                                                                                           
+
+Editor's Choice                                               2   WC47832020261014emae0000b,WC47832020261014emae00002         
+ASIC flags gaps in super fund valuations                                                                                      
+ASI                                                                                                                           
+
+Big insurers say they are confident they can push higher pre  2   AFNROL0020260817em8e000b6,AFNR000020260817em8f0000s         
+
+Australians may soon struggle to take advantage of free trav  2   SMHHOL0020260726em7q000b5,AGEE000020260726em7r0001b         
+
+A chronic shortage of financial advisers coupled with the tr  2   AUSTOL0020260813em8c0002v,AUSTLN0020260814em8f00051         
+
+11 June 2026                                                  2   reg_76a7031803dac49f,reg_8cfa0b1e874a537b                   
+                                                                                                                              
+Express Online Training found to have made mis                                                                                
+
+01 July 2026                                                  2   reg_a51def8e1b4c6879,reg_9aaffe84626c50ad                   
+                                                                                                                              
+ACCC welcomes new mobile coverage map standard                                                                                
+\n=== 4. Metadata quality ===
+-- 4a. Missing fields (non-regulator)
+no_publication  no_author  no_date
+--------------  ---------  -------
+29              347        29     
+-- 4b. Authors that are URLs or junk
+author                                                        n  
+------------------------------------------------------------  ---
+https://www.insurancebusinessmag.com/au/authors/roxanne-liba  190
+tique/                                                           
+
+https://www.facebook.com/smstrusteenews                       146
+
+https://www.insurancebusinessmag.com/au/authors/daniel-wood/  58 
+
+https://www.insurancebusinessmag.com/au/authors/jonalyn-cuet  37 
+o/                                                               
+
+https://www.insurancebusinessmag.com/au/authors/mark-rosanes  18 
+/                                                                
+
+https://www.insurancebusinessmag.com/au/authors/mav-rodrigue  13 
+z/                                                               
+
+https://www.insurancebusinessmag.com/au/authors/josh-recamar  11 
+a/                                                               
+
+Paul Sakkal | Chief political corre                           10 
+
+https://www.insurancebusinessmag.com/au/authors/matthew-sell  9  
+ers/                                                             
+
+Shane Wright | Senior economics cor                           9  
+
+https://www.insurancebusinessmag.com/au/authors/rod-bolivar/  7  
+
+https://www.insurancebusinessmag.com/au/authors/camille-joyc  7  
+e-lisay/                                                         
+
+business Adelaide Miller                                      7  
+
+https://www.insurancebusinessmag.com/au/authors/jhoanna-hine  5  
+s/                                                               
+
+business correspondent David Taylor                           5  
+
+business Gareth Hutchens                                      5  
+
+https://www.insurancebusinessmag.com/au/authors/tez-romero/   4  
+
+https://www.insurancebusinessmag.com/au/authors/gia-snape/    4  
+
+business Alison Branley                                       4  
+
+Ronald Mizen | Political correspond                           4  
+
+Michael Smith | Health                                        4  
+
+https://www.insurancebusinessmag.com/uk/authors/mark-rosanes  3  
+/                                                                
+
+business Nassim Khadem                                        3  
+
+business Michael Janda                                        3  
+
+business Daniel Ziffer                                        3  
+
+Michael Read | Deputy economics edi                           3  
+
+Michael Bleby | Deputy property edi                           3  
+
+John Kehoe | Economics                                        3  
+
+Elias Visontay | National consumer                            3  
+
+https://www.insurancebusinessmag.com/uk/authors/matthew-sell  2  
+ers/                                                             
+
+https://www.insurancebusinessmag.com/au/authors/roxanne-sanj  2  
+ose/                                                             
+
+business Lin Lin                                              2  
+
+Paul Smith | Technology                                       2  
+
+Natassia Chrysanthos | Federal poli                           2  
+
+Lea Jurkovic | Economics correspond                           2  
+
+David Marin-Guzman | Workplace corr                           2  
+
+Brittany Busch | Federal political                            2  
+
+senior political correspondent Jake                           1  
+
+national affairs correspondent Jane                           1  
+
+https://www.mpamag.com/au/authors/william-farrington          1  
+
+https://www.insurancebusinessmag.com/uk/authors/josh-recamar  1  
+a/                                                               
+
+https://www.insurancebusinessmag.com/au/authors/paul-lucas-6  1  
+2156/                                                            
+
+https://www.insurancebusinessmag.com/au/authors/kim-champion  1  
+/                                                                
+
+https://www.insurancebusinessmag.com/au/authors/kiernan-gree  1  
+n/                                                               
+
+https://www.insurancebusinessmag.com/asia/authors/mark-rosan  1  
+es/                                                              
+
+https://www.hcamag.com/au/authors/jack-campbell               1  
+
+https://www.brokernews.com.au/authors/kellie-ell/             1  
+
+business Stephanie Chalmer                                    1  
+
+business Kate Ainsworth                                       1  
+
+business Jasper Wells                                         1  
+
+business David Chau                                           1  
+
+Zoe Samios | Technology                                       1  
+
+Rob Harris | National correspondent                           1  
+
+Phillip Coorey | Political                                    1  
+
+Paul Sakkal | Federal political cor                           1  
+
+Nicola Smith | Defence corresponden                           1  
+
+Michelle Griffin | Federal bureau c                           1  
+
+Maani Truu | Education corresponden                           1  
+
+Kieran Rooney | State politics repo                           1  
+
+John Kehoe | Economics with                                   1  
+
+Jessica Gardner | AFR correspondent                           1  
+
+James Massola | Chief political com                           1  
+
+JOE KELLY, WASHINGTON CORRESPONDENT                           1  
+
+Henrietta Cook | Health                                       1  
+
+David Swan | Technology                                       1  
+
+Cara Waters | City                                            1  
+
+Caitlin Fitzsimmons | Climate and e                           1  
+
+Brittany Busch | Federal politics r                           1  
+
+Angus Delaney | State politics repo                           1  
+-- 4c. Publication name variants (feeds the naming map task)
+publication                                                   n  
+------------------------------------------------------------  ---
+                                                              29 
+
+"ASIC Media Unit" <media@newsletters.asic.gov.au>             244
+
+"Australian Securities and Investments Commission" <reportin  1  
+gaudit@newsletters.asic.gov.au>                                  
+
+(Re)in Asia – Emerging risks • Growth opportunities • APAC i  3  
+nsurance                                                         
+
+@InsuranceBizAU                                               13 
+
+@MrtgBusiness                                                 1  
+
+ACCC Media <do-not-reply@accc.gov.au>                         83 
+
+APRA web updates <subscriptions@apra.gov.au>                  75 
+
+Asia Insurance Review                                         3  
+
+Asian Banking & Finance                                       1  
+
+Aussies reject AI – but it’s not for the reason you think     19 
+theaustralian.com.au04 May 2026 20:30 GMT783 wordsJared Lync     
+h                                                                
+                                                                 
+Chief executives of Australia’s biggest companies and Anthon     
+y Albanese want us all to use more artificial intelligence-p     
+owered tools – but there is a big problem.                       
+
+Australia lacks national strategy to regulate AI spread in w  13 
+orkplace, report states                                          
+Australian Broadcasting Corporation News28 April 20261,245 w     
+ordsnational work reporter Bronwyn Herb                          
+                                                                 
+Australia risks repeating the mistakes it made with social m     
+edia unless it moves quickly to regulate the spread of artif     
+icial intelligence in the workplace, according to a new repo     
+rt.                                                              
+
+Australian Associated Press - Financial News                  1  
+
+Australian Associated Press - General News                    1  
+
+Australian Broadcasting Corporation News                      98 
+
+Australian Broadcasting Corporation Transcripts               1  
+
+Australian Broker                                             1  
+
+Australian Cyber Security Magazine                            2  
+
+Australian Government News and Documents via PUBT             2  
+
+Australian Rural & Regional News                              1  
+
+Australian Taxation Office                                    23 
+
+Australian Transaction Reports and Analysis Centre            12 
+
+Biometric Update | Biometrics News, Companies and Explainers  2  
+
+BrisbaneTimes.com.au                                          10 
+
+Budget war on Boomers won’t make young better off             15 
+afr.com01 May 2026 07:33 GMT939 wordsThe AFR View                
+                                                                 
+Let’s consider Anthony Albanese’s spin on the likely paring      
+back of the capital gains tax discount and limiting the nega     
+tive gearing tax break for property investors in the May 12      
+federal budget.                                                  
+
+Canberra Times                                                20 
+
+Chalmers is going for broke. Will we end up a poorer country  36 
+?                                                                
+The Australian09 May 20263,403 wordsMATTHEW CRANSTON             
+                                                                 
+BUDGET 2026 If Australians believe Jim Chalmers, then this T     
+uesday’s budget is meant to be the most consequential in dec     
+ades. In front of more than one million viewers the Treasure     
+r will frame his speech by saying the budget will not be one     
+ ...                                                             
+
+Chalmers talks a big game - it's time to act on intergenerat  31 
+ional fairness                                                   
+The Age02 May 20261,330 wordsMillie Muroi                        
+                                                                 
+When we debate intergenerational fairness, it often looks li     
+ke younger Australians lamenting the selfishness of Boomers      
+and those Boomers calling Zoomers "entitled" for wanting mor     
+e.                                                               
+
+Chief Investment Officer                                      1  
+
+Contify Insurance News                                        1  
+
+Contify Life Science News                                     1  
+
+Courier Mail                                                  6  
+
+Coverager                                                     2  
+
+Cyber Daily                                                   2  
+
+Cyber Risk Leaders                                            1  
+
+Daily Telegraph                                               52 
+
+Devdiscourse                                                  1  
+
+Drones & Robotics                                             1  
+
+Exchange News Direct Online                                   1  
+
+Financial Newswire                                            1  
+
+Financial Standard                                            176
+
+Financial and Business News | Finance Magnates                1  
+
+Geelong Advertiser                                            1  
+
+Global Banking News                                           1  
+
+Government Technology Review                                  1  
+
+Herald-Sun                                                    1  
+
+Hobart Mercury                                                5  
+
+Hobart Mercury - Online                                       1  
+
+Housing isn’t just a young people problem. We know how this   17 
+story ends                                                       
+theage.com.au30 April 2026 19:00 GMT1,415 wordsMillie Muroi      
+                                                                 
+When we debate intergenerational fairness, it often looks li     
+ke younger Australians lamenting the selfishness of Boomers      
+and those Boomers calling Zoomers “entitled” for wanting mor     
+e.                                                               
+
+Human Resources Director                                      2  
+
+IDM.net.au                                                    1  
+
+Insurance Business                                            408
+
+Insurance Business Online                                     1  
+
+Insurance News                                                82 
+
+Jim Chalmers is going for broke. Will we end up a poorer cou  14 
+ntry?                                                            
+theaustralian.com.au10 May 2026 22:00 GMT3,515 wordsMatthew      
+Cranston                                                         
+                                                                 
+If Australians believe Jim Chalmers, then this Tuesday’s bud     
+get is meant to be the most consequential in decades. In fro     
+nt of more than one million viewers the Treasurer will frame     
+ his speech by saying the budget will not be one that just .     
+..                                                               
+
+Major global data breach rocks local schools and unis         16 
+The Australian08 May 2026279 words                               
+                                                                 
+Schools, colleges and universities across Australia have bee     
+n left scrambling after a major hacking scandal compromised      
+sensitive data belonging to millions of students worldwide.      
+
+Medianet Press Release <medianet@releases.medianet.com.au>    6  
+
+Microsoft to spend $25bn on Australian AI blitz               18 
+The Australian24 April 20261,395 wordsJared Lynch                
+                                                                 
+Microsoft chief executive Satya Nadella is positioning artif     
+icial ­intelligence as the great hope for reversing Australi     
+a’s flatlining productivity, while acknowledging the widespr     
+ead fear that it will also bring significant job ...             
+
+Money Management                                              9  
+
+Mortgage Professional Australia                               1  
+
+New Zealand Exchange Company Announcements                    1  
+
+On behalf of Australian Financial Complaints Authority Limit  1  
+ed                                                               
+        <medianet@releases.medianet.com.au>                      
+
+Proactiveinvestors UK                                         1  
+
+ReinsuranceNe.ws                                              2  
+
+Reserve Bank of Australia                                     4  
+
+Reuters News                                                  1  
+
+SMS Magazine                                                  146
+
+Seniors to cop a $1600 health cover hike                      20 
+Daily Telegraph05 May 2026279 wordsJulie Cross                   
+                                                                 
+Older Australians are facing private health insurance price      
+hikes of more than $1600 from April next year, under the Alb     
+anese government’s plan to scrap higher rebates for over-65s     
+.                                                                
+
+SmartCompany                                                  1  
+
+Super Review                                                  112
+
+TechRepublic                                                  1  
+
+The Advertiser                                                3  
+
+The Age                                                       61 
+
+The Australian                                                246
+
+The Australian Financial Review                               176
+
+The Conversation                                              1  
+
+The Guardian                                                  3  
+
+The Nelson Mail                                               6  
+
+The Northland Age                                             1  
+
+The Post                                                      1  
+
+The Sydney Morning Herald                                     20 
+
+The Treasury <no-reply@treasury.gov.au>                       34 
+
+The Treasury <noreply@treasury.gov.au>                        6  
+
+WAToday.com.au                                                1  
+
+Yahoo Finance                                                 3  
+
+Yahoo News                                                    1  
+
+adnews.com.au                                                 1  
+
+afr.com                                                       29 
+
+couriermail.com.au                                            4  
+
+heraldsun.com.au                                              1  
+
+iTnews                                                        3  
+
+news.com.au                                                   13 
+
+riskinfo                                                      1  
+
+smh.com.au                                                    13 
+
+theage.com.au                                                 11 
+
+theaustralian.com.au                                          59 
+
+w.media                                                       1  
+-- 4d. Date formats in use
+len  example                         n  
+---  ------------------------------  ---
+25   09 October 2026 00:26 GMT       870
+20   2026-05-12T07:18:49Z            468
+12   01 July 2026                    310
+10   2026-01-23                      238
+14   01 August 2026                  128
+17   01 September 2026               109
+22   01 July 2026 05:00 GMT          93 
+11   13 May 2026                     76 
+15   01 October 2026                 66 
+24   02 August 2026 05:11 GMT        64 
+27   01 September 2026 02:30 GMT     43 
+21   13 May 2026 00:18 GMT           39 
+0                                    29 
+16   03 November 2026                19 
+13   12-May-2026 ,                   7  
+19   2026-05-14T01:38:59             2  
+30   2026-05-26T14:09:37&#x2B;05:30  1  
+\n=== 5. Summaries ===
+-- 5a. Good text but no summary (summarise.py backlog)
+n
+-
+0
+-- 5b. Summaries written from junk text (summarised before cleanup)
+id                         title                                                         chars
+-------------------------  ------------------------------------------------------------  -----
+WC45426020260529em5t0005l  AI Data Centers Now Account for 17% of Australia’s Private I  335  
+reg_451449e7d28a4fcc       =?utf-8?Q?APRA=20publishes=20Chair=20John=20Lonsdale=27s=20O  448  
+reg_686245e7f52bb81e       =?utf-8?Q?Media=20release=3A=20Thousands=20of=20scam=20websi  391  
+reg_15ac8935ce0d5a03       =?utf-8?Q?Media=20release=3A=20Peter=20Warren=27s=20acquisit  474  
+reg_f54ff3b8bf7504db       =?utf-8?Q?Media=20release=3A=20ACCC=20issues=20takedown=20re  475  
+reg_f217ecf23284ffc7       Media release: Airlines increase airfares and reduce flights  307  
+reg_93a9e5e41e21bb65       Media release: Households receive consistent broadband speed  386  
+reg_ccdd831ee035e3cd       Federal Court orders $35 million penalty against HSBC for sc  285  
+reg_f250300df9e15652       Former Metigy CEO David Fairfull sentenced to nine years’ im  319  
+reg_b5f301930d4f0cae       Full Federal Court dismisses ASIC appeal on HCF Life unfair   325  
+reg_2121eae4f1fe8db5       ASIC bans Brett Anthony Newbound from providing financial se  353  
+reg_50c7310ece21906b       Speech: Making it count: National Consumer Congress 2026      298  
+reg_cf7512f069a6e4b9       Update from the Treasury                                      285  
+reg_4bc61c6bbf792fba       Update from the Treasury                                      276  
+reg_775cc89de88da3a0       Update from the Treasury                                      321  
+reg_406288f30c9ed27a       APRA publishes March 2026 edition of Quarterly Superannuatio  464  
+reg_b27e778f7c7a284f       Property developer David McWilliams charged over $10 million  311  
+reg_c4d65f6afa7092d6       ASIC lifts bonnet on car finance costs and distribution conc  282  
+reg_e3a0e39dd87bc935       Media release: ACCC to monitor supermarket compliance with n  394  
+reg_4f996f5e9f9f7045       Media release: Cyclone reinsurance pool reduces premiums in   469  
+reg_33cbbde536b4c854       APRA publishes updates to FAQs on Superannuation Data Report  420  
+reg_a21a4ffd442c9be5       ASIC calls platform trustees to account over persistent fail  388  
+reg_a93c78a0e34a3c25       ASIC sues former Keystone Asset Management directors and com  432  
+reg_55a9e162d3d7044c       APRA releases Monthly Authorised Deposit-taking Institution   445  
+reg_1a938cfb709b242f       Rex held accountable for continuous disclosure failure, thre  316  
+reg_9dd4f7205e8cceb4       NSW restaurateur Giuseppe DeFrancesco first person charged b  353  
+reg_fe10f628a39db2cd       ASIC pushes for coordinated action to strengthen competitive  387  
+reg_12031e5d151c7cd7       WA director Trent Bowden pleads guilty to over $1.5 million   333  
+reg_10f05824c6010ba1       ASIC secures $10.3 million in penalties against Mercer Super  424  
+reg_4c2e0f58a86439f2       Media release: Trescal’s acquisition of TR Calibration requi  490  
+reg_762b8d8c140785ca       Media release: Amazon in court for introducing ads to Prime   447  
+reg_860bd6c1a1ce12e2       Media release: Online travel agency eDreams pays penalties a  367  
+reg_bf319b4e1fdee6bf       Update from the Treasury                                      280  
+reg_d7b69731f40d018c       Media release: ACCC opposes Coles’ acquisition of a supermar  339  
+reg_20a67333a87db776       ASIC issues DDO stop orders against Stratfund’s Australian F  360  
+reg_77c70e3b55405533       ASIC cancels AFS licence of Capital Guard for fake bond sale  366  
+reg_9cf954d2784ae9f8       ASX ordered to pay $20.5 million penalty for misleading cond  285  
+reg_1de37e0522245879       Media release: Saipem Subsea7 merger requires Phase 2 review  497  
+reg_f54da189b17232eb       Media release: New bans on water market manipulation and ins  359  
+reg_1dd445ab20ec25f4       Former bankrupt coconut water CEO acquitted of ASIC charge o  383  
+reg_27e67f80faa133fd       Former WA director Joanne Pellew convicted of Corporations A  360  
+reg_cd35d6758bac32e5       ASIC review provides insights into voluntary administration   453  
+reg_82ae35088bc92f76       Media release: JustAnswer to pay $10m in penalties for misle  477  
+reg_2e6b3954dd46ea17       Update from the Treasury                                      289  
+reg_4ddd51352ea1fa94       Update from the Treasury                                      245  
+reg_d73b031cbfdb1f3a       ASIC cancels AFS licence of CFD issuer Trive                  256  
+reg_fe1a30a695099f7c       ASIC cancels CAIP Services' AFS licence for ceasing to carry  243  
+reg_33eaa269a3faa3d8       Media release: Growing home battery uptake delivering lower   398  
+reg_6aa76dbdf0b460dc       APRA grants new foreign ADI licence to Taipei Fubon Commerci  491  
+reg_d762d7e009b4abd3       Federal Court orders First Mutual Private Equity and unregis  342  
+reg_b984c98e235f8877       ASIC moves to wind up Capital Guard over concerns about inve  223  
+reg_c89838268c413be2       Former insurance broker Craig Horsell's suspended sentence a  430  
+reg_b80d02eb5513d41d       ASIC disqualifies Queensland director David Fanning for 5 ye  275  
+reg_835625ef86990405       Deutsche Bank pays $2 million penalty for systemic trade rep  379  
+reg_cb34afa632c36a0c       Media release: Origin Energy to refund customers after ACCC   314  
+reg_89727417dd8f1fd6       Media release: Non-bank lenders join Consumer Data Right as   491  
+reg_ad8a049f84e2ced7       NAB’s WealthHub fined over $1 million for reporting failures  367  
+reg_eb400068fb627856       ASIC Statement of Intent                                      165  
+reg_6f3bdf963ba2452f       ASIC bans former MWL financial adviser Nicole Niu for 5 year  346  
+reg_4747b9e4c6ab0418       ASIC warning: Pump and dump scammers intensify use of fake c  359  
+reg_e11d50a7c4ebe49c       ASIC suspends AFS licence of Prime Value Asset Management Li  236  
+reg_a931f1c6718c7951       Financial Services and Credit Panel issues registration proh  398  
+reg_a3a19d8e20e2240a       ASIC cancels AFS licence of Australian Fiduciaries Limited (  279  
+reg_017a001162d0abb0       Former MWL financial adviser Christian Henry banned for thre  399  
+reg_f9438c6a756abbbf       ASIC secures record $830 million in civil penalties orders a  320  
+reg_cafa7da43f8826e8       Federal Court finds former Noumi CEO breached directors’ dut  414  
+reg_a9f8dec1a0bd38a7       ASIC bans Queensland property developer Jack Gould from fina  358  
+reg_b6b6e089caa44934       ASIC reminds Registered Company Auditors of their obligation  315  
+reg_0e5654f75e31f164       ASIC cancels the registered agent status of Registry Austral  238  
+reg_c13d1a2d371b92bd       Update from the Treasury                                      252  
+reg_69395389a0e1556d       Brendan Gunn sentenced in connection with suspected internat  302  
+reg_41db1146de34efdf       Update from the Treasury                                      283  
+reg_581ce13d3869cf93       ASIC acts against 36 SMSF auditors, expanding its total enfo  320  
+reg_56dc7113d6879c09       Former construction industry director Vickie Vella sentenced  375  
+reg_773c275b898360f6       ASIC bans former NextGen Financial Group Pty Ltd directors N  364  
+reg_0ff6eead6c5c64e5       Media release: Court dismisses ACCC’s case against Magnamail  492  
+reg_450a5365830b60c6       Media release: More low-income Australians to benefit from l  427  
+reg_f1636c9d22e0a8ea       Update from the Treasury                                      298  
+reg_f187a2a9c4c3e64b       Hidden mortgage offset failures costing Australians millions  375  
+reg_ce0945c9cdde0449       Court winds up Capital Guard and appoints liquidators follow  271  
+reg_db54cb16133faaef       Harvey Norman and Latitude ordered to pay combined $55 milli  488  
+reg_3683feb84c7a702e       Media release: Misleading and high pressure unsolicited sale  368  
+reg_b34da2c4b89691fa       APRA releases Monthly Authorised Deposit-taking Institution   448  
+reg_9ec2ac146d1fb7b0       ASIC seeks orders against Royce Capital, Royce (Aust) Real E  468  
+reg_2ade881e32adc6dc       ASIC sues Auditeo and auditors over alleged First Guardian a  276  
+reg_0e05c580e62ee49c       ASIC Chair Sarah Court speaks at Mortgage Offset Press Confe  154  
+reg_3a0fc5115ebc2c49       Federal Court imposes permanent director’s disqualification   296  
+reg_e84a7911ea08eead       Update from the Treasury                                      244  
+reg_90a353bb7a939347       ASIC cancels Australian credit licence of Zenoz Enterprises   203  
+reg_ca039773a6c9f4d6       Update from the Treasury                                      253  
+reg_1d4639edb885dba2       ASIC disqualifies Victorian director Antonio Torcasio for 5   279  
+reg_259f81a4bce9c3a0       Media release: ACCC launches mobile services inquiry          451  
+reg_1aca5709c3abe730       Update from the Treasury                                      274  
+reg_20309235f8d27799       Stavro D’Amore jailed for misusing nearly $700,000 in Bernda  357  
+reg_fcf9024ea26c5195       ASIC suspends AFS licence of CFD issuer GFA Capital Markets   292  
+reg_35285b57a6481d38       Update from the Treasury                                      294  
+reg_9767b83444c143db       ASIC warns against Yepbit and Yepbit Exchange                 269  
+reg_56d469ff3d3dcda4       Media release: Vets Central’s acquisition of Hills Veterinar  421  
+reg_4bd72322d8fe48ae       Speech: Leading from conviction                               373  
+reg_ae0493c9c350d617       Update from the Treasury                                      469  
+reg_cb8c0e369cb80670       Media release: ACCC appeals dismissal of case against mail o  339  
+reg_820311c84ab5cd9b       Update from the Treasury                                      297  
+reg_baed7d85d2f04aa8       APRA releases Monthly Authorised Deposit-taking Institution   448  
+reg_acf16437fb3770c5       Court orders CashnGo to pay $3.5 million penalty for unfair   353  
+reg_2eab8555f9ac2544       ASIC warns insurers cash settlements should not short-change  271  
+reg_44256ac3a63dc4d7       Update from the Treasury                                      400  
+reg_6925f54e85d2f857       Banned SMSF auditor Kristian Convery sentenced for acting wh  370  
+reg_e8706b772da709bd       Update from the Treasury                                      291  
+reg_55838003a7d2c76c       Former Beacon Minerals project manager Alexander McCulloch s  371  
+reg_f0b46e86f0276f9d       Speech: ACCC enforcement: Recent developments and future dir  303  
+reg_f1a829eff6f11451       Speech: Competition and consumer law responding to economic   396  
+reg_d4cc970bf5fc7d97       Update from the Treasury                                      406  
+reg_88e952eda0916531       Meet David Bradbury                                           470  
+reg_a4970da58ab84740       Former WA director Joanne Pellew sentenced to three and a ha  352  
+reg_13dca885ec2e216f       Three super funds issued infringement notices for misleading  392  
+reg_335ee228350b4f3c       Federal Court finds Choosi misled consumers about its insura  244  
+reg_17ea8fcb4e1ccc70       ASIC bans former Sequoia and Interprac director Garry Crole   433  
+reg_2a84036e8480f9a8       ASIC cancels AFS licence of Redstone Capital Pty Ltd          216  
+WC63761020260908em98000ul  Choosi misled customers on insurer range, Federal Court rule  225  
+reg_ae39b7abbfdd7af4       APRA publishes June 2026 edition of Quarterly Superannuation  463  
+reg_69c6b4070f0ad33d       Court makes further orders to preserve assets linked to NSW   360  
+reg_c796c3590be4073e       Update from the Treasury                                      267  
+reg_af6cf9a3aed99987       Registered liquidator Ross Stephen Thomson cancels registrat  429  
+reg_741e9ecc7d032944       ASIC cancels the registered agent status of AGFA Accountants  234  
+reg_d4abaa44ce512e8d       Updated charges against financial services company director   301  
+reg_401bfa77c773eed7       Administrative Review Tribunal affirms ASIC five-year bans o  322  
+reg_0f0ec6a7dc63ddaa       CADB suspends registration of former PKF Brisbane auditor Ca  400  
+reg_ec8967bb6d37ee37       Media release: The Qantas Group and Virgin Australia report   334  
+reg_f7f45de9958e1e85       Media release: Realestate.com.au removes restrictions in con  477  
+reg_f6c6189ee90745c5       ASIC sues lead generation business over alleged misleading c  423  
+reg_20dd58ba92a077f7       ART amends ASIC’s permanent ban made against Noel Northcott   271  
+reg_b86743348955981f       ASIC takes action to protect investors in Star Investment Gr  302  
+reg_78adf8cd0b605155       Update from the Treasury                                      283  
+reg_55560e3e9bc76f07       Fundo Loans pays $19,800 infringement notice over ‘no credit  289  
+reg_5a1c08047b7229ad       ASIC sues former Super Retail Group CEO Anthony Heraghty all  378  
+reg_2e75e223ed9259ee       Media release: digiDirect pays penalties and admits to makin  471  
+reg_0c05a8e9683548dc       ASIC halts offers of private credit products offered under R  290  
+reg_5bf3fb360726c73a       Update from the Treasury                                      271  
+reg_85f92f9eed2e36bc       Former Big Un CEO Richard Evans sentenced for communicating   384  
+reg_374ef230828505c6       NSW concrete contractor Ali Youssef charged with dishonesty   318  
+reg_5b19564cb73c0e66       Former Warwick Gold and Impact Gold director Yuetu Ma disqua  368  
+reg_b7f2b2ad4853a524       Former financial services provider employee Emre Basar charg  363  
+reg_28f8f8c0ae81de36       ASIC strengthens AI trading safeguards and streamlines marke  327  
+reg_f6f58220dddbb364       APRA releases Monthly Authorised Deposit-taking Institution   442  
+reg_032b38098360f5ca       Full Federal Court dismisses appeal by former auditor Regina  353  
+reg_9857a3848f254d88       ASIC cancels liquidator registration of James Gerard Thackra  294  
+reg_8823e14a6b83da28       Hollard fined $2 million for serious insurance claim delay    357  
+reg_bbd6260f176962aa       ASIC halts offers in mortgage schemes managed by Australian   305  
+reg_9efe86e2ce5714cc       ASIC sues Osama Saad alleging conflicted remuneration avoida  472  
+reg_3ebb02cae2b73e07       ASIC releases 2026–27 supervisory priorities to support bett  397  
+reg_b313491bbebf5f30       Queensland property developer sentenced to 9 years imprisonm  321  
+reg_09bc89f6c3659be7       Update from the Treasury                                      447  
+reg_00f560548507d63a       Update from the Treasury                                      304  
+reg_fc3d6ea7c3f1fba2       ASIC moves to extend and strengthen CFD consumer protections  314  
+reg_dee2c3e3c09eca4d       ASIC Annual Forum 2026 explores how Australia can stay ahead  321  
+reg_0bdbe7d8bffe9892       APRA publishes 2025-26 Annual Report                          404  
+reg_7c16329e7ada1e96       Fortnum Private Wealth penalised $1.35 million for cybersecu  310  
+reg_90928329b2235cf4       ASIC review highlights need for stronger scrutiny of super f  323  
+reg_466bf0876820b8a1       Former financial adviser Ezzat-Daniel Nesseim charged with b  346  
+reg_85ced944a94ad51a       ASIC issues DDO stop order against Fidante Partners Limited   318  
+reg_a39db2d9bfe8b187       NSW concrete contractor Ali Youssef charged with dishonesty   307  
+reg_4e9c650392712558       ASIC review finds room for improvement in mortgage brokers’   283  
+reg_0616781c4cab1a3c       Speech: Competition, productivity and the role of right-size  260  
+reg_8b98974f7bb69f4a       Update from the Treasury                                      248  
+reg_d560d668bc429c8d       ASIC consults on implementation of new digital asset laws     260  
+reg_9bcb0b32b3efeddb       Media release: Kmart in court over safety concerns with cosm  451  
+reg_79c1f246986a51f0       Update from the Treasury                                      263  
+WC90132020261102emb200003  Westpac reveals AI cut data warehouse migration cost from $7  210  
+reg_9ad016b237014c77       APRA releases Monthly Authorised Deposit-taking Institution   448  
+reg_168e10ac9a8484bc       APRA publishes Chair John Lonsdale's Opening Statement to th  466  
+reg_817af6eb7c9e9e73       Queenslander Dat Dean Nguyen first person charged with faili  386  
+reg_9f29a9b9d342b508       ASIC issues interim stop orders against two Angas Securities  427  
+reg_e6b8ec9eda517dd6       ASIC’s final warning to licensees – using lead generators ma  342  
+reg_96656cccff03c8fd       Sunshine Loans ordered to pay $5.5 million penalty for charg  333  
+reg_1e1836933f876b24       ASIC issues over $4.3 million in infringement notices to 22   316  
+reg_bf5137bad1673c97       Federal Court upholds $11 million in penalties and disqualif  428  
+reg_afe2c02857f814b3       CDPP discontinues aiding and abetting charge against Clive P  331  
+reg_605afb0efee5eb22       ASIC calls out super trustees for blind spots in overseeing   341  
+reg_3b13bb5289c688ea       Former Youpla Group CEO Bryn Jones and director Ronald Patte  293  
+reg_2277cbfbbfcc9971       ASIC consults on financial resources requirements for market  232  
+reg_12c0380abb475e5e       ASIC sues Falcon Capital directors David Anderson and Simon   351  
+reg_d5b20b780a1e4283       ASIC surveillance shows financial reporting and audit qualit  317  
+reg_7a9f6170163b47fe       Supplementary Budget Estimates, Opening Statement, 29 Octobe  459  
+reg_5efe50c8b156eb28       Palmer Leisure Coolum Pty Ltd convicted and fined $10,000 fo  263  
+reg_316f5ad69e282c46       ASIC review provides insight into insolvent liquidation proc  254  
+reg_28fe255ad99f56ac       ASIC halts offers in mortgage scheme managed by Murdoch Clar  323  
+reg_e823fca73e2be4e9       Financial Services and Credit Panel cancels registration of   341  
+reg_a66f886cbe8a4179       ASIC seeks leave to appeal NSW Supreme Court decision agains  440  
+reg_1aaef9f1314c4f6d       ASIC accepts cancellation of company auditor Benjamin Peters  367  
+reg_3ef3d0b8a6efbe3c       ASIC cancels Australian credit licence of Walker Stores Pty   340  
+reg_3b6ec662c817adfa       Visy and Pratt companies pay over $4.1 million in infringeme  348  
+reg_9dba27036aeca046       ASIC cancels AFS licence of Kyle Clifford Frost               274  
+reg_fc7625b1c3de4a27       Former Rex director Lim Kim Hai disqualified for 4 years and  484  
+reg_30a00bd6083b41cc       Panacea Capital director Brian Creigh charged with criminal   295  
+reg_33f7b64a4e83bf82       ASIC's annual report outlines strong enforcement and consume  308  
+reg_b2058134da187710       ASIC cancels Australian credit licence of MWL Financial Serv  297  
+reg_164ab8b921bbbb12       ASIC bans former MWL financial adviser Pardeep Singh for fou  242  
+reg_88eb015687176c12       Media release: Sharetea pays penalties for alleged breaches   455  
+reg_1b9df8be58a2e719       Media release: H&M pays penalties over absent and inaccurate  493  
+reg_b9251c5eb41ba0e3       Media release: Perfection Fresh admits to fixing the price o  490  
+reg_17c4305fc44065fb       Update from the Treasury                                      251  
+reg_16314e189ff4c9ae       Update from the Treasury                                      252  
+reg_d9ac3acf3d1680ec       Update from the Treasury                                      276  
+reg_f96c5affa1f171fb       Update from the Treasury                                      437  
+reg_900724bc6b9861b5       Update from the Treasury                                      264  
+reg_ee2a3cabc1e5d2d0       Update from the Treasury                                      243  
+reg_5e3f09cabef2ec32       Update from the Treasury                                      277  
+-- 5c. Very short summaries or old "Key Points" format
+id                         title                                               len
+-------------------------  --------------------------------------------------  ---
+reg_ee2a3cabc1e5d2d0       Update from the Treasury                            124
+reg_ebab5bdedb2d0919       ASIC Daily News round-up - 18 August 2026           140
+reg_e7f7b53c3b7a91e8       ASIC Daily News round-up - 29 September 2026        142
+reg_e11d50a7c4ebe49c       ASIC suspends AFS licence of Prime Value Asset Man  148
+reg_d560d668bc429c8d       ASIC consults on implementation of new digital ass  117
+reg_d4abaa44ce512e8d       Updated charges against financial services company  136
+reg_c0180be70aa14d37       ASIC disqualifies New South Wales director Alan Ma  140
+reg_9ad016b237014c77       APRA releases Monthly Authorised Deposit-taking In  146
+reg_8f669f3a35af7a61       Media release: ACCC opposes IAG's proposed acquisi  147
+reg_8b98974f7bb69f4a       Update from the Treasury                            135
+reg_33cbbde536b4c854       APRA publishes updates to FAQs on Superannuation D  142
+reg_2bc9eddd85ea08b7       ASIC Daily News round-up - 15 October 2026          136
+reg_16314e189ff4c9ae       Update from the Treasury                            142
+WCSPREW020260512em5c00002  ASFA pushes policy-to-practice support for super r  145
+WCBUINS020260508em570000d  Australia’s insurance rates continue downward tren  112
+WC47832020260723em7n0000a  TPB releases AI guidance for members                338
+AUSTLN0020260511em5c0000k  Uni grants casuals historic super deal              147
+AUSTLN0020260508em590006b  QBE wary of property insurance rivalry, conflict r  128
+AUSTLN0020260508em590005q  REA lets AI add flair to listings                   143
+AUSTLN0020260508em590004e  Rate reality hits home for older people in debt     144
+\n=== 6. Tags ===
+-- 6a. Articles with no tag
+untagged
+--------
+2562    
+-- 6b. Tag links pointing at deleted articles
+orphan_links
+------------
+0           
+-- 6c. Tags per article distribution
+n_tags  articles
+------  --------
+0       2562    
+\n=== 7. Coverage gaps (missed runs) ===
+-- Articles scraped per day, last 60 days. Gaps = days the pipeline did not run.
+day         n    dowjones
+----------  ---  --------
+2026-09-10  39   35      
+2026-09-13  26   21      
+2026-09-15  29   25      
+2026-09-16  16   14      
+2026-09-17  18   16      
+2026-09-20  18   13      
+2026-09-21  29   23      
+2026-09-22  18   15      
+2026-09-23  23   21      
+2026-09-27  30   20      
+2026-10-09  82   58      
+2026-10-11  23   23      
+2026-10-12  24   21      
+2026-10-14  54   39      
+2026-10-15  21   16      
+2026-10-18  15   15      
+2026-11-02  1    1       
+2026-11-09  132  67      

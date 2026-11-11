@@ -1,0 +1,187 @@
+\n=== A1. Financial Standard "Editor s Choice" sidebar scraped instead of article ===
+publication         n   avg_chars
+------------------  --  ---------
+Financial Standard  69  1279.0   
+-- sample: does the real article appear further down?
+id                         first_600                                                   
+-------------------------  ------------------------------------------------------------
+WC47832020260522em5m00008  Editor's Choice Platforms should be wary of cutting options:
+                            Experts Experts have warned that cutting too many options o
+                           n platforms could restrain client choice. Super fund-backed 
+                           AFSL adviser numbers drop: Rainmaker Industry superannuation
+                            funds will continue to adopt a hybrid framework of advice, 
+                           integrating digital and human channels, as the number of adv
+                           isers under super funds owned AFSL's has declined progressiv
+                           ely in the last five years. Proposed CGT reforms could upend
+                            HNW low advice demand The high-net-worth (HNW) population's
+                            vast pool of wealth estimated to be worth a whopping $4.4 t
+
+WC47832020260522em5m00009  Editor's Choice Platforms should be wary of cutting options:
+                            Experts Experts have warned that cutting too many options o
+                           n platforms could restrain client choice. Super fund-backed 
+                           AFSL adviser numbers drop: Rainmaker Industry superannuation
+                            funds will continue to adopt a hybrid framework of advice, 
+                           integrating digital and human channels, as the number of adv
+                           isers under super funds owned AFSL's has declined progressiv
+                           ely in the last five years. Proposed CGT reforms could upend
+                            HNW low advice demand The high-net-worth (HNW) population's
+                            vast pool of wealth estimated to be worth a whopping $4.4 t
+\n=== A2. Cookie banner rows ===
+n   avg_chars
+--  ---------
+21  8601.0   
+id                         first_600                                                   
+-------------------------  ------------------------------------------------------------
+WC63761020260428em4r000b5  We use essential cookies to make our site work. With your co
+                           nsent, we may also use non-essential cookies to improve user
+                            experience, personalize advertisements, and analyze website
+                            traffic. For these reasons, we may share your site usage da
+                           ta with our social media, advertising, and analytics partner
+                           s. By clicking “Accept,” you agree to our website's cookie u
+                           se as described in our Cookie Policy. You can change your co
+                           okie settings at any time by clicking “Preferences.” Accept 
+                           CONTINUE TO SITE News TV Risk Management Reinsurance Resourc
+                           es Best In Insurance Specialty IBmarkets Contact Us Australi
+
+WC63761020260505em54000b5  We use essential cookies to make our site work. With your co
+                           nsent, we may also use non-essential cookies to improve user
+                            experience, personalize advertisements, and analyze website
+                            traffic. For these reasons, we may share your site usage da
+                           ta with our social media, advertising, and analytics partner
+                           s. By clicking “Accept,” you agree to our website's cookie u
+                           se as described in our Cookie Policy. You can change your co
+                           okie settings at any time by clicking “Preferences.” Accept 
+                           CONTINUE TO SITE News TV Risk Management Reinsurance Resourc
+                           es Best In Insurance Specialty IBmarkets Contact Us Australi
+\n=== A3. Factiva footer: what the tail looks like ===
+id                         last_400                                                    
+-------------------------  ------------------------------------------------------------
+DJDN000020260428em4s00034   richer than ever, according to the Australian Bureau of Sta
+                           tistics' balance sheet, we may need to recess... If you have
+                            any questions regarding the Actuaries Institute news summar
+                           y, or would like to unsubscribe, please contact comms@actuar
+                           ies.asn.au . Any other unsubscribe links are currently non-f
+                           unctioning. © 2026 Factiva, Inc. All rights reserved. Terms 
+                           of Use | Privacy Notice | Cookie Notice.                    
+\n=== A4. Corrupted publication field (multi-line header) ===
+n  
+---
+200
+\n=== A5. Tag tables (all articles untagged) ===
+name        
+------------
+tags        
+article_tags
+\n=== A6. MIME-encoded titles ===
+id                    title                                                       
+--------------------  ------------------------------------------------------------
+reg_01444f9eff6fbe25  =?utf-8?Q?APRA=20Deputy=20Chair=20Margaret=20Cole=20recognis
+                      ed=20in=20                                                  
+
+reg_451449e7d28a4fcc  =?utf-8?Q?APRA=20publishes=20Chair=20John=20Lonsdale=27s=20O
+                      pening=20S                                                  
+
+reg_4ae5addb0eb71b4b  =?utf-8?Q?APRA=20finalises=20new=20IRB=20accreditation=20pat
+                      hway=20for                                                  
+
+reg_b565a79a09b33cc7  =?utf-8?Q?APRA=20finalises=20guidance=20on=20liquidity=20tre
+                      atment=20o                                                  
+
+reg_686245e7f52bb81e  =?utf-8?Q?Media=20release=3A=20Thousands=20of=20scam=20websi
+                      tes=20take                                                  
+
+reg_075191a508bcb76d  =?utf-8?Q?Media=20release=3A=20ACCC=20calls=20for=20a=20stro
+                      nger=20Hor                                                  
+
+reg_fbba25162d680410  =?utf-8?Q?Media=20release=3A=20ACCC=20approves=20Ampol=27s=2
+                      0acquisiti                                                  
+
+reg_15ac8935ce0d5a03  =?utf-8?Q?Media=20release=3A=20Peter=20Warren=27s=20acquisit
+                      ion=20of=2                                                  
+
+reg_f54ff3b8bf7504db  =?utf-8?Q?Media=20release=3A=20ACCC=20issues=20takedown=20re
+                      quests=20t                                                  
+\n=== B1. Reset failed scrapes (preview) ===
+id                         title                                                         chars
+-------------------------  ------------------------------------------------------------  -----
+WC45426020260529em5t0005l  AI Data Centers Now Account for 17% of Australia’s Private I  335  
+WC63761020260908em98000ul  Choosi misled customers on insurer range, Federal Court rule  225  
+AUSTOL0020260927em9r000m9  Run advanced AI here, or lose national identity, says CDC fo  0    
+ABCNEW0020260927em9r0005n  OpenAI breach proves need for 'seat at the AI table' through  0    
+AFNR000020260926em9o0000t  AI shopping agents get big banks hot under the collar         0    
+WC66026020260927em9r00003  Suncorp appoints new non-executive director                   0    
+AUSTOL0020260927em9r0018k  ‘Obvious conflict’: legal insurance monopoly under scrutiny   0    
+AUSTOL0020260927em9q0002v  Advisers hard at work on insurance mega deal: sources         0    
+ABCNEW0020260926em9q00130  NDIS housing provider Fairy Meadow House goes under after po  0    
+AUSTLN0020260925em9q0004t  IAG shares rise after insurer settles another Greensill-link  0    
+WC63761020260925em9p000ru  Unsigned agreement costs WA earthmoving firm's estate in $23  0    
+AFNR000020260926em9o00008  IAG risks growth strategy in WA battle                        0    
+SMHHOL0020260925em9p001p5  Nick’s bosses urged him not to worry about work. Most cancer  0    
+AUSTLN0020260925em9q00035  Investors put off by budget changes                           0    
+WC47832020260925em9p00008  Third of Aussies think retirement will be funded by inherita  0    
+SMHH000020260927em9s0000o  Chalmers to reveal $6bn budget boost as interest rates set t  0    
+ABCNEW0020260927em9r00132  Rewards programs and insurance perks in firing line after ch  0    
+AUSTOL0020260927em9q000b5  Australia recession risk is more like 50-50 on HSBC’s estima  0    
+WC47832020260925em9p00005  RBA workers slam 'copy and paste' pay offer                   0    
+AFNROL0020260927em9o000ul  ANZ restructures 400 tech roles as Matos pushes offshoring    0    
+AFNR000020260926em9o0000w  Westpac links banker pay to SME risk                          0    
+SMHHOL0020261102emb2001p5  AI is coming for office workers. How vulnerable is Brisbane?  760  
+WC63761020261102emb2000rt  Parliamentary inquiry puts SME cyber insurance gap under scr  760  
+WC63761020261102emb2000dx  Vendor cyber risk in focus as Amadeus breach hits airlines g  760  
+WC90132020261102emb200003  Westpac reveals AI cut data warehouse migration cost from $7  210  
+WC63761020261102emb2000gp  EML Group finalises 80% stake in Guild Insurance              760  
+WC63761020261102emb2000jh  Brokers gain new capacity as Munich Re Specialty enters Aust  760  
+b1_rows_reset
+-------------
+27           
+\n=== B2. Duplicates to delete (preview) ===
+id                         title                                                       
+-------------------------  ------------------------------------------------------------
+AUSTLN0020260814em8f00051  Big super, banks bet on AI to offer cut-price financial advi
+                           ce                                                          
+
+AGEE000020260726em7r0001b  Credit cards: Travel agents fear impact of credit card chang
+                           es                                                          
+
+AUSTLN0020260810em8a0000e  Domestic inflation ‘a key risk’ for RBA                     
+
+AFNROL0020260817em8e000b6  Insurers test customers’ price pain tolerance as cost pressu
+                           res grow                                                    
+
+AUSTLN0020260906em9700014  Labor failed to do modelling of SMSF property ban           
+
+reg_a51def8e1b4c6879       Media release: ACCC welcomes new mobile coverage map standar
+                           d and warn                                                  
+
+reg_8cfa0b1e874a537b       Media release: Express Online Training found to have made mi
+                           sled consu                                                  
+
+SLANDT0020260607em680000i  NEW RESEARCH REVEALS HIDDEN SCALE OF CHILD HOMELESSNESS     
+
+TEVEST0020260607em680000e  NEW RESEARCH REVEALS HIDDEN SCALE OF CHILD HOMELESSNESS     
+
+THDAIL0020260607em680000k  NEW RESEARCH REVEALS HIDDEN SCALE OF CHILD HOMELESSNESS     
+
+TIMRUH0020260607em680000g  NEW RESEARCH REVEALS HIDDEN SCALE OF CHILD HOMELESSNESS     
+
+WAIKTI0020260607em680000k  NEW RESEARCH REVEALS HIDDEN SCALE OF CHILD HOMELESSNESS     
+
+AFNR000020260712em7a0000e  NSW looks at new levy for disasters                         
+
+WC64005020260825em8o00002  The SMSF Association has indicated it is generally supportiv
+                           e of the r                                                  
+b2_rows_deleted
+---------------
+14             
+\n=== B3. Regulator publication names ===
+b3_rows_updated
+---------------
+448            
+\n=== B4. Publication name mapping ===
+b4_rows_updated
+---------------
+132            
+\n=== B5. Clear Facebook-link authors ===
+b5_rows_updated
+---------------
+145            

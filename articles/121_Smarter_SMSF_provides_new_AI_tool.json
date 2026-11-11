@@ -1,0 +1,17 @@
+{
+  "id": "WC47832020261027emar0000b",
+  "index": 121,
+  "scraped_at": "2026-11-10T05:41:29Z",
+  "title": "Smarter SMSF provides new AI tool",
+  "full_text": "Industry education and document provider Smarter SMSF has launched an artificial intelligence (AI) technical assistant, Smartie AI, built specifically for professionals servicing the sector.\nSmartie AI has been trained on Smarter SMSF’s reference material, not the open internet, and shows references for every answer so practitioners can verify the information.\n“In SMSF, a confident wrong answer is worse than no answer at all. That’s why we built Smartie on the same reference material our own technical team creates, trains and uses every day. It doesn’t just give an answer. It shows where the answer came from, so practitioners can check it,” Smarter SMSF chief executive and co-founder Aaron Dunn explained.\nThe tool is organised as six specialist agents that cover contributions, pensions and benefit payments, investment rules, trusteeship and membership, estate planning and fund taxation.\nIt is designed to save practitioners the 30 minutes to three hours it can often take to find and respond to some technical questions on behalf of clients, advisers or auditors.\nAccording to Dunn, the new facility will be especially useful for sole practitioners who often have no one they can consult regarding technical issues.\n“Practitioners get a referenced draft in minutes, then check it, adjust it and send it. Senior people stay on the advice clients pay for and juniors aren’t left waiting for their manager or partner to respond,” he said.\nThe tool has been built on Microsoft Copilot Studio. Smarter SMSF confirmed it does not use personal client data, utilises Zero Trust security and Data Loss Prevention controls, and is restricted to SMSF topics. It will be made available from 18 November and is licensed per firm.\n“This is just the beginning of the AI journey for Smartie. We will be shortly releasing upload and export features, along with deeper integration to the Smarter SMSF documents platform – we truly do believe that there is a smarter way,” Dunn noted.",
+  "publication": "SMS Magazine",
+  "author": "Jason Spits",
+  "published_date": "2026-10-27T16:04:23+11:00",
+  "word_count": "341",
+  "heading": "Data Science and AI",
+  "factiva_url": "https://global.factiva.com/redir/default.aspx?EP=NL&AN=WC47832020261027emar0000b&CAT=W&napc=MC&f=nv&P=er&erc=LVfLdDTapCBrFH93tOPKccHd3xazgTKFnVNXLS29ADZY2C%2b%2fttJUlnzKrCm2y7fSBtb5aHm%2bGOXXZERXQJRnd7xcihrKS2hS6mJ4gzH%2bV8aFzQ%2bYrdw8DnpNRbsGPsCbbnotGTWi8Ht7Hlb7TlI%2fGvQ2YTdCYgQI6AsDYeQCnxwl0IKg4WoI9wNoMKGt135ZHlyFlawYcjCIPr0l8thMwnjmEunQdY70%7c2&nldtl=DkzATV7FuEELjedX88l%2bbTt6lBYNjNrSx2D3jDckwHXkhG%2f6ivvzpde5Huy7QPKBusv3L1P3qMQl2pVOWRDN34g99w4u12lmMvr7Qkd0kWTEhVS%2fa2ZqFIdjbYqqqjOIJk4k7BUy2FPEGQ8a5ux%2fAQ%3d%3d%7c2&mod=MCT_email&page_driver=MCT_email",
+  "final_url": "https://smsmagazine.com.au/news/2026/10/27/smarter-smsf-provides-new-ai-tool/",
+  "redirected_to_source": true,
+  "page_title": "Smarter SMSF provides new AI tool | SMS Magazine",
+  "selector_used": "trafilatura"
+}
