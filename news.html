@@ -114,8 +114,6 @@
   from { transform: translateX(0); }
   to   { transform: translateX(-50%); }
 }
-  /* Highlights the number of currently loaded or filtered articles. */
-  #article-count { color: var(--accent); font-weight: 500; }
 
   /* ── Layout ── */
   /* Main desktop layout wrapper containing the sidebar, article reader, and chat rail. */
@@ -519,6 +517,9 @@
   }
   /* Hover background for the source link button. */
   .article-source-link:hover { background: rgba(200,169,110,0.08); }
+  .related-links { display: flex; flex-direction: column; align-items: flex-start; gap: 6px; margin-top: 18px; }
+  .related-links .article-source-link { margin-top: 0; }
+  .related-title { font-size: 12px; color: var(--muted); }
 
   /* ── Chat panel ── */
   /* Chat panel container used as a bottom panel on mobile and right rail on desktop. */
@@ -830,6 +831,7 @@
   cursor: pointer;
   white-space: nowrap;
   transition: border-color 0.15s, color 0.15s;
+  margin-left: auto;
 }
 /* Hover state for the full-access header button. */
 .access-btn:hover { border-color: var(--accent); color: var(--accent); }
@@ -893,7 +895,9 @@
     }
 
     /* Sticky compact header for mobile. */
-    header { padding: 0 14px; gap: 10px; position: sticky; top: 0; z-index: 120; }
+    header { padding: 6px 14px; gap: 4px 10px; position: sticky; top: 0; z-index: 120;
+             flex-wrap: wrap; height: 76px; align-content: center; }
+    .ticker-wrap { order: 3; flex-basis: 100%; }
     /* Smaller logo on mobile. */
     .logo { font-size: 17px; }
     /* Hide article count text on mobile to save space. */
@@ -919,7 +923,7 @@
     .article-list { padding-bottom: 72px; overflow: visible; } /* clear the chat launcher */
 
     /* Show the mobile back bar above the reader. */
-    .mobile-bar { display: flex; position: sticky; top: 52px; z-index: 110; }
+    .mobile-bar { display: flex; position: sticky; top: 76px; z-index: 110; }
 
     /* Mobile reader spacing and normal page scrolling. */
     .article-view { padding: 0 16px 88px; overflow: visible; }
@@ -945,11 +949,11 @@
       border-top: 1px solid var(--line);
     }
     /* Shorter collapsed chat launcher on mobile. */
-    .chat-panel.collapsed { height: 56px; }
+    .chat-panel.collapsed { height: 44px; }
     /* Expanded chat covers the full mobile screen. */
     .chat-panel:not(.collapsed) { top: 0; height: 100dvh; }
     /* Shorter chat header on mobile. */
-    .chat-toggle { height: 56px; }
+    .chat-toggle { height: 44px; }
     /* Wider chat bubbles on narrow screens. */
     .msg { max-width: 92%; }
 
@@ -1032,7 +1036,7 @@
       background: var(--bg3);
     }
     /* Hide the chat resizer when the rail is collapsed. */
-    .chat-panel.collapsed .chat-resizer { display: none; }
+    .chat-resizer { display: none; }
     /* Prevent text selection and show resize cursor while dragging the chat rail. */
     body.resizing-chat {
       cursor: col-resize;
@@ -1156,7 +1160,6 @@ const CORRECT_PASSWORD = "password"; // ← change this to your password
   <div class="ticker-wrap">
     <div class="ticker" id="ticker"></div>
   </div>
-  <div class="header-meta"><span id="article-count">0</span> articles loaded</div>
   <button class="access-btn" id="access-btn" onclick="openAccessModal()">Full access</button>
 </header>
 
@@ -1385,17 +1388,11 @@ async function init() {
     } catch (err2) {
       console.error(err2);
       allArticles = [];
-      document.getElementById('article-count').textContent = '0';
       document.getElementById('article-list').innerHTML =
         '<div class="empty-state">Could not load articles.</div>';
       return;
     }
   }
-
-  document.getElementById('article-count').textContent = visibleArticles().length;
-    buildHeadingChips();
-    applyFilters();
-    buildTicker();
   }
 
   // Switch access level and re-render everything from the gated source-of-truth.
@@ -1494,7 +1491,6 @@ async function applyFilters() {
   // When using FTS search, results are already ranked by relevance
 
   filteredArticles = list;
-  document.getElementById('article-count').textContent = filteredArticles.length;
   renderList();
 }
 
@@ -1561,7 +1557,7 @@ async function selectArticle(id) {
       if (res.ok) {
         const data = await res.json();
         fullText = data.full_text || '';
-        selectedArticle = { ...article, full_text: fullText };
+        selectedArticle = { ...article, full_text: fullText, related_links: data.related_links };
       }
     } catch {
       if (article.filename) {
@@ -1592,13 +1588,13 @@ function renderArticle(a, fullText) {
 
   const date = formatDate(a.published_date);
   const author = cleanAuthor(a.author);
-  const wordCount = a.word_count ? `${Number(a.word_count).toLocaleString()} words` : '';
+  const tag = (a.heading || '').trim();
   const summary = a.summary || '';
   const metaParts = [
     a.publication,
     date,
     author ? `By ${author}` : '',
-    wordCount
+    tag
   ].filter(Boolean).map(x => `<span>${escapeHtml(x)}</span>`).join('');
   const sourceLink = a.final_url
     ? `<a class="article-source-link" href="${a.final_url}" target="_blank">↗ View original source</a>`
@@ -1606,7 +1602,16 @@ function renderArticle(a, fullText) {
     ? `<a class="article-source-link" href="${a.factiva_url}" target="_blank">↗ View on Factiva</a>`
     : '';
 
+  let related = [];
+  try { related = JSON.parse(a.related_links || '[]'); } catch {}
+  const relatedHtml = related.length
+    ? `<div class="related-links"><div class="related-title">Related documents</div>${
+        related.map(r => `<a class="article-source-link" href="${escapeHtml(r.url)}" target="_blank" rel="noopener">↗ ${escapeHtml(r.label || r.url)}</a>`).join('')
+      }</div>`
+    : '';
+
   el.innerHTML = `
+
     <div class="article-title-wrap">
       <h1 class="article-title">${escapeHtml(a.title || 'Untitled')}</h1>
       ${metaParts ? `<div class="article-sticky-meta">${metaParts}</div>` : ''}
@@ -1614,6 +1619,7 @@ function renderArticle(a, fullText) {
     </div>
     <div class="article-body">${fullText ? escapeHtml(fullText) : '<em style="color:var(--faint)">Full text not available. View the original source below.</em>'}</div>
     <div style="margin-top:24px">${sourceLink}</div>
+    ${relatedHtml}
   `;
 
   // Scroll article view to top

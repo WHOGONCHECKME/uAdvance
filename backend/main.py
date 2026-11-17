@@ -162,6 +162,7 @@ def get_articles():
             a.source_type
         FROM articles a
         WHERE a.summarised = 1
+        AND COALESCE(a.hidden, 0) = 0
         ORDER BY a.published_date DESC, a.scraped_at DESC
     """).fetchall()
     conn.close()
@@ -213,6 +214,7 @@ def search_articles(q: str = Query(..., min_length=2, description="Search query"
         JOIN articles a ON articles_fts.rowid = a.rowid
         WHERE articles_fts MATCH ?
         AND a.summarised = 1
+        AND COALESCE(a.hidden, 0) = 0
         ORDER BY rank
         LIMIT 50
     """, (fts_q,)).fetchall()

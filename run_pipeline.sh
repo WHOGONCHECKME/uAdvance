@@ -26,8 +26,12 @@ echo "▶  Step 2/5 — Extract article content"
 "$PYTHON" "$SCRIPT_DIR/dowjones-news-bot/extract_article_content.py"
 
 echo ""
-echo "▶  Step 3/5 — Extract regulator emails"
+echo "▶  Step 3a/5 — Extract regulator emails"
 "$PYTHON" "$SCRIPT_DIR/dowjones-news-bot/extract_regulator_emails.py"
+
+echo ""
+echo "▶  Step 3b/5 — Enrich regulator links"
+"$PYTHON" "$SCRIPT_DIR/dowjones-news-bot/enrich_regulator_links.py"
 
 echo ""
 echo "▶  Step 4/5 — Summarise"
